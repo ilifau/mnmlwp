@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mnmlWP 0.1.1\n"
-"POT-Creation-Date: 2019-02-03 14:52+0100\n"
-"PO-Revision-Date: 2019-02-03 14:52+0100\n"
+"POT-Creation-Date: 2019-07-17 18:25+0200\n"
+"PO-Revision-Date: 2019-07-17 18:26+0200\n"
 "Last-Translator: Sebastian Honert <sebastian.honert@gmail.com>\n"
 "Language-Team: sebastian.honert@gmail.com\n"
 "Language: de_DE@formal\n"
@@ -186,11 +186,11 @@ msgstr "Vorheriger Beitrag"
 msgid "Next Post"
 msgstr "Nächster Beitrag"
 
-#: functions.php:980
+#: functions.php:983
 msgid "Congratulations"
 msgstr "Herzlichen Glückwunsch"
 
-#: functions.php:981
+#: functions.php:984
 #, php-format
 msgid ""
 "You successfully installed the mnmlWP WordPress Theme. Please update your "
@@ -199,114 +199,118 @@ msgstr ""
 "Sie haben das mnmlWP WordPress-Theme erfolgreich installiert. Bitte "
 "aktualisieren Sie die Theme-Einstellungen im %1$s."
 
-#: functions.php:982
+#: functions.php:985
 msgid "Enjoy your mnmlWP site!"
 msgstr "Viel Spaß mit Ihrer mnmlWP-Website!"
 
-#: functions.php:995
+#: functions.php:998
 msgid "Color"
 msgstr "Farbe"
 
-#: functions.php:997
+#: functions.php:1000
 msgid "Pick a Category Color"
 msgstr "Wählen Sie eine Farbe für diese Kategorie"
 
-#: functions.php:1013
+#: functions.php:1016
 msgid "Category Color"
 msgstr "Farbe dieser Kategorie"
 
-#: functions.php:1064
+#: functions.php:1067
 msgid "Hide Page Title?"
 msgstr "Seitentitel verbergen?"
 
-#: functions.php:1074
+#: functions.php:1077
 msgid "Show Sidebar?"
 msgstr "Sidebar anzeigen?"
 
-#: functions.php:1085
+#: functions.php:1088
 msgid "Hide Breadcrumbs?"
 msgstr "Breadcrumb-Navigation verbergen?"
 
-#: functions.php:1095
+#: functions.php:1098
 msgid "Hide Contact Row?"
 msgstr "Konzaktzeile verbergen?"
 
-#: functions.php:1107
+#: functions.php:1110
 msgid "Hero Section"
 msgstr "Hero-Bereich"
 
-#: functions.php:1122 functions.php:1145
+#: functions.php:1125 functions.php:1148
 msgid "This option is not available for the blank page template."
 msgstr "Diese Option ist für das „Blank Template“ nicht verfügbar."
 
-#: functions.php:1139
+#: functions.php:1142
 msgid "Yes, show the sidebar."
 msgstr "Ja, Sidebar anzeigen."
 
-#: functions.php:1162
+#: functions.php:1165
 msgid "Yes, hide the page title."
 msgstr "Ja, Seitentitel verbergen."
 
-#: functions.php:1172
+#: functions.php:1175
 msgid "Check to hide the breadcrumb navigation on this page."
 msgstr "Ankreuzen, um die Breadcrumb-Navigation zu verbergen."
 
-#: functions.php:1175 functions.php:1189 functions.php:1307
+#: functions.php:1178 functions.php:1192 functions.php:1316
 msgid "Attention"
 msgstr "Achtung"
 
-#: functions.php:1175
+#: functions.php:1178
 msgid ""
 "The breadcrumb navigation is globally disabled in the theme customization "
 "options."
 msgstr "Die Breadcrumb-Navigation ist im Theme-Customizer global abgeschaltet."
 
-#: functions.php:1186
+#: functions.php:1189
 msgid "Check to hide the contact row on this page."
 msgstr "Ankreuzen, um die Kontaktzeile auf dieser Seite auszublenden."
 
-#: functions.php:1189
+#: functions.php:1192
 msgid ""
 "The contact row is globally disabled in the theme customization options."
 msgstr "Die Kontaktzeile ist im Theme-Customizer global abgeschaltet."
 
-#: functions.php:1216
+#: functions.php:1221
 msgid "Hero section height"
 msgstr "Höhe des Hero-Bereichs"
 
-#: functions.php:1261
+#: functions.php:1266
 msgid "Content (HTML allowed)"
 msgstr "Inhalt (HTML erlaubt)"
 
-#: functions.php:1265
+#: functions.php:1270
 msgid "Display colored overlay?"
 msgstr "Farb-Overlay anzeigen?"
 
-#: functions.php:1269
+#: functions.php:1275
+msgid "Gradient angle (0-360)"
+msgstr "Farbverlauf Winkel (0-360)"
+
+#: functions.php:1278
 msgid "Radial gradient?"
 msgstr "Radialer Farbverlauf?"
 
-#: functions.php:1271
-msgid "Overlay Opacity in percent (0-100%)"
+#: functions.php:1280
+msgid "Overlay opacity in percent (0-100%)"
 msgstr "Overlay-Deckkraft in Prozent (0-100%)"
 
-#: functions.php:1274
+#: functions.php:1283
 msgid "Skew Overlay?"
 msgstr "Overlay mit Schräge?"
 
-#: functions.php:1276
-msgid "Background position (horizontal)"
-msgstr "Hintergrund-Position (horizontal)"
-
-#: functions.php:1291
+#: functions.php:1285
 msgid "Background position (vertical)"
 msgstr "Hintergrund-Position (vertikal)"
 
-#: functions.php:1306
-msgid "Fixed Background Position?"
+#: functions.php:1300
+msgid "Background position (horizontal)"
+msgstr "Hintergrund-Position (horizontal)"
+
+#: functions.php:1315
+msgid "Fixed background position?"
 msgstr "Hintergrund-Position statisch?"
 
-#: functions.php:1307
+#: functions.php:1316
 msgid ""
 "The fixed background setting overwrites the selected background position "
 "values. It is also not recommended to use the background overlay together "
