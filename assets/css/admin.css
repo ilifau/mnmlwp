@@ -1,0 +1,25 @@
+/* -----------------------------------------
+   1. Input Elements
+   ----------------------------------------- */
+
+.mnmlwp-input {
+    box-sizing: border-box;
+    width: 80%;
+    border: 1px solid #ddd;
+    padding: 4px 6px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+select.mnmlwp-input {
+    width: auto;
+}
+
+.wp-admin select {
+    padding: 0 2px;
+}
+
+textarea.mnmlwp-input {
+    width: 80%;
+    height: 200px;
+}

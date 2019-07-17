@@ -1,0 +1,816 @@
+# Copyright (C) 2018 Sebastian Honert
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: mnmlwp 0.1.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mnmlwp\n"
+"POT-Creation-Date: 2018-01-25 14:48:43+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:15
+msgid "Ooops!"
+msgstr ""
+
+#: 404.php:16
+msgid "Sorry, but there is no content attached to this URL."
+msgstr ""
+
+#: 404.php:17
+msgid "Please go back to the %s or use the search form."
+msgstr ""
+
+#: 404.php:17
+msgid "front page"
+msgstr ""
+
+#: functions/breadcrumbs.php:12
+msgid "Home"
+msgstr ""
+
+#: functions/breadcrumbs.php:13
+msgid "Category &raquo;%1$s&laquo;"
+msgstr ""
+
+#: functions/breadcrumbs.php:14
+msgid "Search for &raquo;%1$s&laquo;"
+msgstr ""
+
+#: functions/breadcrumbs.php:15
+msgid "Tag &raquo;%1$s&laquo;"
+msgstr ""
+
+#: functions/breadcrumbs.php:16
+msgid "Posts by %1$s"
+msgstr ""
+
+#: functions/breadcrumbs.php:17
+msgid "Error 404"
+msgstr ""
+
+#: functions/breadcrumbs.php:18
+msgid "Page %1$s"
+msgstr ""
+
+#: functions/breadcrumbs.php:19
+msgid "Comment Page %1$s"
+msgstr ""
+
+#: functions/customizer.php:15
+msgid "Color Scheme"
+msgstr ""
+
+#: functions/customizer.php:20
+msgid "Page Layout"
+msgstr ""
+
+#: functions/customizer.php:262
+msgid "Background Color"
+msgstr ""
+
+#: functions/customizer.php:268
+msgid "Text Color"
+msgstr ""
+
+#: functions/customizer.php:274
+msgid "Headings Color"
+msgstr ""
+
+#: functions/customizer.php:280
+msgid "Link Color"
+msgstr ""
+
+#: functions/customizer.php:286
+msgid "Link Hover Color"
+msgstr ""
+
+#: functions/customizer.php:294
+msgid "Header Background Color"
+msgstr ""
+
+#: functions/customizer.php:300
+msgid "Logo Text Color"
+msgstr ""
+
+#: functions/customizer.php:306
+msgid "Tagline Color"
+msgstr ""
+
+#: functions/customizer.php:312
+msgid "Contact Row Background"
+msgstr ""
+
+#: functions/customizer.php:320
+msgid "Navigation Background"
+msgstr ""
+
+#: functions/customizer.php:326
+msgid "Nav Item Link Color"
+msgstr ""
+
+#: functions/customizer.php:332
+msgid "Nav Item Link Hover Color"
+msgstr ""
+
+#: functions/customizer.php:338
+msgid "Nav Item Link Active Color"
+msgstr ""
+
+#: functions/customizer.php:344
+msgid "Sub-Menu Background Color"
+msgstr ""
+
+#: functions/customizer.php:350
+msgid "Sub-Menu Link Color"
+msgstr ""
+
+#: functions/customizer.php:356
+msgid "Sub-Menu Link Color Hover"
+msgstr ""
+
+#: functions/customizer.php:362
+msgid "Hamburger Icon Color"
+msgstr ""
+
+#: functions/customizer.php:370
+msgid "Footer Background Color"
+msgstr ""
+
+#: functions/customizer.php:376
+msgid "Footer Text Color"
+msgstr ""
+
+#: functions/customizer.php:384
+msgid "Main Content Width (default: 1120px)"
+msgstr ""
+
+#: functions/customizer.php:390
+msgid "Base Font Size (default: 1.25em)"
+msgstr ""
+
+#: functions/customizer.php:398
+msgid "Use local font (Source Sans Pro)?"
+msgstr ""
+
+#: functions/customizer.php:404
+msgid "Boxed Layout?"
+msgstr ""
+
+#: functions/customizer.php:410
+msgid "Show Breadcrumbs Navigation?"
+msgstr ""
+
+#: functions/customizer.php:416
+msgid "Show breadcrumbs navigation on home page?"
+msgstr ""
+
+#: functions/customizer.php:420
+msgid "Logo Icon"
+msgstr ""
+
+#: functions/customizer.php:421
+msgid ""
+"Select an icon that will be displayed together with your site logo (choose "
+"from any icon from %1$s)."
+msgstr ""
+
+#: functions/customizer.php:429
+msgid "Contact Row"
+msgstr ""
+
+#: functions/customizer.php:430
+msgid ""
+"This section will show at the top of your website and may include some "
+"contact information or similar stuff."
+msgstr ""
+
+#: functions/customizer.php:436
+msgid "Show contact row?"
+msgstr ""
+
+#: functions/customizer.php:442
+msgid "Show arrows below active menu items?"
+msgstr ""
+
+#: functions/customizer.php:448
+msgid "Include search form in primary navigation?"
+msgstr ""
+
+#: functions/customizer.php:454
+msgid "Show loading animation on page load?"
+msgstr ""
+
+#: functions/customizer.php:475
+msgid "Default Header Image"
+msgstr ""
+
+#: functions.php:143
+msgid "Pages:"
+msgstr ""
+
+#: functions.php:149
+msgid "Next page"
+msgstr ""
+
+#: functions.php:150
+msgid "Previous page"
+msgstr ""
+
+#: functions.php:216 inc/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: functions.php:217 inc/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: functions.php:219 inc/class-tgm-plugin-activation.php:330
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: functions.php:221 inc/class-tgm-plugin-activation.php:332
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: functions.php:222 inc/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: functions.php:259 inc/class-tgm-plugin-activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:264 inc/class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:269 inc/class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:274 inc/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: functions.php:275 inc/class-tgm-plugin-activation.php:387
+#: inc/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: functions.php:276 inc/class-tgm-plugin-activation.php:388
+#: inc/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions.php:278 inc/class-tgm-plugin-activation.php:390
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: functions.php:280 inc/class-tgm-plugin-activation.php:392
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: functions.php:282 inc/class-tgm-plugin-activation.php:394
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: functions.php:283 inc/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: functions.php:284 inc/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: functions.php:285 inc/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: functions.php:324
+msgid "Main Navigation"
+msgstr ""
+
+#: functions.php:365 searchform.php:11 searchform.php:12
+msgid "Search"
+msgstr ""
+
+#: functions.php:380
+msgid "mnmlWP Sidebar"
+msgstr ""
+
+#: functions.php:475
+msgid "read&nbsp;more"
+msgstr ""
+
+#: functions.php:529
+msgid "Posts by"
+msgstr ""
+
+#: functions.php:529 functions.php:533 functions.php:537 functions.php:550
+msgid "results"
+msgstr ""
+
+#: functions.php:533
+msgid "Category"
+msgstr ""
+
+#: functions.php:537
+msgid "Tag"
+msgstr ""
+
+#: functions.php:552
+msgid "No Results"
+msgstr ""
+
+#: functions.php:553
+msgid "Please enter a search term."
+msgstr ""
+
+#: functions.php:596
+msgid "comment(s)"
+msgstr ""
+
+#: functions.php:608
+msgid ""
+"No posts found. You might want to use the search form or go back to the home "
+"page."
+msgstr ""
+
+#: functions.php:769
+msgid "Previous Post"
+msgstr ""
+
+#: functions.php:773
+msgid "Next Post"
+msgstr ""
+
+#: functions.php:829
+msgid "Congratulations"
+msgstr ""
+
+#: functions.php:830
+msgid ""
+"You successfully installed the mnmlWP WordPress Theme. Please update your "
+"theme settings in the %1$s."
+msgstr ""
+
+#: functions.php:831
+msgid "Enjoy your mnmlWP site!"
+msgstr ""
+
+#: functions.php:847
+msgid "Color"
+msgstr ""
+
+#: functions.php:849
+msgid "Pick a Category Color"
+msgstr ""
+
+#: functions.php:865
+msgid "Category Color"
+msgstr ""
+
+#: functions.php:915
+msgid "Hide Breadcrumbs?"
+msgstr ""
+
+#: functions.php:925
+msgid "Hide Contact Row?"
+msgstr ""
+
+#: functions.php:944
+msgid "Check to hide the breadcrumb navigation on this page."
+msgstr ""
+
+#: functions.php:947
+msgid ""
+"The breadcrumb navigation is globally disabled in the theme customization "
+"options."
+msgstr ""
+
+#: functions.php:960
+msgid "Check to hide the contact row on this page."
+msgstr ""
+
+#: functions.php:963
+msgid ""
+"The contact row is globally disabled in the theme customization options."
+msgstr ""
+
+#: home.php:9
+msgid "Latest Posts"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:386
+#: inc/class-tgm-plugin-activation.php:827
+#: inc/class-tgm-plugin-activation.php:2533
+#: inc/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:934
+#: inc/class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1121
+#: inc/class-tgm-plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: inc/class-tgm-plugin-activation.php:1982
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: inc/class-tgm-plugin-activation.php:2342
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2388
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2392
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2396
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2400
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2603
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2608
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2614
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3498
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: inc/class-tgm-plugin-activation.php:3501
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3503
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3509
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3509
+#: inc/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3509
+#: inc/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3512
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3517
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3520
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/customizer-reset/customizer-reset.php:35
+msgid "Reset"
+msgstr ""
+
+#: inc/customizer-reset/customizer-reset.php:36
+msgid ""
+"Attention! This will remove all customizations ever made via customizer to "
+"this theme.\n"
+"\n"
+"This action is irreversible. Do you still want to proceed?"
+msgstr ""
+
+#: searchform.php:13
+msgid "Submit"
+msgstr ""
+
+#: widgets/mnmlwp-colored-categories/mnmlwp-colored-categories.php:16
+msgid "mnmlWP Colored Categories"
+msgstr ""
+
+#: widgets/mnmlwp-colored-categories/mnmlwp-colored-categories.php:85
+#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:94
+msgid "Title:"
+msgstr ""
+
+#: widgets/mnmlwp-colored-categories/mnmlwp-colored-categories.php:90
+msgid "Number of categories:"
+msgstr ""
+
+#: widgets/mnmlwp-colored-categories/mnmlwp-colored-categories.php:95
+msgid "Hide empty categories:"
+msgstr ""
+
+#: widgets/mnmlwp-colored-categories/mnmlwp-colored-categories.php:100
+msgid "Colorize link text:"
+msgstr ""
+
+#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:16
+msgid "mnmlWP Recent Posts"
+msgstr ""
+
+#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:99
+msgid "Number of posts:"
+msgstr ""
+
+#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:104
+msgid "Max. number of title characters:"
+msgstr ""
+
+#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:109
+msgid "Display thumbnails:"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "mnmlwp"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://sebastianhonert.com/mnmlwp"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A free, lightweight, and fast WordPress theme that can easily be turned into "
+"different page styles and layouts. It comes with a bunch of useful "
+"shortcodes and demo content. If you want to find out about the possibilities "
+"of this theme, please visit the theme website."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sebastian Honert"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://sebastianhonert.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Post Archive"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Blank Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full Width"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Hero (Page)"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Sidebar (Page)"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Hero (Post)"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Sidebar (Post)"
+msgstr ""

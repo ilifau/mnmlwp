@@ -1,0 +1,48 @@
+/**
+ * mnmlWP Colored Categories Widget Styles
+ */
+
+.mnmlwp-colored-category-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: .375em;
+    padding-bottom: .375em;
+    border-bottom: 1px solid #eee;
+}
+
+.mnmlwp-colored-category-link:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: 0;
+}
+
+.mnmlwp-colored-category-link-color {
+    color: #fff;
+    font-weight: 400;
+    width: auto;
+    float: right;
+    text-align: center;
+    line-height: 1;
+    border-radius: 0;
+    transition: all .2s ease;
+    padding: .375em .5em;
+    margin-right: 3px;
+    border-radius: .25em;
+    font-size: .875em;
+    position: relative;
+    top: 1px;
+}
+
+.mnmlwp-colored-category-link-color:hover,
+.mnmlwp-colored-category-link-color:focus, 
+.mnmlwp-colored-category-link:hover .mnmlwp-colored-category-link-color,
+.mnmlwp-colored-category-link:focus .mnmlwp-colored-category-link-color {
+    transition: all .2s ease;
+    opacity: .825;
+}
+
+.mnmlwp-colored-category-link-title {
+    display: inline;
+    vertical-align: middle;
+}
