@@ -13,15 +13,6 @@ function mnmlwp_import_files()
             'preview_url'                  => 'https://mnmlwp.de',
             'import_notice'              => __( 'Please configure your widgets and category colors after importing the demo content.', 'mnmlwp' ),
         ),
-        array(
-            'import_file_name'             => 'WordPress',
-            'categories'                   => array('Modified'),
-            'local_import_file'            => trailingslashit( get_template_directory() ) . 'demo/data/wordpress/content.xml',
-            'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'demo/data/wordpress/widgets.wie',
-            'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'demo/data/wordpress/customizer.dat',
-            'import_preview_image_url'     => get_template_directory_uri() . '/demo/data/wordpress/screenshot.png',
-            'import_notice'              => __( 'Please configure your widgets and category colors after importing the demo content.', 'mnmlwp' ),
-        ),
     );
 }
 
