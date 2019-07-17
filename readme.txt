@@ -80,6 +80,7 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 = 0.4.2 =
 
 Added: Gradient colors for hero section
+Added: New custom layout / demo data
 
 = 0.4.0 =
 
