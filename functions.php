@@ -53,7 +53,7 @@ function mnmlwp_admin_scripts_and_styles()
     // Color Picker
     $screen = get_current_screen();
     $allowed_post_types = array('post', 'page');
-    $allowed_templates = array('template-page-hero.php', 'template-post-hero.php');
+    $allowed_templates = array('template-page-hero.php', 'template-post-hero.php', 'template-blank-page-hero.php');
     
     $isHero = in_array( $screen->post_type, $allowed_post_types ) && in_array( get_page_template_slug(), $allowed_templates );
     $isCategory = $screen->taxonomy === 'category';
@@ -1104,7 +1104,7 @@ function mnmlwp_add_meta_boxes()
         // Hero Title
         $template = get_post_meta( $post->ID, '_wp_page_template', true );
 
-        if( 'template-page-hero.php' === $template || 'template-post-hero.php' === $template ) {
+        if( 'template-page-hero.php' === $template || 'template-post-hero.php' === $template || 'template-blank-page-hero.php' === $template ) {
             add_meta_box(
                 'mnmlwp-hero-image',
                 esc_html__( 'Hero Section', 'mnmlwp' ),
@@ -1121,7 +1121,7 @@ function mnmlwp_add_meta_boxes_show_sidebar_callback( $post )
 {
     wp_nonce_field( 'mnmlwp_add_meta_boxes_nonce', 'mnmlwp_add_meta_boxes_nonce' );
 
-    if( get_page_template_slug() === 'template-blank-page.php' ) {
+    if( get_page_template_slug() === 'template-blank-page.php' || get_page_template_slug() === 'template-blank-page-hero.php' ) {
         echo __('This option is not available for the blank page template.', 'mnmlwp');
         return;
     }
@@ -1144,7 +1144,7 @@ function mnmlwp_add_meta_boxes_show_sidebar_callback( $post )
 
 function mnmlwp_add_meta_boxes_hide_page_title_callback( $post )
 {
-    if( get_page_template_slug() === 'template-blank-page.php' ) {
+    if( get_page_template_slug() === 'template-blank-page.php' || get_page_template_slug() === 'template-blank-page-hero.php' ) {
         echo __('This option is not available for the blank page template.', 'mnmlwp');
         return;
     }
@@ -1441,7 +1441,7 @@ function mnmlwp_get_hero_height()
 {
     $template = get_post_meta( get_the_ID(), '_wp_page_template', true );
     
-    if( 'template-page-hero.php' !== $template && 'template-post-hero.php' !== $template )
+    if( 'template-page-hero.php' !== $template && 'template-post-hero.php' !== $template && 'template-blank-page-hero.php' !== $template)
         return 75;
         
     $height_desktop = ! empty( get_post_meta( get_the_ID(), '_mnmlwp_hero_height', true ) ) ? absint( get_post_meta( get_the_ID(), '_mnmlwp_hero_height', true ) ) : 75;
@@ -1462,7 +1462,7 @@ function mnmlwp_get_hero_height_measure()
 {
     $template = get_post_meta( get_the_ID(), '_wp_page_template', true );
     
-    if( 'template-page-hero.php' !== $template && 'template-post-hero.php' !== $template )
+    if( 'template-page-hero.php' !== $template && 'template-post-hero.php' !== $template && 'template-blank-page-hero.php' !== $template )
         return 'percent';
         
     $measure_desktop = ! empty( get_post_meta( get_the_ID(), '_mnmlwp_hero_height_measure', true ) ) ? sanitize_text_field( get_post_meta( get_the_ID(), '_mnmlwp_hero_height_measure', true ) ) : 'percent';
