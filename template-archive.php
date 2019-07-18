@@ -4,6 +4,10 @@
      * Template Name: Post Archive
      */
 
+    if ( ! defined( 'ABSPATH' ) ) {
+        exit;
+    }
+
     get_header();
 
     $mnmlwp_show_sidebar = get_post_meta( $post->ID, '_mnmlwp_show_sidebar', true );

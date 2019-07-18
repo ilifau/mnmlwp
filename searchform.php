@@ -6,6 +6,11 @@
  * @subpackage mnmlwp
  * @since mnmlwp 0.1
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 ?>
 <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label for="s" class="assistive-text"><?php esc_html_e( 'Search', 'mnmlwp' ); ?></label>

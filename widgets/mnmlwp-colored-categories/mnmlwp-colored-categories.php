@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 class mnmlWP_Widget_Colored_Categories extends WP_Widget
 {
     public $widget_folder;

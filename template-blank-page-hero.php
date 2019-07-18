@@ -5,6 +5,10 @@
      * Template Post Type: post, page
      */
 
+    if ( ! defined( 'ABSPATH' ) ) {
+        exit;
+    }
+
     get_header();
 
     echo mnmlwp_get_hero_row(); ?>

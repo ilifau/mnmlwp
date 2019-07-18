@@ -4,6 +4,10 @@
      * Archive by author
      */
 
+    if ( ! defined( 'ABSPATH' ) ) {
+        exit;
+    }
+
     get_header();
 
     echo '<div class="row">';

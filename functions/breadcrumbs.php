@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if( ! function_exists('mnmlwp_breadcrumb_trail') )
 {
     function mnmlwp_breadcrumb_trail()

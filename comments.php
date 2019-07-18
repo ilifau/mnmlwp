@@ -1,5 +1,9 @@
 <?php
 
+    if ( ! defined( 'ABSPATH' ) ) {
+        exit;
+    }
+
     if ( have_comments() ) :
 
         echo '<div id="comments">';

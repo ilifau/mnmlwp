@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 class mnmlWP_Widget_Recent_Posts extends WP_Widget
 {
     public $widget_folder;

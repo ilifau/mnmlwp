@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 // Shorten Template Directory URL
 function mnmlwp_theme_url()
 {

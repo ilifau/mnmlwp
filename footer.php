@@ -1,3 +1,11 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+?>
+
 </div><!-- end main row -->
 <div class="row row--footer">
 

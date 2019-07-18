@@ -1,5 +1,9 @@
 <?php
 
+    if ( ! defined( 'ABSPATH' ) ) {
+        exit;
+    }
+
     echo '<div class="mnmlwp-sidebar">';
 
         switch( get_post_type() )
