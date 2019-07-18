@@ -80,6 +80,7 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 = 0.4.3 =
 
 Added: Blank post/page + hero template
+Added: Shortcode allowed in hero section
 
 = 0.4.2 =
 

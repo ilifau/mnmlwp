@@ -924,7 +924,7 @@ if( ! function_exists( 'mnmlwp_get_hero_row' ) )
             $html .= '<div class="mnmlwp-overlay" style="' . $hero_overlay_style_background . $hero_overlay_style_opacity . '"></div>';
         }
 
-        $html .= '<div class="column column--hero" style="height:' . $hero_height . 'vh"><div class="hero-title">' . $hero_title . '</div></div>';
+        $html .= '<div class="column column--hero" style="height:' . $hero_height . 'vh"><div class="hero-title">' . do_shortcode( $hero_title ) . '</div></div>';
         $html .= '</div>';
         $html .= '</div>';
 
