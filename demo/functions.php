@@ -14,7 +14,7 @@ function mnmlwp_import_files()
             'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'demo/data/default/widgets.wie',
             'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'demo/data/default/customizer.dat',
             'import_preview_image_url'     => get_template_directory_uri() . '/demo/data/default/screenshot.png',
-            'preview_url'                  => 'https://mnmlwp.de',
+            'preview_url'                  => 'https://minimalwordpress.com',
             'import_notice'              => __( 'Please configure your widgets and category colors after importing the demo content.', 'mnmlwp' ),
         ),
     );

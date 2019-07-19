@@ -1712,6 +1712,42 @@
       margin-bottom: 2em;
       background: #fafafa;
   }
+
+  .mnmlwp-cover {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover !important;
+      background-position: center center !important;
+      z-index: 1;
+  }
+
+  .mnmlwp-cover-play-button {
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+  }
+
+  .mnmlwp-cover-play-button img {
+      width: 22%;
+      max-width: 128px;
+      opacity: .8;
+      transform: scale(1);
+      transition: all .3s linear;
+  }
+
+  .mnmlwp-cover-play-button img:hover {
+      opacity: 1;
+      transform: scale(1.06125);
+  }
   
   .mnmlwp-video-container iframe,
   .mnmlwp-soundcloud-wrapper iframe {
@@ -1720,6 +1756,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      z-index: 3;
   }
   
   /* -----------------------------------------
