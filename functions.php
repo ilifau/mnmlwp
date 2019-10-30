@@ -140,12 +140,16 @@ function mnmlwp_add_image_sizes()
 {
     add_image_size( 'mnmlwp-1920', 1920, 1080 );
     add_image_size( 'mnmlwp-1600', 1600, 900 );
-    add_image_size( 'mnmlwp-800', 800, 450 );
+    add_image_size( 'mnmlwp-1366', 1366, 768 );
+    add_image_size( 'mnmlwp-1024', 1024, 576 );
+    add_image_size( 'mnmlwp-768', 768, 432 );
+    add_image_size( 'mnmlwp-640', 640, 360 );
+    add_image_size( 'mnmlwp-480', 480, 270 );
+    add_image_size( 'mnmlwp-320', 320, 240 );
 
     // Set image compression quality
-    add_filter('jpeg_quality', function($arg) {
-        return 80;
-    });
+    add_filter( 'jpeg_quality', function( $arg ) { return 60; });
+    add_filter( 'wp_editor_set_quality', function( $arg ) { return 60; });
 }
 
 add_action( 'after_setup_theme', 'mnmlwp_add_image_sizes' );
