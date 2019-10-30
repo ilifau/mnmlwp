@@ -141,15 +141,22 @@ function mnmlwp_add_image_sizes()
     add_image_size( 'mnmlwp-1920', 1920, 1080 );
     add_image_size( 'mnmlwp-1600', 1600, 900 );
     add_image_size( 'mnmlwp-1366', 1366, 768 );
-    add_image_size( 'mnmlwp-1024', 1024, 576 );
-    add_image_size( 'mnmlwp-768', 768, 432 );
+    add_image_size( 'mnmlwp-1024', 1024, 768 );
+    add_image_size( 'mnmlwp-800', 800, 480 );
     add_image_size( 'mnmlwp-640', 640, 360 );
-    add_image_size( 'mnmlwp-480', 480, 270 );
+    add_image_size( 'mnmlwp-480', 480, 320 );
     add_image_size( 'mnmlwp-320', 320, 240 );
 
+    add_image_size( 'mnmlwp-1920-portrait', 1080, 1920, true, array('center', 'top') );
+    add_image_size( 'mnmlwp-1600-portrait', 900, 1600, true, array('center', 'top') );
+    add_image_size( 'mnmlwp-1366-portrait', 768, 1366, true, array('center', 'top') );
+    add_image_size( 'mnmlwp-1024-portrait', 768, 1024, true, array('center', 'top') );
+    add_image_size( 'mnmlwp-800-portrait', 480, 800, true, array('center', 'top') );
+    add_image_size( 'mnmlwp-640-portrait', 360, 640, true, array('center', 'top') );
+
     // Set image compression quality
-    add_filter( 'jpeg_quality', function( $arg ) { return 60; });
-    add_filter( 'wp_editor_set_quality', function( $arg ) { return 60; });
+    add_filter( 'jpeg_quality', function( $arg ) { return 80; });
+    add_filter( 'wp_editor_set_quality', function( $arg ) { return 80; });
 }
 
 add_action( 'after_setup_theme', 'mnmlwp_add_image_sizes' );
@@ -904,13 +911,118 @@ if( ! function_exists ( 'mnmlwp_adjacent_posts' ) )
 }
 
 // Hero Row
+if( ! function_exists( 'mnmlwp_get_hero_background_style' ) )
+{
+    function mnmlwp_get_hero_background_style()
+    {
+        if( ! has_post_thumbnail( get_the_ID() ) )
+            return;
+
+        $landscape_1920 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1920' );
+        $landscape_1600 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1600' );
+        $landscape_1366 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1366' );
+        $landscape_1024 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1024' );
+        $landscape_800 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-800' );
+        $landscape_640 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-640' );
+
+        $portrait_1920 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1920-portrait' );
+        $portrait_1600 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1600-portrait' );
+        $portrait_1366 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1366-portrait' );
+        $portrait_1024 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1024-portrait' );
+        $portrait_800 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-800-portrait' );
+        $portrait_640 = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-640-portrait' );
+
+        $style = '<style>
+        .row.row--hero {
+            background-size:cover;
+        }
+
+        @media screen and (orientation: landscape) and (min-width: 1601px) {
+            .row.row--hero {
+                background-image: url(' . $landscape_1920 . ');
+            }
+        }
+
+        @media screen and (orientation: landscape) and (min-width: 1367px) and (max-width: 1600px) {
+            .row.row--hero {
+                background-image: url(' . $landscape_1600 . ');
+            }
+        }
+
+        @media screen and (orientation: landscape) and (min-width: 1025px) and (max-width: 1366px) {
+            .row.row--hero {
+                background-image: url(' . $landscape_1366 . ');
+            }
+        }
+
+        @media screen and (orientation: landscape) and (min-width: 801px) and (max-width: 1024px) {
+            .row.row--hero {
+                background-image: url(' . $landscape_1024 . ');
+            }
+        }
+
+        @media screen and (orientation: landscape) and (min-width: 641px) and (max-width: 800px) {
+            .row.row--hero {
+                background-image: url(' . $landscape_800 . ');
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-width: 640px) {
+            .row.row--hero {
+                background-image: url(' . $landscape_640 . ');
+            }
+        }
+
+        /* Portrait */
+
+        @media screen and (orientation: portrait) and (min-height: 1601px) {
+            .row.row--hero {
+                background-image: url(' . $portrait_1920 . ');
+            }
+        }
+
+        @media screen and (orientation: portrait) and (min-height: 1367px) and (max-height: 1600px) {
+            .row.row--hero {
+                background-image: url(' . $portrait_1600 . ');
+            }
+        }
+
+        @media screen and (orientation: portrait) and (min-height: 1025px) and (max-height: 1366px) {
+            .row.row--hero {
+                background-image: url(' . $portrait_1366 . ');
+            }
+        }
+
+        @media screen and (orientation: portrait) and (min-height: 801px) and (max-height: 1024px)  {
+            .row.row--hero {
+                background-image: url(' . $portrait_1024 . ');
+            }
+        }
+
+        @media screen and (orientation: portrait) and (min-height: 641px) and (max-height: 800px) {
+            .row.row--hero {
+                background-image: url(' . $portrait_800 . ');
+            }
+        }
+        
+        @media screen and (orientation: portrait) and (max-height: 640px) {
+            .row.row--hero {
+                background-image: url(' . $portrait_640 . ');
+            }
+        }
+
+        </style>';
+
+        return $style;
+    }
+}
+
 if( ! function_exists( 'mnmlwp_get_hero_row' ) )
 {
     function mnmlwp_get_hero_row()
     {
         $hero_height = absint( get_post_meta( get_the_ID(), '_mnmlwp_hero_height', true ) );
-        $hero_bg_image = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1920' );
-        $hero_bg = has_post_thumbnail( get_the_ID() ) ? 'url(' . get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1920' ) . ')' : '#eee';
+        $hero_bg_style = mnmlwp_get_hero_background_style();
         $hero_overlay = get_post_meta( get_the_ID(), '_mnmlwp_hero_has_overlay', true );
         $hero_title = get_post_meta( get_the_ID(), '_mnmlwp_hero_title', true );
         $hero_overlay_color_from = get_post_meta( get_the_ID(), '_mnmlwp_hero_overlay_color_from', true );
@@ -926,7 +1038,8 @@ if( ! function_exists( 'mnmlwp_get_hero_row' ) )
         $hero_classes .= get_post_meta( get_the_ID(), '_mnmlwp_hero_background_attachment_fixed', true ) == 1 ? ' bg-attachment-fixed' : '';
 
         $html = '<div class="row-hero-wrapper">';
-        $html .= '<div class="row row--hero ' . $hero_classes . '" style="background: ' . $hero_bg . ' ' . $hero_bg_position_vertical . ' ' . $hero_bg_position_horizontal . '; background-size: cover;">';
+        $html .= mnmlwp_get_hero_background_style();
+        $html .= '<div class="row row--hero ' . $hero_classes . '" style="' . $hero_bg_position_vertical . ' ' . $hero_bg_position_horizontal . '">';
 
         if( ! empty( $hero_overlay ) ) {
             $html .= '<div class="mnmlwp-overlay" style="' . $hero_overlay_style_background . $hero_overlay_style_opacity . '"></div>';
