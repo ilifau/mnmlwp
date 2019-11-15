@@ -404,6 +404,7 @@
       border-left: 11px solid #ccc;
       margin: 0 0 1em;
       width: 100%;
+      clear: both;
   }
   
   abbr[title] {
@@ -1349,6 +1350,7 @@
       padding: 1em;
       margin: 0 0 1em;
       display: block;
+      clear: both;
   }
   
   .mnmlwp-msg.mnmlwp-msg-first {
