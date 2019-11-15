@@ -4,7 +4,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column,two-columns,three-columns,four-columns,full-width-template,custom-menu,custom-logo,custom-header,translation-ready,featured-images,custom-colors,right-sidebar,footer-widgets,post-formats,flexible-header,theme-options
 Requires at least: 4.9
-Tested up to: 4.9
+Tested up to: 5.3
 Stable tag: 0.1.13
 
 mnmlWP is a free, lightweight, and easy to use WordPress theme trying to make the development of WordPress based websites simple, efficient, and fun again.
@@ -76,6 +76,11 @@ Font License: SIL OFL 1.1 - http://scripts.sil.org/OFL
 Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
+
+= 0.4.5 =
+
+Added: Dynamic hero background sizes
+Added: Clearfixes
 
 = 0.4.4 =
 
