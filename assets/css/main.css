@@ -26,6 +26,7 @@
    15.   Images & Gallery
    16.   Flyout Containers
    17.   Spinkit
+   18.   Clearfixes
    50.   Template: Hero
    99.   Responsive
    999.  WordPress 5 (Gutenberg)
@@ -601,6 +602,10 @@
       margin: 0;
       padding-left: 0;
   }
+
+  nav#main ul {
+    line-height: 1;
+  }
   
   nav#main ul li {
       display: inline-block;
@@ -617,11 +622,6 @@
       padding: .8em 0;
       margin: 0 1em 0 0;
       line-height: 1;
-  }
-  
-  nav#main ul li a:hover,
-  nav#main ul li a:focus {
-      opacity: .825;
   }
   
   nav#main ul li:last-child a {
@@ -748,6 +748,7 @@
           top: 100%;
           margin: 0;
           width: auto;
+          min-width: 100%;
           height: auto;
           clear: left;
           box-shadow: 1px 1px 3px rgba(0,0,0,.33);
@@ -818,16 +819,6 @@
       display: block;
       position: relative;
       min-height: 1px;
-  }
-  
-  .clear-column,
-  .clear-columns {
-      clear: both;
-      display: block;
-      font-size: 1em;
-      height: 0;
-      line-height: 0;
-      width: 100%;
   }
   
   .full-width  {
@@ -1658,6 +1649,11 @@
       display: block;
       margin: .25em auto .5em;
   }
+
+  .fullwidth,
+  .mnmlwp-image-wrapper.fullwidth {
+      max-width: 100%;
+  }
   
   .size-auto,
   .size-full,
@@ -1733,6 +1729,7 @@
       justify-content: center;
       align-items: center;
       z-index: 2;
+      cursor: pointer;
   }
 
   .mnmlwp-cover-play-button img {
@@ -2000,6 +1997,34 @@
     0%, 39%, 100% { opacity: 0; }
     40% { opacity: 1; }
   }
+
+  /* -----------------------------------------
+    18. Clearfixes
+    ----------------------------------------- */
+
+    .row::after,
+    .column::after,
+    .full-width::after,
+    .one-half::after,
+    .one-third::after,
+    .two-third::after,
+    .one-fourth::after,
+    .three-fourth::after,
+    .one-fifth::after,
+    .two-fifth::after,
+    .three-fifth::after,
+    .four-fifth::after,
+    .mnmlwp-sidebar::after,
+    .mnmlwp-sidebar-widget::after,
+    .mnmlwp-columns::after,
+    .clear-column::after,
+    .clear-columns::after,
+    .mnmlwp-msg::after,
+    .mnmlwp-gallery::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
   
   /* -----------------------------------------
     50. Template: Hero
@@ -2115,7 +2140,7 @@
       .four-fifth:not(.dont-break),
       .last-column:not(.dont-break) {
           clear: both;
-          width: 100%!important;
+          width: 100% !important;
           margin-left: 0;
           margin-right: 0;
           margin-bottom: 1em;
