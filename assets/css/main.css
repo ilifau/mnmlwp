@@ -1795,6 +1795,7 @@
   .mnmlwp-flyouts {
       display: block;
       padding-bottom: 1em;
+      clear: both;
   }
   
   .mnmlwp-flyout {
