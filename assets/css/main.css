@@ -71,9 +71,6 @@
   
   .row {
       position: relative;
-      display: block;
-      clear: left;
-      overflow: auto;
   }
   
   .column {
@@ -82,8 +79,6 @@
       max-width: 100%;
       padding: 2em;
       margin: 0 auto;
-      clear: left;
-      overflow: auto;
   }
   
   .row.row--header {
@@ -408,7 +403,6 @@
       padding: .75em;
       border-left: 11px solid #ccc;
       margin: 0 0 1em;
-      overflow: auto;
       width: 100%;
   }
   
@@ -2017,10 +2011,11 @@
     .mnmlwp-sidebar::after,
     .mnmlwp-sidebar-widget::after,
     .mnmlwp-columns::after,
-    .clear-column::after,
-    .clear-columns::after,
     .mnmlwp-msg::after,
-    .mnmlwp-gallery::after {
+    .mnmlwp-gallery::after,
+    .mnmlwp-code::after,
+    .mnmlwp-flyouts::after,
+    .mnmlwp-flyout::after {
         display: block;
         content: '';
         clear: both;
