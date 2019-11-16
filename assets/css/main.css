@@ -29,7 +29,7 @@
    18.   Clearfixes
    50.   Template: Hero
    99.   Responsive
-   999.  WordPress 5 (Gutenberg)
+   999.  WordPress Blocks (Gutenberg)
 
 */
 
@@ -304,6 +304,7 @@
       margin: 1em 0 2em;
       border-left: 0;
       z-index: 2;
+      clear: both;
   }
   
   blockquote::before {
@@ -377,14 +378,14 @@
   
   hr {
       display: block;
+      width: 50%;
       background: 0;
-      margin: 0;
       padding: 0;
       border: 0;
       height: 0;
-      border-top: 1px solid #eee;
+      border-top: 2px solid #eee;
       padding-top: 2em;
-      margin-top: 2em;
+      margin: 2em auto 0 auto;
       clear: both;
   }
   
@@ -2345,7 +2346,7 @@
   }
   
   /* -----------------------------------------
-     999. WordPress 5 (Gutenberg)
+     999. WordPress Blocks (Gutenberg)
      ----------------------------------------- */
   
   embed,
@@ -2411,3 +2412,10 @@
       margin-right: -100px;
       max-width: 1024px;
   } */
+
+  .wp-block-code {
+      background: #f7f7f7;
+      border-left: 2px solid #ddd;
+      padding: 1em;
+      clear: both;
+  }
