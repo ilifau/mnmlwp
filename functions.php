@@ -1319,14 +1319,14 @@ function mnmlwp_add_meta_boxes_hero_image_callback( $post )
 
     echo '<br><br><label for="mnmlwp-hero-title"><b>' . esc_html__('Content (HTML allowed)', 'mnmlwp') . '</b></label><br>';
     
-    echo '<textarea class="mnmlwp-input" id="mnmlwp-hero-title" name="mnmlwp-hero-title">' . $hero_title . '</textarea>';
+    echo '<textarea class="mnmlwp-input widefat" id="mnmlwp-hero-title" name="mnmlwp-hero-title" rows="10">' . $hero_title . '</textarea>';
 
     echo '<br><input type="checkbox" id="mnmlwp-hero-has-overlay" name="mnmlwp-hero-has-overlay" value="1" ' . $has_overlay_checked . '>&nbsp;<b>' . esc_html__('Display colored overlay?', 'mnmlwp') . '</b>';
     
-    echo '<br><br><strong>Color 1</strong><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-from" name="mnmlwp-hero-overlay-color-from" value="' . $hero_overlay_color_from . '">';
-    echo '<strong>Color 2</strong><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-to" name="mnmlwp-hero-overlay-color-to" value="' . $hero_overlay_color_to . '">';
+    echo '<br><br><strong>Gradient color 1</strong><br><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-from" name="mnmlwp-hero-overlay-color-from" value="' . $hero_overlay_color_from . '">';
+    echo '<br><br><strong>Gradient color 2</strong><br><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-to" name="mnmlwp-hero-overlay-color-to" value="' . $hero_overlay_color_to . '">';
 
-    echo '<br><label for="mnmlwp-hero-overlay-gradient-degrees"><b>' . esc_html__('Gradient angle (0-360)', 'mnmlwp') . '</b></label>';
+    echo '<br><br><label for="mnmlwp-hero-overlay-gradient-degrees"><b>' . esc_html__('Gradient angle (0-360)', 'mnmlwp') . '</b></label>';
     echo '<br><input type="number" step="1" min="0" max="360" id="mnmlwp-hero-overlay-gradient-degrees" name="mnmlwp-hero-overlay-gradient-degrees" value="' . $hero_overlay_gradient_degrees . '">';
 
     echo '<br><br><input type="checkbox" id="mnmlwp-hero-has-radial-gradient" name="mnmlwp-hero-has-radial-gradient" value="1" ' . $has_radial_gradient_checked . '>&nbsp;<b>' . esc_html__('Radial gradient?', 'mnmlwp') . '</b>';

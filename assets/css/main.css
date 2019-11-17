@@ -605,7 +605,7 @@
   
   nav#main ul li {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: 0;
       position: relative;
       -webkit-transform: translate3d(0,0,0);
   }
@@ -2208,7 +2208,7 @@
   
       nav#main {
           display: none;
-          padding: .75em 0;
+          padding: .75em 0 1em;
       }
   
       nav#main ul {

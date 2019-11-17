@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.4.6 =
+
+Fixed: Admin editor styles
+Fixed: Main navigation list items align
+
 = 0.4.5 =
 
 Added: Dynamic hero background sizes
