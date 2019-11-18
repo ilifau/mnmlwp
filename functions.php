@@ -953,12 +953,13 @@ if( ! function_exists( 'mnmlwp_get_hero_background_style' ) )
     }
 }
 
+add_action('wp_head', 'mnmlwp_get_hero_background_style');
+
 if( ! function_exists( 'mnmlwp_get_hero_row' ) )
 {
     function mnmlwp_get_hero_row()
     {
         $hero_height = absint( get_post_meta( get_the_ID(), '_mnmlwp_hero_height', true ) );
-        $hero_bg_style = mnmlwp_get_hero_background_style();
         $hero_overlay = get_post_meta( get_the_ID(), '_mnmlwp_hero_has_overlay', true );
         $hero_title = get_post_meta( get_the_ID(), '_mnmlwp_hero_title', true );
         $hero_overlay_color_from = get_post_meta( get_the_ID(), '_mnmlwp_hero_overlay_color_from', true );
@@ -974,7 +975,6 @@ if( ! function_exists( 'mnmlwp_get_hero_row' ) )
         $hero_classes .= get_post_meta( get_the_ID(), '_mnmlwp_hero_background_attachment_fixed', true ) == 1 ? ' bg-attachment-fixed' : '';
 
         $html = '<div class="row-hero-wrapper">';
-        $html .= mnmlwp_get_hero_background_style();
         $html .= '<div class="row row--hero ' . $hero_classes . '" style="background-position:' . $hero_bg_position_vertical . ' ' . $hero_bg_position_horizontal . '">';
 
         if( ! empty( $hero_overlay ) ) {
