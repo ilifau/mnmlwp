@@ -136,16 +136,19 @@ $mnmlwp_custom_background_args = array(
 add_theme_support( 'custom-background', $mnmlwp_custom_background_args );
 
 // Add Image Sizes
-function mnmlwp_add_image_sizes()
+if( ! function_exists( 'mnmlwp_add_image_sizes') )
 {
-    add_image_size( 'mnmlwp-1920', 1920, 1080 );
-    add_image_size( 'mnmlwp-1600', 1600, 900 );
-    add_image_size( 'mnmlwp-800', 800, 450 );
-    add_image_size( 'mnmlwp-portrait', 1024, 1024, true );
+    function mnmlwp_add_image_sizes()
+    {
+        add_image_size( 'mnmlwp-1920', 1920, 1280 );
+        add_image_size( 'mnmlwp-1600', 1600, 1024 );
+        add_image_size( 'mnmlwp-800', 800, 600 );
+        add_image_size( 'mnmlwp-portrait', 1024, 1024, true );
 
-    // Set image compression quality
-    add_filter( 'jpeg_quality', function( $arg ) { return 82; });
-    add_filter( 'wp_editor_set_quality', function( $arg ) { return 82; });
+        // Set image compression quality
+        add_filter( 'jpeg_quality', function( $arg ) { return 82; });
+        add_filter( 'wp_editor_set_quality', function( $arg ) { return 82; });
+    }
 }
 
 add_action( 'after_setup_theme', 'mnmlwp_add_image_sizes' );
