@@ -6,7 +6,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 echo mnmlwp_page_content_wrapper( 'footer' ); ?>
 
-</div>
 <div class="row row--footer">
 
     <?php if( is_active_sidebar( 'mnmlwp-footer-left' ) || is_active_sidebar( 'mnmlwp-footer-middle' ) || is_active_sidebar( 'mnmlwp-footer-right' ) || is_active_sidebar( 'mnmlwp-footer-full-width' ) ): ?>
