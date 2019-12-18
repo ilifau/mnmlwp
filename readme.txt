@@ -77,6 +77,12 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.4.9 =
+
+Added: Flex columns shortcode
+Added: Page content wrapper
+Fixed: Minor CSS changes
+
 = 0.4.8 =
 
 Fixed: Hero styles moved to wp_head
