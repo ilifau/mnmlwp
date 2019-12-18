@@ -15,6 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
     </head>
     <body <?php body_class(); ?>>
         <?php mnmlwp_loading_layer(); ?>
+        <?php if( get_theme_mod('mnmlwp_is_boxed') ): ?>
+        <div class="mnmlwp-boxed-wrapper" style="width: <?php echo esc_html( get_theme_mod('mnmlwp_column_width', '1120px') ); ?>">
+        <?php endif; ?>  
         <?php if( get_theme_mod( 'mnmlwp_show_contact_row', false ) && get_theme_mod( 'mnmlwp_contact_row', 'Company Name | Street Address | Postcode City | +49 (0) 1234 56789 | contact@email.xyz' ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_contact_row', true ) ): ?>
                 <div class="row row--contact hide-767">
                     <div class="column column--contact">
@@ -85,4 +88,4 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <?php endif; ?>
             <?php endif;?>
         <?php endif; ?>
-        <div class="row row--main">
+        <?php echo mnmlwp_page_content_wrapper(); ?>

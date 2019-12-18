@@ -15,7 +15,7 @@
 
     $mnmlwp_show_sidebar = get_post_meta( $post->ID, '_mnmlwp_show_sidebar', true );
     $mnmlwp_hide_page_title = filter_var(get_post_meta( $post->ID, '_mnmlwp_hide_page_title', true ), FILTER_VALIDATE_BOOLEAN);
-    
+
     while ( have_posts() ) : the_post(); ?>
 
         <div class="row row--single row--single-hero">

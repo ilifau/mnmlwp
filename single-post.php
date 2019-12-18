@@ -13,79 +13,71 @@
 
     while ( have_posts() ) : the_post(); ?>
 
-        <div class="row row--single">
+        <?php
 
-            <div class="column column--single">
+        if( is_active_sidebar( 'mnmlwp-sidebar' ) && $mnmlwp_show_sidebar == 1 ) {
+            echo '<div class="three-fourth">';
+        }
 
-                <?php
+        ?>
+        
+        <main>
 
-                if( is_active_sidebar( 'mnmlwp-sidebar' ) && $mnmlwp_show_sidebar == 1 ) {
-                    echo '<div class="three-fourth">';
-                }
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                ?>
-                
-                <main>
+                <header class="entry-header">
+                    <!-- Categories and Tags, Author and Date -->
+                    <div class="mnmlwp-meta-wrapper mnmlwp-meta-wrapper--single">
+                        <?php echo mnmlwp_get_post_meta( $post->ID ); ?>
+                    </div>
+                </header>
 
-                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-                        <header class="entry-header">
-                            <!-- Categories and Tags, Author and Date -->
-                            <div class="mnmlwp-meta-wrapper mnmlwp-meta-wrapper--single">
-                                <?php echo mnmlwp_get_post_meta( $post->ID ); ?>
-                            </div>
-                        </header>
-
-                        <!-- Entry Content -->
-                        <div class="entry-content">
-                            <?php
-                            
-                            if( ! $mnmlwp_hide_page_title ) {
-                                echo '<h1 class="mnmlwp-page-title">' . get_the_title() . '</h1>';
-                            }
-                            
-                            if ( has_post_thumbnail() ) {
-                                echo '<img class="mnmlwp-featured-image lazy" data-original="' . get_the_post_thumbnail_url() . '" src="' . mnmlwp_assets_url() . '/img/placeholder.png" title="' . get_the_title() . '">';
-                            }
-                            
-                            the_content();
-                            
-                            wp_link_pages();
-                            
-                            ?>
-                        </div>
-
-                    </article>
+                <!-- Entry Content -->
+                <div class="entry-content">
+                    <?php
                     
-                </main>
+                    if( ! $mnmlwp_hide_page_title ) {
+                        echo '<h1 class="mnmlwp-page-title">' . get_the_title() . '</h1>';
+                    }
+                    
+                    if ( has_post_thumbnail() ) {
+                        echo '<img class="mnmlwp-featured-image lazy" data-original="' . get_the_post_thumbnail_url() . '" src="' . mnmlwp_assets_url() . '/img/placeholder.png" title="' . get_the_title() . '">';
+                    }
+                    
+                    the_content();
+                    
+                    wp_link_pages();
+                    
+                    ?>
+                </div>
 
-                <!-- Shariff -->
-                <?php if ( shortcode_exists( 'shariff' ) ) {
-                        echo do_shortcode('[shariff]');
-                    } ?>
+            </article>
+            
+        </main>
 
-                <!-- Previous/Next Posts -->
-                <?php mnmlwp_adjacent_posts(); ?>
+        <!-- Shariff -->
+        <?php if ( shortcode_exists( 'shariff' ) ) {
+                echo do_shortcode('[shariff]');
+            } ?>
 
-                <?php
+        <!-- Previous/Next Posts -->
+        <?php mnmlwp_adjacent_posts(); ?>
 
-                if( is_active_sidebar( 'mnmlwp-sidebar' )  && $mnmlwp_show_sidebar == 1 ) {
+        <?php
 
-                    echo '</div>';
+        if( is_active_sidebar( 'mnmlwp-sidebar' )  && $mnmlwp_show_sidebar == 1 ) {
 
-                    echo '<div class="one-fourth last-column">';
+            echo '</div>';
 
-                        echo get_sidebar();
+            echo '<div class="one-fourth last-column">';
 
-                    echo '</div>';
+                echo get_sidebar();
 
-                }
+            echo '</div>';
 
-                ?>
+        }
 
-            </div>
-
-        </div>
+        ?>
         
         <?php if ( comments_open() || get_comments_number() ) : ?>
             

@@ -11,12 +11,10 @@
 
     get_header();
 
-    echo mnmlwp_get_hero_row();
-
     $mnmlwp_show_sidebar = get_post_meta( $post->ID, '_mnmlwp_show_sidebar', true );
     $mnmlwp_hide_page_title = filter_var(get_post_meta( $post->ID, '_mnmlwp_hide_page_title', true ), FILTER_VALIDATE_BOOLEAN);
-    
-    ?>
+
+    echo mnmlwp_get_hero_row(); ?>
 
     <div class="row row--single row--single-hero">
 

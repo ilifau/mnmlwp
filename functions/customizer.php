@@ -334,6 +334,18 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'sanitize_text_field',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_columns_spacing_horizontal' , array(
+        'default'   => 0,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_columns_spacing_vertical' , array(
+        'default'   => 0,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint',
+    ) );
+
     function mnmlwp_sanitize_checkbox( $checked ) {
         return ( ( isset( $checked ) && true == $checked ) ? true : false );
     }
@@ -671,6 +683,32 @@ function mnmlwp_customize_register( $wp_customize )
             '3dx' => '3Dx',
         ),
     ) );
+
+    $wp_customize->add_control( 'mnmlwp_columns_spacing_horizontal', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Columns Spacing (horizontal)', 'mnmlwp' ),
+        'section'    => 'mnmlwp_layout_section',
+        'settings'   => 'mnmlwp_columns_spacing_horizontal',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 64,
+            'step' => 2,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_columns_spacing_vertical', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Columns Spacing (vertical)', 'mnmlwp' ),
+        'section'    => 'mnmlwp_layout_section',
+        'settings'   => 'mnmlwp_columns_spacing_vertical',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 64,
+            'step' => 2,
+            'style' => 'width:98%;'
+        ),
+    ) );
 }
 
 add_action( 'customize_register', 'mnmlwp_customize_register' );
@@ -715,6 +753,64 @@ function mnmlwp_customizer_css()
              .column.column--contact a:hover {
                  color: ' . esc_html( get_theme_mod('mnmlwp_contact_row_text_color', '#fff') ) . ';
              }';
+
+             // Flex columns spacing
+             $mnmlwp_columns_spacing_horizontal = esc_html( get_theme_mod('mnmlwp_columns_spacing_horizontal', 0) );
+             $mnmlwp_columns_spacing_vertical = esc_html( get_theme_mod('mnmlwp_columns_spacing_vertical', 0) );
+             
+             if( $mnmlwp_columns_spacing_horizontal > 0 || $mnmlwp_columns_spacing_vertical > 0 )
+             {
+                echo '.mnmlwp-flex-column {
+                        margin-bottom: calc((1em + ' .  $mnmlwp_columns_spacing_vertical . 'px));
+                    }
+                        
+                    .mnmlwp-flex-column--half {
+                        width: calc(1/2 * 100% - (1 - 1/2) * (1.5em + ' . $mnmlwp_columns_spacing_horizontal . 'px));
+                        
+                    }
+                    
+                    .mnmlwp-flex-column--third {
+                        width: calc(1/3 * 100% - (1 - 1/3) * (1.5em + ' . $mnmlwp_columns_spacing_horizontal . 'px));
+                    }
+
+                    .mnmlwp-flex-column--two-third {
+                        width: calc(2/3 * 100% - (1 - 2/3) * (1.5em + ' . $mnmlwp_columns_spacing_horizontal . 'px));
+                    }
+
+                    .mnmlwp-flex-column--fourth {
+                        width: calc(1/4 * 100% - (1 - 1/4) * (1.5em + ' . $mnmlwp_columns_spacing_horizontal . 'px));
+                    }
+
+                    .mnmlwp-flex-column--three-fourth {
+                        width: calc(3/4 * 100% - (1 - 3/4) * (1.5em + ' . $mnmlwp_columns_spacing_horizontal . 'px));
+                    }
+
+                    .mnmlwp-flex-column--fifth {
+                        width: calc(1/5 * 100% - (1 - 1/5) * (1.5em + ' . $mnmlwp_columns_spacing_horizontal . 'px));
+                    }
+
+                    .mnmlwp-flex-column--two-fifth {
+                        width: calc(2/5 * 100% - (1 - 2/5) * (1.5em + ' . $mnmlwp_columns_spacing_horizontal . 'px));
+                    }
+
+                    .mnmlwp-flex-column--three-fifth {
+                        width: calc(3/5 * 100% - (1 - 3/5) * (1.5em + ' . $mnmlwp_columns_spacing_horizontal . 'px));
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        .mnmlwp-flex-column--half:not(.dont-break),
+                        .mnmlwp-flex-column--third:not(.dont-break),
+                        .mnmlwp-flex-column--two-third:not(.dont-break),
+                        .mnmlwp-flex-column--fourth:not(.dont-break),
+                        .mnmlwp-flex-column--three-fourth:not(.dont-break),
+                        .mnmlwp-flex-column--fifth:not(.dont-break),
+                        .mnmlwp-flex-column--two-fifth:not(.dont-break),
+                        .mnmlwp-flex-column--three-fifth:not(.dont-break) {
+                            width: 100%;
+                            margin-right: 0;
+                        }
+                }';
+             }
              
              // Breadcrumb navigation
              

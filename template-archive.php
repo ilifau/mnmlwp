@@ -12,44 +12,36 @@
 
     $mnmlwp_show_sidebar = get_post_meta( $post->ID, '_mnmlwp_show_sidebar', true );
 
-    echo '<div class="row">';
+    if( is_active_sidebar( 'mnmlwp-sidebar' ) && $mnmlwp_show_sidebar == 1 ) {
+        echo '<div class="three-fourth">';
+    }
+    
+    echo '<main>';
 
-        echo '<div class="column">';
+        if (have_posts()) :
 
-            if( is_active_sidebar( 'mnmlwp-sidebar' ) && $mnmlwp_show_sidebar == 1 ) {
-                echo '<div class="three-fourth">';
-            }
-            
-            echo '<main>';
+            while (have_posts()) : the_post();
 
-                if (have_posts()) :
+                the_content();
 
-                    while (have_posts()) : the_post();
+            endwhile;
 
-                        the_content();
+        endif;
+        
+    echo '</main>';
 
-                    endwhile;
+    echo mnmlwp_get_posts();
 
-                endif;
-                
-            echo '</main>';
-
-            echo mnmlwp_get_posts();
-
-            if( is_active_sidebar( 'mnmlwp-sidebar' ) && $mnmlwp_show_sidebar == 1 ) {
-
-                echo '</div>';
-
-                echo '<div class="one-fourth last-column">';
-
-                    echo get_sidebar();
-
-                echo '</div>';
-
-            }
+    if( is_active_sidebar( 'mnmlwp-sidebar' ) && $mnmlwp_show_sidebar == 1 ) {
 
         echo '</div>';
 
-    echo '</div>';
+        echo '<div class="one-fourth last-column">';
+
+            echo get_sidebar();
+
+        echo '</div>';
+
+    }
 
     get_footer();
