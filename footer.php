@@ -38,13 +38,13 @@ echo mnmlwp_page_content_wrapper( 'footer' ); ?>
                         ?>
                     </div>
                     <div class="clear-columns"></div>
-                    <div class="full-width">
-                        <?php
-                            if ( is_active_sidebar( 'mnmlwp-footer-full-width' ) ) :
-                                dynamic_sidebar( 'mnmlwp-footer-full-width' );
-                            endif;
-                        ?>
-                    </div>
+                    <?php
+                        if ( is_active_sidebar( 'mnmlwp-footer-full-width' ) ) {
+                            echo '<div class="full-width">';
+                              dynamic_sidebar( 'mnmlwp-footer-full-width' );
+                            echo '</div>';
+                        }
+                      ?>
                 </div>
 
             </footer>

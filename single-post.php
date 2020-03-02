@@ -41,7 +41,7 @@
                     }
                     
                     if ( has_post_thumbnail() ) {
-                        echo '<img class="mnmlwp-featured-image lazy" data-original="' . get_the_post_thumbnail_url() . '" src="' . mnmlwp_assets_url() . '/img/placeholder.png" title="' . get_the_title() . '">';
+                        echo '<img class="mnmlwp-featured-image lazy" data-original="' . get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-1600' ) . '" src="' . mnmlwp_assets_url() . '/img/placeholder.png" title="' . get_the_title() . '">';
                     }
                     
                     the_content();

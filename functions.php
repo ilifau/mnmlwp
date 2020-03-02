@@ -388,25 +388,29 @@ include 'functions/breadcrumbs.php';
 include 'demo/functions.php';
 
 // Main Content Wrapper
-function mnmlwp_page_content_wrapper( $context = 'header' ) {
-  global $post;
+if( ! function_exists( 'mnmlwp_page_content_wrapper' ) )
+{ 
+    function mnmlwp_page_content_wrapper( $context = 'header' )
+    {
+        global $post;
 
-  $templates = array(
-    'template-blank-page.php',
-    'template-blank-page-hero.php',
-    'template-page-hero.php',
-    'template-post-hero.php',
-  );
+        $templates = array(
+            'template-blank-page.php',
+            'template-blank-page-hero.php',
+            'template-page-hero.php',
+            'template-post-hero.php',
+        );
 
-  if( in_array( get_page_template_slug( get_the_ID() ), $templates ) ) {
-      return;
-  } else {
-    if( $context === 'header' ) {
-      return '<div class="row row--main"><div class="row"><div class="column">';
-    } else {
-      return '</div></div></div>';
+        if( in_array( get_page_template_slug( get_the_ID() ), $templates ) ) {
+            return;
+        } else {
+            if( $context === 'header' ) {
+            return '<div class="row row--main"><div class="row"><div class="column">';
+            } else {
+            return '</div></div></div>';
+            }
+        }
     }
-  }
 }
 
 // Main Navigation
@@ -734,7 +738,7 @@ if( ! function_exists( 'mnmlwp_get_posts') )
 
                         if ( has_post_thumbnail() && $format !== 'no-images' )
                         {
-                            $feat_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+                            $feat_image_url = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-800' );
 
                             $html .= '<div class="mnmlwp-post-list-thumbnail-wrapper">';
                             $html .= '<a href="' . esc_url( get_permalink( get_the_ID() ) ) . '"><img class="mnmlwp-post-list-thumbnail lazy" data-original="' . $feat_image_url . '" src="' . mnmlwp_assets_url() . '/img/placeholder.png" alt="" /></a>';
@@ -1410,7 +1414,7 @@ function mnmlwp_add_meta_boxes_save( $post_id )
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
         return;
 
-    if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
+    if ( isset( $_POST['post_type'] ) && 'page' === $_POST['post_type'] ) {
         if ( ! current_user_can( 'edit_page', $post_id ) ) {
             return;
         }

@@ -925,13 +925,17 @@ function mnmlwp_customizer_css()
                  color: ' . esc_html( get_theme_mod('mnmlwp_tagline_color', '#91a4ba') ) . '!important;
              }
 
+             nav#main ul li.current-menu-item > a,
              nav#main ul li.current_page_item > a,
              nav#main ul li.current-page-parent > a,
              nav#main ul li.current-menu-parent > a,
+             nav#main ul li.current-menu-item > a:hover,
              nav#main ul li.current_page_item > a:hover,
              nav#main ul li.current-page-parent > a:hover,
+             nav#main ul li.current-menu-item > a:focus,
              nav#main ul li.current_page_item > a:focus,
              nav#main ul li.current-page-parent > a:focus,
+             nav#main ul li.current-menu-item > a:active,
              nav#main ul li.current_page_item > a:active,
              nav#main ul li.current-page-parent > a:active {
                 opacity: 1;
@@ -949,14 +953,18 @@ function mnmlwp_customizer_css()
             }
 
             nav#main ul.sub-menu li.current_page_item > a,
+            nav#main ul.sub-menu li.current-menu-item > a,
             nav#main ul.sub-menu li.current-page-parent > a,
             nav#main ul.sub-menu li.current-menu-parent > a,
             nav#main ul.sub-menu li.current_page_item > a:hover,
             nav#main ul.sub-menu li.current-page-parent > a:hover,
+            nav#main ul.sub-menu li.current-menu-item > a:hover,
             nav#main ul.sub-menu li.current_page_item > a:focus,
             nav#main ul.sub-menu li.current-page-parent > a:focus,
+            nav#main ul.sub-menu li.current-menu-item > a:focus,
             nav#main ul.sub-menu li.current_page_item > a:active,
-            nav#main ul.sub-menu li.current-page-parent > a:active {
+            nav#main ul.sub-menu li.current-page-parent > a:active,
+            nav#main ul.sub-menu li.current-menu-item > a:active {
                opacity: 1;
                color: ' . esc_html( get_theme_mod('mnmlwp_nav_sub_menu_link_color_active', '#e74c3c') ) . ';
            }

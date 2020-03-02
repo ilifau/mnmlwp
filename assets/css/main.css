@@ -448,40 +448,40 @@
      2.1 Lists
      ----------------------------------------- */
   
-  main ol,
-  main ul {
+  ol,
+  ul {
       list-style-type: none;
       list-style-position: outside;
       padding: 0;
       margin: 0 0 1em;
   }
   
-  main ul {
+  ul {
       list-style-type: disc;
       margin-left: 2em;
   }
   
-  main ul li ul {
+  ul li ul {
       list-style-type: circle;
       margin-bottom: 0;
   }
   
-  main ul li ul li ul {
+  ul li ul li ul {
       list-style-type: square;
       margin-bottom: 0;
   }
   
-  main ol {
+  ol {
       list-style-type: decimal;
       margin-left: 2em;
   }
   
-  main ol li ol {
+  ol li ol {
       list-style-type: lower-roman;
       margin-bottom: 0;
   }
   
-  main ol li ol li ol {
+  ol li ol li ol {
       list-style-type: lower-alpha;
       margin-bottom: 0;
   }
@@ -595,12 +595,14 @@
       display: block;
       line-height: 1;
       position: relative;
-      margin: 0;
       padding-left: 0;
+      list-style-type: none;
   }
 
   nav#main ul {
     line-height: 1;
+    list-style-type: none;
+    margin: 0 0;
   }
   
   nav#main ul li {
@@ -624,13 +626,17 @@
       margin-right: 0;
   }
   
+  nav#main ul li.current-menu-item > a,
   nav#main ul li.current_page_item > a,
   nav#main ul li.current-page-parent > a,
-  nav#main ul li.current_page_parent > a,
+  nav#main ul li.current-menu-parent > a,
+  nav#main ul li.current-menu-item > a:hover,
   nav#main ul li.current_page_item > a:hover,
   nav#main ul li.current-page-parent > a:hover,
+  nav#main ul li.current-menu-item > a:focus,
   nav#main ul li.current_page_item > a:focus,
   nav#main ul li.current-page-parent > a:focus,
+  nav#main ul li.current-menu-item > a:active,
   nav#main ul li.current_page_item > a:active,
   nav#main ul li.current-page-parent > a:active {
       font-weight: 600;
@@ -641,8 +647,6 @@
       font-family: 'FontAwesome';
       content: '\f107';
       margin-left: .25em;
-      position: relative;
-      top: 1px;
       display: inline-block;
       font-weight: 400;
       text-decoration: none;
@@ -729,6 +733,16 @@
           position: -moz-sticky;
           position: -ms-sticky;
           position: -o-sticky;
+      }
+
+      ul#menu-primary-menu,
+      nav#main ul li a {
+        display: flex;
+      }
+
+      nav#main ul li a {
+        justify-content: center;
+        align-items: center;
       }
   
       nav#main li.mnmlwp-main-nav-searchform {
