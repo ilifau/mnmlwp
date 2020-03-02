@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-echo mnmlwp_page_content_wrapper( 'footer' ); ?>
+echo mnmlwp_page_content_wrapper( get_the_ID(), 'footer' ); ?>
 
 <div class="row row--footer">
 

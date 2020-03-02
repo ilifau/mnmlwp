@@ -390,10 +390,8 @@ include 'demo/functions.php';
 // Main Content Wrapper
 if( ! function_exists( 'mnmlwp_page_content_wrapper' ) )
 { 
-    function mnmlwp_page_content_wrapper( $context = 'header' )
+    function mnmlwp_page_content_wrapper( $post_id, $context = 'header' )
     {
-        global $post;
-
         $templates = array(
             'template-blank-page.php',
             'template-blank-page-hero.php',
@@ -401,7 +399,7 @@ if( ! function_exists( 'mnmlwp_page_content_wrapper' ) )
             'template-post-hero.php',
         );
 
-        if( in_array( get_page_template_slug( get_the_ID() ), $templates ) ) {
+        if( is_singular() && in_array( get_page_template_slug( $post_id ), $templates ) ) {
             return;
         } else {
             if( $context === 'header' ) {

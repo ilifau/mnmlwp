@@ -88,4 +88,4 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <?php endif; ?>
             <?php endif;?>
         <?php endif; ?>
-        <?php echo mnmlwp_page_content_wrapper(); ?>
+        <?php echo mnmlwp_page_content_wrapper( get_the_ID() ); ?>
