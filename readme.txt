@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.5.0 =
+
+Fixed: Full width layouts
+
 = 0.4.9 =
 
 Added: Flex columns shortcode
