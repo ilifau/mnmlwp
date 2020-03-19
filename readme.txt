@@ -77,6 +77,20 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+
+
+= 0.5.1 =
+
+Please note: this update might include some breaking changes. Backup your website before updating!
+
+Fixed: Better navigation HTML structure
+Fixed: Flex colum layout in templates
+Added: Navigation sub-menu timeout
+Added: Main menu item background color (Customizer)
+Added: Main menu item background color (Customizer)
+Changed: Main menu color scheme
+Removed: Menu position "before header"
+
 = 0.5.0 =
 
 Fixed: Full width layouts
@@ -159,11 +173,11 @@ Fixed: Adjusted maximum width of rows in boxed layout
 
 Added: Activate post/page sidebar by default (Customizer)
 Added: Hide page title by default (Customizer)
-Fixes: CSS, improved readability
+Fixed: CSS, improved readability
 
 = 0.2.15 =
 
-Fixes: Updated to latest version of TGM Plugin Activation
+Fixed: Updated to latest version of TGM Plugin Activation
 
 = 0.2.12 =
 

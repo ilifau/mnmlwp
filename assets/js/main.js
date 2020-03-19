@@ -2,6 +2,13 @@
 
 jQuery(document).ready(function($) {
 
+    // Animation speed
+    let animSpeed = 180;
+
+    // Navigation timeout
+    var navTimer = 180;
+    var navTimeout;
+
     // Get Viewport Width
     function isMobile() {
         return $(window).width() <= 767;
@@ -16,32 +23,41 @@ jQuery(document).ready(function($) {
         if( window_width > 1023 ) return 'desktop';
     }
 
-    // Main Navigation Hover Delay
-    var navTimeout;
-
     // Main Navigation Desktop
     function initiateNav() {
-        $('nav#main ul li.menu-item-has-children').unbind('mouseenter').unbind('mouseleave').unbind('touchend');
+        $('nav#main ul li.menu-item-has-children').off('mouseenter').off('mouseleave').off('touchend');
 
         if( ! isMobile() && ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            $('nav#main ul li.menu-item-has-children').on('mouseenter mouseleave', function() {
-                toggleSubMenu( $(this).find('ul.sub-menu').eq(0) );
+            $('nav#main ul li.menu-item-has-children').on('mouseenter mouseleave', function(e) {
+                var submenu = $(this).find('ul.sub-menu').eq(0);
+
+                if (e.type === 'mouseleave') {
+                    toggleSubMenu(submenu, e.type);
+                } else {
+                    navTimeout = setTimeout(function () {
+                        toggleSubMenu(submenu);
+                    }, navTimer);
+                }
             });
         }
 
         // Main Navigation Mobile > 767
         else if( ! isMobile() && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            $('nav#main ul li.menu-item-has-children').unbind('mouseenter').unbind('mouseleave');
+            $('nav#main ul li.menu-item-has-children').off('mouseenter').off('mouseleave').off('touchend');
 
             $('nav#main ul li.menu-item-has-children').on({
                  touchend: function(e) {
+                    var submenu = $(this).find('ul.sub-menu').eq(0);
+
                     if( ! $(this).hasClass('mnmlwp-mobile-active') ) {
-                        closeActiveNavItems();
+                        e.preventDefault();
+
+                        if ( ! $(this).parents('ul').parents('ul').length ) {
+                            closeActiveNavItems();
+                        }
 
                         $(this).addClass('mnmlwp-mobile-active');
-                        toggleSubMenu( $(this).find('ul.sub-menu').eq(0) );
-
-                        e.preventDefault();
+                        toggleSubMenu(submenu);
                         return false;
                     }
                 }
@@ -52,13 +68,22 @@ jQuery(document).ready(function($) {
     initiateNav();
 
     // Toggle sub menu
-    function toggleSubMenu( item ) {
+    function toggleSubMenu( item, event = null ) {
+        clearTimeout(navTimeout);
         switch(mnmlwp_globals.nav_animation) {
             case 'fade':
-                item.stop().fadeToggle(200);
+                if (event === 'mouseleave') {
+                    item.stop(true, true).fadeOut(animSpeed);
+                } else {
+                    item.stop(true, true).fadeToggle(animSpeed);
+                }
                 break;
             default:
-                item.stop().slideToggle(200);
+                if (event === 'mouseleave') {
+                    item.stop(true, true).slideUp(animSpeed);
+                } else {
+                    item.stop(true, true).slideToggle(animSpeed);
+                }
                 break;
         }
     }
@@ -104,10 +129,10 @@ jQuery(document).ready(function($) {
         $hamburger.toggleClass('is-active');
         switch(mnmlwp_globals.nav_animation) {
             case 'fade':
-                $('nav#main').stop().fadeToggle(200);
+                $('nav#main').stop().fadeToggle(animSpeed);
                 break;
             default:
-                $('nav#main').stop().slideToggle(200);
+                $('nav#main').stop().slideToggle(animSpeed);
                 break;
         }
     });

@@ -25,7 +25,8 @@
                 <?php
 
                 if( is_active_sidebar( 'mnmlwp-sidebar' ) && $mnmlwp_show_sidebar == 1 ) {
-                    echo '<div class="three-fourth">';
+                    echo '<div class="mnmlwp-flex-columns">';
+                    echo '<div class="mnmlwp-flex-column mnmlwp-flex-column--two-third">';
                 }
 
                 ?>
@@ -73,10 +74,11 @@
 
                     echo '</div>';
 
-                    echo '<div class="one-fourth last-column">';
+                    echo '<div class="mnmlwp-flex-column mnmlwp-flex-column--third">';
 
                         echo get_sidebar();
 
+                    echo '</div>';
                     echo '</div>';
 
                 }

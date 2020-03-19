@@ -103,6 +103,10 @@
   .row.row--footer {
       padding: 1em 0;
   }
+
+  .mnmlwp-boxed-wrapper {
+      margin: 0 auto;
+  }
   
   .overflow-visible {
       overflow: visible!important;
@@ -313,7 +317,7 @@
       height: 100%;
       float: left;
       font-size: 3em;
-      margin-right: .25em;
+      margin-right: .5em;
       font-style: normal;
       color: #ddd;
   }
@@ -451,14 +455,14 @@
   ol,
   ul {
       list-style-type: none;
-      list-style-position: outside;
+      list-style-position: inside;
       padding: 0;
       margin: 0 0 1em;
   }
   
   ul {
       list-style-type: disc;
-      margin-left: 2em;
+      margin-left: 1em;
   }
   
   ul li ul {
@@ -473,7 +477,7 @@
   
   ol {
       list-style-type: decimal;
-      margin-left: 2em;
+      margin-left: 1em;
   }
   
   ol li ol {
@@ -589,41 +593,33 @@
   nav#main {
       position: relative;
       z-index: 99;
-  }
-  
-  nav#main > ul {
-      display: block;
-      line-height: 1;
-      position: relative;
-      padding-left: 0;
-      list-style-type: none;
+      font-size: .875em;
   }
 
   nav#main ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     line-height: 1;
     list-style-type: none;
     margin: 0 0;
   }
   
   nav#main ul li {
-      display: inline-block;
       vertical-align: 0;
       position: relative;
       -webkit-transform: translate3d(0,0,0);
+      margin: 0;
+      padding: 0;
   }
   
   nav#main ul li a {
-      font-size: .875em;
       font-weight: 400;
       letter-spacing: 1px;
-      display: inline-block;
-      padding: .8em 0;
-      margin: 0 1em 0 0;
+      padding: 15px;
+      margin: 0;
       line-height: 1;
-  }
-  
-  nav#main ul li:last-child a {
-      margin-right: 0;
   }
   
   nav#main ul li.current-menu-item > a,
@@ -639,35 +635,29 @@
   nav#main ul li.current-menu-item > a:active,
   nav#main ul li.current_page_item > a:active,
   nav#main ul li.current-page-parent > a:active {
-      font-weight: 600;
       opacity: 1;
   }
   
   nav#main ul li.menu-item-has-children > a::after {
       font-family: 'FontAwesome';
       content: '\f107';
-      margin-left: .25em;
-      display: inline-block;
+      margin-left: .5em;
       font-weight: 400;
       text-decoration: none;
+      display: inline-block;
+      vertical-align: 0;
+      line-height: 1;
   }
-  
+
+  nav#main ul li ul li.menu-item-has-children > a::after {
+    content: '\f105';
+    margin-left: .875em;
+  }
+
   /* Navigation Second Level */
   nav#main ul li ul {
       display: none;
-      clear: left;
-      position: fixed;
-      top: -4px;
-  }
-  
-  nav#main ul li ul li a {
-      margin-left: 1em;
-      font-size: .75em;
-      padding: .375em;
-  }
-  
-  nav#main ul li ul li:hover > ul {
-      /* display: block; */
+      font-size: .875em;
   }
   
   /* Navigation Third Level */
@@ -675,7 +665,8 @@
       display: none;
       position: absolute;
       top: 0;
-      left: 95%;
+      left: 100%;
+      font-size: 1em;
   }
   
   /* Navigation search form */
@@ -683,9 +674,15 @@
   nav#main li.mnmlwp-main-nav-searchform {
       position: relative;
       z-index: 4;
-      font-size: .75em;
+      font-size: .875em;
       display: inline-block;
       vertical-align: middle;
+  }
+
+  nav#main li.mnmlwp-main-nav-searchform #searchform,
+  nav#main li.mnmlwp-main-nav-searchform #searchform #s {
+      position: relative;
+      height: 100%;
   }
   
   nav#main li.mnmlwp-main-nav-searchform input#s {
@@ -697,6 +694,7 @@
       display: block;
       position: relative;
       margin: 0;
+      padding: .75em;
   }
   
   nav#main li.mnmlwp-main-nav-searchform button.submit {
@@ -743,12 +741,14 @@
       nav#main ul li a {
         justify-content: center;
         align-items: center;
+        height: 100%;
       }
   
       nav#main li.mnmlwp-main-nav-searchform {
           position: absolute;
           right: 0;
           top: .2875em;
+          padding-left: 1em;
       }
   
       nav#main ul li ul {
@@ -762,7 +762,6 @@
           height: auto;
           clear: left;
           box-shadow: 1px 1px 3px rgba(0,0,0,.33);
-          background: #fff;
       }
   
       nav#main ul li:hover ul li {
@@ -783,28 +782,14 @@
       }
   
       nav#main ul li ul li a {
-          padding: .5em .75em;
           display: block;
-          margin: 0 0 0 0;
+          margin: 0;
           line-height: 1.375;
-          text-transform: none;
           clear: left;
           width: 100%;
       }
   
-      nav#main ul li ul li a:hover {
-          opacity: .9;
-      }
-  
       /* Third Level */
-      nav#main ul li ul li ul {
-          top: .25em;
-      }
-  
-      nav#main ul li ul li ul li a {
-          font-size: .75em;
-      }
-  
       nav#main ul li:last-child ul li ul {
           position: absolute;
           right: 100%;
@@ -820,9 +805,6 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-  }
-
-  .mnmlwp-flex-column {
       margin-bottom: 1em;
   }
 
@@ -1164,6 +1146,11 @@
   /* -----------------------------------------
      5.2 Comments
      ----------------------------------------- */
+
+  #comments,
+  #respond {
+    margin-top: 2em;
+  }
   
   a.num-comments {
       display: inline-block;
@@ -1930,6 +1917,7 @@
     width: 40px;
     height: 40px;
     position: relative;
+    opacity: .3;
   }
   
   .sk-fading-circle .sk-circle {
@@ -2188,10 +2176,6 @@
           font-size: .65em
       }
   
-      nav#main ul li a {
-          font-size: .75em;
-      }
-  
       .full-width,
       .one-half:not(.dont-break),
       .one-third:not(.dont-break),
@@ -2232,7 +2216,7 @@
   
   @media screen and (min-width: 768px) {
       nav#main li.mnmlwp-main-nav-searchform {
-          top: -3.75em;
+          top: -4.5em;
       }
   
       nav#main li.mnmlwp-main-nav-searchform input#s {
@@ -2259,8 +2243,7 @@
       }
   
       .column.column--nav {
-          padding-top: 0;
-          padding-bottom: 0;
+          padding: 0;
       }
 
       .mnmlwp-flex-column--half:not(.dont-break),
@@ -2273,6 +2256,7 @@
       .mnmlwp-flex-column--three-fifth:not(.dont-break) {
           width: 100%;
           margin-right: 0;
+          margin-bottom: 1em;
       }
   
       .mnmlwp-logo {
@@ -2285,66 +2269,47 @@
   
       nav#main {
           display: none;
-          padding: .75em 0 1em;
+          padding: 0;
+          font-size: 1em;
       }
   
       nav#main ul {
-          top: 0;
-          padding: 0;
+          display: block;
+          flex-direction: column;
+          justify-content: center;
       }
   
       nav#main ul li ul,
       nav#main ul li ul li ul {
           position: relative;
           display: block;
-          padding: .25em 0;
           left: 0;
+          margin: 0 0;
       }
-  
-      nav#main ul li ul li ul {
-          padding-top: 0;
+
+      nav#main ul li a {
+          display: block;
+          clear: both;
+          margin: 0 0;
+          line-height: 1.33;
+          padding: 10px;
           padding-left: 1em;
       }
-  
-      nav#main ul li {
-          display: block;
+
+      nav#main ul li ul li a {
+          padding-left: 2em;
       }
-  
-      nav#main ul li a {
-          font-size: 1em;
-          margin: 0 0;
-          padding: .375em 0;
-      }
-  
-      nav#main ul.sub-menu li a {
-          text-transform: none;
-          padding: .25em 0;
-          font-size: .875em;
-          line-height: 1.5;
-      }
-  
-      nav#main ul.sub-menu li:first-child a {
-          padding-top: .5em;
-      }
-  
-      nav#main ul li:last-child a {
-          margin-right: 0;
+
+      nav#main ul li ul li ul li a {
+        padding-left: 3em;
       }
   
       nav#main ul li.current_page_item > a {
           font-weight: 600;
       }
   
-      nav#main ul li ul li:last-child a {
-          padding-bottom: .6125em;
-      }
-  
-      nav#main ul li ul li:last-child a {
-          padding-bottom: 0;
-      }
-  
       nav#main li.mnmlwp-main-nav-searchform {
-          margin: 1em 0 0;
+          margin: 1em 0 1.125em 1em;
           display: inline-block;
       }
   

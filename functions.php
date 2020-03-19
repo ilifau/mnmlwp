@@ -128,8 +128,8 @@ add_theme_support('responsive-embeds');
 
 // Custom Background
 $mnmlwp_custom_background_args = array(
-	'default-color'          => '#ffffff',
-	'default-image'          => '',
+	'default-color' => '#ffffff',
+	'default-image' => '',
 );
 
 add_theme_support( 'custom-background', $mnmlwp_custom_background_args );
@@ -390,7 +390,7 @@ include 'demo/functions.php';
 // Main Content Wrapper
 if( ! function_exists( 'mnmlwp_page_content_wrapper' ) )
 { 
-    function mnmlwp_page_content_wrapper( $post_id, $context = 'header' )
+    function mnmlwp_page_content_wrapper( $post_id = 0, $context = 'header' )
     {
         $templates = array(
             'template-blank-page.php',
@@ -436,7 +436,7 @@ if( ! function_exists ( 'mnmlwp_nav' ) )
 
                 echo '</nav>';
 
-                echo '<div class="hamburger hamburger--' . esc_attr( get_theme_mod('mnmlwp_hamburger_class', 'boring') ) . '">
+                echo '<div class="hamburger hamburger--' . esc_attr( get_theme_mod('mnmlwp_hamburger_class', 'elastic') ) . '">
                     <div class="hamburger-box">
                         <div class="hamburger-inner"></div>
                     </div>
@@ -452,7 +452,7 @@ function mnmlwp_add_search_nav_item( $items, $args )
     if( $args->theme_location !== 'main-nav' )
         return $items;
 
-    if( ! get_theme_mod(  'mnmlwp_has_nav_search', true) )
+    if( ! get_theme_mod(  'mnmlwp_has_nav_search', true ) )
         return $items;
 
     // $searchform = get_search_form( false );

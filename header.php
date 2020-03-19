@@ -25,13 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
                 </div>
         <?php endif; ?>
-        <?php if ( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'before_header' ): ?>
-            <div class="row row--nav overflow-visible <?php echo get_theme_mod('mnmlwp_nav_is_sticky', true ) ? 'sticky' : ''; ?>">
-                <div class="column column--nav overflow-visible">
-                    <?php mnmlwp_nav(); ?>
-                </div>
-            </div>
-        <?php endif; ?>
         <div class="row row--header">
             <div class="column column--header">
                 <div class="mnmlwp-logo">
@@ -43,8 +36,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                             if ( has_custom_logo() ) {
                                 echo '<img class="mnmlwp-logo-image" src="'. esc_url( $mnmlwp_logo[0] ) .'" alt="">';
                             } else {
-                                if( get_theme_mod( 'mnmlwp_logo_icon' ) ) {
-                                    echo '<div class="mnmlwp-logo-icon fa fa-' . esc_attr( get_theme_mod( 'mnmlwp_logo_icon' ) ) . ' mnmlwp-text-shadow"></div>';
+                                if( get_theme_mod( 'mnmlwp_logo_icon', 'diamond' ) ) {
+                                    echo '<div class="mnmlwp-logo-icon fa fa-' . esc_attr( get_theme_mod( 'mnmlwp_logo_icon', 'diamond' ) ) . ' mnmlwp-text-shadow"></div>';
                                 }
 
                                 echo '<span class="mnmlwp-logo-text mnmlwp-text-shadow">' . get_bloginfo( 'name' ) . '</span>';

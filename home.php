@@ -10,7 +10,8 @@
     $mnmlwp_hide_page_title = filter_var(get_post_meta( $post->ID, '_mnmlwp_hide_page_title', true ), FILTER_VALIDATE_BOOLEAN);
 
     if( is_active_sidebar( 'mnmlwp-sidebar' ) && $mnmlwp_show_sidebar == 1 ) {
-        echo '<div class="three-fourth">';
+        echo '<div class="mnmlwp-flex-columns">';
+        echo '<div class="mnmlwp-flex-column mnmlwp-flex-column--two-third">';
     }
 
     echo '<h1>' . esc_html__('Latest Posts', 'mnmlwp') . '</h1>';
@@ -21,10 +22,11 @@
 
         echo '</div>';
 
-        echo '<div class="one-fourth last-column">';
+        echo '<div class="mnmlwp-flex-column mnmlwp-flex-column--third">';
 
             echo get_sidebar();
 
+        echo '</div>';
         echo '</div>';
 
     }
