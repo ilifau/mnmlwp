@@ -77,7 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.5.2 =
 
+Updated: Demo content
+Fixed: Navigation z-index, footer HTML
 
 = 0.5.1 =
 
