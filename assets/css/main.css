@@ -733,6 +733,10 @@
           position: -o-sticky;
       }
 
+      nav#main ul li:hover {
+        z-index: 1;
+      }
+
       ul#menu-primary-menu,
       nav#main ul li a {
         display: flex;

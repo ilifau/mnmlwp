@@ -27,7 +27,6 @@ echo mnmlwp_page_content_wrapper( get_the_ID(), 'footer' ); ?>
                             <?php
                                 if ( is_active_sidebar( 'mnmlwp-footer-middle' ) ) :
                                     dynamic_sidebar( 'mnmlwp-footer-middle' );
-                                    echo '&nbsp;';
                                 endif;
                             ?>
                         </div>
