@@ -205,6 +205,7 @@ jQuery(document).ready(function($) {
             return false;
         }
     });
+    
 });
 
 jQuery(window).load(function() {

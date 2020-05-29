@@ -30,8 +30,8 @@ The mnmlWP theme is ready for internationalization and includes English and Germ
 2. Search for "mnmlWP"
 3. Install and activate
 4. Install recommended Plugins
-5. Install child theme from [https://minimalwordpress.com/download](https://minimalwordpress.com/download)
-6. Install shortcode plugin from [https://minimalwordpress.com/download](https://minimalwordpress.com/download)
+5. Install child theme from [https://minimalwordpress.de/download](https://minimalwordpress.de/download)
+6. Install shortcode plugin from [https://minimalwordpress.de/download](https://minimalwordpress.de/download)
 7. Import demo content (optional)
 
 == Frequently Asked Questions ==
@@ -43,7 +43,7 @@ Yes, mnmlWP is a free theme, and it always will be.
 Currently, no. But additional premium components are on the todo list.
 
 = Where can I find documentation? =
-The theme includes a documentation online and in the demo data packaged in the theme itself. Please find the current documentation [here](https://minimalwordpress.com/documentation/).
+The theme includes a documentation online and in the demo data packaged in the theme itself. Please find the current documentation [here](https://minimalwordpress.de/documentation/).
 
 = Do you offer support? =
 We are looking forward to provide support for the free theme in the [WordPress.org forums](https://wordpress.org/support/theme/mnmlwp).
@@ -125,7 +125,7 @@ Added: Clearfixes
 = 0.4.4 =
 
 Added: Cover images for embedded YouTube/Vimeo videos
-Changed: Project website is now https://minimalwordpress.com
+Changed: Project website is now https://minimalwordpress.de
 
 = 0.4.3 =
 

@@ -27,13 +27,13 @@
 
 <channel>
 	<title>mnmlWP</title>
-	<link>https://minimalwordpress.com</link>
+	<link>https://minimalwordpress.de</link>
 	<description>Effortless WordPress Development</description>
 	<pubDate>Fri, 20 Mar 2020 13:56:31 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
-	<wp:base_site_url>https://minimalwordpress.com</wp:base_site_url>
-	<wp:base_blog_url>https://minimalwordpress.com</wp:base_blog_url>
+	<wp:base_site_url>https://minimalwordpress.de</wp:base_site_url>
+	<wp:base_blog_url>https://minimalwordpress.de</wp:base_blog_url>
 
 		<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[sebastian]]></wp:author_login><wp:author_email><![CDATA[sebastian.honert@gmail.com]]></wp:author_email><wp:author_display_name><![CDATA[Sebastian]]></wp:author_display_name><wp:author_first_name><![CDATA[Sebastian]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
@@ -178,21 +178,21 @@
 	<generator>https://wordpress.org/?v=5.3.2</generator>
 
 <image>
-	<url>https://minimalwordpress.com/wp-content/uploads/2018/02/cropped-favicon-32x32.png</url>
+	<url>https://minimalwordpress.de/wp-content/uploads/2018/02/cropped-favicon-32x32.png</url>
 	<title>mnmlWP</title>
-	<link>https://minimalwordpress.com</link>
+	<link>https://minimalwordpress.de</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 
 		<item>
 		<title>WordPress Logo</title>
-		<link>https://minimalwordpress.com/cropped-wordpress-logo-512-png/</link>
+		<link>https://minimalwordpress.de/cropped-wordpress-logo-512-png/</link>
 		<pubDate>Sun, 14 Jan 2018 11:28:23 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/01/cropped-wordpress-logo-512.png</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/01/cropped-wordpress-logo-512.png</guid>
 		<description></description>
-		<content:encoded><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/01/cropped-wordpress-logo-512.png]]></content:encoded>
+		<content:encoded><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/01/cropped-wordpress-logo-512.png]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>73</wp:post_id>
 		<wp:post_date><![CDATA[2018-01-14 12:28:23]]></wp:post_date>
@@ -206,7 +206,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/01/cropped-wordpress-logo-512.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/01/cropped-wordpress-logo-512.png]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/01/cropped-wordpress-logo-512.png]]></wp:meta_value>
@@ -226,10 +226,10 @@
 							</item>
 					<item>
 		<title>code-is-poetry</title>
-		<link>https://minimalwordpress.com/code-is-poetry/</link>
+		<link>https://minimalwordpress.de/code-is-poetry/</link>
 		<pubDate>Tue, 20 Feb 2018 18:40:32 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/code-is-poetry.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/code-is-poetry.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -245,7 +245,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/code-is-poetry.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/code-is-poetry.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/code-is-poetry.jpg]]></wp:meta_value>
@@ -257,10 +257,10 @@
 							</item>
 					<item>
 		<title>macbook-apple-imac-computer</title>
-		<link>https://minimalwordpress.com/features/macbook-apple-imac-computer/</link>
+		<link>https://minimalwordpress.de/features/macbook-apple-imac-computer/</link>
 		<pubDate>Tue, 20 Feb 2018 18:53:57 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/macbook-apple-imac-computer.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/macbook-apple-imac-computer.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -276,7 +276,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/macbook-apple-imac-computer.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/macbook-apple-imac-computer.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/macbook-apple-imac-computer.jpg]]></wp:meta_value>
@@ -288,12 +288,12 @@
 							</item>
 					<item>
 		<title>cropped-wordpress-logo-512-1.png</title>
-		<link>https://minimalwordpress.com/cropped-wordpress-logo-512-1-png/</link>
+		<link>https://minimalwordpress.de/cropped-wordpress-logo-512-1-png/</link>
 		<pubDate>Thu, 22 Feb 2018 08:45:43 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/01/cropped-wordpress-logo-512-1.png</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/01/cropped-wordpress-logo-512-1.png</guid>
 		<description></description>
-		<content:encoded><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/01/cropped-wordpress-logo-512-1.png]]></content:encoded>
+		<content:encoded><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/01/cropped-wordpress-logo-512-1.png]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>1956</wp:post_id>
 		<wp:post_date><![CDATA[2018-02-22 09:45:43]]></wp:post_date>
@@ -307,7 +307,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/01/cropped-wordpress-logo-512-1.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/01/cropped-wordpress-logo-512-1.png]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/01/cropped-wordpress-logo-512-1.png]]></wp:meta_value>
@@ -323,10 +323,10 @@
 							</item>
 					<item>
 		<title>pexels-photo-459150</title>
-		<link>https://minimalwordpress.com/about/pexels-photo-459150/</link>
+		<link>https://minimalwordpress.de/about/pexels-photo-459150/</link>
 		<pubDate>Fri, 23 Feb 2018 10:50:07 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/pexels-photo-459150.jpeg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/pexels-photo-459150.jpeg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -342,7 +342,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/pexels-photo-459150.jpeg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/pexels-photo-459150.jpeg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/pexels-photo-459150.jpeg]]></wp:meta_value>
@@ -354,10 +354,10 @@
 							</item>
 					<item>
 		<title>favicon</title>
-		<link>https://minimalwordpress.com/favicon/</link>
+		<link>https://minimalwordpress.de/favicon/</link>
 		<pubDate>Mon, 26 Feb 2018 16:39:20 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/favicon.png</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/favicon.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -373,7 +373,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/favicon.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/favicon.png]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/favicon.png]]></wp:meta_value>
@@ -385,12 +385,12 @@
 							</item>
 					<item>
 		<title>cropped-favicon.png</title>
-		<link>https://minimalwordpress.com/cropped-favicon-png/</link>
+		<link>https://minimalwordpress.de/cropped-favicon-png/</link>
 		<pubDate>Mon, 26 Feb 2018 16:39:21 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/cropped-favicon.png</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/cropped-favicon.png</guid>
 		<description></description>
-		<content:encoded><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/cropped-favicon.png]]></content:encoded>
+		<content:encoded><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/cropped-favicon.png]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>2120</wp:post_id>
 		<wp:post_date><![CDATA[2018-02-26 17:39:21]]></wp:post_date>
@@ -404,7 +404,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/cropped-favicon.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/cropped-favicon.png]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/cropped-favicon.png]]></wp:meta_value>
@@ -420,10 +420,10 @@
 							</item>
 					<item>
 		<title>cropped-peacock-hero.jpg</title>
-		<link>https://minimalwordpress.com/cropped-peacock-hero-jpg/</link>
+		<link>https://minimalwordpress.de/cropped-peacock-hero-jpg/</link>
 		<pubDate>Mon, 26 Feb 2018 16:46:43 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/cropped-peacock-hero.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/cropped-peacock-hero.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -439,7 +439,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/cropped-peacock-hero.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/cropped-peacock-hero.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/cropped-peacock-hero.jpg]]></wp:meta_value>
@@ -455,10 +455,10 @@
 							</item>
 					<item>
 		<title>clouds-forest</title>
-		<link>https://minimalwordpress.com/clouds-forest/</link>
+		<link>https://minimalwordpress.de/clouds-forest/</link>
 		<pubDate>Tue, 27 Feb 2018 14:05:57 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/clouds-forest.jpeg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/clouds-forest.jpeg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -474,7 +474,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/clouds-forest.jpeg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/clouds-forest.jpeg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/clouds-forest.jpeg]]></wp:meta_value>
@@ -486,10 +486,10 @@
 							</item>
 					<item>
 		<title>fall-autumn-red-season</title>
-		<link>https://minimalwordpress.com/fall-autumn-red-season/</link>
+		<link>https://minimalwordpress.de/fall-autumn-red-season/</link>
 		<pubDate>Tue, 27 Feb 2018 14:06:02 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/fall-autumn-red-season.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/fall-autumn-red-season.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -505,7 +505,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/fall-autumn-red-season.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/fall-autumn-red-season.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/fall-autumn-red-season.jpg]]></wp:meta_value>
@@ -517,10 +517,10 @@
 							</item>
 					<item>
 		<title>forest-trees-fog-foggy</title>
-		<link>https://minimalwordpress.com/forest-trees-fog-foggy/</link>
+		<link>https://minimalwordpress.de/forest-trees-fog-foggy/</link>
 		<pubDate>Tue, 27 Feb 2018 14:06:07 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/forest-trees-fog-foggy.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/forest-trees-fog-foggy.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -536,7 +536,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/forest-trees-fog-foggy.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/forest-trees-fog-foggy.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/forest-trees-fog-foggy.jpg]]></wp:meta_value>
@@ -548,10 +548,10 @@
 							</item>
 					<item>
 		<title>magic-tree</title>
-		<link>https://minimalwordpress.com/magic-tree/</link>
+		<link>https://minimalwordpress.de/magic-tree/</link>
 		<pubDate>Tue, 27 Feb 2018 14:06:11 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/magic-tree.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/magic-tree.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -567,7 +567,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/magic-tree.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/magic-tree.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/magic-tree.jpg]]></wp:meta_value>
@@ -579,10 +579,10 @@
 							</item>
 					<item>
 		<title>mountains-clouds-forest-fog</title>
-		<link>https://minimalwordpress.com/mountains-clouds-forest-fog/</link>
+		<link>https://minimalwordpress.de/mountains-clouds-forest-fog/</link>
 		<pubDate>Tue, 27 Feb 2018 14:06:15 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/mountains-clouds-forest-fog.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/mountains-clouds-forest-fog.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -598,7 +598,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/mountains-clouds-forest-fog.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/mountains-clouds-forest-fog.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/mountains-clouds-forest-fog.jpg]]></wp:meta_value>
@@ -614,10 +614,10 @@
 							</item>
 					<item>
 		<title>nature-forest-trees-fog</title>
-		<link>https://minimalwordpress.com/nature-forest-trees-fog/</link>
+		<link>https://minimalwordpress.de/nature-forest-trees-fog/</link>
 		<pubDate>Tue, 27 Feb 2018 14:06:18 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/02/nature-forest-trees-fog.jpeg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/02/nature-forest-trees-fog.jpeg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -633,7 +633,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/02/nature-forest-trees-fog.jpeg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/02/nature-forest-trees-fog.jpeg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/02/nature-forest-trees-fog.jpeg]]></wp:meta_value>
@@ -649,10 +649,10 @@
 							</item>
 					<item>
 		<title>mnmlWP minimalist WordPress theme</title>
-		<link>https://minimalwordpress.com/wordpress-mnmlwp/</link>
+		<link>https://minimalwordpress.de/wordpress-mnmlwp/</link>
 		<pubDate>Sat, 17 Mar 2018 11:57:49 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2018/03/wordpress-mnmlwp.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2018/03/wordpress-mnmlwp.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -668,7 +668,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2018/03/wordpress-mnmlwp.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2018/03/wordpress-mnmlwp.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2018/03/wordpress-mnmlwp.jpg]]></wp:meta_value>
@@ -680,10 +680,10 @@
 							</item>
 					<item>
 		<title>blue-lake</title>
-		<link>https://minimalwordpress.com/blue-lake/</link>
+		<link>https://minimalwordpress.de/blue-lake/</link>
 		<pubDate>Wed, 17 Jul 2019 15:08:44 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2019/07/blue-lake.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2019/07/blue-lake.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -699,7 +699,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2019/07/blue-lake.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2019/07/blue-lake.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2019/07/blue-lake.jpg]]></wp:meta_value>
@@ -711,10 +711,10 @@
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/video-cover/</link>
+		<link>https://minimalwordpress.de/video-cover/</link>
 		<pubDate>Fri, 19 Jul 2019 17:24:33 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2019/07/video-cover.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2019/07/video-cover.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -730,7 +730,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2019/07/video-cover.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2019/07/video-cover.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2019/07/video-cover.jpg]]></wp:meta_value>
@@ -742,10 +742,10 @@
 							</item>
 					<item>
 		<title>quis-fau</title>
-		<link>https://minimalwordpress.com/quis-fau/</link>
+		<link>https://minimalwordpress.de/quis-fau/</link>
 		<pubDate>Sat, 16 Nov 2019 14:16:39 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2019/11/quis-fau.png</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2019/11/quis-fau.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -761,7 +761,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2019/11/quis-fau.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2019/11/quis-fau.png]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2019/11/quis-fau.png]]></wp:meta_value>
@@ -773,10 +773,10 @@
 							</item>
 					<item>
 		<title>mnmlWP Customizer (Colors)</title>
-		<link>https://minimalwordpress.com/mnmlwp-customizer-colors/</link>
+		<link>https://minimalwordpress.de/mnmlwp-customizer-colors/</link>
 		<pubDate>Thu, 19 Mar 2020 15:59:58 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2020/03/mnmlwp-customizer-colors.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2020/03/mnmlwp-customizer-colors.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -792,7 +792,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2020/03/mnmlwp-customizer-colors.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2020/03/mnmlwp-customizer-colors.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2020/03/mnmlwp-customizer-colors.jpg]]></wp:meta_value>
@@ -804,10 +804,10 @@
 							</item>
 					<item>
 		<title>mnmlwp-customizer-layout</title>
-		<link>https://minimalwordpress.com/mnmlwp-customizer-layout/</link>
+		<link>https://minimalwordpress.de/mnmlwp-customizer-layout/</link>
 		<pubDate>Thu, 19 Mar 2020 16:04:21 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2020/03/mnmlwp-customizer-layout.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2020/03/mnmlwp-customizer-layout.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -823,7 +823,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2020/03/mnmlwp-customizer-layout.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2020/03/mnmlwp-customizer-layout.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2020/03/mnmlwp-customizer-layout.jpg]]></wp:meta_value>
@@ -835,10 +835,10 @@
 							</item>
 					<item>
 		<title>Contact</title>
-		<link>https://minimalwordpress.com/contact/</link>
+		<link>https://minimalwordpress.de/contact/</link>
 		<pubDate>Sat, 13 Jan 2018 18:06:55 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=4</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=4</guid>
 		<description></description>
 		<content:encoded><![CDATA[[contact]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -917,10 +917,10 @@
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2018/01/13/8/</link>
+		<link>https://minimalwordpress.de/2018/01/13/8/</link>
 		<pubDate>Sat, 13 Jan 2018 18:07:17 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=8</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=8</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -972,10 +972,10 @@
 							</item>
 					<item>
 		<title>Impressum</title>
-		<link>https://minimalwordpress.com/contact/impressum/</link>
+		<link>https://minimalwordpress.de/contact/impressum/</link>
 		<pubDate>Sat, 13 Jan 2018 19:50:31 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=11</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=11</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Honert Verlag</strong>
 Dr. Sebastian Honert
@@ -1081,10 +1081,10 @@ Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Date
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2018/01/13/23/</link>
+		<link>https://minimalwordpress.de/2018/01/13/23/</link>
 		<pubDate>Sat, 13 Jan 2018 20:02:02 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=23</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=23</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1136,10 +1136,10 @@ Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Date
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2018/01/13/35/</link>
+		<link>https://minimalwordpress.de/2018/01/13/35/</link>
 		<pubDate>Sat, 13 Jan 2018 20:07:58 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=35</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=35</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1191,10 +1191,10 @@ Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Date
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2018/01/13/37/</link>
+		<link>https://minimalwordpress.de/2018/01/13/37/</link>
 		<pubDate>Sat, 13 Jan 2018 20:07:58 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=37</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=37</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1246,10 +1246,10 @@ Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Date
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2018/01/13/38/</link>
+		<link>https://minimalwordpress.de/2018/01/13/38/</link>
 		<pubDate>Sat, 13 Jan 2018 20:07:58 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=38</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=38</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1301,10 +1301,10 @@ Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Date
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2018/01/13/50/</link>
+		<link>https://minimalwordpress.de/2018/01/13/50/</link>
 		<pubDate>Sat, 13 Jan 2018 20:13:34 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=50</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=50</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1356,10 +1356,10 @@ Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Date
 							</item>
 					<item>
 		<title>mnmlwp-child</title>
-		<link>https://minimalwordpress.com/2018/01/23/mnmlwp-child/</link>
+		<link>https://minimalwordpress.de/2018/01/23/mnmlwp-child/</link>
 		<pubDate>Tue, 23 Jan 2018 15:30:37 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/2018/01/23/mnmlwp-child/</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/2018/01/23/mnmlwp-child/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1378,10 +1378,10 @@ Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Date
 														</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2018/02/19/253/</link>
+		<link>https://minimalwordpress.de/2018/02/19/253/</link>
 		<pubDate>Mon, 19 Feb 2018 21:03:27 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=253</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=253</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1433,7 +1433,7 @@ Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Date
 							</item>
 					<item>
 		<title>Lorem Ipsum</title>
-		<link>https://minimalwordpress.com/lorem-ipsum/</link>
+		<link>https://minimalwordpress.de/lorem-ipsum/</link>
 		<pubDate>Tue, 04 Sep 2007 16:52:50 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
 		<guid isPermaLink="false">https://wpthemetestdata.wordpress.com/lorem-ipsum/</guid>
@@ -1505,7 +1505,7 @@ Lorem Ipsum је једноставно модел текста који се к
 							</item>
 					<item>
 		<title>Front Page</title>
-		<link>https://minimalwordpress.com/front-page/</link>
+		<link>https://minimalwordpress.de/front-page/</link>
 		<pubDate>Sat, 21 May 2011 01:49:43 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
 		<guid isPermaLink="false">https://wpthemetestdata.wordpress.com/?page_id=701</guid>
@@ -1535,10 +1535,10 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2018/02/20/1698/</link>
+		<link>https://minimalwordpress.de/2018/02/20/1698/</link>
 		<pubDate>Tue, 20 Feb 2018 16:17:22 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1698</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1698</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1590,10 +1590,10 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 							</item>
 					<item>
 		<title>Questions &amp; Answers</title>
-		<link>https://minimalwordpress.com/2018/04/20/2551/</link>
+		<link>https://minimalwordpress.de/2018/04/20/2551/</link>
 		<pubDate>Fri, 20 Apr 2018 12:49:03 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=2551</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=2551</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1645,10 +1645,10 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2018/04/23/2732/</link>
+		<link>https://minimalwordpress.de/2018/04/23/2732/</link>
 		<pubDate>Mon, 23 Apr 2018 19:46:00 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=2732</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=2732</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1700,10 +1700,10 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 							</item>
 					<item>
 		<title>GitHub Repository</title>
-		<link>https://minimalwordpress.com/2019/02/03/github-external/</link>
+		<link>https://minimalwordpress.de/2019/02/03/github-external/</link>
 		<pubDate>Sun, 03 Feb 2019 15:08:49 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=2948</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=2948</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1755,10 +1755,10 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 							</item>
 					<item>
 		<title>Columns Spacing (Test)</title>
-		<link>https://minimalwordpress.com/columns-spacing-test/</link>
+		<link>https://minimalwordpress.de/columns-spacing-test/</link>
 		<pubDate>Fri, 22 Nov 2019 18:18:42 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=3512</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=3512</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:html -->
 [mnmlwp_columns]
@@ -1880,10 +1880,10 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 							</item>
 					<item>
 		<title></title>
-		<link>https://minimalwordpress.com/2020/03/19/3589/</link>
+		<link>https://minimalwordpress.de/2020/03/19/3589/</link>
 		<pubDate>Thu, 19 Mar 2020 18:29:34 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=3589</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=3589</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1935,10 +1935,10 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 							</item>
 					<item>
 		<title>mnmlwp-import-demo-data</title>
-		<link>https://minimalwordpress.com/mnmlwp-import-demo-data/</link>
+		<link>https://minimalwordpress.de/mnmlwp-import-demo-data/</link>
 		<pubDate>Fri, 20 Mar 2020 13:38:57 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2020/03/mnmlwp-import-demo-data.jpg</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2020/03/mnmlwp-import-demo-data.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1954,7 +1954,7 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2020/03/mnmlwp-import-demo-data.jpg]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2020/03/mnmlwp-import-demo-data.jpg]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2020/03/mnmlwp-import-demo-data.jpg]]></wp:meta_value>
@@ -1966,10 +1966,10 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 							</item>
 					<item>
 		<title>sebastian</title>
-		<link>https://minimalwordpress.com/sebastian/</link>
+		<link>https://minimalwordpress.de/sebastian/</link>
 		<pubDate>Fri, 20 Mar 2020 13:42:04 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp-content/uploads/2020/03/sebastian.png</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp-content/uploads/2020/03/sebastian.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1985,7 +1985,7 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://minimalwordpress.com/wp-content/uploads/2020/03/sebastian.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://minimalwordpress.de/wp-content/uploads/2020/03/sebastian.png]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2020/03/sebastian.png]]></wp:meta_value>
@@ -1997,10 +1997,10 @@ If the site is set to display the Blog Posts Index as the Front Page, then this 
 							</item>
 					<item>
 		<title>About</title>
-		<link>https://minimalwordpress.com/</link>
+		<link>https://minimalwordpress.de/</link>
 		<pubDate>Sat, 13 Jan 2018 19:52:49 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=14</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=14</guid>
 		<description></description>
 		<content:encoded><![CDATA[<h1>Minimal Wordpress?</h1>
 Yup, that's what this site is all about!
@@ -2133,10 +2133,10 @@ The mnmlWP theme is ready for internationalization and includes English and Germ
 							</item>
 					<item>
 		<title>Documentation</title>
-		<link>https://minimalwordpress.com/documentation/</link>
+		<link>https://minimalwordpress.de/documentation/</link>
 		<pubDate>Sat, 13 Jan 2018 20:00:34 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=17</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=17</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:html -->
 <h1>Documentation</h1>
@@ -2253,10 +2253,10 @@ The mnmlWP theme is ready for internationalization and includes English and Germ
 							</item>
 					<item>
 		<title>Features</title>
-		<link>https://minimalwordpress.com/features/</link>
+		<link>https://minimalwordpress.de/features/</link>
 		<pubDate>Sat, 13 Jan 2018 20:01:28 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=20</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=20</guid>
 		<description></description>
 		<content:encoded><![CDATA[<h1>Features Overview</h1>
 The following is an incomplete list of what this theme can do for you!
@@ -2552,10 +2552,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Typography</title>
-		<link>https://minimalwordpress.com/features/typography/</link>
+		<link>https://minimalwordpress.de/features/typography/</link>
 		<pubDate>Sat, 13 Jan 2018 20:06:20 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=25</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=25</guid>
 		<description></description>
 		<content:encoded><![CDATA[[get_posts cat="typography" hide_images="1"]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2634,10 +2634,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Shortcodes</title>
-		<link>https://minimalwordpress.com/features/shortcodes/</link>
+		<link>https://minimalwordpress.de/features/shortcodes/</link>
 		<pubDate>Sat, 13 Jan 2018 20:06:46 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=27</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=27</guid>
 		<description></description>
 		<content:encoded><![CDATA[[get_posts cat="shortcodes" hide_images="1"]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2752,10 +2752,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Widgets</title>
-		<link>https://minimalwordpress.com/features/widgets/</link>
+		<link>https://minimalwordpress.de/features/widgets/</link>
 		<pubDate>Sat, 13 Jan 2018 20:07:03 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=29</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=29</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:html -->
 <h1>Widgets</h1>
@@ -2885,10 +2885,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Templates</title>
-		<link>https://minimalwordpress.com/features/templates/</link>
+		<link>https://minimalwordpress.de/features/templates/</link>
 		<pubDate>Sat, 13 Jan 2018 20:07:23 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=33</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=33</guid>
 		<description></description>
 		<content:encoded><![CDATA[The mnmlWP theme comes with a handful of templates for both posts and pages.
 <ul>
@@ -3016,10 +3016,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Child Themes</title>
-		<link>https://minimalwordpress.com/child-themes/</link>
+		<link>https://minimalwordpress.de/child-themes/</link>
 		<pubDate>Sat, 13 Jan 2018 20:08:46 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=40</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=40</guid>
 		<description></description>
 		<content:encoded><![CDATA[More info coming soon.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -3098,10 +3098,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Downloads</title>
-		<link>https://minimalwordpress.com/downloads/</link>
+		<link>https://minimalwordpress.de/downloads/</link>
 		<pubDate>Sat, 13 Jan 2018 20:13:14 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=48</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=48</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
 <p><strong>Please remember! </strong>Always save a backup of your website before updating theme files. Use a child theme to change the look and feel of the base theme.</p>
@@ -3124,13 +3124,13 @@ The following is an incomplete list of what this theme can do for you!
 <p>[msg type="info no-icon"]<a href="https://wordpress.org/themes/mnmlwp/" target="_blank" rel="noopener noreferrer"> mnmlwp-0.5.1.zip</a>[/msg]</p>
 <h3>mnmlWP Child Theme</h3>
 <p>A child theme inherits the functionality and styling of another theme, called the parent theme. Child themes are the recommended way of modifying an existing theme. Find out more about child themes in the WordPress <a href="https://codex.wordpress.org/Child_Themes">Documentation</a>.</p>
-<p>[msg type="info no-icon"]<a href="https://minimalwordpress.com/update/downloads/mnmlwp/mnmlwp-child-0.6.zip"> mnmlwp-child-0.6.zip</a>[/msg]</p>
+<p>[msg type="info no-icon"]<a href="https://minimalwordpress.de/update/downloads/mnmlwp/mnmlwp-child-0.6.zip"> mnmlwp-child-0.6.zip</a>[/msg]</p>
 <h3>mnmlWP Contact Form</h3>
 <p>If you want to include a contact form into your website, you can download this plugin. The look and feel of the contact form has been optimized for the use with mnmlWP. The plugin does not require the mnmlWP theme though and can be used with any other WordPress theme.</p>
 <p>[msg type="info no-icon"]<a href="https://de.wordpress.org/plugins/mnmlwp-simple-contact-form/"> mnmlwp-contact-form-0.2.1.zip</a>[/msg]</p>
 <h3 id="mnmlwp-shortcodes">mnmlWP Shortcodes</h3>
 <p>This plugin includes all the shortcodes of the mnmlWP theme. According to WordPress best practices, all shortcode functionalities should reside outside of a theme. The theme itself will therefore still work even when the shortcodes plugin is not available or inactive.</p>
-<p>[msg type="info no-icon"]<a href="https://minimalwordpress.com/update/downloads/plugins/mnmlwp-shortcodes-0.2.2.zip"> mnmlwp-shortcodes-0.2.2.zip</a>[/msg]</p>]]></content:encoded>
+<p>[msg type="info no-icon"]<a href="https://minimalwordpress.de/update/downloads/plugins/mnmlwp-shortcodes-0.2.2.zip"> mnmlwp-shortcodes-0.2.2.zip</a>[/msg]</p>]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>48</wp:post_id>
 		<wp:post_date><![CDATA[2018-01-13 21:13:14]]></wp:post_date>
@@ -3243,10 +3243,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Layout Options</title>
-		<link>https://minimalwordpress.com/layout-options/</link>
+		<link>https://minimalwordpress.de/layout-options/</link>
 		<pubDate>Fri, 19 Jan 2018 14:21:05 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=91</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=91</guid>
 		<description></description>
 		<content:encoded><![CDATA[[row style="background:#f3f3f3"]
 [column style="padding-top:4em;padding-bottom:4em"]
@@ -3299,10 +3299,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Customizer</title>
-		<link>https://minimalwordpress.com/features/customizer/</link>
+		<link>https://minimalwordpress.de/features/customizer/</link>
 		<pubDate>Mon, 19 Feb 2018 21:00:01 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=250</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=250</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p>The customizer section of the mnmlWP theme allows you to adjust the settings for colors and layout of your website in a number of ways. There are <strong>more than 25 color options and an additional ~25 layout options</strong> available.</p>
 
@@ -3427,10 +3427,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Headings and Paragraphs</title>
-		<link>https://minimalwordpress.com/2018/02/21/headings-and-paragraphs/</link>
+		<link>https://minimalwordpress.de/2018/02/21/headings-and-paragraphs/</link>
 		<pubDate>Wed, 21 Feb 2018 09:37:58 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1757</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1757</guid>
 		<description></description>
 		<content:encoded><![CDATA[<h1>Headings h1</h1>
 <h2>Heading h2</h2>
@@ -3566,10 +3566,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Highlight Text</title>
-		<link>https://minimalwordpress.com/2018/02/21/highlight-text/</link>
+		<link>https://minimalwordpress.de/2018/02/21/highlight-text/</link>
 		<pubDate>Wed, 21 Feb 2018 10:01:26 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1774</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1774</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, [highlight]consetetur sadipscing elitr[/highlight], sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
 
@@ -3689,10 +3689,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Contact Form Demo</title>
-		<link>https://minimalwordpress.com/features/contact-form/</link>
+		<link>https://minimalwordpress.de/features/contact-form/</link>
 		<pubDate>Fri, 23 Feb 2018 15:37:20 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=2055</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=2055</guid>
 		<description></description>
 		<content:encoded><![CDATA[[msg type="warning"]The contact form includes a session based security number. Your web server needs to support <b>PHP sessions</b> for the form to work. The form also includes honeypot fields to prevent bots from submitting the form. This is just a demo of the contact form, but you can find a working version on the <a href="/contact/">contact page</a>.[/msg]
 
@@ -3799,10 +3799,10 @@ The following is an incomplete list of what this theme can do for you!
 							</item>
 					<item>
 		<title>Questions &amp; Anwers</title>
-		<link>https://minimalwordpress.com/documentation/questions-and-anwers/</link>
+		<link>https://minimalwordpress.de/documentation/questions-and-anwers/</link>
 		<pubDate>Fri, 20 Apr 2018 12:41:39 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=2543</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=2543</guid>
 		<description></description>
 		<content:encoded><![CDATA[[flyouts]
 [flyout title="Is the mnmlWP theme free?"]Absolutely! The mnmlWP theme is 100% free. You can use it for whatever project you can think of, commercial and non-commercial.[/flyout]
@@ -3936,10 +3936,10 @@ If you experience any issues using the mnmlWP theme please do not hesitate to <a
 							</item>
 					<item>
 		<title>Demo Content</title>
-		<link>https://minimalwordpress.com/demo-content/</link>
+		<link>https://minimalwordpress.de/demo-content/</link>
 		<pubDate>Mon, 23 Apr 2018 19:45:16 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=2722</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=2722</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:html -->
 [mnmlwp_flex_columns style="padding-bottom:1em"]
@@ -4066,10 +4066,10 @@ If you experience any issues using the mnmlWP theme please do not hesitate to <a
 							</item>
 					<item>
 		<title>Donation Confirmation</title>
-		<link>https://minimalwordpress.com/donation-confirmation/</link>
+		<link>https://minimalwordpress.de/donation-confirmation/</link>
 		<pubDate>Thu, 26 Apr 2018 14:37:27 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/donation-confirmation/</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/donation-confirmation/</guid>
 		<description></description>
 		<content:encoded><![CDATA[[give_receipt]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4088,10 +4088,10 @@ If you experience any issues using the mnmlWP theme please do not hesitate to <a
 														</item>
 					<item>
 		<title>Donation Failed</title>
-		<link>https://minimalwordpress.com/donation-failed/</link>
+		<link>https://minimalwordpress.de/donation-failed/</link>
 		<pubDate>Thu, 26 Apr 2018 14:37:27 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/donation-failed/</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/donation-failed/</guid>
 		<description></description>
 		<content:encoded><![CDATA[We&#039;re sorry, your donation failed to process. Please try again or contact site support.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4110,10 +4110,10 @@ If you experience any issues using the mnmlWP theme please do not hesitate to <a
 														</item>
 					<item>
 		<title>Donation History</title>
-		<link>https://minimalwordpress.com/donation-history/</link>
+		<link>https://minimalwordpress.de/donation-history/</link>
 		<pubDate>Thu, 26 Apr 2018 14:37:27 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/donation-history/</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/donation-history/</guid>
 		<description></description>
 		<content:encoded><![CDATA[[donation_history]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4132,10 +4132,10 @@ If you experience any issues using the mnmlWP theme please do not hesitate to <a
 														</item>
 					<item>
 		<title>Datenschutzerklärung</title>
-		<link>https://minimalwordpress.com/datenschutz/</link>
+		<link>https://minimalwordpress.de/datenschutz/</link>
 		<pubDate>Wed, 23 May 2018 11:07:28 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?page_id=2796</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?page_id=2796</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p>Verantwortliche Stelle im Sinne der Datenschutzgesetze ist:</p>
 
@@ -4257,10 +4257,10 @@ D-86157 Augsburg
 							</item>
 					<item>
 		<title>Unordered Lists</title>
-		<link>https://minimalwordpress.com/2018/02/21/unordered-lists/</link>
+		<link>https://minimalwordpress.de/2018/02/21/unordered-lists/</link>
 		<pubDate>Wed, 21 Feb 2018 10:17:26 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1785</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1785</guid>
 		<description></description>
 		<content:encoded><![CDATA[<ul>
 <li>List Item</li>
@@ -4410,10 +4410,10 @@ D-86157 Augsburg
 							</item>
 					<item>
 		<title>Ordered Lists</title>
-		<link>https://minimalwordpress.com/2018/02/21/ordered-lists/</link>
+		<link>https://minimalwordpress.de/2018/02/21/ordered-lists/</link>
 		<pubDate>Wed, 21 Feb 2018 10:19:34 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1787</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1787</guid>
 		<description></description>
 		<content:encoded><![CDATA[<ol>
 <li>List Item</li>
@@ -4563,10 +4563,10 @@ D-86157 Augsburg
 							</item>
 					<item>
 		<title>Buttons</title>
-		<link>https://minimalwordpress.com/2018/02/21/buttons/</link>
+		<link>https://minimalwordpress.de/2018/02/21/buttons/</link>
 		<pubDate>Wed, 21 Feb 2018 10:36:43 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1790</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1790</guid>
 		<description></description>
 		<content:encoded><![CDATA[<div style="display: block; overflow: hidden; margin-bottom: 1em;">[btn type="small" href="#" text="Default"] [btn type="small secondary" href="#" text="Secondary"] [btn type="small success" href="#" text="Success"] [btn type="small warning" href="#" text="Warning"] [btn type="small error" href="#" text="Error"]</div>
 <div style="display: block; overflow: hidden; margin-bottom: 1em;">[btn type="" href="#" text="Default"] [btn type="secondary" href="#" text="Secondary"] [btn type="success" href="#" text="Success"] [btn type="warning" href="#" text="Warning"] [btn type="error" href="#" text="Error"]</div>
@@ -4693,10 +4693,10 @@ D-86157 Augsburg
 							</item>
 					<item>
 		<title>Message Boxes</title>
-		<link>https://minimalwordpress.com/2018/02/21/message-boxes/</link>
+		<link>https://minimalwordpress.de/2018/02/21/message-boxes/</link>
 		<pubDate>Wed, 21 Feb 2018 10:40:04 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1792</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1792</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p>[msg]Message box type default with <a href="#">hyperlink</a>[/msg]<br />[msg type="info"]Message box type info with <a href="#">hyperlink</a>[/msg]<br />[msg type="success"]Message box type success with <a href="#">hyperlink</a>[/msg]<br />[msg type="warning"]Message warning with <a href="#">hyperlink</a>[/msg]<br />[msg type="error"]Message box type alert with <a href="#">hyperlink</a>[/msg]<br />[msg type="info no-icon"]Message box type no-icon[/msg]<br />[msg style="background: #efc8f0; color: #5f3360" type="no-icon center"] Message box custom/centered[/msg]</p>
 
@@ -4829,13 +4829,13 @@ D-86157 Augsburg
 							</item>
 					<item>
 		<title>Flyout Containers</title>
-		<link>https://minimalwordpress.com/2018/02/21/flyout-containers/</link>
+		<link>https://minimalwordpress.de/2018/02/21/flyout-containers/</link>
 		<pubDate>Wed, 21 Feb 2018 10:51:37 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1794</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1794</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
-<p><strong>Hint: </strong>By adding an additional attribute it is possible to turn the flyout containers into an <a href="https://minimalwordpress.com/2020/03/19/accordion/">accordion</a>.</p>
+<p><strong>Hint: </strong>By adding an additional attribute it is possible to turn the flyout containers into an <a href="https://minimalwordpress.de/2020/03/19/accordion/">accordion</a>.</p>
 <!-- /wp:paragraph -->
 
 <p>[flyouts]<br />[flyout title="I am a flyout container!" active="1"]Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.[/flyout]<br />[flyout title="Me too!"]Content...[/flyout]<br />[flyout title="Me too!"]Content...[/flyout]<br />[/flyouts]</p>
@@ -4961,10 +4961,10 @@ D-86157 Augsburg
 							</item>
 					<item>
 		<title>Valuemeters</title>
-		<link>https://minimalwordpress.com/2018/02/21/valuemeters/</link>
+		<link>https://minimalwordpress.de/2018/02/21/valuemeters/</link>
 		<pubDate>Wed, 21 Feb 2018 10:52:16 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1796</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1796</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p>[valuemeters]<br />[valuemeter name="Webdesign" value="98"]<br />[valuemeter name="Javascript" value="95" color="#2875a8" background="#e1f2fe"]<br />[valuemeter name="PHP/MySql" value="90" color="#35905c" background="rgba(66,178,114,0.1)"]<br />[valuemeter name="Photography" value="78" color="#9F6000" background="#FEEFB3"]<br />[valuemeter name="Cooking" value="87" color="#D8000C" background="#FCE8E8"]<br />[/valuemeters]</p>
 
@@ -5091,10 +5091,10 @@ D-86157 Augsburg
 							</item>
 					<item>
 		<title>Input Elements / Forms</title>
-		<link>https://minimalwordpress.com/2018/02/21/input-elements-forms/</link>
+		<link>https://minimalwordpress.de/2018/02/21/input-elements-forms/</link>
 		<pubDate>Wed, 21 Feb 2018 10:55:33 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1803</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1803</guid>
 		<description></description>
 		<content:encoded><![CDATA[<form>
   <label>Text Input</label><input type="text" value="" placeholder="Input&hellip;"><label>E-Mail Input</label><input type="email" value="" placeholder="E-Mail&hellip;"><label>Textarea</label><textarea placeholder="Textarea&hellip;"></textarea><label>Dropdown Menu</label><select>
@@ -5205,13 +5205,13 @@ D-86157 Augsburg
 							</item>
 					<item>
 		<title>Columns Layout</title>
-		<link>https://minimalwordpress.com/2018/02/21/columns-layout/</link>
+		<link>https://minimalwordpress.de/2018/02/21/columns-layout/</link>
 		<pubDate>Wed, 21 Feb 2018 10:56:48 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1805</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1805</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>After you have installed the <a href="https://minimalwordpress.com/downloads/">mnmlWP shortcodes plugin</a> you can start to layout the content of your sites in <strong>columns</strong>. The plugin supports the following column widths:</p>
+<p>After you have installed the <a href="https://minimalwordpress.de/downloads/">mnmlWP shortcodes plugin</a> you can start to layout the content of your sites in <strong>columns</strong>. The plugin supports the following column widths:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
@@ -5421,10 +5421,10 @@ D-86157 Augsburg
 							</item>
 					<item>
 		<title>Aligned Images With Lightbox</title>
-		<link>https://minimalwordpress.com/2018/02/21/aligned-images-with-lightbox/</link>
+		<link>https://minimalwordpress.de/2018/02/21/aligned-images-with-lightbox/</link>
 		<pubDate>Wed, 21 Feb 2018 11:32:46 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1812</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1812</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading -->
 <h2>Align Left</h2>
@@ -5592,10 +5592,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>YouTube Videos</title>
-		<link>https://minimalwordpress.com/2018/02/21/youtube-videos/</link>
+		<link>https://minimalwordpress.de/2018/02/21/youtube-videos/</link>
 		<pubDate>Wed, 21 Feb 2018 11:34:02 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1814</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1814</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p>[youtube id="0w_xEUoK79o" cover="/wp-content/uploads/2019/07/video-cover.jpg"]</p>
 <p>If you want to add a cover image to prevent auto loading the player you can do so by specifying the "cover" parameter. If you leave the parameter blank the video will automatically be embeded on page load.</p>
@@ -5717,10 +5717,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Vimeo Videos</title>
-		<link>https://minimalwordpress.com/2018/02/21/vimeo-videos/</link>
+		<link>https://minimalwordpress.de/2018/02/21/vimeo-videos/</link>
 		<pubDate>Wed, 21 Feb 2018 11:34:38 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1816</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1816</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p>[vimeo id="42076913" cover="/wp-content/uploads/2019/07/video-cover.jpg"]</p>
 <p>If you want to add a cover image to prevent auto loading the player you can do so by specifying the "cover" parameter. If you leave the parameter blank the video will automatically be embeded on page load.</p>
@@ -5842,10 +5842,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>SoundCloud Audio Player</title>
-		<link>https://minimalwordpress.com/2018/02/21/soundcloud-audio-player/</link>
+		<link>https://minimalwordpress.de/2018/02/21/soundcloud-audio-player/</link>
 		<pubDate>Wed, 21 Feb 2018 11:39:52 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1818</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1818</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p>[soundcloud url="https://api.soundcloud.com/tracks/262322956" params="auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" iframe="true" /]</p>
 
@@ -5966,10 +5966,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Image Gallery (Lightbox)</title>
-		<link>https://minimalwordpress.com/2018/02/21/image-gallery-lightbox/</link>
+		<link>https://minimalwordpress.de/2018/02/21/image-gallery-lightbox/</link>
 		<pubDate>Wed, 21 Feb 2018 11:52:49 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1821</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1821</guid>
 		<description></description>
 		<content:encoded><![CDATA[Galleries can be inserted with the <code>&#91;gallery&#93;</code> shortcode. Columns and gallery names can be assigned by the respective parameters.
 
@@ -6061,10 +6061,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Contact Form</title>
-		<link>https://minimalwordpress.com/2018/02/21/contact-form/</link>
+		<link>https://minimalwordpress.de/2018/02/21/contact-form/</link>
 		<pubDate>Wed, 21 Feb 2018 11:54:24 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1823</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1823</guid>
 		<description></description>
 		<content:encoded><![CDATA[<h1>Contact Form Demo</h1>
 <p>[msg type="warning"]The contact form includes a session based security number. Your website needs to support <b>PHP sessions</b> for the form to work. The form also includes honeypot fields to prevent bots from submitting the form. This is just a demo of the contact form, but you can find a working version on the <a href="/contact/">contact page</a>.[/msg]</p>
@@ -6191,13 +6191,13 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>System Shortcodes</title>
-		<link>https://minimalwordpress.com/2018/02/21/system-shortcodes/</link>
+		<link>https://minimalwordpress.de/2018/02/21/system-shortcodes/</link>
 		<pubDate>Wed, 21 Feb 2018 12:05:44 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1834</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1834</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
-<p><strong>Home Url:</strong> https://minimalwordpress.com</p>
+<p><strong>Home Url:</strong> https://minimalwordpress.de</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
@@ -6205,7 +6205,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
-<p><strong>Site Url:</strong> https://minimalwordpress.com</p>
+<p><strong>Site Url:</strong> https://minimalwordpress.de</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
@@ -6213,7 +6213,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
-<p><strong>Register Url:</strong> https://minimalwordpress.com/peekaboo/?action=register</p>
+<p><strong>Register Url:</strong> https://minimalwordpress.de/peekaboo/?action=register</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
@@ -6221,7 +6221,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
-<p><strong>Login Url:</strong> https://minimalwordpress.com/peekaboo/?redirect_to=https%3A%2F%2Fminimalwordpress.com%3Fwelcome%3D1</p>
+<p><strong>Login Url:</strong> https://minimalwordpress.de/peekaboo/?redirect_to=https%3A%2F%2Fminimalwordpress.de%3Fwelcome%3D1</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
@@ -6356,10 +6356,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Code / Unformatted Text</title>
-		<link>https://minimalwordpress.com/2018/02/21/code-unformatted-text/</link>
+		<link>https://minimalwordpress.de/2018/02/21/code-unformatted-text/</link>
 		<pubDate>Wed, 21 Feb 2018 12:10:36 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1837</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1837</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
 <p>Code and unformatted text can be inserted by using the [[code]] shortcode. You can also use the WP Gutenberg editor block for code. The shortcode provides a very basic way to display preformatted text on your website and is probably not sufficient for complex demands. If you are looking for a more sophisticated solution you might want to have a look at the <a rel="noreferrer noopener" href="https://wordpress.org/plugins/enlighter/" target="_blank">Enlighter – Customizable Syntax Highlighter</a> plugin.</p>
@@ -6496,10 +6496,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Default Template</title>
-		<link>https://minimalwordpress.com/2018/02/21/default-template/</link>
+		<link>https://minimalwordpress.de/2018/02/21/default-template/</link>
 		<pubDate>Wed, 21 Feb 2018 15:45:47 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1862</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1862</guid>
 		<description></description>
 		<content:encoded><![CDATA[[msg]The default Page/Post template shows a full width container with no sidebar.[/msg]
 
@@ -6589,10 +6589,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Sidebar Template</title>
-		<link>https://minimalwordpress.com/2018/02/21/sidebar-template/</link>
+		<link>https://minimalwordpress.de/2018/02/21/sidebar-template/</link>
 		<pubDate>Wed, 21 Feb 2018 15:49:54 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1868</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1868</guid>
 		<description></description>
 		<content:encoded><![CDATA[[msg]The Sidebar component is available for both posts and pages and divides the main section into 3/4 content and 1/4 sidebar. This post also shows a featured image.[/msg]
 
@@ -6682,10 +6682,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Hero Post</title>
-		<link>https://minimalwordpress.com/2018/02/21/hero-post/</link>
+		<link>https://minimalwordpress.de/2018/02/21/hero-post/</link>
 		<pubDate>Wed, 21 Feb 2018 15:53:26 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1874</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1874</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:shortcode -->
 [msg type="info"]This is a "Hero" post. The hero section in this post uses the featured image of the post. It is also possible to add a colored overlay and HTML-content to the hero section.[/msg]
@@ -6818,10 +6818,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Blank Template</title>
-		<link>https://minimalwordpress.com/2018/02/21/blank-template/</link>
+		<link>https://minimalwordpress.de/2018/02/21/blank-template/</link>
 		<pubDate>Wed, 21 Feb 2018 16:32:48 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1898</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1898</guid>
 		<description></description>
 		<content:encoded><![CDATA[<div class="row-hero-wrapper">
 <div class="row row--hero" style="background: #eee center top; background-size: cover;">
@@ -6838,7 +6838,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 <h1>Blank Post/Page Template</h1>
 The blank template has no initial formatting. You can use the <strong>[[row]]</strong> and <strong>[[column]] </strong>shortcodes to layout your page content. Your chance to get creative!
 
-Download the <a href="https://minimalwordpress.com/demo-content/">demo content</a> to see how it works.
+Download the <a href="https://minimalwordpress.de/demo-content/">demo content</a> to see how it works.
 
 [btn type="small" href="/templates" text="Back to Templates"]
 [/column]
@@ -6956,10 +6956,10 @@ Download the <a href="https://minimalwordpress.com/demo-content/">demo content</
 							</item>
 					<item>
 		<title>Untitled block</title>
-		<link>https://minimalwordpress.com/2018/01/28/untitled-block/</link>
+		<link>https://minimalwordpress.de/2018/01/28/untitled-block/</link>
 		<pubDate>Sun, 28 Jan 2018 10:47:26 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/wp_block/untitled-block/</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/wp_block/untitled-block/</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:core/shortcode -->
 [valuemeter name="Test" value="96"]
@@ -6980,10 +6980,10 @@ Download the <a href="https://minimalwordpress.com/demo-content/">demo content</
 														</item>
 					<item>
 		<title>Post Archive Without Images</title>
-		<link>https://minimalwordpress.com/2018/02/22/post-archive-without-images/</link>
+		<link>https://minimalwordpress.de/2018/02/22/post-archive-without-images/</link>
 		<pubDate>Thu, 22 Feb 2018 13:29:03 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1971</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1971</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:code -->
 <pre class="wp-block-code"><code>&#91;get_posts cat="typography" hide_images="1"]</code></pre>
@@ -7111,10 +7111,10 @@ Download the <a href="https://minimalwordpress.com/demo-content/">demo content</
 							</item>
 					<item>
 		<title>Hero Post With Sidebar and Fixed Hero Image</title>
-		<link>https://minimalwordpress.com/2018/02/22/hero-post-with-sidebar-fixed-hero-image/</link>
+		<link>https://minimalwordpress.de/2018/02/22/hero-post-with-sidebar-fixed-hero-image/</link>
 		<pubDate>Thu, 22 Feb 2018 21:07:27 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1982</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1982</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:shortcode -->
 [msg]This is a "Hero" post. The hero section in this post uses the featured image of the post. The overlay position is set to "fixed". It is also possible to add a colored overlay and HTML-content to the hero section.[/msg]
@@ -7262,10 +7262,10 @@ Download the <a href="https://minimalwordpress.com/demo-content/">demo content</
 							</item>
 					<item>
 		<title>Default Template + Featured Image</title>
-		<link>https://minimalwordpress.com/2018/02/22/default-template-featured-image/</link>
+		<link>https://minimalwordpress.de/2018/02/22/default-template-featured-image/</link>
 		<pubDate>Thu, 22 Feb 2018 21:18:16 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=1995</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=1995</guid>
 		<description></description>
 		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -7355,17 +7355,17 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Blockquotes</title>
-		<link>https://minimalwordpress.com/2018/04/15/blockquotes/</link>
+		<link>https://minimalwordpress.de/2018/04/15/blockquotes/</link>
 		<pubDate>Sun, 15 Apr 2018 14:10:09 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=2430</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=2430</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p>The blockquote shortcode takes four optional parameters: <strong>author</strong>, <strong>src</strong>, <strong>date</strong>, and <strong>url</strong>.</p>
-<p>[blockquote author="John Doe" src="New York Times" date="April 18, 2018" url="https://minimalwordpress.com"]Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.[/blockquote]</p>
+<p>[blockquote author="John Doe" src="New York Times" date="April 18, 2018" url="https://minimalwordpress.de"]Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.[/blockquote]</p>
 <p>You can insert blockquotes in your posts like this:</p>
 
 <!-- wp:code -->
-<pre class="wp-block-code"><code>&#91;blockquote author="John Doe" src="New York Times" date="April 18, 2018" url="https://minimalwordpress.com"]Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.&#91;/blockquote]</code></pre>
+<pre class="wp-block-code"><code>&#91;blockquote author="John Doe" src="New York Times" date="April 18, 2018" url="https://minimalwordpress.de"]Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.&#91;/blockquote]</code></pre>
 <!-- /wp:code -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>2430</wp:post_id>
@@ -7481,10 +7481,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Slideshow</title>
-		<link>https://minimalwordpress.com/2018/04/23/slideshow/</link>
+		<link>https://minimalwordpress.de/2018/04/23/slideshow/</link>
 		<pubDate>Mon, 23 Apr 2018 08:55:19 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=2615</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=2615</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:html -->
 [smartslider3 slider="2"]
@@ -7617,10 +7617,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Slideshow Full Width</title>
-		<link>https://minimalwordpress.com/2018/04/23/slideshow-full-width/</link>
+		<link>https://minimalwordpress.de/2018/04/23/slideshow-full-width/</link>
 		<pubDate>Mon, 23 Apr 2018 09:07:31 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=2636</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=2636</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:html -->
 [smartslider3 slider="1"]
@@ -7766,10 +7766,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 							</item>
 					<item>
 		<title>Blank Page + Hero Template</title>
-		<link>https://minimalwordpress.com/2019/07/18/blank-page-hero-template/</link>
+		<link>https://minimalwordpress.de/2019/07/18/blank-page-hero-template/</link>
 		<pubDate>Thu, 18 Jul 2019 15:34:24 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=3208</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=3208</guid>
 		<description></description>
 		<content:encoded><![CDATA[[row]
 [column]
@@ -7896,10 +7896,10 @@ This post uses the blank page template including the hero section.
 							</item>
 					<item>
 		<title>Untitled Reusable Block</title>
-		<link>https://minimalwordpress.com/2019/11/16/untitled-reusable-block/</link>
+		<link>https://minimalwordpress.de/2019/11/16/untitled-reusable-block/</link>
 		<pubDate>Sat, 16 Nov 2019 13:51:50 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/2019/11/16/untitled-reusable-block/</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/2019/11/16/untitled-reusable-block/</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:spacer -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -7920,13 +7920,13 @@ This post uses the blank page template including the hero section.
 														</item>
 					<item>
 		<title>Accordion</title>
-		<link>https://minimalwordpress.com/2020/03/19/accordion/</link>
+		<link>https://minimalwordpress.de/2020/03/19/accordion/</link>
 		<pubDate>Thu, 19 Mar 2020 15:42:48 +0000</pubDate>
 		<dc:creator><![CDATA[sebastian]]></dc:creator>
-		<guid isPermaLink="false">https://minimalwordpress.com/?p=3568</guid>
+		<guid isPermaLink="false">https://minimalwordpress.de/?p=3568</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Accordions are basically <a href="https://minimalwordpress.com/2018/02/21/flyout-containers/">flyout containers</a> with an additional attribute.</p>
+<p>Accordions are basically <a href="https://minimalwordpress.de/2018/02/21/flyout-containers/">flyout containers</a> with an additional attribute.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->
