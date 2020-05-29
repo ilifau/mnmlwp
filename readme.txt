@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.5.3 =
+
+Added: Responsive Tables
+
 = 0.5.2 =
 
 Updated: Demo content
