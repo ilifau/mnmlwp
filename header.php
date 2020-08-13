@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="mnmlwp-logo">
                     <a href="<?php echo esc_url( home_url() ); ?>">
                         <?php
-                            $mnmlwp_custom_logo_id = get_theme_mod( 'custom_logo' );
+                            $mnmlwp_custom_logo_id = esc_html( get_theme_mod( 'custom_logo' ) );
                             $mnmlwp_logo = wp_get_attachment_image_src( $mnmlwp_custom_logo_id , 'full' );
                             
                             if ( has_custom_logo() ) {
@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     ?>
                 </div>
                 <?php if ( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'inside_header' ): ?>
-                    <div class="row row--nav overflow-visible <?php echo get_theme_mod('mnmlwp_nav_is_sticky', true ) ? 'sticky' : ''; ?>">
+                    <div class="row row--nav overflow-visible <?php echo esc_html( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
                         <div class="column column--nav overflow-visible">
                             <?php mnmlwp_nav(); ?>
                         </div>
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
         </div>
         <?php if( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'after_header' ): ?>
-            <div class="row row--nav overflow-visible <?php echo get_theme_mod('mnmlwp_nav_is_sticky', true ) ? 'sticky' : ''; ?>">
+            <div class="row row--nav overflow-visible <?php echo esc_html( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
                 <div class="column column--nav overflow-visible">
                     <?php mnmlwp_nav(); ?>
                 </div>

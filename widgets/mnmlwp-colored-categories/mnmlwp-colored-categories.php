@@ -102,22 +102,22 @@ class mnmlWP_Widget_Colored_Categories extends WP_Widget
         ?>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'mnmlwp' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'mnmlwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'num_cats' ) ); ?>"><?php esc_attr_e( 'Number of categories:', 'mnmlwp' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'num_cats' ) ); ?>"><?php esc_html_e( 'Number of categories:', 'mnmlwp' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'num_cats' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'num_cats' ) ); ?>" type="text" value="<?php echo esc_attr( (int)$num_cats ); ?>">
         </p>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'hide_empty' ) ); ?>"><?php esc_attr_e( 'Hide empty categories:', 'mnmlwp' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'hide_empty' ) ); ?>"><?php esc_html_e( 'Hide empty categories:', 'mnmlwp' ); ?></label>
             <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'hide_empty' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'hide_empty' ) ); ?>" value="1" <?php echo $hide_empty === 1 ? 'checked' : ''; ?>>
         </p>
 
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'colorize' ) ); ?>"><?php esc_attr_e( 'Colorize link text:', 'mnmlwp' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'colorize' ) ); ?>"><?php esc_html_e( 'Colorize link text:', 'mnmlwp' ); ?></label>
             <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'colorize' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'colorize' ) ); ?>" value="1" <?php echo $colorize === 1 ? 'checked' : ''; ?>>
         </p>
 

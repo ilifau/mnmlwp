@@ -108,22 +108,22 @@ class mnmlWP_Widget_Recent_Posts extends WP_Widget
         ?>
 
         <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'mnmlwp' ); ?></label>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'mnmlwp' ); ?></label>
         <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
 
         <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'num_posts' ) ); ?>"><?php esc_attr_e( 'Number of posts:', 'mnmlwp' ); ?></label>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'num_posts' ) ); ?>"><?php esc_html_e( 'Number of posts:', 'mnmlwp' ); ?></label>
         <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'num_posts' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'num_posts' ) ); ?>" type="text" value="<?php echo esc_attr( (int)$num_posts ); ?>">
         </p>
 
         <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'title_length' ) ); ?>"><?php esc_attr_e( 'Max. number of title characters:', 'mnmlwp' ); ?></label>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'title_length' ) ); ?>"><?php esc_html_e( 'Max. number of title characters:', 'mnmlwp' ); ?></label>
         <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title_length' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title_length' ) ); ?>" type="text" value="<?php echo esc_attr( (int)$title_length ); ?>">
         </p>
 
         <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'show_thumbs' ) ); ?>"><?php esc_attr_e( 'Display thumbnails:', 'mnmlwp' ); ?></label>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'show_thumbs' ) ); ?>"><?php esc_html_e( 'Display thumbnails:', 'mnmlwp' ); ?></label>
         <input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'show_thumbs' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_thumbs' ) ); ?>" value="1" <?php echo $show_thumbs === 1 ? 'checked' : ''; ?>>
         </p>
 
