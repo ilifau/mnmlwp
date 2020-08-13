@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php wp_body_open(); ?>
         <?php mnmlwp_loading_layer(); ?>
         <?php if( get_theme_mod('mnmlwp_is_boxed') ): ?>
-        <div class="mnmlwp-boxed-wrapper" style="width: <?php echo esc_html( get_theme_mod('mnmlwp_column_width', '1120px') ); ?>">
+        <div class="mnmlwp-boxed-wrapper" style="width: <?php echo esc_attr( get_theme_mod('mnmlwp_column_width', '1120px') ); ?>">
         <?php endif; ?>  
         <?php if( get_theme_mod( 'mnmlwp_show_contact_row', false ) && get_theme_mod( 'mnmlwp_contact_row', 'Company Name | Street Address | Postcode City | +49 (0) 1234 56789 | contact@email.xyz' ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_contact_row', true ) ): ?>
                 <div class="row row--contact hide-767">
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             $mnmlwp_logo = wp_get_attachment_image_src( $mnmlwp_custom_logo_id , 'full' );
                             
                             if ( has_custom_logo() ) {
-                                echo '<img class="mnmlwp-logo-image" src="'. esc_url( $mnmlwp_logo[0] ) .'" alt="">';
+                                echo '<img class="mnmlwp-logo-image" src="'. esc_attr( $mnmlwp_logo[0] ) .'" alt="">';
                             } else {
                                 if( get_theme_mod( 'mnmlwp_logo_icon', 'diamond' ) ) {
                                     echo '<div class="mnmlwp-logo-icon fa fa-' . esc_attr( get_theme_mod( 'mnmlwp_logo_icon', 'diamond' ) ) . ' mnmlwp-text-shadow"></div>';
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     ?>
                 </div>
                 <?php if ( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'inside_header' ): ?>
-                    <div class="row row--nav overflow-visible <?php echo esc_html( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
+                    <div class="row row--nav overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
                         <div class="column column--nav overflow-visible">
                             <?php mnmlwp_nav(); ?>
                         </div>
@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
         </div>
         <?php if( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'after_header' ): ?>
-            <div class="row row--nav overflow-visible <?php echo esc_html( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
+            <div class="row row--nav overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
                 <div class="column column--nav overflow-visible">
                     <?php mnmlwp_nav(); ?>
                 </div>
