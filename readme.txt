@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.5.4 =
+
+Fixed: Post/page template options
+Fixed: WP image block (image sizes)
+
 = 0.5.3 =
 
 Added: Responsive Tables
