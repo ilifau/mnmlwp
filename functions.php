@@ -1137,28 +1137,32 @@ function mnmlwp_add_meta_boxes()
     global $post;
 
     $screens = get_post_types();
+    $post_type = get_post_type( $post->ID );
 
     foreach ( $screens as $screen )
     {
-        // Add Hide Page Title Option
-        add_meta_box(
-            'mnmlwp-hide-page-title',
-            esc_html__( 'Hide Page Title?', 'mnmlwp' ),
-            'mnmlwp_add_meta_boxes_hide_page_title_callback',
-            $screen,
-            'side',
-            'low'
-        );
-        
-        // Add Show Sidebar Option
-        add_meta_box(
-            'mnmlwp-show-sidebar',
-            esc_html__( 'Show Sidebar?', 'mnmlwp' ),
-            'mnmlwp_add_meta_boxes_show_sidebar_callback',
-            $screen,
-            'side',
-            'low'
-        );
+        if( $post_type === 'page' || $post_type === 'post' )
+        {
+            // Add Hide Page Title Option
+            add_meta_box(
+                'mnmlwp-hide-page-title',
+                esc_html__( 'Hide Page Title?', 'mnmlwp' ),
+                'mnmlwp_add_meta_boxes_hide_page_title_callback',
+                $screen,
+                'side',
+                'low'
+            );
+            
+            // Add Show Sidebar Option
+            add_meta_box(
+                'mnmlwp-show-sidebar',
+                esc_html__( 'Show Sidebar?', 'mnmlwp' ),
+                'mnmlwp_add_meta_boxes_show_sidebar_callback',
+                $screen,
+                'side',
+                'low'
+            );
+        }
 
         // Hide Breadcrumbs
         if( get_theme_mod( 'mnmlwp_has_breadcrumbs', true ) ) {
