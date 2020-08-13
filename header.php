@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
+        <?php wp_body_open(); ?>
         <?php mnmlwp_loading_layer(); ?>
         <?php if( get_theme_mod('mnmlwp_is_boxed') ): ?>
         <div class="mnmlwp-boxed-wrapper" style="width: <?php echo esc_html( get_theme_mod('mnmlwp_column_width', '1120px') ); ?>">
