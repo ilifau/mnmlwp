@@ -79,6 +79,7 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 = 0.5.4 =
 
+Added: WP required theme info
 Fixed: Post/page template options
 Fixed: WP image block (image sizes)
 
