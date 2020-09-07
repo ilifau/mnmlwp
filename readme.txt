@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.5.5 =
+
+Fixed: requires PHP 7.2 (not 7.4)
+
 = 0.5.4 =
 
 Added: WP required theme info
