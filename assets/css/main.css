@@ -1734,6 +1734,10 @@
       border: 1px solid #f1f1f1;
   }
   
+  .mnmlwp-footer-widgets .full-width {
+      margin-bottom: 0;
+  }
+
   .mnmlwp-footer-widget ul,
   .mnmlwp-footer-widget ol {
       display: block;

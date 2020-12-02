@@ -56,9 +56,8 @@ function mnmlwp_admin_scripts_and_styles()
     // Color Picker
     $screen = get_current_screen();
     $allowed_post_types = array('post', 'page');
-    $allowed_templates = array('template-page-hero.php', 'template-post-hero.php', 'template-blank-page-hero.php');
-    
-    $isHero = in_array( $screen->post_type, $allowed_post_types ) && in_array( get_page_template_slug(), $allowed_templates );
+
+    $isHero = in_array( $screen->post_type, $allowed_post_types );
     $isCategory = $screen->taxonomy === 'category';
 
     if( $isHero || $isCategory ) {
@@ -67,7 +66,9 @@ function mnmlwp_admin_scripts_and_styles()
     }
     
     // Global
-    wp_enqueue_script( 'admin', mnmlwp_assets_url() . '/js/admin/mnmlwp-notifications.js', array('jquery'), '0.0.1', true );
+    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css' );
+    wp_enqueue_script( 'admin', mnmlwp_assets_url() . '/js/admin/mnmlwp-admin.js', array('jquery'), '0.0.1', true );
+    wp_enqueue_script( 'admin-notifications', mnmlwp_assets_url() . '/js/admin/mnmlwp-notifications.js', array('jquery'), '0.0.1', true );
 }
 
 add_action( 'admin_enqueue_scripts', 'mnmlwp_admin_scripts_and_styles' );
@@ -1185,16 +1186,12 @@ function mnmlwp_add_meta_boxes()
         }
 
         // Hero Title
-        $template = get_post_meta( $post->ID, '_wp_page_template', true );
-
-        if( 'template-page-hero.php' === $template || 'template-post-hero.php' === $template || 'template-blank-page-hero.php' === $template ) {
-            add_meta_box(
-                'mnmlwp-hero-image',
-                esc_html__( 'Hero Section', 'mnmlwp' ),
-                'mnmlwp_add_meta_boxes_hero_image_callback',
-                $screen
-            );
-        }
+        add_meta_box(
+            'mnmlwp-hero-image',
+            esc_html__( 'Hero Section', 'mnmlwp' ),
+            'mnmlwp_add_meta_boxes_hero_callback',
+            $screen
+        );
     }
 }
 
@@ -1276,7 +1273,7 @@ function mnmlwp_add_meta_boxes_hide_contact_row_callback( $post )
     }
 }
 
-function mnmlwp_add_meta_boxes_hero_image_callback( $post )
+function mnmlwp_add_meta_boxes_hero_callback( $post )
 {
     $hero_height = get_post_meta( $post->ID, '_mnmlwp_hero_height', true ) ? get_post_meta( $post->ID, '_mnmlwp_hero_height', true ) : 75;
     $hero_height_measure = get_post_meta( $post->ID, '_mnmlwp_hero_height_measure', true ) ? get_post_meta( $post->ID, '_mnmlwp_hero_height_measure', true ) : 'percent';
@@ -1299,104 +1296,114 @@ function mnmlwp_add_meta_boxes_hero_image_callback( $post )
     $background_position_vertical = get_post_meta( $post->ID, '_mnmlwp_hero_background_position_vertical', true ) ? get_post_meta( $post->ID, '_mnmlwp_hero_background_position_vertical', true ) : 'center';
     $has_background_attachment_fixed = get_post_meta( $post->ID, '_mnmlwp_hero_background_attachment_fixed', true );
     $has_background_attachment_fixed_checked = $has_background_attachment_fixed == 1 ? 'checked' : '';
-    
-    // Desktop
-    echo '<label for="mnmlwp-hero-height"><b>' . esc_html__('Hero section height', 'mnmlwp') . '</b></label>
-    <br><input type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height" name="mnmlwp-hero-height" value="' . $hero_height . '">';
-    echo '<select style="vertical-align:top" id="mnmlwp-hero-height-measure" name="mnmlwp-hero-height-measure" />';
 
-        foreach( array(
-            'percent' => '%',
-            'pixel' => 'px',
-        ) as $key => $val ) {
-            ?><option value="<?php echo $key; ?>"<?php
-                if( $key === $hero_height_measure ) echo ' selected="selected"';
-            ?>><?php echo $val; ?></option><?php
-        }
+    // Hero fieldset
+    $template = get_post_meta( $post->ID, '_wp_page_template', true );
+    $has_hero_class = ( 'template-page-hero.php' === $template || 'template-post-hero.php' === $template || 'template-blank-page-hero.php' === $template ) ? 'mnmlwp-has-hero' : '';
 
-    echo '</select> <small>Desktop (1024px)</small>';
-    
-    // Tablet
-    echo '<br><input type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height-tablet" name="mnmlwp-hero-height-tablet" value="' . $hero_height_tablet . '">';
-    echo '<select style="vertical-align:top" id="mnmlwp-hero-height-measure-tablet" name="mnmlwp-hero-height-measure-tablet" />';
+    echo '<p id="mnmlwp-hero-fieldset-message" class="mnmlwp-last ' . $has_hero_class . '">' . __('If you would like to display a hero section please select the hero template in the post/page attributes.', 'mnmlwp') . '</p>';
 
-        foreach( array(
-            'percent' => '%',
-            'pixel' => 'px',
-        ) as $key => $val ) {
-            ?><option value="<?php echo $key; ?>"<?php
-                if( $key === $hero_height_measure_tablet ) echo ' selected="selected"';
-            ?>><?php echo $val; ?></option><?php
-        }
+    echo '<fieldset id="mnmlwp-hero-fieldset" class="' . $has_hero_class . '">';
 
-    echo '</select> <small>Tablet (768-1024px)</small>';
-    
-    // Smartphone
-    echo '<br><input type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height-smartphone" name="mnmlwp-hero-height-smartphone" value="' . $hero_height_smartphone . '">';
-    echo '<select style="vertical-align:top" id="mnmlwp-hero-height-measure-smartphone" name="mnmlwp-hero-height-measure-smartphone" />';
+        // Desktop
+        echo '<label for="mnmlwp-hero-height"><b>' . esc_html__('Hero section height', 'mnmlwp') . '</b></label>
+        <br><input class="mnmlwp-hero-input" type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height" name="mnmlwp-hero-height" value="' . $hero_height . '">';
+        echo '<select style="vertical-align:top" id="mnmlwp-hero-height-measure" name="mnmlwp-hero-height-measure" />';
 
-        foreach( array(
-            'percent' => '%',
-            'pixel' => 'px',
-        ) as $key => $val ) {
-            ?><option value="<?php echo $key; ?>"<?php
-                if( $key === $hero_height_measure_smartphone ) echo ' selected="selected"';
-            ?>><?php echo $val; ?></option><?php
-        }
+            foreach( array(
+                'percent' => '%',
+                'pixel' => 'px',
+            ) as $key => $val ) {
+                ?><option value="<?php echo $key; ?>"<?php
+                    if( $key === $hero_height_measure ) echo ' selected="selected"';
+                ?>><?php echo $val; ?></option><?php
+            }
 
-    echo '</select> <small>Smartphone (320-768px)</small>';
+        echo '</select> <small>Desktop (1024px)</small>';
+        
+        // Tablet
+        echo '<br><input type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height-tablet" name="mnmlwp-hero-height-tablet" value="' . $hero_height_tablet . '">';
+        echo '<select style="vertical-align:top" id="mnmlwp-hero-height-measure-tablet" name="mnmlwp-hero-height-measure-tablet" />';
 
-    echo '<br><br><label for="mnmlwp-hero-title"><b>' . esc_html__('Content (HTML allowed)', 'mnmlwp') . '</b></label><br>';
-    
-    echo '<textarea class="mnmlwp-input widefat" id="mnmlwp-hero-title" name="mnmlwp-hero-title" rows="10">' . $hero_title . '</textarea>';
+            foreach( array(
+                'percent' => '%',
+                'pixel' => 'px',
+            ) as $key => $val ) {
+                ?><option value="<?php echo $key; ?>"<?php
+                    if( $key === $hero_height_measure_tablet ) echo ' selected="selected"';
+                ?>><?php echo $val; ?></option><?php
+            }
 
-    echo '<br><input type="checkbox" id="mnmlwp-hero-has-overlay" name="mnmlwp-hero-has-overlay" value="1" ' . $has_overlay_checked . '>&nbsp;<b>' . esc_html__('Display colored overlay?', 'mnmlwp') . '</b>';
-    
-    echo '<br><br><strong>Gradient color 1</strong><br><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-from" name="mnmlwp-hero-overlay-color-from" value="' . $hero_overlay_color_from . '">';
-    echo '<br><br><strong>Gradient color 2</strong><br><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-to" name="mnmlwp-hero-overlay-color-to" value="' . $hero_overlay_color_to . '">';
+        echo '</select> <small>Tablet (768-1024px)</small>';
+        
+        // Smartphone
+        echo '<br><input type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height-smartphone" name="mnmlwp-hero-height-smartphone" value="' . $hero_height_smartphone . '">';
+        echo '<select style="vertical-align:top" id="mnmlwp-hero-height-measure-smartphone" name="mnmlwp-hero-height-measure-smartphone" />';
 
-    echo '<br><br><label for="mnmlwp-hero-overlay-gradient-degrees"><b>' . esc_html__('Gradient angle (0-360)', 'mnmlwp') . '</b></label>';
-    echo '<br><input type="number" step="1" min="0" max="360" id="mnmlwp-hero-overlay-gradient-degrees" name="mnmlwp-hero-overlay-gradient-degrees" value="' . $hero_overlay_gradient_degrees . '">';
+            foreach( array(
+                'percent' => '%',
+                'pixel' => 'px',
+            ) as $key => $val ) {
+                ?><option value="<?php echo $key; ?>"<?php
+                    if( $key === $hero_height_measure_smartphone ) echo ' selected="selected"';
+                ?>><?php echo $val; ?></option><?php
+            }
 
-    echo '<br><br><input type="checkbox" id="mnmlwp-hero-has-radial-gradient" name="mnmlwp-hero-has-radial-gradient" value="1" ' . $has_radial_gradient_checked . '>&nbsp;<b>' . esc_html__('Radial gradient?', 'mnmlwp') . '</b>';
+        echo '</select> <small>Smartphone (320-768px)</small>';
 
-    echo '<br><br><label for="mnmlwp-hero-overlay-opacity"><b>' . esc_html__('Overlay opacity in percent (0-100%)', 'mnmlwp') . '</b></label>';
-    echo '<br><input type="number" step="1" min="0" max="100" id="mnmlwp-hero-overlay-opacity" name="mnmlwp-hero-overlay-opacity" value="' . $hero_overlay_opacity . '">';
+        echo '<br><br><label for="mnmlwp-hero-title"><b>' . esc_html__('Content (HTML allowed)', 'mnmlwp') . '</b></label><br>';
+        
+        echo '<textarea class="mnmlwp-input widefat" id="mnmlwp-hero-title" name="mnmlwp-hero-title" rows="10">' . $hero_title . '</textarea>';
 
-    echo '<br><br><input type="checkbox" id="mnmlwp-hero-has-skew" name="mnmlwp-hero-has-skew" value="1" ' . $has_skew_checked . '>&nbsp;<b>' . esc_html__('Skew Overlay?', 'mnmlwp') . '</b>';
+        echo '<br><input type="checkbox" id="mnmlwp-hero-has-overlay" name="mnmlwp-hero-has-overlay" value="1" ' . $has_overlay_checked . '>&nbsp;<b>' . esc_html__('Display colored overlay?', 'mnmlwp') . '</b>';
+        
+        echo '<br><br><strong>Gradient color 1</strong><br><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-from" name="mnmlwp-hero-overlay-color-from" value="' . $hero_overlay_color_from . '">';
+        echo '<br><br><strong>Gradient color 2</strong><br><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-to" name="mnmlwp-hero-overlay-color-to" value="' . $hero_overlay_color_to . '">';
 
-    echo '<br><br><label for="mnmlwp-hero-background-position-horizontal"><b>' . esc_html__('Background position (vertical)', 'mnmlwp') . '</b></label><br>';
-    echo '<select id="mnmlwp-hero-background-position-horizontal" name="mnmlwp-hero-background-position-horizontal" />';
+        echo '<br><br><label for="mnmlwp-hero-overlay-gradient-degrees"><b>' . esc_html__('Gradient angle (0-360)', 'mnmlwp') . '</b></label>';
+        echo '<br><input type="number" step="1" min="0" max="360" id="mnmlwp-hero-overlay-gradient-degrees" name="mnmlwp-hero-overlay-gradient-degrees" value="' . $hero_overlay_gradient_degrees . '">';
 
-        foreach( array(
-            'center' => 'Center (default)',
-            'top' => 'Top',
-            'bottom' => 'Bottom'
-        ) as $key => $val ) {
-            ?><option value="<?php echo $key; ?>"<?php
-                if( $key === $background_position_horizontal ) echo ' selected="selected"';
-            ?>><?php echo $val; ?></option><?php
-        }
+        echo '<br><br><input type="checkbox" id="mnmlwp-hero-has-radial-gradient" name="mnmlwp-hero-has-radial-gradient" value="1" ' . $has_radial_gradient_checked . '>&nbsp;<b>' . esc_html__('Radial gradient?', 'mnmlwp') . '</b>';
 
-    echo '</select>';
+        echo '<br><br><label for="mnmlwp-hero-overlay-opacity"><b>' . esc_html__('Overlay opacity in percent (0-100%)', 'mnmlwp') . '</b></label>';
+        echo '<br><input type="number" step="1" min="0" max="100" id="mnmlwp-hero-overlay-opacity" name="mnmlwp-hero-overlay-opacity" value="' . $hero_overlay_opacity . '">';
 
-    echo '<br><br><label for="mnmlwp-hero-background-position-vertical"><b>' . esc_html__('Background position (horizontal)', 'mnmlwp') . '</b></label><br>';
-    echo '<select id="mnmlwp-hero-background-position-vertical" name="mnmlwp-hero-background-position-vertical" />';
+        echo '<br><br><input type="checkbox" id="mnmlwp-hero-has-skew" name="mnmlwp-hero-has-skew" value="1" ' . $has_skew_checked . '>&nbsp;<b>' . esc_html__('Skew Overlay?', 'mnmlwp') . '</b>';
 
-        foreach( array(
-            'center' => 'Center (default)',
-            'left' => 'Left',
-            'right' => 'Right'
-        ) as $key => $val ) {
-            ?><option value="<?php echo $key; ?>"<?php
-                if( $key === $background_position_vertical ) echo ' selected="selected"';
-            ?>><?php echo $val; ?></option><?php
-        }
+        echo '<br><br><label for="mnmlwp-hero-background-position-horizontal"><b>' . esc_html__('Background position (vertical)', 'mnmlwp') . '</b></label><br>';
+        echo '<select id="mnmlwp-hero-background-position-horizontal" name="mnmlwp-hero-background-position-horizontal" />';
 
-    echo '</select>';
-    
-    echo '<br><br><input type="checkbox" id="mnmlwp-hero-background-attachment-fixed" name="mnmlwp-hero-background-attachment-fixed" value="1" ' . $has_background_attachment_fixed_checked . '>&nbsp;<b>' . esc_html__('Fixed background position?', 'mnmlwp') . '</b>';
-    echo '</p><p><b>' . esc_html__('Attention', 'mnmlwp'). '!</b> ' . esc_html__('The fixed background setting overwrites the selected background position values. It is also not recommended to use the background overlay together with a fixed background, since the re-rendering of a transparent element might result in in jerky scrolling. The fixed background setting only takes effect with screen sizes >= 768px.', 'mnmlwp') . '</p>';
+            foreach( array(
+                'center' => 'Center (default)',
+                'top' => 'Top',
+                'bottom' => 'Bottom'
+            ) as $key => $val ) {
+                ?><option value="<?php echo $key; ?>"<?php
+                    if( $key === $background_position_horizontal ) echo ' selected="selected"';
+                ?>><?php echo $val; ?></option><?php
+            }
+
+        echo '</select>';
+
+        echo '<br><br><label for="mnmlwp-hero-background-position-vertical"><b>' . esc_html__('Background position (horizontal)', 'mnmlwp') . '</b></label><br>';
+        echo '<select id="mnmlwp-hero-background-position-vertical" name="mnmlwp-hero-background-position-vertical" />';
+
+            foreach( array(
+                'center' => 'Center (default)',
+                'left' => 'Left',
+                'right' => 'Right'
+            ) as $key => $val ) {
+                ?><option value="<?php echo $key; ?>"<?php
+                    if( $key === $background_position_vertical ) echo ' selected="selected"';
+                ?>><?php echo $val; ?></option><?php
+            }
+
+        echo '</select>';
+        
+        echo '<br><br><input type="checkbox" id="mnmlwp-hero-background-attachment-fixed" name="mnmlwp-hero-background-attachment-fixed" value="1" ' . $has_background_attachment_fixed_checked . '>&nbsp;<b>' . esc_html__('Fixed background position?', 'mnmlwp') . '</b>';
+        echo '</p><p><b>' . esc_html__('Attention', 'mnmlwp'). '!</b> ' . esc_html__('The fixed background setting overwrites the selected background position values. It is also not recommended to use the background overlay together with a fixed background, since the re-rendering of a transparent element might result in in jerky scrolling. The fixed background setting only takes effect with screen sizes >= 768px.', 'mnmlwp') . '</p>';
+
+    echo '</fieldset>';
 }
 
 /**

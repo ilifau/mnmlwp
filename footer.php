@@ -15,29 +15,33 @@ echo mnmlwp_page_content_wrapper( get_the_ID(), 'footer' ); ?>
             <footer>
 
                 <div class="full-width last mnmlwp-footer-widgets">
-                    <div class="mnmlwp-flex-columns">
-                        <div class="mnmlwp-flex-column mnmlwp-flex-column--third">
-                            <?php
-                                if ( is_active_sidebar( 'mnmlwp-footer-left' ) ) :
-                                    dynamic_sidebar( 'mnmlwp-footer-left' );
-                                endif;
-                            ?>
+
+                    <?php if( is_active_sidebar( 'mnmlwp-footer-left' ) || is_active_sidebar( 'mnmlwp-footer-middle' ) || is_active_sidebar( 'mnmlwp-footer-right' ) ): ?>
+                        <div class="mnmlwp-flex-columns">
+                            <div class="mnmlwp-flex-column mnmlwp-flex-column--third">
+                                <?php
+                                    if ( is_active_sidebar( 'mnmlwp-footer-left' ) ) :
+                                        dynamic_sidebar( 'mnmlwp-footer-left' );
+                                    endif;
+                                ?>
+                            </div>
+                            <div class="mnmlwp-flex-column mnmlwp-flex-column--third">
+                                <?php
+                                    if ( is_active_sidebar( 'mnmlwp-footer-middle' ) ) :
+                                        dynamic_sidebar( 'mnmlwp-footer-middle' );
+                                    endif;
+                                ?>
+                            </div>
+                            <div class="mnmlwp-flex-column mnmlwp-flex-column--third">
+                                <?php
+                                    if ( is_active_sidebar( 'mnmlwp-footer-right' ) ) :
+                                        dynamic_sidebar( 'mnmlwp-footer-right' );
+                                    endif;
+                                ?>
+                            </div>
                         </div>
-                        <div class="mnmlwp-flex-column mnmlwp-flex-column--third">
-                            <?php
-                                if ( is_active_sidebar( 'mnmlwp-footer-middle' ) ) :
-                                    dynamic_sidebar( 'mnmlwp-footer-middle' );
-                                endif;
-                            ?>
-                        </div>
-                        <div class="mnmlwp-flex-column mnmlwp-flex-column--third">
-                            <?php
-                                if ( is_active_sidebar( 'mnmlwp-footer-right' ) ) :
-                                    dynamic_sidebar( 'mnmlwp-footer-right' );
-                                endif;
-                            ?>
-                        </div>
-                    </div>
+                    <?php endif; ?>
+
                     <?php
                         if ( is_active_sidebar( 'mnmlwp-footer-full-width' ) ) {
                             echo '<div class="full-width">';

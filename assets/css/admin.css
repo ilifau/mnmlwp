@@ -1,0 +1,24 @@
+/* mnmlWP admin CSS */
+.mnmlwp-last {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#mnmlwp-hero-fieldset-message {
+  display: block;
+  overflow: hidden;
+}
+
+#mnmlwp-hero-fieldset-message.mnmlwp-has-hero {
+  display: none;
+}
+
+#mnmlwp-hero-fieldset {
+  display: none;
+}
+
+#mnmlwp-hero-fieldset.mnmlwp-has-hero {
+  display: block;
+  overflow: hidden;
+  height: auto;
+}

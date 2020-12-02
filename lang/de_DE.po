@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mnmlWP 0.1.1\n"
-"POT-Creation-Date: 2020-03-19 16:24+0100\n"
-"PO-Revision-Date: 2020-03-19 16:36+0100\n"
+"POT-Creation-Date: 2020-12-02 17:34+0100\n"
+"PO-Revision-Date: 2020-12-02 17:34+0100\n"
 "Last-Translator: Sebastian Honert <sebastian.honert@gmail.com>\n"
 "Language-Team: sebastian.honert@gmail.com\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -215,23 +215,23 @@ msgstr "Wähle eine Farbe für diese Kategorie"
 msgid "Category Color"
 msgstr "Farbe dieser Kategorie"
 
-#: functions.php:1147
+#: functions.php:1150
 msgid "Hide Page Title?"
 msgstr "Seitentitel verbergen?"
 
-#: functions.php:1157
+#: functions.php:1160
 msgid "Show Sidebar?"
 msgstr "Sidebar anzeigen?"
 
-#: functions.php:1168
+#: functions.php:1172
 msgid "Hide Breadcrumbs?"
 msgstr "Breadcrumb-Navigation verbergen?"
 
-#: functions.php:1178
+#: functions.php:1182
 msgid "Hide Contact Row?"
 msgstr "Konzaktzeile verbergen?"
 
-#: functions.php:1190
+#: functions.php:1191
 msgid "Hero Section"
 msgstr "Hero-Bereich"
 
@@ -251,7 +251,7 @@ msgstr "Ja, Seitentitel verbergen."
 msgid "Check to hide the breadcrumb navigation on this page."
 msgstr "Ankreuzen, um die Breadcrumb-Navigation zu verbergen."
 
-#: functions.php:1258 functions.php:1272 functions.php:1396
+#: functions.php:1258 functions.php:1272 functions.php:1404
 msgid "Attention"
 msgstr "Achtung"
 
@@ -270,47 +270,55 @@ msgid ""
 "The contact row is globally disabled in the theme customization options."
 msgstr "Die Kontaktzeile ist im Theme-Customizer global abgeschaltet."
 
-#: functions.php:1301
+#: functions.php:1304
+msgid ""
+"If you would like to display a hero section please select the hero template "
+"in the post/page attributes."
+msgstr ""
+"Um einen Hero-Bereich anzeigen zu lassen, wähle bitte das Hero-Template in "
+"den Beitrags-/Seitenattributen."
+
+#: functions.php:1309
 msgid "Hero section height"
 msgstr "Höhe des Hero-Bereichs"
 
-#: functions.php:1346
+#: functions.php:1354
 msgid "Content (HTML allowed)"
 msgstr "Inhalt (HTML erlaubt)"
 
-#: functions.php:1350
+#: functions.php:1358
 msgid "Display colored overlay?"
 msgstr "Farb-Overlay anzeigen?"
 
-#: functions.php:1355
+#: functions.php:1363
 msgid "Gradient angle (0-360)"
 msgstr "Farbverlauf Winkel (0-360)"
 
-#: functions.php:1358
+#: functions.php:1366
 msgid "Radial gradient?"
 msgstr "Radialer Farbverlauf?"
 
-#: functions.php:1360
+#: functions.php:1368
 msgid "Overlay opacity in percent (0-100%)"
 msgstr "Overlay-Deckkraft in Prozent (0-100%)"
 
-#: functions.php:1363
+#: functions.php:1371
 msgid "Skew Overlay?"
 msgstr "Overlay mit Schräge?"
 
-#: functions.php:1365
+#: functions.php:1373
 msgid "Background position (vertical)"
 msgstr "Hintergrundposition (vertikal)"
 
-#: functions.php:1380
+#: functions.php:1388
 msgid "Background position (horizontal)"
 msgstr "Hintergrundposition (horizontal)"
 
-#: functions.php:1395
+#: functions.php:1403
 msgid "Fixed background position?"
 msgstr "Statische Hintergrundposition?"
 
-#: functions.php:1396
+#: functions.php:1404
 msgid ""
 "The fixed background setting overwrites the selected background position "
 "values. It is also not recommended to use the background overlay together "
@@ -598,23 +606,6 @@ msgstr "Senden"
 msgid "mnmlWP Colored Categories"
 msgstr "mnmlWP Farbige Kategorien"
 
-#: widgets/mnmlwp-colored-categories/mnmlwp-colored-categories.php:105
-#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:111
-msgid "Title:"
-msgstr "Titel:"
-
-#: widgets/mnmlwp-colored-categories/mnmlwp-colored-categories.php:110
-msgid "Number of categories:"
-msgstr "Anzahl der Kategorien:"
-
-#: widgets/mnmlwp-colored-categories/mnmlwp-colored-categories.php:115
-msgid "Hide empty categories:"
-msgstr "Leere Kategorien verbergen:"
-
-#: widgets/mnmlwp-colored-categories/mnmlwp-colored-categories.php:120
-msgid "Colorize link text:"
-msgstr "Linktext einfärben:"
-
 #: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:20
 msgid "mnmlWP Recent Posts"
 msgstr "mnmlWP Neueste Beiträge"
@@ -623,17 +614,26 @@ msgstr "mnmlWP Neueste Beiträge"
 msgid "No posts found"
 msgstr "Keine Beiträge gefunden"
 
-#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:116
-msgid "Number of posts:"
-msgstr "Anzahl der Beiträge:"
+#~ msgid "Title:"
+#~ msgstr "Titel:"
 
-#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:121
-msgid "Max. number of title characters:"
-msgstr "Max. Länge der Beitragstitel (Zeichen):"
+#~ msgid "Number of categories:"
+#~ msgstr "Anzahl der Kategorien:"
 
-#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:126
-msgid "Display thumbnails:"
-msgstr "Beitragsbilder anzeigen:"
+#~ msgid "Hide empty categories:"
+#~ msgstr "Leere Kategorien verbergen:"
+
+#~ msgid "Colorize link text:"
+#~ msgstr "Linktext einfärben:"
+
+#~ msgid "Number of posts:"
+#~ msgstr "Anzahl der Beiträge:"
+
+#~ msgid "Max. number of title characters:"
+#~ msgstr "Max. Länge der Beitragstitel (Zeichen):"
+
+#~ msgid "Display thumbnails:"
+#~ msgstr "Beitragsbilder anzeigen:"
 
 #~ msgid "Sub-Menu Background Color"
 #~ msgstr "Sub-Menu Hintergrundfarbe"
