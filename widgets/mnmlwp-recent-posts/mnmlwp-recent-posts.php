@@ -57,11 +57,27 @@ class mnmlWP_Widget_Recent_Posts extends WP_Widget
             echo $args['after_title'];
         }
 
+        $sticky = get_option( 'sticky_posts' );
+
         $posts = get_posts( array(
             'post_type' => 'post',
             'post_status' => 'publish',
             'posts_per_page' => $num_posts,
+            'post__not_in' => $sticky,
+            'orderby' => 'date',
+            'order' => 'DESC',
         ) );
+
+        $sticky_posts = get_posts( array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => $num_posts,
+            'post__in' => $sticky,
+            'orderby' => 'date',
+            'order' => 'DESC',
+        ) );
+
+        $posts = array_merge( $sticky_posts, $posts );
 
         if( empty( $posts ) ) {
             echo esc_html__('No posts found', 'mnmlwp');
@@ -75,14 +91,15 @@ class mnmlWP_Widget_Recent_Posts extends WP_Widget
 
             echo '<a class="mnmlwp-recent-posts-link" href="' . esc_url( get_permalink( $post->ID ) ) . '">';
 
+                $tack = in_array( $post->ID, $sticky ) ? '<span class="mnmlwp-recent-posts-tack fa fa-thumb-tack"></span>' : '';
                 $more = strlen( $post->post_title ) >= $title_length ? '&hellip;' : '';
 
                 if( $show_thumbs ) {
-                    echo '<span class="mnmlwp-recent-posts-link-title">' . substr(esc_attr( $post->post_title ), 0 , $title_length) . $more . '</span>';
+                    echo '<span class="mnmlwp-recent-posts-link-title">' . $tack . substr(esc_attr( $post->post_title ), 0 , $title_length) . $more . '</span>';
                     echo '<span class="mnmlwp-recent-posts-link-thumbnail"><img data-original="' . $url . '" class="lazy" src="' . get_template_directory_uri() . '/widgets/mnmlwp-recent-posts/assets/img/placeholder.png" alt=""></span>';
 
                 } else {
-                    echo '<span class="mnmlwp-recent-posts-link-title mnmlwp-recent-posts-link-title-no-thumb">' . substr(esc_attr( $post->post_title ), 0 , $title_length) . $more . '</span>';
+                    echo '<span class="mnmlwp-recent-posts-link-title mnmlwp-recent-posts-link-title-no-thumb">' . $tack . substr(esc_attr( $post->post_title ), 0 , $title_length) . $more . '</span>';
                 }
 
             echo '</a>';

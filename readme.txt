@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.5.7 =
+
+Added: Sticky posts in recent posts widget
+Added: Sticky posts in categories
+
 = 0.5.6 =
 
 Added: Toggle hero section in post/page editor

@@ -46,3 +46,8 @@
     width: 100%;
     padding: .125em 0;
 }
+
+.mnmlwp-recent-posts-tack {
+    transform: rotate(12deg);
+    margin-right: .2875em;
+}

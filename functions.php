@@ -654,6 +654,17 @@ if( ! function_exists( 'mnmlwp_get_posts') )
             $wp_query = new WP_Query( $args );
         }
 
+        if( is_category() ) {
+            $sticky = get_option('sticky_posts');
+
+            foreach( $wp_query->posts as $key => $post ) {
+                if( in_array( $post->ID, $sticky ) ) {
+                    unset( $wp_query->posts[$key] );
+                    array_unshift( $wp_query->posts, $post );
+                }
+            }
+        }
+
         $html = '';
 
         if( is_author() ) {
@@ -794,18 +805,16 @@ if( ! function_exists ( 'mnmlwp_get_post_meta' ) )
         }
 
         $divider = '<span class="mnmlwp-separator"></span>';
-        // $author_title = '<span class="mnmlwp-author-title">' . esc_html__('Author', 'mnmlwp') . ':</span> ';
         $author_title = '';
-        $author = in_array( 'author', $components ) && get_post_type() === 'post' ? $author_title . '<a class="post-meta-author-link" href="' . esc_url( home_url() ) . '/author/' . get_the_author_meta('nicename') . '">' . get_the_author_meta('display_name') . '</a>' . $divider : '';
-        $date = in_array( 'date', $components ) ? get_the_date() : '';
+        $post_author_id = get_post_field( 'post_author', $post_id );
+
+        $author = in_array( 'author', $components ) && get_post_type( $post_id ) === 'post' ? $author_title . '<a class="post-meta-author-link" href="' . esc_url( home_url() ) . '/author/' . get_the_author_meta( 'nicename', $post_author_id ) . '">' . get_the_author_meta( 'display_name', $post_author_id ) . '</a>' . $divider : '';
+        $date = in_array( 'date', $components ) ? get_the_date( '', $post_id ) : '';
 
         $html = '<div class="mnmlwp-post-meta">';
-
             $html .= '<p class="last">' . $author . $date . '</p>';
-
             $html .= in_array( 'categories', $components ) ? mnmlwp_get_post_categories( $post_id ) : '';
             $html .= in_array( 'tags', $components ) ? mnmlwp_get_post_tags( $post_id ) : '';
-
         $html .= '</div>';
 
         return $html;
@@ -1163,6 +1172,14 @@ function mnmlwp_add_meta_boxes()
                 'side',
                 'low'
             );
+
+            // Hero Title
+            add_meta_box(
+                'mnmlwp-hero-image',
+                esc_html__( 'Hero Section', 'mnmlwp' ),
+                'mnmlwp_add_meta_boxes_hero_callback',
+                $screen
+            );
         }
 
         // Hide Breadcrumbs
@@ -1184,14 +1201,6 @@ function mnmlwp_add_meta_boxes()
                 $screen
             );
         }
-
-        // Hero Title
-        add_meta_box(
-            'mnmlwp-hero-image',
-            esc_html__( 'Hero Section', 'mnmlwp' ),
-            'mnmlwp_add_meta_boxes_hero_callback',
-            $screen
-        );
     }
 }
 
