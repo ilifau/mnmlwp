@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.6.2 =
+
+Fixed: Breadcrumb navigation
+
 = 0.6.1 =
 
 Fixed: Searchform visibility in widgets

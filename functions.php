@@ -1548,6 +1548,10 @@ function mnmlwp_get_hero_height_measure()
  * @since 0.6.0
  */
 function mnmlwp_get_breadcrumb_html() {
+    if( ! function_exists('breadcrumb_trail') ) {
+        return;
+    }
+
     ob_start();
     mnmlwp_breadcrumb_trail();
     $breadcrumb = ob_get_contents();

@@ -948,6 +948,11 @@
       nav#main #searchform {
         display: none !important;
       }
+
+      /* Sidebar */
+      .mnmlwp-sidebar {
+        margin-bottom: 2em;
+      }
   }
   
   /* ------------------------------------------
