@@ -2476,6 +2476,10 @@
           display: inline-block;
           font-size: .875em;
       }
+
+      .mnmlwp-widgets #searchform {
+          display: block;
+      }
   
       #searchform input#s {
           width: 16em;

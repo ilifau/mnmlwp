@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.6.1 =
+
+Fixed: Searchform visibility in widgets
+
 = 0.6.0 =
 
 Breaking changes: .row and .column classed changed to .mnmlwp-row and .mnmlwp-column
