@@ -363,11 +363,11 @@ function mnmlwp_register_required_plugins()
     tgmpa( $plugins, $config );
 }
 
-// Customizer
-include 'functions/customizer.php';
-
 // Breadcrumbs
 include 'functions/breadcrumbs.php';
+
+// Customizer
+include 'functions/customizer.php';
 
 // Demo Content
 include 'demo/functions.php';
@@ -996,6 +996,8 @@ if( ! function_exists( 'mnmlwp_get_hero_row' ) )
         $html .= '</div>';
         $html .= '</div>';
 
+        $html .= mnmlwp_get_breadcrumb_html();
+
         return $html;
     }
 }
@@ -1538,4 +1540,54 @@ function mnmlwp_get_hero_height_measure()
     );
     
     return $measure;
+}
+
+/**
+ * Get breadcrumb trail HTML
+ * 
+ * @since 0.6.0
+ */
+function mnmlwp_get_breadcrumb_html() {
+    ob_start();
+    mnmlwp_breadcrumb_trail();
+    $breadcrumb = ob_get_contents();
+    ob_end_clean();
+
+    return '<div class="mnmlwp-row mnmlwp-row--breadcrumbs">
+        <div class="mnmlwp-column mnmlwp-column--breadcrumbs">
+            <div class="mnmlwp-breadcrumbs">'
+                . $breadcrumb .
+            '</div>
+        </div>
+    </div>
+    <div class="clear-columns"></div>';
+}
+
+/**
+ * Get breadcrumb row
+ * 
+ * @since 0.6.0
+ */
+function mnmlwp_get_breadcrumb_row( $hero = false ) {
+    global $post;
+
+    if( function_exists('breadcrumb_trail') ):
+
+        $templates = array(
+            'template-blank-page.php',
+            'template-blank-page-hero.php',
+            'template-page-hero.php',
+            'template-post-hero.php',
+        );
+
+        if( ! $hero && ( is_singular() && ! in_array( get_page_template_slug( $post->ID ), $templates ) ) ) {
+            if( ( get_theme_mod( 'mnmlwp_has_breadcrumbs', false ) ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_breadcrumbs', true ) ):
+                if( ( ! is_front_page() ) || ( is_front_page() && get_theme_mod( 'mnmlwp_breadcrumbs_show_on_home', false ) ) ):
+                    echo mnmlwp_get_breadcrumb_html();
+                endif;
+            endif;
+        } else {
+            
+        }
+    endif;
 }

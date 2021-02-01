@@ -90,18 +90,5 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
         </div>
         <div class="clear-columns"></div>
-        <?php if( function_exists('breadcrumb_trail') ): ?>
-            <?php if( ( get_theme_mod( 'mnmlwp_has_breadcrumbs', false ) ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_breadcrumbs', true ) ): ?>
-                <?php if( ( ! is_front_page() ) || ( is_front_page() && get_theme_mod( 'mnmlwp_breadcrumbs_show_on_home', false ) ) ): ?>
-                    <div class="mnmlwp-row mnmlwp-row--breadcrumbs">
-                        <div class="mnmlwp-column mnmlwp-column--breadcrumbs">
-                            <div class="mnmlwp-breadcrumbs">
-                                <?php mnmlwp_breadcrumb_trail(); ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear-columns"></div>
-                <?php endif; ?>
-            <?php endif;?>
-        <?php endif; ?>
+        <?php echo mnmlwp_get_breadcrumb_row( false ); ?>
         <?php echo mnmlwp_page_content_wrapper( get_the_ID() ); ?>
