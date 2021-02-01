@@ -16,9 +16,9 @@
 
     echo mnmlwp_get_hero_row(); ?>
 
-    <div class="row row--single row--single-hero">
+    <div class="mnmlwp-row mnmlwp-row--single mnmlwp-row--single-hero">
 
-        <div class="column column--single column--single-hero">
+        <div class="mnmlwp-column mnmlwp-column--single mnmlwp-column--single-hero">
 
             <?php
 

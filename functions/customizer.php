@@ -48,6 +48,30 @@ function mnmlwp_customize_register( $wp_customize )
 
     // Header
 
+    $wp_customize->add_setting( 'mnmlwp_logo_height_desktop' , array(
+        'default'   => 2,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_logo_height_tablet' , array(
+        'default'   => 2,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_logo_height_tablet' , array(
+        'default'   => 2,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_logo_height_mobile' , array(
+        'default'   => 2,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_header_bg_color' , array(
         'default'   => '#34465b',
         'transport' => 'refresh',
@@ -211,7 +235,7 @@ function mnmlwp_customize_register( $wp_customize )
     // Section Settings Page Layout
 
     $wp_customize->add_setting( 'mnmlwp_base_font_size' , array(
-        'default'   => '1.25em',
+        'default'   => '1.125em',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ) );
@@ -226,12 +250,6 @@ function mnmlwp_customize_register( $wp_customize )
         'default'   => 60,
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
-    ) );
-
-    $wp_customize->add_setting( 'mnmlwp_has_local_font', array(
-        'default' => true,
-        'capability' => 'edit_theme_options',
-        'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_is_boxed', array(
@@ -302,8 +320,26 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_has_header_search', array(
+        'default' => true,
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_has_nav_search', array(
         'default' => true,
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_center_header', array(
+        'default' => false,
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_center_menu', array(
+        'default' => false,
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
     ) );
@@ -325,6 +361,36 @@ function mnmlwp_customize_register( $wp_customize )
         'capability' => 'edit_theme_options',
         'type' => 'theme_mod',
         'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_header_padding_top' , array(
+        'default'   => 1.5,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_header_padding_bottom' , array(
+        'default'   => 1.5,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_nav_item_padding_top_bottom' , array(
+        'default'   => 15,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_nav_item_padding_left_right' , array(
+        'default'   => 15,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_header_padding_bottom' , array(
+        'default'   => 1.5,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_columns_spacing_horizontal' , array(
@@ -370,6 +436,45 @@ function mnmlwp_customize_register( $wp_customize )
     ) ) );
 
     // Header
+
+    $wp_customize->add_control( 'mnmlwp_logo_height_desktop', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Logo image height (desktop)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_logo_height_desktop',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 3,
+            'step' => 0.1,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_logo_height_tablet', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Logo image height (tablet)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_logo_height_tablet',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 3,
+            'step' => 0.1,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_logo_height_mobile', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Logo image height (mobile)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_logo_height_mobile',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 3,
+            'step' => 0.1,
+            'style' => 'width:98%;'
+        ),
+    ) );
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_header_bg_color', array(
         'label'      => esc_html__( 'Header background color', 'mnmlwp' ),
@@ -528,7 +633,7 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_control( 'mnmlwp_base_font_size', array(
-        'label'      => esc_html__( 'Base font size (default: 1.25em)', 'mnmlwp' ),
+        'label'      => esc_html__( 'Base font size (default: 1.125em)', 'mnmlwp' ),
         'section'    => 'mnmlwp_layout_section',
         'settings'   => 'mnmlwp_base_font_size',
     ) );
@@ -578,12 +683,6 @@ function mnmlwp_customize_register( $wp_customize )
         'type'       => 'number',
     ) );
 
-    $wp_customize->add_control( 'mnmlwp_has_local_font', array(
-        'type' => 'checkbox',
-        'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Use local font (Source Sans Pro)?', 'mnmlwp'),
-    ) );
-
     $wp_customize->add_control( 'mnmlwp_is_boxed', array(
         'type' => 'checkbox',
         'section' => 'mnmlwp_layout_section',
@@ -596,10 +695,28 @@ function mnmlwp_customize_register( $wp_customize )
         'label' => esc_html__( 'Sticky main navigation?', 'mnmlwp'),
     ) );
 
+    $wp_customize->add_control( 'mnmlwp_has_header_search', array(
+        'type' => 'checkbox',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Include search form in header (desktop)?', 'mnmlwp'),
+    ) );
+
     $wp_customize->add_control( 'mnmlwp_has_nav_search', array(
         'type' => 'checkbox',
         'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Include search form in primary navigation?', 'mnmlwp'),
+        'label' => esc_html__( 'Include search form in main navigation (mobile)?', 'mnmlwp'),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_center_header', array(
+        'type' => 'checkbox',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Center header content?', 'mnmlwp'),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_center_menu', array(
+        'type' => 'checkbox',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Center mobile menu?', 'mnmlwp'),
     ) );
 
     $wp_customize->add_control( 'mnmlwp_has_loading_layer', array(
@@ -670,6 +787,58 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_spinner_color',
     ) ) );
 
+    $wp_customize->add_control( 'mnmlwp_header_padding_top', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Header padding top', 'mnmlwp' ),
+        'section'    => 'mnmlwp_layout_section',
+        'settings'   => 'mnmlwp_header_padding_top',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 5,
+            'step' => 0.1,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_header_padding_bottom', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Header padding bottom', 'mnmlwp' ),
+        'section'    => 'mnmlwp_layout_section',
+        'settings'   => 'mnmlwp_header_padding_bottom',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 5,
+            'step' => 0.1,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_nav_item_padding_top_bottom', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Nav item padding top/bottom (desktop)', 'mnmlwp' ),
+        'section'    => 'mnmlwp_layout_section',
+        'settings'   => 'mnmlwp_nav_item_padding_top_bottom',
+        'input_attrs' => array(
+            'min' => 5,
+            'max' => 31,
+            'step' => 1,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_nav_item_padding_left_right', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Nav item padding left/right (desktop)', 'mnmlwp' ),
+        'section'    => 'mnmlwp_layout_section',
+        'settings'   => 'mnmlwp_nav_item_padding_left_right',
+        'input_attrs' => array(
+            'min' => 5,
+            'max' => 31,
+            'step' => 1,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
     $wp_customize->add_control( 'mnmlwp_columns_spacing_horizontal', array(
         'type'       => 'range',
         'label'      => esc_html__( 'Flex columns spacing (horizontal)', 'mnmlwp' ),
@@ -715,24 +884,24 @@ function mnmlwp_customizer_css()
     echo '<style>';
         echo 'body {
                  color: ' . esc_html( get_theme_mod('mnmlwp_body_text_color', '#2b323a') ) . ';
-                 font-size: ' . esc_html( get_theme_mod('mnmlwp_base_font_size', '1.25em') ) . ';
+                 font-size: ' . esc_html( get_theme_mod('mnmlwp_base_font_size', '1.125em') ) . ';
              }
 
              .sk-fading-circle .sk-circle:before {
                  background-color: ' . esc_html( get_theme_mod('mnmlwp_spinner_color', '#000') )  . ';
              }
 
-             .row.row--contact {
+             .mnmlwp-row.mnmlwp-row--contact {
                  background: ' . esc_html( get_theme_mod('mnmlwp_contact_row_bg_color', '#21232b') ) . ';
              }
 
-             .column {
+             .mnmlwp-column {
                  width: ' . esc_html( get_theme_mod('mnmlwp_column_width', '1120px') ) . ';
              }
 
-             .column.column--contact,
-             .column.column--contact a,
-             .column.column--contact a:hover {
+             .mnmlwp-column.mnmlwp-column--contact,
+             .mnmlwp-column.mnmlwp-column--contact a,
+             .mnmlwp-column.mnmlwp-column--contact a:hover {
                  color: ' . esc_html( get_theme_mod('mnmlwp_contact_row_text_color', '#fff') ) . ';
              }';
 
@@ -797,18 +966,18 @@ function mnmlwp_customizer_css()
              // Breadcrumb navigation
              
              if( function_exists('breadcrumb_trail') ) {
-                 echo ' .row.row--breadcrumbs {
+                 echo ' .mnmlwp-row.mnmlwp-row--breadcrumbs {
                       background: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_bg_color', '#f4f7ff') ) . ';
                       color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_text_color', '#34465b') ) . ';
                   }
 
-                  .row.row--breadcrumbs a {
+                  .mnmlwp-row.mnmlwp-row--breadcrumbs a {
                       color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_color', '#2065b1') ) . ';
                   }
 
-                  .row.row--breadcrumbs a:hover,
-                  .row.row--breadcrumbs a:focus,
-                  .row.row--breadcrumbs a:active {
+                  .mnmlwp-row.mnmlwp-row--breadcrumbs a:hover,
+                  .mnmlwp-row.mnmlwp-row--breadcrumbs a:focus,
+                  .mnmlwp-row.mnmlwp-row--breadcrumbs a:active {
                       color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_hover_color', '#154e8c') ) . ';
                   }
                   
@@ -822,20 +991,20 @@ function mnmlwp_customizer_css()
                      padding: 1em 0;
                  }
 
-                 .row {
+                 .mnmlwp-row {
                      width: ' . esc_html( get_theme_mod('mnmlwp_column_width', '1120px') ) . ';
                      margin: 0 auto;
                  }
 
-                 .row.row--main .column {
+                 .mnmlwp-row.mnmlwp-row--main .mnmlwp-column {
                      background: #fff;
                  }
                 
-                 .column.column--hero {
+                 .mnmlwp-column.mnmlwp-column--hero {
                      background: transparent!important;
                  }
 
-                 .column.column--single {
+                 .mnmlwp-column.mnmlwp-column--single {
                      background: #fff;
                  }
                  
@@ -843,13 +1012,9 @@ function mnmlwp_customizer_css()
                     body {
                         padding: 0 0;
                     }
-
-                    .row {
-                        max-width: 100%;
-                    }
                  }';
              } else {
-                 echo '.row-hero-wrapper {
+                 echo '.mnmlwp-row-hero-wrapper {
                      background: transparent;
                  }';
              }
@@ -912,6 +1077,7 @@ function mnmlwp_customizer_css()
                  color: ' . esc_html( get_theme_mod('mnmlwp_tagline_color', '#c1dfff') ) . '!important;
              }
 
+            nav#main ul li,
             nav#main ul li a {
                 background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color', '#21232b') ) . ';
             }
@@ -961,7 +1127,7 @@ function mnmlwp_customizer_css()
                 color: #fff;
             }
 
-            .row.row--footer {
+            .mnmlwp-row.mnmlwp-row--footer {
                 background: ' . esc_html( get_theme_mod('mnmlwp_footer_bg_color', '#34465b') ) . ';
             }
 
@@ -987,7 +1153,7 @@ function mnmlwp_customizer_css()
             }
 
             @media screen and (max-width: ' . esc_html( get_theme_mod('mnmlwp_column_width', '1120px') ) . ') {
-                .column.column--single.column--single-hero {
+                .mnmlwp-column.mnmlwp-column--single.mnmlwp-column--single-hero {
                     margin-top: 0;
                 }
             }
@@ -1005,53 +1171,82 @@ function mnmlwp_customizer_css()
             }';
 
             if( has_header_image() ) {
-                echo '.row.row--header {
+                echo '.mnmlwp-row.mnmlwp-row--header {
                     background: url(' . get_header_image()  . ') center center;
                     background-size: cover;
                 }';
             } else {
-                echo '.row.row--header {
+                echo '.mnmlwp-row.mnmlwp-row--header {
                     background: ' . esc_html( get_theme_mod('mnmlwp_header_bg_color', '#34465b') ) . ';
                 }';
             }
 
-            // Nav poition / hamburger icon
+            // Heaer padding
+            $mnmlwp_header_padding_top = esc_html( get_theme_mod('mnmlwp_header_padding_top', 1.5) );
+            $mnmlwp_header_padding_bottom = esc_html( get_theme_mod('mnmlwp_header_padding_bottom', 1.5) );
+
+            echo '.mnmlwp-column.mnmlwp-column--header {
+                padding-top: ' . $mnmlwp_header_padding_top . 'em;
+                padding-bottom: ' . $mnmlwp_header_padding_bottom . 'em;
+            }';
+
+            // Logo height
+            $mnmlwp_logo_height_desktop = esc_html( get_theme_mod('mnmlwp_logo_height_desktop', 2) );
+            $mnmlwp_logo_height_tablet = esc_html( get_theme_mod('mnmlwp_logo_height_tablet', 2) );
+            $mnmlwp_logo_height_mobile = esc_html( get_theme_mod('mnmlwp_logo_height_mobile', 2) );
+
+            echo '.mnmlwp-logo-image {
+                height: ' . $mnmlwp_logo_height_desktop . 'em;
+            }
+
+            @media screen and (max-width: 1023px) {
+                .mnmlwp-logo-image {
+                    height: ' . $mnmlwp_logo_height_tablet . 'em;
+                }
+            }
+            
+            @media screen and (max-width: 640px) {
+                .mnmlwp-logo-image {
+                    height: ' . $mnmlwp_logo_height_mobile . 'em;
+                }
+            }';
+
+            // Nav position / hamburger icon
+            echo '.mnmlwp-row.mnmlwp-row--nav {
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_row_color', '#21232b') ) . ';
+            }';
+
+            // Nav item padding
+            echo '@media screen and (min-width: 768px) {
+                nav#main ul li a {
+                    padding: ' . absint( get_theme_mod('mnmlwp_nav_item_padding_top_bottom', 15) ) . 'px ' . absint( get_theme_mod('mnmlwp_nav_item_padding_left_right', 15) ) . 'px;
+                }
+            }';
+
             switch( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) )
             {  
                 case 'inside_header':
                 
-                    echo '.row.row--nav {
-                        background: none;
-                    }
-                    
+                    echo '
+                
                     @media screen and (min-width:768px) {
                         
-                        .row.row--header {
+                        .mnmlwp-row.mnmlwp-row--header {
                             overflow: visible;
                         }
                         
-                        .column.column--header {
+                        .mnmlwp-column.mnmlwp-column--header {
                             width: auto;
-                            padding: 1em;
+                            padding-left: 1em;
+                            padding-right: 1em;
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             margin: 0 auto;
                             overflow: visible;
                         }
-                        
-                        div.mnmlwp-logo {
-                            margin-right: auto;
-                            max-width: 25%;
-                        }
-                        
-                        .row.row--nav {
-                            margin-left: auto;
-                            max-width: 75%;
-                            box-shadow: 0 0;
-                        }
 
-                        .column.column--nav {
+                        .mnmlwp-column.mnmlwp-column--nav {
                             padding-left: 0;
                             padding-right: 0;
                             text-align: right;
@@ -1077,45 +1272,18 @@ function mnmlwp_customizer_css()
                     }';
                         
                     echo '@media screen and (max-width: 767px) {            
-                            .column.column--nav {
+                            .mnmlwp-column.mnmlwp-column--nav {
                                 padding-left: 0;
-                            }
-                            
-                            nav#main {
-                                padding: .75em 0 0!important;
-                            }
-                            
-                            nav#main ul li.current_page_item > a {
-                                font-weight: 700;
                             }
 
                             nav#main li.mnmlwp-main-nav-searchform {
                                 margin-left: 0;
                                 margin-bottom: 0;
                             }
-                            
-                            .hamburger {
-                                right: 0;
-                            }
                         }';
-                    
-                    if( display_header_text() && get_bloginfo( 'description' ) )
-                    {
-                        echo '@media screen and (max-width: 767px) {
-                            .hamburger {
-                                top: -3.175em;
-                            }
-                        }';
-                    } else {
-                        echo '@media screen and (max-width: 767px) {
-                            .hamburger {
-                                top: -2.5em;
-                            }
-                        }';
-                    }
                     
                     if( get_theme_mod('mnmlwp_nav_is_sticky', true) === true ) {
-                        echo '.row.row--header {
+                        echo '.mnmlwp-row.mnmlwp-row--header {
                             position: sticky;
                             position: -webkit-sticky;
                             position: -moz-sticky;
@@ -1130,26 +1298,45 @@ function mnmlwp_customizer_css()
                     
                 default:
 
-                    echo '.row.row--nav {
-                        background: ' . esc_html( get_theme_mod('mnmlwp_nav_row_color', '#21232b') ) . ';
-                    }';
-                
-                    if( display_header_text() && get_bloginfo( 'description' ) )
-                    {
-                        echo '@media screen and (max-width: 767px) {
-                            .hamburger {
-                                top: -4.75em;
-                            }
-                        }';
-                    } else {
-                        echo '@media screen and (max-width: 767px) {
-                            .hamburger {
-                                top: -4em;
-                            }
-                        }';
-                    }
-                    
                     break;    
+            }
+
+            // Center header
+            if( get_theme_mod('mnmlwp_center_header', false) === true ) {
+                echo' 
+                    div.mnmlwp-logo {
+                        margin: 0 0;
+                    }
+
+                    .mnmlwp-column.mnmlwp-column--header {
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+
+                    .mnmlwp-column.mnmlwp-column--header #searchform {
+                        margin-top: 1em;
+                    }
+
+                    .hamburger {
+                        margin-top: .75em;
+                        padding: 9px;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        .mnmlwp-row.mnmlwp-row--nav.mnmlwp-row--nav-inside-header {
+                            margin-top: .6125em;
+                        }
+                    } 
+                ';
+            }
+
+            // Center menu
+            if( get_theme_mod('mnmlwp_center_menu', false) === true ) {
+                echo 'nav#main ul {
+                    justify-content: center;
+                    text-align: center;
+                }';
             }
 
     echo '</style>';
@@ -1161,8 +1348,8 @@ add_action( 'wp_head', 'mnmlwp_customizer_css');
 function mnmlwp_theme_prefix_setup()
 {
     add_theme_support( 'custom-logo', array(
-        'height'      => 42,
-        'width'       => 137,
+        'height'      => 320,
+        'width'       => 800,
         'flex-height' => true,
         'flex-width'  => true,
         'header-text' => array( 'site-title' ),
@@ -1191,4 +1378,9 @@ function mnmlwp_adjust_color($hex, $adjustment)
     }
 
     return $adjusted_value;
+}
+
+// Sanitize float values
+function mnmlwp_sanitize_float( $input ) {
+    return filter_var($input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 }

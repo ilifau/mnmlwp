@@ -39,11 +39,6 @@ function mnmlwp_scripts_and_styles()
     // Styles
     wp_enqueue_style( 'font-awesome', mnmlwp_assets_url() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'hamburgers', mnmlwp_assets_url() . '/css/hamburgers/hamburgers.css' );
-
-    if( get_theme_mod( 'mnmlwp_has_local_font', true ) ) {
-        wp_enqueue_style( 'mnmlwp-fonts', mnmlwp_assets_url() . '/css/fonts.css' );
-    }
-
     wp_enqueue_style( 'mnmlwp', mnmlwp_theme_url() . '/style.css' );
     wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css' );
 }
@@ -119,13 +114,6 @@ add_theme_support( 'post-formats', array(
 // WP5 Gutenberg
 add_theme_support('responsive-embeds');
 
-// add_theme_support( 'align-wide' ); // Image classes .alignwide, .alignfull
-// add_theme_support('disable-custom-font-sizes');
-// add_theme_support( 'disable-custom-colors' );
-// add_theme_support( 'editor-styles' );
-// add_theme_support( 'dark-editor-style' );
-// add_theme_support( 'wp-block-styles' );
-
 // Custom Background
 $mnmlwp_custom_background_args = array(
 	'default-color' => '#ffffff',
@@ -175,9 +163,6 @@ add_theme_support( 'automatic-feed-links' );
 
 // Custom Header
 add_theme_support( 'custom-header' );
-
-// Custom Background
-// add_theme_support( 'custom-background' );
 
 // Add Editor Style
 function mnmlwp_theme_add_editor_styles() {
@@ -403,7 +388,7 @@ if( ! function_exists( 'mnmlwp_page_content_wrapper' ) )
             return;
         } else {
             if( $context === 'header' ) {
-            return '<div class="row row--main"><div class="row"><div class="column">';
+            return '<div class="mnmlwp-row mnmlwp-row--main"><div class="mnmlwp-row"><div class="mnmlwp-column">';
             } else {
             return '</div></div></div>';
             }
@@ -435,12 +420,6 @@ if( ! function_exists ( 'mnmlwp_nav' ) )
                     ) );
 
                 echo '</nav>';
-
-                echo '<div class="hamburger hamburger--' . esc_attr( get_theme_mod('mnmlwp_hamburger_class', 'elastic') ) . '">
-                    <div class="hamburger-box">
-                        <div class="hamburger-inner"></div>
-                    </div>
-                </div>';
             echo '</div>';
         }
     }
@@ -452,7 +431,7 @@ function mnmlwp_add_search_nav_item( $items, $args )
     if( $args->theme_location !== 'main-nav' )
         return $items;
 
-    if( ! get_theme_mod(  'mnmlwp_has_nav_search', true ) )
+    if( ! get_theme_mod( 'mnmlwp_has_nav_search', true ) )
         return $items;
 
     // $searchform = get_search_form( false );
@@ -462,7 +441,7 @@ function mnmlwp_add_search_nav_item( $items, $args )
         <button class="submit mnmlwp-btn mnmlwp-btn-small" id="searchsubmit" value=""></button>
     </form>';
 
-    $items .= '<li class="mnmlwp-main-nav-searchform">' . $searchform . '</li>';
+    $items .= '<li class="menu-item mnmlwp-main-nav-searchform">' . $searchform . '</li>';
 
     return $items;
 }
@@ -949,24 +928,24 @@ if( ! function_exists( 'mnmlwp_get_hero_background_style' ) )
         $mnmlwp_portrait = get_the_post_thumbnail_url( get_the_ID(), 'mnmlwp-portrait' );
 
         $style = '<style>
-        .row.row--hero {
+        .mnmlwp-row.mnmlwp-row--hero {
             background-size:cover;
         }
 
         @media screen and (orientation: landscape) and (min-width: 1601px) {
-            .row.row--hero {
+            .mnmlwp-row.mnmlwp-row--hero {
                 background-image: url(' . $mnmnlwp_1920 . ');
             }
         }
 
         @media screen and (orientation: landscape) and (min-width: 801px) and (max-width: 1600px) {
-            .row.row--hero {
+            .mnmlwp-row.mnmlwp-row--hero {
                 background-image: url(' . $mnmnlwp_1600 . ');
             }
         }
 
         @media screen and (orientation: landscape) and (max-width: 800px) {
-            .row.row--hero {
+            .mnmlwp-row.mnmlwp-row--hero {
                 background-image: url(' . $mnmnlwp_800 . ');
             }
         }
@@ -974,7 +953,7 @@ if( ! function_exists( 'mnmlwp_get_hero_background_style' ) )
         /* Portrait */
 
         @media screen and (orientation: portrait) {
-            .row.row--hero {
+            .mnmlwp-row.mnmlwp-row--hero {
                 background-image: url(' . $mnmlwp_portrait . ');
             }
         }
@@ -1006,14 +985,14 @@ if( ! function_exists( 'mnmlwp_get_hero_row' ) )
         $hero_bg_attachment_fixed = get_post_meta( get_the_ID(), '_mnmlwp_hero_background_attachment_fixed', true );
         $hero_classes .= get_post_meta( get_the_ID(), '_mnmlwp_hero_background_attachment_fixed', true ) == 1 ? ' bg-attachment-fixed' : '';
 
-        $html = '<div class="row-hero-wrapper">';
-        $html .= '<div class="row row--hero ' . $hero_classes . '" style="background-position:' . $hero_bg_position_vertical . ' ' . $hero_bg_position_horizontal . '">';
+        $html = '<div class="mnmlwp-row-hero-wrapper">';
+        $html .= '<div class="mnmlwp-row mnmlwp-row--hero ' . $hero_classes . '" style="background-position:' . $hero_bg_position_vertical . ' ' . $hero_bg_position_horizontal . '">';
 
         if( ! empty( $hero_overlay ) ) {
             $html .= '<div class="mnmlwp-overlay" style="' . $hero_overlay_style_background . $hero_overlay_style_opacity . '"></div>';
         }
 
-        $html .= '<div class="column column--hero" style="height:' . $hero_height . 'vh"><div class="hero-title">' . do_shortcode( $hero_title ) . '</div></div>';
+        $html .= '<div class="mnmlwp-column mnmlwp-column--hero" style="height:' . $hero_height . 'vh"><div class="hero-title">' . do_shortcode( $hero_title ) . '</div></div>';
         $html .= '</div>';
         $html .= '</div>';
 
@@ -1062,22 +1041,6 @@ function mnmlwp_hex2rgba($color, $opacity = false) {
         //Return rgb(a) color string
         return $output;
 }
-
-/**
- * Success Message for Admin after theme was installed
- */
-function mnmlwp_admin_welcome_message()
-{
-    $welcome = '<div class="notice notice-success is-dismissible">';
-    $welcome .= '<h2>' . esc_html__('Congratulations', 'mnmlwp') . '</h2>';
-    $welcome .= '<p>' . sprintf( esc_html__('You successfully installed the mnmlWP WordPress Theme. Please update your theme settings in the %1$s.', 'mnmlwp'), '<a href="' . esc_attr( admin_url( 'customize.php' ) ) . '">Customizer</a>' ) . '</p>';
-    $welcome .= '<p>' . esc_html__('Enjoy your mnmlWP site!', 'mnmlwp') . '</p>';
-    $welcome .= '</div>';
-
-    echo $welcome;
-}
-
-add_action( 'after_switch_theme', 'mnmlwp_admin_welcome_message' );
 
 /** Add Colorpicker Field to "Add New Category" Form **/
 

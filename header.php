@@ -20,14 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="mnmlwp-boxed-wrapper" style="width: <?php echo esc_attr( get_theme_mod('mnmlwp_column_width', '1120px') ); ?>">
         <?php endif; ?>  
         <?php if( get_theme_mod( 'mnmlwp_show_contact_row', false ) && get_theme_mod( 'mnmlwp_contact_row', 'Company Name | Street Address | Postcode City | +49 (0) 1234 56789 | contact@email.xyz' ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_contact_row', true ) ): ?>
-                <div class="row row--contact hide-767">
-                    <div class="column column--contact">
+                <div class="mnmlwp-row mnmlwp-row--contact hide-767">
+                    <div class="mnmlwp-column mnmlwp-column--contact">
                         <p><?php echo esc_html( get_theme_mod( 'mnmlwp_contact_row', 'Company Name | Street Address | Postcode City | +49 (0) 1234 56789 | contact@email.xyz') ); ?></p>
                     </div>
                 </div>
         <?php endif; ?>
-        <div class="row row--header">
-            <div class="column column--header">
+        <div class="mnmlwp-row mnmlwp-row--header">
+            <div class="mnmlwp-column mnmlwp-column--header">
                 <div class="mnmlwp-logo">
                     <a href="<?php echo esc_url( home_url() ); ?>">
                         <?php
@@ -38,10 +38,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 echo '<img class="mnmlwp-logo-image" src="'. esc_attr( $mnmlwp_logo[0] ) .'" alt="">';
                             } else {
                                 if( get_theme_mod( 'mnmlwp_logo_icon', 'diamond' ) ) {
-                                    echo '<div class="mnmlwp-logo-icon fa fa-' . esc_attr( get_theme_mod( 'mnmlwp_logo_icon', 'diamond' ) ) . ' mnmlwp-text-shadow"></div>';
+                                    echo '<div class="mnmlwp-logo-icon fa fa-' . esc_attr( get_theme_mod( 'mnmlwp_logo_icon', 'diamond' ) ) . '"></div>';
                                 }
 
-                                echo '<span class="mnmlwp-logo-text mnmlwp-text-shadow">' . get_bloginfo( 'name' ) . '</span>';
+                                echo '<span class="mnmlwp-logo-text">' . get_bloginfo( 'name' ) . '</span>';
                             }
                         ?>
                     </a>
@@ -52,27 +52,49 @@ if ( ! defined( 'ABSPATH' ) ) {
                     ?>
                 </div>
                 <?php if ( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'inside_header' ): ?>
-                    <div class="row row--nav overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
-                        <div class="column column--nav overflow-visible">
+                    <div class="mnmlwp-row mnmlwp-row--nav mnmlwp-row--nav-inside-header overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
+                        <div class="mnmlwp-column mnmlwp-column--nav overflow-visible">
                             <?php mnmlwp_nav(); ?>
                         </div>
                     </div>
                 <?php endif; ?>
+                <?php if( get_theme_mod( 'mnmlwp_has_header_search', true ) ): ?>
+                    <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <input type="text" class="field" name="s" id="s" placeholder="<?php echo esc_attr__( 'Search', 'mnmlwp' ); ?>&hellip;" />
+                        <button class="submit mnmlwp-btn mnmlwp-btn-small" id="searchsubmit" value=""></button>
+                    </form>
+                <?php endif; ?>
+                <div class="hamburger hamburger--<?php echo esc_attr( get_theme_mod('mnmlwp_hamburger_class', 'elastic') ); ?>">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <?php if( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'after_header' ): ?>
-            <div class="row row--nav overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
-                <div class="column column--nav overflow-visible">
+            <div class="mnmlwp-row mnmlwp-row--nav overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
+                <div class="mnmlwp-column mnmlwp-column--nav overflow-visible">
                     <?php mnmlwp_nav(); ?>
                 </div>
             </div>
         <?php endif; ?>
+        <div class="mnmlwp-row mnmlwp-row--nav mnmlwp-row--nav-mobile overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
+            <div class="mnmlwp-column mnmlwp-column--nav mnmlwp-column--nav-mobile overflow-visible">
+                <?php mnmlwp_nav(); ?>
+                <?php if( get_theme_mod( 'mnmlwp_has_nav_search', true ) ): ?>
+                    <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <input type="text" class="field" name="s" id="s" placeholder="<?php echo esc_attr__( 'Search', 'mnmlwp' ); ?>&hellip;" />
+                        <button class="submit mnmlwp-btn mnmlwp-btn-small" id="searchsubmit" value=""></button>
+                    </form>
+                <?php endif; ?>
+            </div>
+        </div>
         <div class="clear-columns"></div>
         <?php if( function_exists('breadcrumb_trail') ): ?>
             <?php if( ( get_theme_mod( 'mnmlwp_has_breadcrumbs', false ) ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_breadcrumbs', true ) ): ?>
                 <?php if( ( ! is_front_page() ) || ( is_front_page() && get_theme_mod( 'mnmlwp_breadcrumbs_show_on_home', false ) ) ): ?>
-                    <div class="row row--breadcrumbs">
-                        <div class="column column--breadcrumbs">
+                    <div class="mnmlwp-row mnmlwp-row--breadcrumbs">
+                        <div class="mnmlwp-column mnmlwp-column--breadcrumbs">
                             <div class="mnmlwp-breadcrumbs">
                                 <?php mnmlwp_breadcrumb_trail(); ?>
                             </div>

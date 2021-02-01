@@ -149,17 +149,17 @@ jQuery(document).ready(function($) {
 
         if( measure === 'percent') {
             
-            var subtract = $('.row.row--header').outerHeight(); // Subtract header/nav height
+            var subtract = $('.mnmlwp-row.mnmlwp-row--header').outerHeight(); // Subtract header/nav height
             
             if( mnmlwp_globals.nav_position !== 'inside_header' ) {
-                 subtract += $('.row.row--nav').outerHeight();
+                 subtract += $('.mnmlwp-row.mnmlwp-row--nav').outerHeight();
             }
             
             hero_height = $(window).height() * hero_height/100; // Convert vh to px
 
-            $('.column.column--hero').css('height', hero_height - subtract + 1 + 'px');
+            $('.mnmlwp-column.mnmlwp-column--hero').css('height', hero_height - subtract + 1 + 'px');
         } else {
-            $('.column.column--hero').css('height', hero_height + 'px');
+            $('.mnmlwp-column.mnmlwp-column--hero').css('height', hero_height + 'px');
         }
     }
     

@@ -6,7 +6,7 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 15px 15px;
+  padding: 15px 0 15px 15px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -709,12 +709,7 @@
 @media screen and (max-width: 767px) {
     .hamburger {
         display: inline-block;
-        position: absolute;
-        z-index: 2;
-        left: auto;
-        right: .75em;
-        top: -3.6em;
-        opacity: 1;
-        padding-right: 0;
+        position: relative;
+        order: 1;
     }
 }

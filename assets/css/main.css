@@ -63,17 +63,17 @@
   
   body {
       background: #fff;
-      font: 1.25em 'Source Sans Pro', system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+      font: 1.25em system, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #222;
       line-height: 1.5;
       margin: 0 0;
   }
   
-  .row {
+  .mnmlwp-row {
       position: relative;
   }
   
-  .column {
+  .mnmlwp-column {
       position: relative;
       width: 1024px;
       max-width: 100%;
@@ -81,32 +81,43 @@
       margin: 0 auto;
   }
   
-  .row.row--header {
+  .mnmlwp-row.mnmlwp-row--header {
       z-index: 1;
   }
   
-  .row.row--nav {
+  .mnmlwp-row.mnmlwp-row--nav {
       z-index: 1;
   }
   
-  .row.row--contact {
+  .mnmlwp-row.mnmlwp-row--contact {
       display: block;
       background: #23282d;
       letter-spacing: 1px;
   }
   
-  .column.column--header {
+  .mnmlwp-column.mnmlwp-column--header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
       padding-top: 1.5em;
       padding-bottom: 1.5em;
+      flex-wrap: nowrap;
   }
   
-  .row.row--footer {
+  .mnmlwp-row.mnmlwp-row--footer {
       padding: 1em 0;
   }
 
   .mnmlwp-boxed-wrapper {
       margin: 0 auto;
+      max-width: 100%;
   }
+
+  .mnmlwp-boxed-wrapper .mnmlwp-row,
+  .mnmlwp-boxed-wrapper .mnmlwp-column {
+    max-width: 100%;
+}
   
   .overflow-visible {
       overflow: visible!important;
@@ -182,7 +193,7 @@
       padding-bottom: 0!important;
   }
   
-  .column h2:first-of-type {
+  .mnmlwp-column h2:first-of-type {
       margin-top: 0;
   }
   
@@ -191,8 +202,10 @@
       line-height: 1;
       font-weight: 600;
       position: relative;
-      max-width: 100%;
       white-space: nowrap;
+      margin: 0 auto 6px 0;
+      flex: 0 1 25%;
+      order: 1;
   }
   
   div.mnmlwp-logo a {
@@ -259,26 +272,29 @@
       color: rgba(0, 108, 159, 1);
   }
   
-  .column.column--contact {
+  .mnmlwp-column.mnmlwp-column--contact {
       padding: .5em 2em;
+      text-align: center;
   }
   
-  .column.column--contact p {
+  .mnmlwp-column.mnmlwp-column--contact p {
       font-size: .75em;
-      font-weight: 400;
+      font-weight: 300;
       margin: 0;
       padding: 0;
   }
   
-  .column.column--contact a,
-  .column.column--contact a:hover,
-  .column.column--contact a:focus {
+  .mnmlwp-column.mnmlwp-column--contact a,
+  .mnmlwp-column.mnmlwp-column--contact a:hover,
+  .mnmlwp-column.mnmlwp-column--contact a:focus {
       opacity: .875;
   }
   
   .mnmlwp-logo-image {
-      height: 1.02em;
+      height: auto;
+      max-height: 3em;
       width: auto;
+      max-width: 100%;
       position: relative;
       display: inline-block;
       vertical-align: top;
@@ -364,12 +380,7 @@
       content: '|';
       color: inherit;
       opacity: .25;
-      font-family: 'Source Sans Pro';
       margin: 0 .25em;
-  }
-  
-  .mnmlwp-text-shadow {
-      text-shadow: 1px 1px 0 rgba(0,0,0,.3);
   }
   
   :focus {
@@ -709,7 +720,7 @@
     3. Main Navigation
     ----------------------------------------- */
   
-  .column.column--nav {
+  .mnmlwp-column.mnmlwp-column--nav {
       padding-top: 0;
       padding-bottom: 0;
   }
@@ -728,6 +739,9 @@
     line-height: 1;
     list-style-type: none;
     margin: 0 0;
+    flex-grow: 4;
+    flex-shrink: 3;
+    flex-basis: auto;
   }
   
   nav#main ul li {
@@ -794,26 +808,23 @@
       font-size: 1em;
   }
   
-  /* Navigation search form */
+  /* Search form */
   
-  nav#main li.mnmlwp-main-nav-searchform {
+  #searchform {
       position: relative;
       z-index: 4;
-      font-size: .875em;
       display: inline-block;
       vertical-align: middle;
   }
 
-  nav#main li.mnmlwp-main-nav-searchform #searchform,
-  nav#main li.mnmlwp-main-nav-searchform #searchform #s {
+  #searchform,
+  #searchform #s {
       position: relative;
-      height: 100%;
   }
   
-  nav#main li.mnmlwp-main-nav-searchform input#s {
+  #searchform input#s {
       margin-bottom: 0;
-      width: 14em;
-      max-width: 14em;
+      width: 100%;
       background: #fff;
       border: 0;
       display: block;
@@ -822,7 +833,7 @@
       padding: .75em;
   }
   
-  nav#main li.mnmlwp-main-nav-searchform button.submit {
+  #searchform button.submit {
       text-shadow: none !important;
       border: none;
       margin: 0;
@@ -836,21 +847,31 @@
       text-align: center;
   }
   
-  nav#main li.mnmlwp-main-nav-searchform button.submit::before {
+  #searchform button.submit::before {
       font-family: 'FontAwesome';
       content: '\f002';
       color: #fff;
   }
   
   @media screen and (min-width: 768px) {
-      .row.row--nav {
+      .mnmlwp-row.mnmlwp-row--nav {
           position: relative;
           top: 0;
           z-index: 9;
-          box-shadow: 1px 2px 4px rgba(0,0,0,.25);
+          width: 100%;
+          order: 2;
+      }
+
+      .mnmlwp-row.mnmlwp-row--nav.mnmlwp-row--nav-inside-header {
+        flex: 0 1 55%;
+        width: 55%;
+      }
+
+      .mnmlwp-row.mnmlwp-row--nav-mobile {
+        display: none !important;
       }
       
-      .row.row--nav.sticky {
+      .mnmlwp-row.mnmlwp-row--nav.sticky {
           position: sticky;
           position: -webkit-sticky;
           position: -moz-sticky;
@@ -873,11 +894,11 @@
         height: 100%;
       }
   
-      nav#main li.mnmlwp-main-nav-searchform {
-          position: absolute;
-          right: 0;
-          top: .2875em;
-          padding-left: 1em;
+      .mnmlwp-column--header #searchform {
+         flex: 0 1 20%;
+         order: 2;
+         padding-left: 1em;
+         font-size: .875em;
       }
   
       nav#main ul li ul {
@@ -890,7 +911,6 @@
           min-width: 100%;
           height: auto;
           clear: left;
-          box-shadow: 1px 1px 3px rgba(0,0,0,.33);
       }
   
       nav#main ul li:hover ul li {
@@ -923,6 +943,11 @@
           position: absolute;
           right: 100%;
       }
+
+      /* Nav sarchform */
+      nav#main #searchform {
+        display: none !important;
+      }
   }
   
   /* ------------------------------------------
@@ -934,7 +959,6 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin-bottom: 1em;
   }
 
   .mnmlwp-flex-column--half {
@@ -1192,7 +1216,7 @@
       color: #777;
       border: 1px solid #eee;
       background: #f1f1f1;
-      border-radius: 3px;
+      border-radius: 0;
       font-weight: 400;
   }
   
@@ -1438,7 +1462,7 @@
       padding: .5em;
       border: 1px solid #ddd;
       background: #f9f9f9;
-      font: 1em 'Source Sans Pro', sans-serif;
+      font-size: 1em;
       font-weight: 400;
       margin-bottom: .5em;
   }
@@ -1646,10 +1670,9 @@
       color: #fff!important;
       text-shadow: none;
       background: #222;
-      font-family: 'Source Sans Pro', sans-serif;
       font-size: 1em;
       font-weight: 400;
-      border-radius: 3px;
+      border-radius: 0;
       text-decoration: none;
       transition: all .2s ease;
       -webkit-appearance: none;
@@ -1763,27 +1786,30 @@
       padding-bottom: .75em;
   }
   
-  .mnmlwp-sidebar #searchform #searchsubmit {
+  .mnmlwp-widgets #searchform {
+      width: 75%;
+  }
+
+  .mnmlwp-widgets #searchform #searchsubmit {
       margin-bottom: 0;
   }
   
-  .mnmlwp-sidebar #searchform .screen-reader-text,
-  .mnmlwp-sidebar #searchform label {
+  .mnmlwp-widgets #searchform .screen-reader-text,
+  .mnmlwp-widgets #searchform label {
       display: none;
   }
+
+  .mnmlwp-widgets #searchform input#s {
+      border: 1px solid #f1f1f1;
+      margin-bottom: .5em;
+  }
   
-  .mnmlwp-sidebar #searchsubmit {
+  .mnmlwp-widgets #searchsubmit {
       font-size: .875em;
   }
   
   label[for=s] {
       display: none;
-  }
-  
-  input#s {
-      margin-bottom: .5em;
-      max-width: 290px;
-      background: #fff;
   }
   
   .mnmlwp-search-num-results {
@@ -1850,11 +1876,11 @@
      13. Breadcrumbs Navigation
      ----------------------------------------- */
   
-  .row.row--breadcrumbs {
+  .mnmlwp-row.mnmlwp-row--breadcrumbs {
       background: #f3f8fd;
   }
   
-  .column.column--breadcrumbs {
+  .mnmlwp-column.mnmlwp-column--breadcrumbs {
       padding-top: .25em;
       padding-bottom: .25em;
   }
@@ -1951,7 +1977,6 @@
       padding: 0 .5em;
       font-size: .75em;
       color: #aaa;
-      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
       margin-bottom: 1em;
       text-align: center;
   }
@@ -2186,8 +2211,8 @@
     18. Clearfixes
     ----------------------------------------- */
 
-    .row::after,
-    .column::after,
+    .mnmlwp-row::after,
+    .mnmlwp-column::after,
     .full-width::after,
     .one-half::after,
     .one-third::after,
@@ -2215,38 +2240,38 @@
     50. Template: Hero
     ----------------------------------------- */
   
-  .row-hero-wrapper {
+  .mnmlwp-row-hero-wrapper {
       position: relative;
       background: #fff;
   }
   
-  .row.row--hero {
+  .mnmlwp-row.mnmlwp-row--hero {
       top: -1px;
   }
   
-  .row.row--hero.bg-attachment-fixed {
+  .mnmlwp-row.mnmlwp-row--hero.bg-attachment-fixed {
       background-attachment: fixed!important
   }
   
   @media screen and (max-width: 767px) {
-      .row.row--hero.bg-attachment-fixed {
+      .mnmlwp-row.mnmlwp-row--hero.bg-attachment-fixed {
           background-attachment: initial!important;
       }
   }
   
-  .row.row--hero.skewed {
+  .mnmlwp-row.mnmlwp-row--hero.skewed {
       transform-origin: left;
       transform: skewY(-4deg);
       -webkit-transform-origin: left;
       -webkit-transform: skewY(-4deg);
   }
   
-  .row.row--hero.skewed::before {
+  .mnmlwp-row.mnmlwp-row--hero.skewed::before {
       transform: skewY(4deg);
       -webkit-transform: skewY(4deg);
   }
   
-  .row.row--hero .mnmlwp-hero-layer {
+  .mnmlwp-row.mnmlwp-row--hero .mnmlwp-hero-layer {
       z-index: 0;
       position: absolute;
       display: block;
@@ -2257,7 +2282,7 @@
       background: rgba(0,0,0,.5);
   }
   
-  .column.column--hero {
+  .mnmlwp-column.mnmlwp-column--hero {
       height: 56.25vh;
       min-height: 16em;
       display: flex;
@@ -2275,7 +2300,6 @@
       color: #fff;
       font-size: 2.25em;
       line-height: 1.125;
-      text-shadow: 1px 1px 2px rgba(0,0,0,.4);
       letter-spacing: 4px;
   }
   
@@ -2301,12 +2325,8 @@
   
   @media screen and (max-width: 1023px) {
   
-      .column {
+      .mnmlwp-column {
           padding: 1.375em 1.125em;
-      }
-  
-      .column.column--contact {
-          font-size: .65em
       }
   
       .full-width,
@@ -2344,20 +2364,6 @@
   }
   
   /* -----------------------------------------
-     min-width 768px
-     ----------------------------------------- */
-  
-  @media screen and (min-width: 768px) {
-      nav#main li.mnmlwp-main-nav-searchform {
-          top: -4.5em;
-      }
-  
-      nav#main li.mnmlwp-main-nav-searchform input#s {
-          box-shadow: 1px 1px 3px rgba(0,0,0,.2);
-      }
-  }
-  
-  /* -----------------------------------------
      max-width 767px
      ----------------------------------------- */
   
@@ -2366,16 +2372,32 @@
           font-size: 1em;
       }
   
-      .row.row--header {
+      .mnmlwp-row.mnmlwp-row--header {
           padding: 0;
-          box-shadow: 0 0 .375em rgba(0,0,0,.6);
       }
   
-      .column {
+      .mnmlwp-column {
           padding: 1.25em 1em;
       }
+
+      .mnmlwp-column.mnmlwp-column--header {
+          flex-wrap: wrap;
+      }
+
+      .mnmlwp-row.mnmlwp-row--nav {
+          display: none;
+      }
+
+      .mnmlwp-row.mnmlwp-row--nav-mobile {
+          display: block;
+      }
+
+      .mnmlwp-row.mnmlwp-row--nav.mnmlwp-row--nav-inside-header {
+          order: 2;
+          width: 100%;
+      }
   
-      .column.column--nav {
+      .mnmlwp-column.mnmlwp-column--nav {
           padding: 0;
       }
 
@@ -2391,9 +2413,9 @@
           margin-right: 0;
           margin-bottom: 1em;
       }
-  
-      .mnmlwp-logo {
-          top: -.075em;
+
+      div.mnmlwp-logo {
+        flex: 0 1 75%;
       }
   
       .mnmlwp-tagline {
@@ -2444,13 +2466,18 @@
       nav#main ul li ul li.menu-item-has-children > a::after {
         content: '\f107';
       }
-  
-      nav#main li.mnmlwp-main-nav-searchform {
-          margin: 1em 0 1.125em 1em;
-          display: inline-block;
+
+      #searchform {
+          display: none;
       }
   
-      nav#main li.mnmlwp-main-nav-searchform input#s {
+      nav#main #searchform {
+          margin: 1em 0 1.125em 1em;
+          display: inline-block;
+          font-size: .875em;
+      }
+  
+      #searchform input#s {
           width: 16em;
           max-width: 100%;
       }

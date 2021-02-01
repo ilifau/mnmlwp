@@ -4,7 +4,7 @@
         exit;
     }
 
-    echo '<div class="mnmlwp-sidebar">';
+    echo '<div class="mnmlwp-sidebar mnmlwp-widgets">';
 
         switch( get_post_type() )
         {

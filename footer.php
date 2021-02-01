@@ -8,13 +8,13 @@ echo mnmlwp_page_content_wrapper( get_the_ID(), 'footer' ); ?>
 
 <?php if( is_active_sidebar( 'mnmlwp-footer-left' ) || is_active_sidebar( 'mnmlwp-footer-middle' ) || is_active_sidebar( 'mnmlwp-footer-right' ) || is_active_sidebar( 'mnmlwp-footer-full-width' ) ): ?>
 
-    <div class="row row--footer">
+    <div class="mnmlwp-row mnmlwp-row--footer">
 
-        <div class="column column--footer overflow-hidden">
+        <div class="mnmlwp-column mnmlwp-column--footer overflow-hidden">
 
             <footer>
 
-                <div class="full-width last mnmlwp-footer-widgets">
+                <div class="full-width last mnmlwp-widgets mnmlwp-footer-widgets">
 
                     <?php if( is_active_sidebar( 'mnmlwp-footer-left' ) || is_active_sidebar( 'mnmlwp-footer-middle' ) || is_active_sidebar( 'mnmlwp-footer-right' ) ): ?>
                         <div class="mnmlwp-flex-columns">
