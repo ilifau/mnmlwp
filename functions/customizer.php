@@ -716,7 +716,7 @@ function mnmlwp_customize_register( $wp_customize )
     $wp_customize->add_control( 'mnmlwp_center_menu', array(
         'type' => 'checkbox',
         'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Center mobile menu?', 'mnmlwp'),
+        'label' => esc_html__( 'Center main menu items?', 'mnmlwp'),
     ) );
 
     $wp_customize->add_control( 'mnmlwp_has_loading_layer', array(

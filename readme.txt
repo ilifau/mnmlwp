@@ -79,7 +79,7 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 = 0.6.0 =
 
-Fixed: CSS classes changed from .row and .column to .mnmlwp-row and .mnmlwp-column
+Breaking changes: .row and .column classed changed to .mnmlwp-row and .mnmlwp-column
 Added: Flex header layout for logo, navigation, and hamburger
 Added: Shared mobile navigation
 Added: Logo height option
@@ -87,6 +87,7 @@ Added: Separate options for nav in header  (desktop) and main nav (mobile)
 Added: Option for centering header content
 Added: Option for centering menu items
 Added: Options header top and bottom padding
+Added: Sticky posts in recent posts widget
 Removed: Source Sans Pro font; base font is now system font
 Removed: Theme activation welcome message
 

@@ -200,7 +200,7 @@
   div.mnmlwp-logo {
       font-size: 1.75em;
       line-height: 1;
-      font-weight: 600;
+      font-weight: 700;
       position: relative;
       white-space: nowrap;
       margin: 0 auto 6px 0;
@@ -221,7 +221,7 @@
   
   .mnmlwp-tagline {
       font-size: .5875em;
-      font-weight: 300;
+      font-weight: 200;
       padding-top: .5em;
   }
   
@@ -927,7 +927,7 @@
       }
   
       nav#main ul li ul li {
-          min-width: 9em;
+          min-width: 12em;
       }
   
       nav#main ul li ul li a {
@@ -1135,7 +1135,7 @@
       padding: 4px 7px;
       margin-right: .25em;
       margin-bottom: .125em;
-      border-radius: .25em;
+      border-radius: 0;
       font-size: .75em;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -1149,7 +1149,7 @@
   
   .mnmlwp-tag-link {
       display: inline-block;
-      border-radius: .25em;
+      border-radius: 0;
       padding: .4em .5em;
       font-weight: 400;
       line-height: 1;
@@ -1604,21 +1604,21 @@
   }
   
   .mnmlwp-msg.mnmlwp-msg-default {
-      color: #16222d;
-      background: #f1f1f1;
+      color: #333;
+      background: #f7f7f7;
   }
   
   .mnmlwp-msg.mnmlwp-msg-default a {
-      color: #16222d!important;
+      color: #333!important;
   }
   
   .mnmlwp-msg.mnmlwp-msg-info {
-      color: #2875a8;
-      background-color: #ebf7ff;
+      color: #444bb1;
+      background-color: #f5f6ff;
   }
   
   .mnmlwp-msg.mnmlwp-msg-info a {
-      color: #2875a8!important;
+      color: #444bb1!important;
   }
   
   .mnmlwp-msg.mnmlwp-msg-success {
@@ -1778,7 +1778,7 @@
   
   .mnmlwp-widget-title {
       font-size: 1.25em;
-      font-weight: 400;
+      font-weight: 600;
       padding-top: 0;
   }
   
@@ -2037,7 +2037,7 @@
       font-size: .875em;
       color: #2c3e50;
       display: inline-block;
-      content: '\f078';
+      content: '\f067';
       width: 1em;
       margin-right: .5em;
       position: relative;
@@ -2045,7 +2045,7 @@
   }
   
   .mnmlwp-flyout-title.active::before {
-      content: '\f077';
+      content: '\f068';
   }
   
   .mnmlwp-flyout-content {

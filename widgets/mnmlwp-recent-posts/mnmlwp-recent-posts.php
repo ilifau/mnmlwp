@@ -68,16 +68,18 @@ class mnmlWP_Widget_Recent_Posts extends WP_Widget
             'order' => 'DESC',
         ) );
 
-        $sticky_posts = get_posts( array(
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'posts_per_page' => $num_posts,
-            'post__in' => $sticky,
-            'orderby' => 'date',
-            'order' => 'DESC',
-        ) );
-
-        $posts = array_merge( $sticky_posts, $posts );
+        if( ! empty( $sticky ) ) {
+            $sticky_posts = get_posts( array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => $num_posts,
+                'post__in' => $sticky,
+                'orderby' => 'date',
+                'order' => 'DESC',
+            ) );
+    
+            $posts = array_merge( $sticky_posts, $posts );
+        }
 
         if( empty( $posts ) ) {
             echo esc_html__('No posts found', 'mnmlwp');
