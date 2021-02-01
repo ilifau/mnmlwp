@@ -1580,7 +1580,7 @@ function mnmlwp_get_breadcrumb_row( $hero = false ) {
             'template-post-hero.php',
         );
 
-        if( ! $hero && ( is_singular() && ! in_array( get_page_template_slug( $post->ID ), $templates ) ) ) {
+        if( ! $hero && ( ! in_array( get_page_template_slug( $post->ID ), $templates ) ) ) {
             if( ( get_theme_mod( 'mnmlwp_has_breadcrumbs', false ) ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_breadcrumbs', true ) ):
                 if( ( ! is_front_page() ) || ( is_front_page() && get_theme_mod( 'mnmlwp_breadcrumbs_show_on_home', false ) ) ):
                     echo mnmlwp_get_breadcrumb_html();
