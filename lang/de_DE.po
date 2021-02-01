@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mnmlWP 0.1.1\n"
-"POT-Creation-Date: 2020-12-02 17:34+0100\n"
-"PO-Revision-Date: 2020-12-02 17:34+0100\n"
+"POT-Creation-Date: 2021-02-01 15:39+0100\n"
+"PO-Revision-Date: 2021-02-01 15:41+0100\n"
 "Last-Translator: Sebastian Honert <sebastian.honert@gmail.com>\n"
 "Language-Team: sebastian.honert@gmail.com\n"
 "Language: de_DE\n"
@@ -45,58 +45,58 @@ msgid ""
 "content."
 msgstr "Bitte konfiguriere nach dem Demo-Import die Widgets."
 
-#: functions.php:191
+#: functions.php:176
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: functions.php:197
+#: functions.php:182
 msgid "Next page"
 msgstr "Nächste Seite"
 
-#: functions.php:198
+#: functions.php:183
 msgid "Previous page"
 msgstr "Vorangehende Seite"
 
-#: functions.php:304
+#: functions.php:289
 msgid "Install Required Plugins"
 msgstr "Benötigte Plugins installieren"
 
-#: functions.php:305
+#: functions.php:290
 msgid "Install Plugins"
 msgstr "Plugins installieren"
 
-#: functions.php:307
+#: functions.php:292
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installiere Plugin: %s"
 
-#: functions.php:309
+#: functions.php:294
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Update Plugin: %s"
 
-#: functions.php:310
+#: functions.php:295
 msgid "Something went wrong with the plugin API."
 msgstr "Fehler in der plugin API."
 
-#: functions.php:362
+#: functions.php:347
 msgid "Return to Required Plugins Installer"
 msgstr "Zurück zum Plugin-Installer"
 
-#: functions.php:363
+#: functions.php:348
 msgid "Plugin activated successfully."
 msgstr "Plugin erfolgreich aktiviert."
 
-#: functions.php:364
+#: functions.php:349
 msgid "The following plugin was activated successfully:"
 msgstr "Das folgende Plugin wurde erfolgreich aktiviert:"
 
-#: functions.php:366
+#: functions.php:351
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Keine Änderungen vorgenommen. Plugin %1$s war bereits aktiv."
 
-#: functions.php:368
+#: functions.php:353
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
@@ -105,16 +105,16 @@ msgstr ""
 "Plugin nicht aktiviert Eine aktuellere Version von %s wird für dieses Theme "
 "benötigt. Bitte aktualisiere das Plugin."
 
-#: functions.php:370
+#: functions.php:355
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Alle Plugins wurden erfolgreich installiert und aktiviert. %1$s"
 
-#: functions.php:371
+#: functions.php:356
 msgid "Dismiss this notice"
 msgstr "Diesen Hinweis verbergen"
 
-#: functions.php:372
+#: functions.php:357
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
 "activate."
@@ -122,55 +122,55 @@ msgstr ""
 "Es gibt ein oder mehrere notwendige oder empfohlene Plugins, die "
 "installiert, aktualisiert oder aktiviert werden können."
 
-#: functions.php:373
+#: functions.php:358
 msgid "Please contact the administrator of this site for help."
 msgstr "Bitte kontaktiere den Seiten-Administrator."
 
-#: functions.php:418
+#: functions.php:403
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: functions.php:461 searchform.php:17
+#: functions.php:440 header.php:63 header.php:86 searchform.php:17
 msgid "Search"
 msgstr "Suche"
 
-#: functions.php:476
+#: functions.php:455
 msgid "mnmlWP Sidebar"
 msgstr "mnmlWP Sidebar"
 
-#: functions.php:573
+#: functions.php:552
 msgid "read&nbsp;more"
 msgstr "mehr&nbsp;lesen"
 
-#: functions.php:660
+#: functions.php:650
 msgid "Posts by"
 msgstr "Beiträge von"
 
-#: functions.php:660 functions.php:664 functions.php:668 functions.php:681
+#: functions.php:650 functions.php:654 functions.php:658 functions.php:671
 msgid "results"
 msgstr "Ergebnisse"
 
-#: functions.php:664
+#: functions.php:654
 msgid "Category"
 msgstr "Kategorie"
 
-#: functions.php:668
+#: functions.php:658
 msgid "Tag"
 msgstr "Schlagwort"
 
-#: functions.php:683
+#: functions.php:673
 msgid "No Results"
 msgstr "Keine Ergebnisse"
 
-#: functions.php:684
+#: functions.php:674
 msgid "Please enter a search term."
 msgstr "Bitte gib einen Suchbegriff ein."
 
-#: functions.php:752
+#: functions.php:742
 msgid "comment(s)"
 msgstr "Kommentar(e)"
 
-#: functions.php:764
+#: functions.php:754
 msgid ""
 "No posts found. You might want to use the search form or go back to the home "
 "page."
@@ -178,99 +178,82 @@ msgstr ""
 "Keine Beiträge gefunden. Bitte benutze die Suchfunktion oder kehre zurück "
 "zur Startseite."
 
-#: functions.php:916
+#: functions.php:904
 msgid "Previous Post"
 msgstr "Vorheriger Beitrag"
 
-#: functions.php:920
+#: functions.php:908
 msgid "Next Post"
 msgstr "Nächster Beitrag"
 
-#: functions.php:1063
-msgid "Congratulations"
-msgstr "Herzlichen Glückwunsch"
-
-#: functions.php:1064
-#, php-format
-msgid ""
-"You successfully installed the mnmlWP WordPress Theme. Please update your "
-"theme settings in the %1$s."
-msgstr ""
-"Du hast das mnmlWP WordPress-Theme erfolgreich installiert. Bitte "
-"aktualisier die Theme-Einstellungen im %1$s."
-
-#: functions.php:1065
-msgid "Enjoy your mnmlWP site!"
-msgstr "Viel Spaß mit Deiner mnmlWP-Website!"
-
-#: functions.php:1078
+#: functions.php:1050
 msgid "Color"
 msgstr "Farbe"
 
-#: functions.php:1080
+#: functions.php:1052
 msgid "Pick a Category Color"
 msgstr "Wähle eine Farbe für diese Kategorie"
 
-#: functions.php:1096
+#: functions.php:1068
 msgid "Category Color"
 msgstr "Farbe dieser Kategorie"
 
-#: functions.php:1150
+#: functions.php:1122
 msgid "Hide Page Title?"
 msgstr "Seitentitel verbergen?"
 
-#: functions.php:1160
+#: functions.php:1132
 msgid "Show Sidebar?"
 msgstr "Sidebar anzeigen?"
 
-#: functions.php:1172
-msgid "Hide Breadcrumbs?"
-msgstr "Breadcrumb-Navigation verbergen?"
-
-#: functions.php:1182
-msgid "Hide Contact Row?"
-msgstr "Konzaktzeile verbergen?"
-
-#: functions.php:1191
+#: functions.php:1142
 msgid "Hero Section"
 msgstr "Hero-Bereich"
 
-#: functions.php:1205 functions.php:1228
+#: functions.php:1152
+msgid "Hide Breadcrumbs?"
+msgstr "Breadcrumb-Navigation verbergen?"
+
+#: functions.php:1162
+msgid "Hide Contact Row?"
+msgstr "Konzaktzeile verbergen?"
+
+#: functions.php:1177 functions.php:1200
 msgid "This option is not available for the blank page template."
 msgstr "Diese Option ist für das „Blank Template“ nicht verfügbar."
 
-#: functions.php:1222
+#: functions.php:1194
 msgid "Yes, show the sidebar."
 msgstr "Ja, Sidebar anzeigen."
 
-#: functions.php:1245
+#: functions.php:1217
 msgid "Yes, hide the page title."
 msgstr "Ja, Seitentitel verbergen."
 
-#: functions.php:1255
+#: functions.php:1227
 msgid "Check to hide the breadcrumb navigation on this page."
 msgstr "Ankreuzen, um die Breadcrumb-Navigation zu verbergen."
 
-#: functions.php:1258 functions.php:1272 functions.php:1404
+#: functions.php:1230 functions.php:1244 functions.php:1376
 msgid "Attention"
 msgstr "Achtung"
 
-#: functions.php:1258
+#: functions.php:1230
 msgid ""
 "The breadcrumb navigation is globally disabled in the theme customization "
 "options."
 msgstr "Die Breadcrumb-Navigation ist im Theme-Customizer global abgeschaltet."
 
-#: functions.php:1269
+#: functions.php:1241
 msgid "Check to hide the contact row on this page."
 msgstr "Ankreuzen, um die Kontaktzeile auf dieser Seite auszublenden."
 
-#: functions.php:1272
+#: functions.php:1244
 msgid ""
 "The contact row is globally disabled in the theme customization options."
 msgstr "Die Kontaktzeile ist im Theme-Customizer global abgeschaltet."
 
-#: functions.php:1304
+#: functions.php:1276
 msgid ""
 "If you would like to display a hero section please select the hero template "
 "in the post/page attributes."
@@ -278,47 +261,47 @@ msgstr ""
 "Um einen Hero-Bereich anzeigen zu lassen, wähle bitte das Hero-Template in "
 "den Beitrags-/Seitenattributen."
 
-#: functions.php:1309
+#: functions.php:1281
 msgid "Hero section height"
 msgstr "Höhe des Hero-Bereichs"
 
-#: functions.php:1354
+#: functions.php:1326
 msgid "Content (HTML allowed)"
 msgstr "Inhalt (HTML erlaubt)"
 
-#: functions.php:1358
+#: functions.php:1330
 msgid "Display colored overlay?"
 msgstr "Farb-Overlay anzeigen?"
 
-#: functions.php:1363
+#: functions.php:1335
 msgid "Gradient angle (0-360)"
 msgstr "Farbverlauf Winkel (0-360)"
 
-#: functions.php:1366
+#: functions.php:1338
 msgid "Radial gradient?"
 msgstr "Radialer Farbverlauf?"
 
-#: functions.php:1368
+#: functions.php:1340
 msgid "Overlay opacity in percent (0-100%)"
 msgstr "Overlay-Deckkraft in Prozent (0-100%)"
 
-#: functions.php:1371
+#: functions.php:1343
 msgid "Skew Overlay?"
 msgstr "Overlay mit Schräge?"
 
-#: functions.php:1373
+#: functions.php:1345
 msgid "Background position (vertical)"
 msgstr "Hintergrundposition (vertikal)"
 
-#: functions.php:1388
+#: functions.php:1360
 msgid "Background position (horizontal)"
 msgstr "Hintergrundposition (horizontal)"
 
-#: functions.php:1403
+#: functions.php:1375
 msgid "Fixed background position?"
 msgstr "Statische Hintergrundposition?"
 
-#: functions.php:1404
+#: functions.php:1376
 msgid ""
 "The fixed background setting overwrites the selected background position "
 "values. It is also not recommended to use the background overlay together "
@@ -381,183 +364,203 @@ msgstr "Farbschema"
 msgid "Page Layout"
 msgstr "Seitenlayout"
 
-#: functions/customizer.php:349
+#: functions/customizer.php:415
 msgid "Text color"
 msgstr "Textfarbe"
 
-#: functions/customizer.php:355
+#: functions/customizer.php:421
 msgid "Headings color"
 msgstr "Überschriftenfarbe"
 
-#: functions/customizer.php:361
+#: functions/customizer.php:427
 msgid "Link color"
 msgstr "Linkfarbe"
 
-#: functions/customizer.php:367
+#: functions/customizer.php:433
 msgid "Link hover color"
 msgstr "Linkfarbe (hover)"
 
-#: functions/customizer.php:375
+#: functions/customizer.php:442
+msgid "Logo image height (desktop)"
+msgstr ""
+
+#: functions/customizer.php:455
+msgid "Logo image height (tablet)"
+msgstr ""
+
+#: functions/customizer.php:468
+msgid "Logo image height (mobile)"
+msgstr ""
+
+#: functions/customizer.php:480
 msgid "Header background color"
 msgstr "Header Hintergrundfarbe"
 
-#: functions/customizer.php:381
+#: functions/customizer.php:486
 msgid "Logo text color"
 msgstr "Logo-Textfarbe"
 
-#: functions/customizer.php:387
+#: functions/customizer.php:492
 msgid "Logo icon color"
 msgstr "Logo-Iconfarbe"
 
-#: functions/customizer.php:393
+#: functions/customizer.php:498
 msgid "Tagline color"
 msgstr "Farbe der Tagline"
 
-#: functions/customizer.php:399
+#: functions/customizer.php:504
 msgid "Contact row background color"
 msgstr "Kontaktzeile Hintergrundfarbe"
 
-#: functions/customizer.php:405
+#: functions/customizer.php:510
 msgid "Contact row text"
 msgstr "Kontaktzeile Textfarbe"
 
-#: functions/customizer.php:413
+#: functions/customizer.php:518
 msgid "Navigation background color"
 msgstr "Menu Hintergrundfarbe"
 
-#: functions/customizer.php:419
+#: functions/customizer.php:524
 msgid "Nav item color"
 msgstr "Menu Linkfarbe"
 
-#: functions/customizer.php:425
+#: functions/customizer.php:530
 msgid "Nav item background color"
 msgstr "Menu Link-Hintergrundfarbe"
 
-#: functions/customizer.php:431
+#: functions/customizer.php:536
 msgid "Nav item hover color"
 msgstr "Menu Linkfarbe (hover)"
 
-#: functions/customizer.php:437
+#: functions/customizer.php:542
 msgid "Nav item hover background color"
 msgstr "Menu Link-Hintergrundfarbe (hover)"
 
-#: functions/customizer.php:443
+#: functions/customizer.php:548
 msgid "Nav item active color"
 msgstr "Menu Linkfarbe (aktiv)"
 
-#: functions/customizer.php:449
+#: functions/customizer.php:554
 msgid "Nav item active background color"
 msgstr "Menu Link-Hintergrundfarbe (aktiv)"
 
-#: functions/customizer.php:455
+#: functions/customizer.php:560
 msgid "Hamburger icon color"
 msgstr "Hamburger-Iconfarbe"
 
-#: functions/customizer.php:465
+#: functions/customizer.php:570
 msgid "Breadcrumb background color"
 msgstr "Breadcrumb Hintergrundfarbe"
 
-#: functions/customizer.php:471
+#: functions/customizer.php:576
 msgid "Breadcrumb text color"
 msgstr "Breadcrumb Textfarbe"
 
-#: functions/customizer.php:477
+#: functions/customizer.php:582
 msgid "Breadcrumb link color"
 msgstr "Breadcrumb Linkfarbe"
 
-#: functions/customizer.php:483
+#: functions/customizer.php:588
 msgid "Breadcrumb link color (hover)"
 msgstr "Breadcrumb Linkfarbe (hover)"
 
-#: functions/customizer.php:493
+#: functions/customizer.php:598
 msgid "Footer background color"
 msgstr "Footer Hintergrundfarbe"
 
-#: functions/customizer.php:499
+#: functions/customizer.php:604
 msgid "Footer text color"
 msgstr "Footer Textfarbe"
 
-#: functions/customizer.php:505
+#: functions/customizer.php:610
 msgid "Footer headings color"
 msgstr "Footer Überschriftenfarbe"
 
-#: functions/customizer.php:511
+#: functions/customizer.php:616
 msgid "Footer link color"
 msgstr "Footer Linkfarbe"
 
-#: functions/customizer.php:517
+#: functions/customizer.php:622
 msgid "Footer link hover color"
 msgstr "Footer Linkfarbe (hover)"
 
-#: functions/customizer.php:525
+#: functions/customizer.php:630
 msgid "Main content width (default: 1120px)"
 msgstr "Breite des Seiteninhalts (default: 1120px)"
 
-#: functions/customizer.php:531
-msgid "Base font size (default: 1.25em)"
-msgstr "Basis-Schriftgröße (default: 1.25em)"
+#: functions/customizer.php:636
+msgid "Base font size (default: 1.125em)"
+msgstr "Basis-Schriftgröße (default: 1.125em)"
 
-#: functions/customizer.php:539
+#: functions/customizer.php:644
 msgid "Main menu position"
 msgstr "Position der Hauptnavigation"
 
-#: functions/customizer.php:549
+#: functions/customizer.php:654
 msgid "Menu animation style"
 msgstr "Menu-Animation"
 
-#: functions/customizer.php:559
+#: functions/customizer.php:664
 msgid "Hamburger icon class"
 msgstr "Hamburger-Icon"
 
-#: functions/customizer.php:575
+#: functions/customizer.php:680
 msgid "Excerpt length in words (default: 60)"
 msgstr "Länge des Auszugs (default: 60)"
 
-#: functions/customizer.php:584
-msgid "Use local font (Source Sans Pro)?"
-msgstr "Lokale Schriftart verwenden (Source Sans Pro)?"
-
-#: functions/customizer.php:590
+#: functions/customizer.php:689
 msgid "Boxed layout?"
 msgstr "Boxed Layout?"
 
-#: functions/customizer.php:596
+#: functions/customizer.php:695
 msgid "Sticky main navigation?"
 msgstr "Hauptnavigation feststellen?"
 
-#: functions/customizer.php:602
-msgid "Include search form in primary navigation?"
-msgstr "Suchfeld in Hauptnavigation anzeigen?"
+#: functions/customizer.php:701
+msgid "Include search form in header (desktop)?"
+msgstr "Suchfeld in Hauptnavigation anzeigen (Desktop)?"
 
-#: functions/customizer.php:608
+#: functions/customizer.php:707
+msgid "Include search form in main navigation (mobile)?"
+msgstr "Suchfeld in Hauptnavigation einfügen (mobile)?"
+
+#: functions/customizer.php:713
+msgid "Center header content?"
+msgstr "Header-Inhalt zentrieren?"
+
+#: functions/customizer.php:719
+msgid "Center main menu items?"
+msgstr "Hauptnavigation zentrieren?"
+
+#: functions/customizer.php:725
 msgid "Show loading animation on page load?"
 msgstr "Lade-Animation anzeigen?"
 
-#: functions/customizer.php:614
+#: functions/customizer.php:731
 msgid "Show sidebar by default?"
 msgstr "Sidebar anzeigen voreingestellt?"
 
-#: functions/customizer.php:620
+#: functions/customizer.php:737
 msgid "Hide page title by default?"
 msgstr "Seitentitel verbergen voreingestellt?"
 
-#: functions/customizer.php:626
+#: functions/customizer.php:743
 msgid "Show read more link?"
 msgstr "„Mehr lesen“ Link anzeigen?"
 
-#: functions/customizer.php:636
+#: functions/customizer.php:753
 msgid "Show breadcrumbs navigation?"
 msgstr "Breadcrumb-Navigation anzeigen?"
 
-#: functions/customizer.php:642
+#: functions/customizer.php:759
 msgid "Show breadcrumbs navigation on home page?"
 msgstr "Breadcrumb-Navigation auf Startseite anzeigen?"
 
-#: functions/customizer.php:648
+#: functions/customizer.php:765
 msgid "Logo Icon"
 msgstr "Logo-Icon"
 
-#: functions/customizer.php:649
+#: functions/customizer.php:766
 #, php-format
 msgid ""
 "Select an icon that will be displayed together with your site logo (choose "
@@ -566,15 +569,15 @@ msgstr ""
 "Wähle ein Icon, das zusammen mit dem Seitenlogo angezeigt wird (ein "
 "beliebiges Icon von %1$s)."
 
-#: functions/customizer.php:657
+#: functions/customizer.php:774
 msgid "Show contact row?"
 msgstr "Kontaktzeile anzeigen?"
 
-#: functions/customizer.php:663
+#: functions/customizer.php:780
 msgid "Contact row"
 msgstr "Kontaktzeile"
 
-#: functions/customizer.php:664
+#: functions/customizer.php:781
 msgid ""
 "This section will show at the top of your website and may include some "
 "contact information or similar stuff."
@@ -582,15 +585,31 @@ msgstr ""
 "Dieser Bereich wird am Anfang Deiner Website angezeigt und kann z.B. "
 "Kontaktinformationen beinhalten."
 
-#: functions/customizer.php:668
+#: functions/customizer.php:785
 msgid "Spinner color"
 msgstr "Farbe der Ladeanimation"
 
-#: functions/customizer.php:675
+#: functions/customizer.php:792
+msgid "Header padding top"
+msgstr "Header Innenabstand (oben)"
+
+#: functions/customizer.php:805
+msgid "Header padding bottom"
+msgstr "Header Innenabstand (unten)"
+
+#: functions/customizer.php:818
+msgid "Nav item padding top/bottom (desktop)"
+msgstr "Navigationselemente Innenabstand oben/unten (Desktop)"
+
+#: functions/customizer.php:831
+msgid "Nav item padding left/right (desktop)"
+msgstr "Navigationselemente Innenabstand links/rechts (Desktop)"
+
+#: functions/customizer.php:844
 msgid "Flex columns spacing (horizontal)"
 msgstr "Flex columns Abstand (horizontal)"
 
-#: functions/customizer.php:688
+#: functions/customizer.php:857
 msgid "Folumns columns spacing (vertical)"
 msgstr "Flex columns Abstand (vertikal)"
 
@@ -610,9 +629,26 @@ msgstr "mnmlWP Farbige Kategorien"
 msgid "mnmlWP Recent Posts"
 msgstr "mnmlWP Neueste Beiträge"
 
-#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:67
+#: widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php:85
 msgid "No posts found"
 msgstr "Keine Beiträge gefunden"
+
+#~ msgid "Congratulations"
+#~ msgstr "Herzlichen Glückwunsch"
+
+#, php-format
+#~ msgid ""
+#~ "You successfully installed the mnmlWP WordPress Theme. Please update your "
+#~ "theme settings in the %1$s."
+#~ msgstr ""
+#~ "Du hast das mnmlWP WordPress-Theme erfolgreich installiert. Bitte "
+#~ "aktualisier die Theme-Einstellungen im %1$s."
+
+#~ msgid "Enjoy your mnmlWP site!"
+#~ msgstr "Viel Spaß mit Deiner mnmlWP-Website!"
+
+#~ msgid "Use local font (Source Sans Pro)?"
+#~ msgstr "Lokale Schriftart verwenden (Source Sans Pro)?"
 
 #~ msgid "Title:"
 #~ msgstr "Titel:"
