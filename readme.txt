@@ -77,6 +77,13 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.6.3 =
+
+Fixed: z-index header / contact row
+Fixed: Current theme version info for main.css
+Fixed: Centered header => Text align center
+Added: Customizer options for logo base font size, logo title font size, logo subtitle font size
+
 = 0.6.2 =
 
 Fixed: Breadcrumb navigation

@@ -47,6 +47,36 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     // Header
+    
+    $wp_customize->add_setting( 'mnmlwp_logo_base_font_size_desktop' , array(
+        'default'   => 1.75,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_logo_base_font_size_tablet' , array(
+        'default'   => 1.75,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_logo_base_font_size_mobile' , array(
+        'default'   => 1.5,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_site_title_font_size' , array(
+        'default'   => 1,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_site_subtitle_font_size' , array(
+        'default'   => 0.5875,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
 
     $wp_customize->add_setting( 'mnmlwp_logo_height_desktop' , array(
         'default'   => 2,
@@ -437,6 +467,71 @@ function mnmlwp_customize_register( $wp_customize )
 
     // Header
 
+    $wp_customize->add_control( 'mnmlwp_logo_base_font_size_desktop', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Logo base font size (desktop)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_logo_base_font_size_desktop',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 3,
+            'step' => 0.05,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_logo_base_font_size_tablet', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Logo base font size (tablet)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_logo_base_font_size_tablet',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 3,
+            'step' => 0.05,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_logo_base_font_size_mobile', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Logo base font size (mobile)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_logo_base_font_size_mobile',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 3,
+            'step' => 0.05,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_site_title_font_size', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Site title font size (em)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_site_title_font_size',
+        'input_attrs' => array(
+            'min' => .5,
+            'max' => 2.5,
+            'step' => 0.05,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_site_subtitle_font_size', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Site tagline font size (em)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_site_subtitle_font_size',
+        'input_attrs' => array(
+            'min' => 0.25,
+            'max' => 1.5,
+            'step' => 0.05,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
     $wp_customize->add_control( 'mnmlwp_logo_height_desktop', array(
         'type'       => 'range',
         'label'      => esc_html__( 'Logo image height (desktop)', 'mnmlwp' ),
@@ -794,7 +889,7 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_header_padding_top',
         'input_attrs' => array(
             'min' => 0,
-            'max' => 5,
+            'max' => 8,
             'step' => 0.1,
             'style' => 'width:98%;'
         ),
@@ -807,7 +902,7 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_header_padding_bottom',
         'input_attrs' => array(
             'min' => 0,
-            'max' => 5,
+            'max' => 8,
             'step' => 0.1,
             'style' => 'width:98%;'
         ),
@@ -1190,6 +1285,40 @@ function mnmlwp_customizer_css()
                 padding-bottom: ' . $mnmlwp_header_padding_bottom . 'em;
             }';
 
+            // Site title and subtitle (tagline)
+            $mnmlwp_logo_base_font_size_desktop = esc_html( get_theme_mod('mnmlwp_logo_base_font_size_desktop', 1.75) );
+            $mnmlwp_logo_base_font_size_tablet = esc_html( get_theme_mod('mnmlwp_logo_base_font_size_tablet', 1.75) );
+            $mnmlwp_logo_base_font_size_mobile = esc_html( get_theme_mod('mnmlwp_logo_base_font_size_mobile', 1.5) );
+
+            $mnmlwp_site_title_font_size = esc_html( get_theme_mod('mnmlwp_site_title_font_size', 1) );
+            $mnmlwp_site_subtitle_font_size = esc_html( get_theme_mod('mnmlwp_site_subtitle_font_size', 0.5875) );
+
+            echo '
+
+            div.mnmlwp-logo {
+                font-size: ' . $mnmlwp_logo_base_font_size_desktop . 'em;
+            }
+
+            @media screen and (max-width: 1023px) {
+                div.mnmlwp-logo {
+                    font-size: ' . $mnmlwp_logo_base_font_size_tablet . 'em;
+                }
+            }
+            
+            @media screen and (max-width: 640px) {
+                div.mnmlwp-logo {
+                    font-size: ' . $mnmlwp_logo_base_font_size_mobile . 'em;
+                }
+            }
+
+            .mnmlwp-logo-icon, .mnmlwp-logo-text {
+                font-size: ' . $mnmlwp_site_title_font_size . 'em;
+            }
+
+            .mnmlwp-tagline {
+                font-size: ' . $mnmlwp_site_subtitle_font_size . 'em;
+            }';
+
             // Logo height
             $mnmlwp_logo_height_desktop = esc_html( get_theme_mod('mnmlwp_logo_height_desktop', 2) );
             $mnmlwp_logo_height_tablet = esc_html( get_theme_mod('mnmlwp_logo_height_tablet', 2) );
@@ -1312,6 +1441,7 @@ function mnmlwp_customizer_css()
                         align-items: center;
                         justify-content: center;
                         flex-direction: column;
+                        text-align: center;
                     }
 
                     .mnmlwp-column.mnmlwp-column--header #searchform {

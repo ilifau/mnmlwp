@@ -82,7 +82,7 @@
   }
   
   .mnmlwp-row.mnmlwp-row--header {
-      z-index: 1;
+      z-index: 3;
   }
   
   .mnmlwp-row.mnmlwp-row--nav {
@@ -93,6 +93,7 @@
       display: block;
       background: #23282d;
       letter-spacing: 1px;
+      z-index: 4;
   }
   
   .mnmlwp-column.mnmlwp-column--header {
@@ -2421,10 +2422,6 @@
 
       div.mnmlwp-logo {
         flex: 0 1 75%;
-      }
-  
-      .mnmlwp-tagline {
-          font-size: .5em;
       }
   
       nav#main {
