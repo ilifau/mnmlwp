@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mnmlWP 0.1.1\n"
-"POT-Creation-Date: 2021-02-01 15:39+0100\n"
-"PO-Revision-Date: 2021-02-01 15:41+0100\n"
+"POT-Creation-Date: 2021-02-03 17:35+0100\n"
+"PO-Revision-Date: 2021-02-03 17:36+0100\n"
 "Last-Translator: Sebastian Honert <sebastian.honert@gmail.com>\n"
 "Language-Team: sebastian.honert@gmail.com\n"
 "Language: de_DE\n"
@@ -186,74 +186,74 @@ msgstr "Vorheriger Beitrag"
 msgid "Next Post"
 msgstr "Nächster Beitrag"
 
-#: functions.php:1050
+#: functions.php:1052
 msgid "Color"
 msgstr "Farbe"
 
-#: functions.php:1052
+#: functions.php:1054
 msgid "Pick a Category Color"
 msgstr "Wähle eine Farbe für diese Kategorie"
 
-#: functions.php:1068
+#: functions.php:1070
 msgid "Category Color"
 msgstr "Farbe dieser Kategorie"
 
-#: functions.php:1122
+#: functions.php:1124
 msgid "Hide Page Title?"
 msgstr "Seitentitel verbergen?"
 
-#: functions.php:1132
+#: functions.php:1134
 msgid "Show Sidebar?"
 msgstr "Sidebar anzeigen?"
 
-#: functions.php:1142
+#: functions.php:1144
 msgid "Hero Section"
 msgstr "Hero-Bereich"
 
-#: functions.php:1152
+#: functions.php:1154
 msgid "Hide Breadcrumbs?"
 msgstr "Breadcrumb-Navigation verbergen?"
 
-#: functions.php:1162
+#: functions.php:1164
 msgid "Hide Contact Row?"
 msgstr "Konzaktzeile verbergen?"
 
-#: functions.php:1177 functions.php:1200
+#: functions.php:1179 functions.php:1202
 msgid "This option is not available for the blank page template."
 msgstr "Diese Option ist für das „Blank Template“ nicht verfügbar."
 
-#: functions.php:1194
+#: functions.php:1196
 msgid "Yes, show the sidebar."
 msgstr "Ja, Sidebar anzeigen."
 
-#: functions.php:1217
+#: functions.php:1219
 msgid "Yes, hide the page title."
 msgstr "Ja, Seitentitel verbergen."
 
-#: functions.php:1227
+#: functions.php:1229
 msgid "Check to hide the breadcrumb navigation on this page."
 msgstr "Ankreuzen, um die Breadcrumb-Navigation zu verbergen."
 
-#: functions.php:1230 functions.php:1244 functions.php:1376
+#: functions.php:1232 functions.php:1246 functions.php:1378
 msgid "Attention"
 msgstr "Achtung"
 
-#: functions.php:1230
+#: functions.php:1232
 msgid ""
 "The breadcrumb navigation is globally disabled in the theme customization "
 "options."
 msgstr "Die Breadcrumb-Navigation ist im Theme-Customizer global abgeschaltet."
 
-#: functions.php:1241
+#: functions.php:1243
 msgid "Check to hide the contact row on this page."
 msgstr "Ankreuzen, um die Kontaktzeile auf dieser Seite auszublenden."
 
-#: functions.php:1244
+#: functions.php:1246
 msgid ""
 "The contact row is globally disabled in the theme customization options."
 msgstr "Die Kontaktzeile ist im Theme-Customizer global abgeschaltet."
 
-#: functions.php:1276
+#: functions.php:1278
 msgid ""
 "If you would like to display a hero section please select the hero template "
 "in the post/page attributes."
@@ -261,47 +261,47 @@ msgstr ""
 "Um einen Hero-Bereich anzeigen zu lassen, wähle bitte das Hero-Template in "
 "den Beitrags-/Seitenattributen."
 
-#: functions.php:1281
+#: functions.php:1283
 msgid "Hero section height"
 msgstr "Höhe des Hero-Bereichs"
 
-#: functions.php:1326
+#: functions.php:1328
 msgid "Content (HTML allowed)"
 msgstr "Inhalt (HTML erlaubt)"
 
-#: functions.php:1330
+#: functions.php:1332
 msgid "Display colored overlay?"
 msgstr "Farb-Overlay anzeigen?"
 
-#: functions.php:1335
+#: functions.php:1337
 msgid "Gradient angle (0-360)"
 msgstr "Farbverlauf Winkel (0-360)"
 
-#: functions.php:1338
+#: functions.php:1340
 msgid "Radial gradient?"
 msgstr "Radialer Farbverlauf?"
 
-#: functions.php:1340
+#: functions.php:1342
 msgid "Overlay opacity in percent (0-100%)"
 msgstr "Overlay-Deckkraft in Prozent (0-100%)"
 
-#: functions.php:1343
+#: functions.php:1345
 msgid "Skew Overlay?"
 msgstr "Overlay mit Schräge?"
 
-#: functions.php:1345
+#: functions.php:1347
 msgid "Background position (vertical)"
 msgstr "Hintergrundposition (vertikal)"
 
-#: functions.php:1360
+#: functions.php:1362
 msgid "Background position (horizontal)"
 msgstr "Hintergrundposition (horizontal)"
 
-#: functions.php:1375
+#: functions.php:1377
 msgid "Fixed background position?"
 msgstr "Statische Hintergrundposition?"
 
-#: functions.php:1376
+#: functions.php:1378
 msgid ""
 "The fixed background setting overwrites the selected background position "
 "values. It is also not recommended to use the background overlay together "
@@ -364,203 +364,223 @@ msgstr "Farbschema"
 msgid "Page Layout"
 msgstr "Seitenlayout"
 
-#: functions/customizer.php:415
+#: functions/customizer.php:445
 msgid "Text color"
 msgstr "Textfarbe"
 
-#: functions/customizer.php:421
+#: functions/customizer.php:451
 msgid "Headings color"
 msgstr "Überschriftenfarbe"
 
-#: functions/customizer.php:427
+#: functions/customizer.php:457
 msgid "Link color"
 msgstr "Linkfarbe"
 
-#: functions/customizer.php:433
+#: functions/customizer.php:463
 msgid "Link hover color"
 msgstr "Linkfarbe (hover)"
 
-#: functions/customizer.php:442
+#: functions/customizer.php:472
+msgid "Logo base font size (desktop)"
+msgstr "Logo Basis-Schriftgröße (Desktop)"
+
+#: functions/customizer.php:485
+msgid "Logo base font size (tablet)"
+msgstr "Logo Basis-Schriftgröße (Tablet)"
+
+#: functions/customizer.php:498
+msgid "Logo base font size (mobile)"
+msgstr "Logo Basis-Schriftgröße (Mobile)"
+
+#: functions/customizer.php:511
+msgid "Site title font size (em)"
+msgstr "Schriftgröße Seitentitel (em)"
+
+#: functions/customizer.php:524
+msgid "Site tagline font size (em)"
+msgstr "Schriftgröße Tagline (em)"
+
+#: functions/customizer.php:537
 msgid "Logo image height (desktop)"
-msgstr ""
+msgstr "Logo Höhe (Desktop)"
 
-#: functions/customizer.php:455
+#: functions/customizer.php:550
 msgid "Logo image height (tablet)"
-msgstr ""
+msgstr "Logo Höhe (Tablet)"
 
-#: functions/customizer.php:468
+#: functions/customizer.php:563
 msgid "Logo image height (mobile)"
-msgstr ""
+msgstr "Logo Höhe (Mobile)"
 
-#: functions/customizer.php:480
+#: functions/customizer.php:575
 msgid "Header background color"
 msgstr "Header Hintergrundfarbe"
 
-#: functions/customizer.php:486
+#: functions/customizer.php:581
 msgid "Logo text color"
 msgstr "Logo-Textfarbe"
 
-#: functions/customizer.php:492
+#: functions/customizer.php:587
 msgid "Logo icon color"
 msgstr "Logo-Iconfarbe"
 
-#: functions/customizer.php:498
+#: functions/customizer.php:593
 msgid "Tagline color"
 msgstr "Farbe der Tagline"
 
-#: functions/customizer.php:504
+#: functions/customizer.php:599
 msgid "Contact row background color"
 msgstr "Kontaktzeile Hintergrundfarbe"
 
-#: functions/customizer.php:510
+#: functions/customizer.php:605
 msgid "Contact row text"
 msgstr "Kontaktzeile Textfarbe"
 
-#: functions/customizer.php:518
+#: functions/customizer.php:613
 msgid "Navigation background color"
 msgstr "Menu Hintergrundfarbe"
 
-#: functions/customizer.php:524
+#: functions/customizer.php:619
 msgid "Nav item color"
 msgstr "Menu Linkfarbe"
 
-#: functions/customizer.php:530
+#: functions/customizer.php:625
 msgid "Nav item background color"
 msgstr "Menu Link-Hintergrundfarbe"
 
-#: functions/customizer.php:536
+#: functions/customizer.php:631
 msgid "Nav item hover color"
 msgstr "Menu Linkfarbe (hover)"
 
-#: functions/customizer.php:542
+#: functions/customizer.php:637
 msgid "Nav item hover background color"
 msgstr "Menu Link-Hintergrundfarbe (hover)"
 
-#: functions/customizer.php:548
+#: functions/customizer.php:643
 msgid "Nav item active color"
 msgstr "Menu Linkfarbe (aktiv)"
 
-#: functions/customizer.php:554
+#: functions/customizer.php:649
 msgid "Nav item active background color"
 msgstr "Menu Link-Hintergrundfarbe (aktiv)"
 
-#: functions/customizer.php:560
+#: functions/customizer.php:655
 msgid "Hamburger icon color"
 msgstr "Hamburger-Iconfarbe"
 
-#: functions/customizer.php:570
+#: functions/customizer.php:665
 msgid "Breadcrumb background color"
 msgstr "Breadcrumb Hintergrundfarbe"
 
-#: functions/customizer.php:576
+#: functions/customizer.php:671
 msgid "Breadcrumb text color"
 msgstr "Breadcrumb Textfarbe"
 
-#: functions/customizer.php:582
+#: functions/customizer.php:677
 msgid "Breadcrumb link color"
 msgstr "Breadcrumb Linkfarbe"
 
-#: functions/customizer.php:588
+#: functions/customizer.php:683
 msgid "Breadcrumb link color (hover)"
 msgstr "Breadcrumb Linkfarbe (hover)"
 
-#: functions/customizer.php:598
+#: functions/customizer.php:693
 msgid "Footer background color"
 msgstr "Footer Hintergrundfarbe"
 
-#: functions/customizer.php:604
+#: functions/customizer.php:699
 msgid "Footer text color"
 msgstr "Footer Textfarbe"
 
-#: functions/customizer.php:610
+#: functions/customizer.php:705
 msgid "Footer headings color"
 msgstr "Footer Überschriftenfarbe"
 
-#: functions/customizer.php:616
+#: functions/customizer.php:711
 msgid "Footer link color"
 msgstr "Footer Linkfarbe"
 
-#: functions/customizer.php:622
+#: functions/customizer.php:717
 msgid "Footer link hover color"
 msgstr "Footer Linkfarbe (hover)"
 
-#: functions/customizer.php:630
+#: functions/customizer.php:725
 msgid "Main content width (default: 1120px)"
 msgstr "Breite des Seiteninhalts (default: 1120px)"
 
-#: functions/customizer.php:636
+#: functions/customizer.php:731
 msgid "Base font size (default: 1.125em)"
 msgstr "Basis-Schriftgröße (default: 1.125em)"
 
-#: functions/customizer.php:644
+#: functions/customizer.php:739
 msgid "Main menu position"
 msgstr "Position der Hauptnavigation"
 
-#: functions/customizer.php:654
+#: functions/customizer.php:749
 msgid "Menu animation style"
 msgstr "Menu-Animation"
 
-#: functions/customizer.php:664
+#: functions/customizer.php:759
 msgid "Hamburger icon class"
 msgstr "Hamburger-Icon"
 
-#: functions/customizer.php:680
+#: functions/customizer.php:775
 msgid "Excerpt length in words (default: 60)"
 msgstr "Länge des Auszugs (default: 60)"
 
-#: functions/customizer.php:689
+#: functions/customizer.php:784
 msgid "Boxed layout?"
 msgstr "Boxed Layout?"
 
-#: functions/customizer.php:695
+#: functions/customizer.php:790
 msgid "Sticky main navigation?"
 msgstr "Hauptnavigation feststellen?"
 
-#: functions/customizer.php:701
+#: functions/customizer.php:796
 msgid "Include search form in header (desktop)?"
 msgstr "Suchfeld in Hauptnavigation anzeigen (Desktop)?"
 
-#: functions/customizer.php:707
+#: functions/customizer.php:802
 msgid "Include search form in main navigation (mobile)?"
 msgstr "Suchfeld in Hauptnavigation einfügen (mobile)?"
 
-#: functions/customizer.php:713
+#: functions/customizer.php:808
 msgid "Center header content?"
 msgstr "Header-Inhalt zentrieren?"
 
-#: functions/customizer.php:719
+#: functions/customizer.php:814
 msgid "Center main menu items?"
 msgstr "Hauptnavigation zentrieren?"
 
-#: functions/customizer.php:725
+#: functions/customizer.php:820
 msgid "Show loading animation on page load?"
 msgstr "Lade-Animation anzeigen?"
 
-#: functions/customizer.php:731
+#: functions/customizer.php:826
 msgid "Show sidebar by default?"
 msgstr "Sidebar anzeigen voreingestellt?"
 
-#: functions/customizer.php:737
+#: functions/customizer.php:832
 msgid "Hide page title by default?"
 msgstr "Seitentitel verbergen voreingestellt?"
 
-#: functions/customizer.php:743
+#: functions/customizer.php:838
 msgid "Show read more link?"
 msgstr "„Mehr lesen“ Link anzeigen?"
 
-#: functions/customizer.php:753
+#: functions/customizer.php:848
 msgid "Show breadcrumbs navigation?"
 msgstr "Breadcrumb-Navigation anzeigen?"
 
-#: functions/customizer.php:759
+#: functions/customizer.php:854
 msgid "Show breadcrumbs navigation on home page?"
 msgstr "Breadcrumb-Navigation auf Startseite anzeigen?"
 
-#: functions/customizer.php:765
+#: functions/customizer.php:860
 msgid "Logo Icon"
 msgstr "Logo-Icon"
 
-#: functions/customizer.php:766
+#: functions/customizer.php:861
 #, php-format
 msgid ""
 "Select an icon that will be displayed together with your site logo (choose "
@@ -569,15 +589,15 @@ msgstr ""
 "Wähle ein Icon, das zusammen mit dem Seitenlogo angezeigt wird (ein "
 "beliebiges Icon von %1$s)."
 
-#: functions/customizer.php:774
+#: functions/customizer.php:869
 msgid "Show contact row?"
 msgstr "Kontaktzeile anzeigen?"
 
-#: functions/customizer.php:780
+#: functions/customizer.php:875
 msgid "Contact row"
 msgstr "Kontaktzeile"
 
-#: functions/customizer.php:781
+#: functions/customizer.php:876
 msgid ""
 "This section will show at the top of your website and may include some "
 "contact information or similar stuff."
@@ -585,31 +605,31 @@ msgstr ""
 "Dieser Bereich wird am Anfang Deiner Website angezeigt und kann z.B. "
 "Kontaktinformationen beinhalten."
 
-#: functions/customizer.php:785
+#: functions/customizer.php:880
 msgid "Spinner color"
 msgstr "Farbe der Ladeanimation"
 
-#: functions/customizer.php:792
+#: functions/customizer.php:887
 msgid "Header padding top"
 msgstr "Header Innenabstand (oben)"
 
-#: functions/customizer.php:805
+#: functions/customizer.php:900
 msgid "Header padding bottom"
 msgstr "Header Innenabstand (unten)"
 
-#: functions/customizer.php:818
+#: functions/customizer.php:913
 msgid "Nav item padding top/bottom (desktop)"
 msgstr "Navigationselemente Innenabstand oben/unten (Desktop)"
 
-#: functions/customizer.php:831
+#: functions/customizer.php:926
 msgid "Nav item padding left/right (desktop)"
 msgstr "Navigationselemente Innenabstand links/rechts (Desktop)"
 
-#: functions/customizer.php:844
+#: functions/customizer.php:939
 msgid "Flex columns spacing (horizontal)"
 msgstr "Flex columns Abstand (horizontal)"
 
-#: functions/customizer.php:857
+#: functions/customizer.php:952
 msgid "Folumns columns spacing (vertical)"
 msgstr "Flex columns Abstand (vertikal)"
 
