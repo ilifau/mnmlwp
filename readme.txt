@@ -77,6 +77,12 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.6.4 =
+
+Added: Hero section fields for title, subtitle, content, alignment, and colors
+Fixed: Toggle hero settings on template select
+Fixed: Hero section editor layout
+
 = 0.6.3 =
 
 Fixed: z-index header / contact row
