@@ -77,6 +77,14 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.6.6 =
+
+Added: Version number for admin.css
+
+= 0.6.5 =
+
+Added: Version number for admin.js
+
 = 0.6.4 =
 
 Added: Hero section fields for title, subtitle, content, alignment, and colors
