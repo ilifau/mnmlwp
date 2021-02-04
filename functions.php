@@ -972,7 +972,14 @@ if( ! function_exists( 'mnmlwp_get_hero_row' ) )
     {
         $hero_height = absint( get_post_meta( get_the_ID(), '_mnmlwp_hero_height', true ) );
         $hero_overlay = get_post_meta( get_the_ID(), '_mnmlwp_hero_has_overlay', true );
-        $hero_title = get_post_meta( get_the_ID(), '_mnmlwp_hero_title', true );
+        $hero_main_title = get_post_meta( get_the_ID(), '_mnmlwp_hero_main_title', true );
+        $hero_subtitle = get_post_meta( get_the_ID(), '_mnmlwp_hero_subtitle', true );
+        $hero_content = get_post_meta( get_the_ID(), '_mnmlwp_hero_content', true );
+        $hero_main_title_color = get_post_meta( get_the_ID(), '_mnmlwp_hero_main_title_color', true );
+        $hero_subtitle_color = get_post_meta( get_the_ID(), '_mnmlwp_hero_subtitle_color', true );
+        $hero_content_color = get_post_meta( get_the_ID(), '_mnmlwp_hero_content_color', true );
+        $hero_content_align = get_post_meta( get_the_ID(), '_mnmlwp_hero_content_align', true );
+        $hero_title = get_post_meta( get_the_ID(), '_mnmlwp_hero_title', true ); // HTML content
         $hero_overlay_color_from = get_post_meta( get_the_ID(), '_mnmlwp_hero_overlay_color_from', true );
         $hero_overlay_color_to = get_post_meta( get_the_ID(), '_mnmlwp_hero_overlay_color_to', true );
         $hero_overlay_gradient_degrees = get_post_meta( get_the_ID(), '_mnmlwp_hero_overlay_gradient_degrees', true );
@@ -992,7 +999,14 @@ if( ! function_exists( 'mnmlwp_get_hero_row' ) )
             $html .= '<div class="mnmlwp-overlay" style="' . $hero_overlay_style_background . $hero_overlay_style_opacity . '"></div>';
         }
 
-        $html .= '<div class="mnmlwp-column mnmlwp-column--hero" style="height:' . $hero_height . 'vh"><div class="hero-title">' . do_shortcode( $hero_title ) . '</div></div>';
+        $html .= '<div class="mnmlwp-column mnmlwp-column--hero" style="height:' . $hero_height . 'vh">
+            <div class="mnmlwp-hero-inner" style="text-align:' . $hero_content_align . '">';
+                $html .= ! empty( $hero_main_title ) ? '<div class="mnmlwp-hero-main-title" style="color:' . $hero_main_title_color . '">' . sanitize_text_field( $hero_main_title ) . '</div>' : '';
+                $html .= ! empty( $hero_subtitle ) ? '<div class="mnmlwp-hero-subtitle" style="color:' . $hero_subtitle_color . '">' . sanitize_text_field( $hero_subtitle ) . '</div>' : '';
+                $html .= ! empty( $hero_content ) ? '<div class="mnmlwp-hero-content" style="color:' . $hero_content_color . '">' . sanitize_text_field( $hero_content ) . '</div>' : '';
+            $html .= '</div>
+            <div class="hero-title">' . do_shortcode( $hero_title ) . '</div>
+        </div>';
         $html .= '</div>';
         $html .= '</div>';
 
@@ -1255,7 +1269,14 @@ function mnmlwp_add_meta_boxes_hero_callback( $post )
     $hero_height_measure_tablet = get_post_meta( $post->ID, '_mnmlwp_hero_height_measure_tablet', true ) ? get_post_meta( $post->ID, '_mnmlwp_hero_height_measure_tablet', true ) : 'percent';
     $hero_height_smartphone = get_post_meta( $post->ID, '_mnmlwp_hero_height_smartphone', true ) ? get_post_meta( $post->ID, '_mnmlwp_hero_height_smartphone', true ) : 50;
     $hero_height_measure_smartphone = get_post_meta( $post->ID, '_mnmlwp_hero_height_measure_smartphone', true ) ? get_post_meta( $post->ID, '_mnmlwp_hero_height_measure_smartphone', true ) : 'percent';
-    $hero_title = get_post_meta( $post->ID, '_mnmlwp_hero_title', true );
+    $hero_main_title = get_post_meta( $post->ID, '_mnmlwp_hero_main_title', true );
+    $hero_subtitle = get_post_meta( $post->ID, '_mnmlwp_hero_subtitle', true );
+    $hero_content = get_post_meta( $post->ID, '_mnmlwp_hero_content', true );
+    $hero_main_title_color = get_post_meta( $post->ID, '_mnmlwp_hero_main_title_color', true );
+    $hero_subtitle_color = get_post_meta( $post->ID, '_mnmlwp_hero_subtitle_color', true );
+    $hero_content_color = get_post_meta( $post->ID, '_mnmlwp_hero_content_color', true );
+    $hero_content_align = get_post_meta( $post->ID, '_mnmlwp_hero_content_align', true );
+    $hero_title = get_post_meta( $post->ID, '_mnmlwp_hero_title', true ); // HTML content
     $has_overlay = get_post_meta( $post->ID, '_mnmlwp_hero_has_overlay', true );
     $has_overlay_checked = $has_overlay == 1 ? 'checked' : '';
     $hero_overlay_color_from = get_post_meta( $post->ID, '_mnmlwp_hero_overlay_color_from', true );
@@ -1280,8 +1301,8 @@ function mnmlwp_add_meta_boxes_hero_callback( $post )
     echo '<fieldset id="mnmlwp-hero-fieldset" class="' . $has_hero_class . '">';
 
         // Desktop
-        echo '<label for="mnmlwp-hero-height"><b>' . esc_html__('Hero section height', 'mnmlwp') . '</b></label>
-        <br><input class="mnmlwp-hero-input" type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height" name="mnmlwp-hero-height" value="' . $hero_height . '">';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-height">' . esc_html__('Hero section height', 'mnmlwp') . '</label>
+        <input class="mnmlwp-hero-input" type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height" name="mnmlwp-hero-height" value="' . $hero_height . '">';
         echo '<select style="vertical-align:top" id="mnmlwp-hero-height-measure" name="mnmlwp-hero-height-measure" />';
 
             foreach( array(
@@ -1293,10 +1314,10 @@ function mnmlwp_add_meta_boxes_hero_callback( $post )
                 ?>><?php echo $val; ?></option><?php
             }
 
-        echo '</select> <small>Desktop (1024px)</small>';
+        echo '</select> <small>Desktop (1024px)</small></div>';
         
         // Tablet
-        echo '<br><input type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height-tablet" name="mnmlwp-hero-height-tablet" value="' . $hero_height_tablet . '">';
+        echo '<div class="mnmlwp-row"><input type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height-tablet" name="mnmlwp-hero-height-tablet" value="' . $hero_height_tablet . '">';
         echo '<select style="vertical-align:top" id="mnmlwp-hero-height-measure-tablet" name="mnmlwp-hero-height-measure-tablet" />';
 
             foreach( array(
@@ -1308,10 +1329,10 @@ function mnmlwp_add_meta_boxes_hero_callback( $post )
                 ?>><?php echo $val; ?></option><?php
             }
 
-        echo '</select> <small>Tablet (768-1024px)</small>';
+        echo '</select> <small>Tablet (768-1024px)</small></div>';
         
         // Smartphone
-        echo '<br><input type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height-smartphone" name="mnmlwp-hero-height-smartphone" value="' . $hero_height_smartphone . '">';
+        echo '<div class="mnmlwp-row"><input type="number" step="1" min="0" max="4096" id="mnmlwp-hero-height-smartphone" name="mnmlwp-hero-height-smartphone" value="' . $hero_height_smartphone . '">';
         echo '<select style="vertical-align:top" id="mnmlwp-hero-height-measure-smartphone" name="mnmlwp-hero-height-measure-smartphone" />';
 
             foreach( array(
@@ -1323,28 +1344,58 @@ function mnmlwp_add_meta_boxes_hero_callback( $post )
                 ?>><?php echo $val; ?></option><?php
             }
 
-        echo '</select> <small>Smartphone (320-768px)</small>';
+        echo '</select> <small>Smartphone (320-768px)</small></div>';
 
-        echo '<br><br><label for="mnmlwp-hero-title"><b>' . esc_html__('Content (HTML allowed)', 'mnmlwp') . '</b></label><br>';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-main-title">' . esc_html__('Title', 'mnmlwp') . '</label>';
+        echo '<input type="text" class="mnmlwp-input widefat" id="mnmlwp-hero-main-title" name="mnmlwp-hero-main-title" value="' . $hero_main_title . '"></div>';
+
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-subtitle">' . esc_html__('Subtitle', 'mnmlwp') . '</label>';
+        echo '<input type="text" class="mnmlwp-input widefat" id="mnmlwp-hero-subtitle" name="mnmlwp-hero-subtitle" value="' . $hero_subtitle . '"></div>';
+
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-content">' . esc_html__('Content', 'mnmlwp') . '</label>';
+        echo '<input type="text" class="mnmlwp-input widefat" id="mnmlwp-hero-content" name="mnmlwp-hero-content" value="' . $hero_content . '"></div>';
+
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-main-title-color">' . esc_html__('Title color', 'mnmlwp') . '</label><input type="text" class="colorpicker" id="mnmlwp-hero-main-title-color" name="mnmlwp-hero-main-title-color" value="' . $hero_main_title_color . '"></div>';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-subtitle-color">' . esc_html__('Subtitle color', 'mnmlwp') . '</label><input type="text" class="colorpicker" id="mnmlwp-hero-subtitle-color" name="mnmlwp-hero-subtitle-color" value="' . $hero_subtitle_color . '"></div>';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-content-color">' . esc_html__('Content color', 'mnmlwp') . '</label><input type="text" class="colorpicker" id="mnmlwp-hero-content-color" name="mnmlwp-hero-content-color" value="' . $hero_content_color . '"></div>';
+
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-content-align">' . esc_html__('Content alignment', 'mnmlwp') . '</label>';
+        echo '<select id="mnmlwp-hero-content-align" name="mnmlwp-hero-content-align" />';
+
+            foreach( array(
+                'center' => 'Center (default)',
+                'left' => 'Left',
+                'right' => 'Right'
+            ) as $key => $val ) {
+                ?><option value="<?php echo $key; ?>"<?php
+                    if( $key === $hero_content_align ) echo ' selected="selected"';
+                ?>><?php echo $val; ?></option><?php
+            }
+
+        echo '</select></div>';
+
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-title">' . esc_html__('Custom HTML', 'mnmlwp') . '</label>';
+        echo '<textarea class="mnmlwp-input widefat" id="mnmlwp-hero-title" name="mnmlwp-hero-title" rows="10">' . $hero_title . '</textarea></div>';
+
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-has-overlay">' . esc_html__('Display colored overlay?', 'mnmlwp') . '</label>';
+        echo '<input type="checkbox" id="mnmlwp-hero-has-overlay" name="mnmlwp-hero-has-overlay" value="1" ' . $has_overlay_checked . '></div>';
         
-        echo '<textarea class="mnmlwp-input widefat" id="mnmlwp-hero-title" name="mnmlwp-hero-title" rows="10">' . $hero_title . '</textarea>';
-
-        echo '<br><input type="checkbox" id="mnmlwp-hero-has-overlay" name="mnmlwp-hero-has-overlay" value="1" ' . $has_overlay_checked . '>&nbsp;<b>' . esc_html__('Display colored overlay?', 'mnmlwp') . '</b>';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-height">' . esc_html__('Gradient color 1', 'mnmlwp') . '</label><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-from" name="mnmlwp-hero-overlay-color-from" value="' . $hero_overlay_color_from . '"></div>';
         
-        echo '<br><br><strong>Gradient color 1</strong><br><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-from" name="mnmlwp-hero-overlay-color-from" value="' . $hero_overlay_color_from . '">';
-        echo '<br><br><strong>Gradient color 2</strong><br><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-to" name="mnmlwp-hero-overlay-color-to" value="' . $hero_overlay_color_to . '">';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-height">' . esc_html__('Gradient color 2', 'mnmlwp') . '</label><input type="text" class="colorpicker" id="mnmlwp-hero-overlay-color-to" name="mnmlwp-hero-overlay-color-to" value="' . $hero_overlay_color_to . '"></div>';
 
-        echo '<br><br><label for="mnmlwp-hero-overlay-gradient-degrees"><b>' . esc_html__('Gradient angle (0-360)', 'mnmlwp') . '</b></label>';
-        echo '<br><input type="number" step="1" min="0" max="360" id="mnmlwp-hero-overlay-gradient-degrees" name="mnmlwp-hero-overlay-gradient-degrees" value="' . $hero_overlay_gradient_degrees . '">';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-overlay-gradient-degrees">' . esc_html__('Gradient angle (0-360)', 'mnmlwp') . '</label>';
+        echo '<input type="number" step="1" min="0" max="360" id="mnmlwp-hero-overlay-gradient-degrees" name="mnmlwp-hero-overlay-gradient-degrees" value="' . $hero_overlay_gradient_degrees . '"></div>';
 
-        echo '<br><br><input type="checkbox" id="mnmlwp-hero-has-radial-gradient" name="mnmlwp-hero-has-radial-gradient" value="1" ' . $has_radial_gradient_checked . '>&nbsp;<b>' . esc_html__('Radial gradient?', 'mnmlwp') . '</b>';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-height">' . esc_html__('Radial gradient?', 'mnmlwp') . '</label><input type="checkbox" id="mnmlwp-hero-has-radial-gradient" name="mnmlwp-hero-has-radial-gradient" value="1" ' . $has_radial_gradient_checked . '></div>';
 
-        echo '<br><br><label for="mnmlwp-hero-overlay-opacity"><b>' . esc_html__('Overlay opacity in percent (0-100%)', 'mnmlwp') . '</b></label>';
-        echo '<br><input type="number" step="1" min="0" max="100" id="mnmlwp-hero-overlay-opacity" name="mnmlwp-hero-overlay-opacity" value="' . $hero_overlay_opacity . '">';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-overlay-gradient-degrees">' . esc_html__('Overlay opacity in percent (0-100%)', 'mnmlwp') . '</label>';
+        echo '<input type="number" step="1" min="0" max="100" id="mnmlwp-hero-overlay-opacity" name="mnmlwp-hero-overlay-opacity" value="' . $hero_overlay_opacity . '"></div>';
 
-        echo '<br><br><input type="checkbox" id="mnmlwp-hero-has-skew" name="mnmlwp-hero-has-skew" value="1" ' . $has_skew_checked . '>&nbsp;<b>' . esc_html__('Skew Overlay?', 'mnmlwp') . '</b>';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-overlay-gradient-degrees">' . esc_html__('Skew overlay?', 'mnmlwp') . '</label>';
+        echo '<input type="checkbox" id="mnmlwp-hero-has-skew" name="mnmlwp-hero-has-skew" value="1" ' . $has_skew_checked . '></div>';
 
-        echo '<br><br><label for="mnmlwp-hero-background-position-horizontal"><b>' . esc_html__('Background position (vertical)', 'mnmlwp') . '</b></label><br>';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-background-position-horizontal">' . esc_html__('Background position (vertical)', 'mnmlwp') . '</label>';
         echo '<select id="mnmlwp-hero-background-position-horizontal" name="mnmlwp-hero-background-position-horizontal" />';
 
             foreach( array(
@@ -1357,9 +1408,9 @@ function mnmlwp_add_meta_boxes_hero_callback( $post )
                 ?>><?php echo $val; ?></option><?php
             }
 
-        echo '</select>';
+        echo '</select></div>';
 
-        echo '<br><br><label for="mnmlwp-hero-background-position-vertical"><b>' . esc_html__('Background position (horizontal)', 'mnmlwp') . '</b></label><br>';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-background-position-vertical">' . esc_html__('Background position (horizontal)', 'mnmlwp') . '</label>';
         echo '<select id="mnmlwp-hero-background-position-vertical" name="mnmlwp-hero-background-position-vertical" />';
 
             foreach( array(
@@ -1372,10 +1423,10 @@ function mnmlwp_add_meta_boxes_hero_callback( $post )
                 ?>><?php echo $val; ?></option><?php
             }
 
-        echo '</select>';
+        echo '</select></div>';
         
-        echo '<br><br><input type="checkbox" id="mnmlwp-hero-background-attachment-fixed" name="mnmlwp-hero-background-attachment-fixed" value="1" ' . $has_background_attachment_fixed_checked . '>&nbsp;<b>' . esc_html__('Fixed background position?', 'mnmlwp') . '</b>';
-        echo '</p><p><b>' . esc_html__('Attention', 'mnmlwp'). '!</b> ' . esc_html__('The fixed background setting overwrites the selected background position values. It is also not recommended to use the background overlay together with a fixed background, since the re-rendering of a transparent element might result in in jerky scrolling. The fixed background setting only takes effect with screen sizes >= 768px.', 'mnmlwp') . '</p>';
+        echo '<div class="mnmlwp-row"><label class="mnmlwp-label" for="mnmlwp-hero-background-position-vertical">' . esc_html__('Fixed background position?', 'mnmlwp') . '</label>';
+        echo '<input type="checkbox" id="mnmlwp-hero-background-attachment-fixed" name="mnmlwp-hero-background-attachment-fixed" value="1" ' . $has_background_attachment_fixed_checked . '></div>';
 
     echo '</fieldset>';
 }
@@ -1417,6 +1468,13 @@ function mnmlwp_add_meta_boxes_save( $post_id )
     $data['mnmlwp-hide-page-title'] = isset( $_POST['mnmlwp-hide-page-title'] ) ? absint( $_POST['mnmlwp-hide-page-title'] ) : 0;
     $data['mnmlwp-hide-breadcrumbs'] = isset( $_POST['mnmlwp-hide-breadcrumbs'] ) ? absint( $_POST['mnmlwp-hide-breadcrumbs'] ) : 0;
     $data['mnmlwp-hide-contact-row'] = isset( $_POST['mnmlwp-hide-contact-row'] ) ? absint( $_POST['mnmlwp-hide-contact-row'] ) : 0;
+    $data['mnmlwp-hero-main-title'] = isset( $_POST['mnmlwp-hero-main-title'] ) ? sanitize_text_field( $_POST['mnmlwp-hero-main-title'] ) : '';
+    $data['mnmlwp-hero-subtitle'] = isset( $_POST['mnmlwp-hero-subtitle'] ) ? sanitize_text_field( $_POST['mnmlwp-hero-subtitle'] ) : '';
+    $data['mnmlwp-hero-content'] = isset( $_POST['mnmlwp-hero-content'] ) ? sanitize_text_field( $_POST['mnmlwp-hero-content'] ) : '';
+    $data['mnmlwp-hero-main-title-color'] = isset( $_POST['mnmlwp-hero-main-title-color'] ) ? sanitize_hex_color( $_POST['mnmlwp-hero-main-title-color'] ) : '';
+    $data['mnmlwp-hero-subtitle-color'] = isset( $_POST['mnmlwp-hero-subtitle-color'] ) ? sanitize_hex_color( $_POST['mnmlwp-hero-subtitle-color'] ) : '';
+    $data['mnmlwp-hero-content-color'] = isset( $_POST['mnmlwp-hero-content-color'] ) ? sanitize_hex_color( $_POST['mnmlwp-hero-content-color'] ) : '';
+    $data['mnmlwp-hero-content-align'] = isset( $_POST['mnmlwp-hero-content-align'] ) ? sanitize_text_field( $_POST['mnmlwp-hero-content-align'] ) : 'center';
     $data['mnmlwp-hero-title'] = isset( $_POST['mnmlwp-hero-title'] ) ? wp_kses_post( $_POST['mnmlwp-hero-title'] ) : '';
     $data['mnmlwp-hero-has-overlay'] = isset( $_POST['mnmlwp-hero-has-overlay'] ) ? absint( $_POST['mnmlwp-hero-has-overlay'] ) : 0;
     $data['mnmlwp-hero-overlay-color-from'] = isset( $_POST['mnmlwp-hero-overlay-color-from'] ) ? sanitize_hex_color( $_POST['mnmlwp-hero-overlay-color-from'] ) : '';
@@ -1485,6 +1543,13 @@ function mnmlwp_add_meta_boxes_save( $post_id )
     update_post_meta( $post_id, '_mnmlwp_hide_page_title', $data['mnmlwp-hide-page-title'] );
     update_post_meta( $post_id, '_mnmlwp_hide_breadcrumbs', $data['mnmlwp-hide-breadcrumbs'] );
     update_post_meta( $post_id, '_mnmlwp_hide_contact_row', $data['mnmlwp-hide-contact-row'] );
+    update_post_meta( $post_id, '_mnmlwp_hero_main_title', $data['mnmlwp-hero-main-title'] );
+    update_post_meta( $post_id, '_mnmlwp_hero_subtitle', $data['mnmlwp-hero-subtitle'] );
+    update_post_meta( $post_id, '_mnmlwp_hero_content', $data['mnmlwp-hero-content'] );
+    update_post_meta( $post_id, '_mnmlwp_hero_main_title_color', $data['mnmlwp-hero-main-title-color'] );
+    update_post_meta( $post_id, '_mnmlwp_hero_subtitle_color', $data['mnmlwp-hero-subtitle-color'] );
+    update_post_meta( $post_id, '_mnmlwp_hero_content_color', $data['mnmlwp-hero-content-color'] );
+    update_post_meta( $post_id, '_mnmlwp_hero_content_align', $data['mnmlwp-hero-content-align'] );
     update_post_meta( $post_id, '_mnmlwp_hero_title', $data['mnmlwp-hero-title'] );
     update_post_meta( $post_id, '_mnmlwp_hero_has_overlay', $data['mnmlwp-hero-has-overlay'] );
     update_post_meta( $post_id, '_mnmlwp_hero_overlay_color_from', $data['mnmlwp-hero-overlay-color-from'] );

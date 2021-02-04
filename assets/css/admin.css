@@ -22,3 +22,15 @@
   overflow: hidden;
   height: auto;
 }
+
+/* Hero section */
+.mnmlwp-label {
+  display: block;
+  font-weight: 600;
+  padding: .6125em .125em .375em;
+}
+
+.mnmlwp-row {
+  display: block;
+  padding: .25em .125em;
+}

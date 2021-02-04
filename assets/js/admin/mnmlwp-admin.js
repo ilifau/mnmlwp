@@ -13,7 +13,8 @@
         $('#mnmlwp-hero-fieldset-message').show(0);
       }
     }
-    $('select').on('change', function() {
+
+    $('.editor-page-attributes__template select').on('change', function() {
       let template = $(this).val();
       toggleHeroSection(template);
     })

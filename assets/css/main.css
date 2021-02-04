@@ -2298,6 +2298,50 @@
       -webkit-flex-direction: column;
       -webkit-justify-content: center;
   }
+
+  .mnmlwp-hero-inner {
+      display: block;
+      z-index: 5;
+      color: #fff;
+  }
+
+  .mnmlwp-hero-main-title {
+    display: block;
+    position: relative;
+    font-size: 2.25em;
+    line-height: 1.125;
+    letter-spacing: 4px;
+    font-weight: 500;
+  }
+
+  .mnmlwp-hero-main-title + .mnmlwp-hero-subtitle {
+      margin-top: .5em;
+  }
+
+  .mnmlwp-hero-subtitle {
+    display: block;
+    position: relative;
+    font-size: 1.25em;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    font-weight: 200;
+  }
+
+  .mnmlwp-hero-main-title + .mnmlwp-hero-content {
+    margin-top: 1em;
+  }
+
+  .mnmlwp-hero-subtitle + .mnmlwp-hero-content {
+    margin-top: 1em;
+  }
+
+  .mnmlwp-hero-content {
+    display: block;
+    position: relative;
+    font-size: 1em;
+    line-height: 1.33;
+    font-weight: 400;
+  }
   
   .hero-title {
       display: block;
