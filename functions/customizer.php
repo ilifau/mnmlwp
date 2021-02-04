@@ -18,6 +18,11 @@ function mnmlwp_customize_register( $wp_customize )
         'priority'   => 30,
     ) );
 
+    $wp_customize->add_section( 'mnmlwp_hero_section' , array(
+        'title'      => esc_html__( 'Hero Section', 'mnmlwp' ),
+        'priority'   => 30,
+    ) );
+
     // Section Settings Color Scheme
 
     // General
@@ -439,6 +444,26 @@ function mnmlwp_customize_register( $wp_customize )
         return ( ( isset( $checked ) && true == $checked ) ? true : false );
     }
 
+    // Hero
+
+    $wp_customize->add_setting( 'mnmlwp_hero_base_font_size_desktop' , array(
+        'default'   => '1',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_hero_base_font_size_tablet' , array(
+        'default'   => '1',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_hero_base_font_size_mobile' , array(
+        'default'   => '1',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
     // General
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_body_text_color', array(
@@ -738,8 +763,9 @@ function mnmlwp_customize_register( $wp_customize )
         'section' => 'mnmlwp_layout_section',
         'label' => esc_html__( 'Main menu position', 'mnmlwp'),
         'choices' => array(
-            'after_header' => 'Default (after header)',
-            'inside_header' => 'Inside header',
+            'before_header' => __('Before header', 'mnmlwp'),
+            'after_header' => __('After header (default)', 'mnmlwp'),
+            'inside_header' => __('Inside header', 'mnmlwp'),
         ),
     ) );
 
@@ -956,6 +982,47 @@ function mnmlwp_customize_register( $wp_customize )
             'min' => 0,
             'max' => 64,
             'step' => 2,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    // Hero
+
+    $wp_customize->add_control( 'mnmlwp_hero_base_font_size_desktop', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Hero content base font size (desktop)', 'mnmlwp' ),
+        'section'    => 'mnmlwp_hero_section',
+        'settings'   => 'mnmlwp_hero_base_font_size_desktop',
+        'input_attrs' => array(
+            'min' => 0.5,
+            'max' => 2,
+            'step' => 0.05,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_hero_base_font_size_tablet', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Hero content base font size (tablet)', 'mnmlwp' ),
+        'section'    => 'mnmlwp_hero_section',
+        'settings'   => 'mnmlwp_hero_base_font_size_tablet',
+        'input_attrs' => array(
+            'min' => 0.5,
+            'max' => 2,
+            'step' => 0.05,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_hero_base_font_size_mobile', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Hero content base font size (mobile)', 'mnmlwp' ),
+        'section'    => 'mnmlwp_hero_section',
+        'settings'   => 'mnmlwp_hero_base_font_size_mobile',
+        'input_attrs' => array(
+            'min' => 0.5,
+            'max' => 2,
+            'step' => 0.05,
             'style' => 'width:98%;'
         ),
     ) );
@@ -1468,6 +1535,27 @@ function mnmlwp_customizer_css()
                     text-align: center;
                 }';
             }
+
+            // Hero section
+            $mnmlwp_hero_base_font_size_desktop = esc_html( get_theme_mod('mnmlwp_hero_base_font_size_desktop', 1) );
+            $mnmlwp_hero_base_font_size_tablet = esc_html( get_theme_mod('mnmlwp_hero_base_font_size_tablet', 1) );
+            $mnmlwp_hero_base_font_size_mobile = esc_html( get_theme_mod('mnmlwp_hero_base_font_size_mobile', 1) );
+
+            echo '.mnmlwp-hero-inner {
+                    font-size: ' . $mnmlwp_hero_base_font_size_desktop . 'em;
+                }
+
+            @media screen and (max-width: 1023px) {
+                .mnmlwp-hero-inner {
+                    font-size: ' . $mnmlwp_hero_base_font_size_tablet . 'em;
+                }
+            }
+
+            @media screen and (max-width: 640px) {
+                .mnmlwp-hero-inner {
+                    font-size: ' . $mnmlwp_hero_base_font_size_mobile . 'em;
+                }
+            }';
 
     echo '</style>';
 }

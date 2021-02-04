@@ -27,6 +27,13 @@ if ( ! defined( 'ABSPATH' ) ) {
                 </div>
         <?php endif; ?>
         <div class="mnmlwp-row mnmlwp-row--header">
+            <?php if ( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'before_header' ): ?>
+                <div class="mnmlwp-row mnmlwp-row--nav mnmlwp-row--nav-before-header overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
+                    <div class="mnmlwp-column mnmlwp-column--nav overflow-visible">
+                        <?php mnmlwp_nav(); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
             <div class="mnmlwp-column mnmlwp-column--header">
                 <div class="mnmlwp-logo">
                     <a href="<?php echo esc_url( home_url() ); ?>">
@@ -72,7 +79,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
         </div>
         <?php if( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'after_header' ): ?>
-            <div class="mnmlwp-row mnmlwp-row--nav overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
+            <div class="mnmlwp-row mnmlwp-row--nav mnmlwp-row--nav-after-header overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
                 <div class="mnmlwp-column mnmlwp-column--nav overflow-visible">
                     <?php mnmlwp_nav(); ?>
                 </div>

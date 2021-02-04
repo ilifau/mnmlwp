@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mnmlWP 0.1.1\n"
-"POT-Creation-Date: 2021-02-04 17:18+0100\n"
-"PO-Revision-Date: 2021-02-04 17:20+0100\n"
+"POT-Creation-Date: 2021-02-04 21:06+0100\n"
+"PO-Revision-Date: 2021-02-04 21:07+0100\n"
 "Last-Translator: Sebastian Honert <sebastian.honert@gmail.com>\n"
 "Language-Team: sebastian.honert@gmail.com\n"
 "Language: de_DE\n"
@@ -130,7 +130,7 @@ msgstr "Bitte kontaktiere den Seiten-Administrator."
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: functions.php:440 header.php:63 header.php:86 searchform.php:17
+#: functions.php:440 header.php:70 header.php:93 searchform.php:17
 msgid "Search"
 msgstr "Suche"
 
@@ -206,7 +206,7 @@ msgstr "Seitentitel verbergen?"
 msgid "Show Sidebar?"
 msgstr "Sidebar anzeigen?"
 
-#: functions.php:1158
+#: functions.php:1158 functions/customizer.php:22
 msgid "Hero Section"
 msgstr "Hero-Bereich"
 
@@ -386,223 +386,235 @@ msgstr "Farbschema"
 msgid "Page Layout"
 msgstr "Seitenlayout"
 
-#: functions/customizer.php:445
+#: functions/customizer.php:470
 msgid "Text color"
 msgstr "Textfarbe"
 
-#: functions/customizer.php:451
+#: functions/customizer.php:476
 msgid "Headings color"
 msgstr "Überschriftenfarbe"
 
-#: functions/customizer.php:457
+#: functions/customizer.php:482
 msgid "Link color"
 msgstr "Linkfarbe"
 
-#: functions/customizer.php:463
+#: functions/customizer.php:488
 msgid "Link hover color"
 msgstr "Linkfarbe (hover)"
 
-#: functions/customizer.php:472
+#: functions/customizer.php:497
 msgid "Logo base font size (desktop)"
 msgstr "Logo Basis-Schriftgröße (Desktop)"
 
-#: functions/customizer.php:485
+#: functions/customizer.php:510
 msgid "Logo base font size (tablet)"
 msgstr "Logo Basis-Schriftgröße (Tablet)"
 
-#: functions/customizer.php:498
+#: functions/customizer.php:523
 msgid "Logo base font size (mobile)"
 msgstr "Logo Basis-Schriftgröße (Mobile)"
 
-#: functions/customizer.php:511
+#: functions/customizer.php:536
 msgid "Site title font size (em)"
 msgstr "Schriftgröße Seitentitel (em)"
 
-#: functions/customizer.php:524
+#: functions/customizer.php:549
 msgid "Site tagline font size (em)"
 msgstr "Schriftgröße Tagline (em)"
 
-#: functions/customizer.php:537
+#: functions/customizer.php:562
 msgid "Logo image height (desktop)"
 msgstr "Logo Höhe (Desktop)"
 
-#: functions/customizer.php:550
+#: functions/customizer.php:575
 msgid "Logo image height (tablet)"
 msgstr "Logo Höhe (Tablet)"
 
-#: functions/customizer.php:563
+#: functions/customizer.php:588
 msgid "Logo image height (mobile)"
 msgstr "Logo Höhe (Mobile)"
 
-#: functions/customizer.php:575
+#: functions/customizer.php:600
 msgid "Header background color"
 msgstr "Header Hintergrundfarbe"
 
-#: functions/customizer.php:581
+#: functions/customizer.php:606
 msgid "Logo text color"
 msgstr "Logo-Textfarbe"
 
-#: functions/customizer.php:587
+#: functions/customizer.php:612
 msgid "Logo icon color"
 msgstr "Logo-Iconfarbe"
 
-#: functions/customizer.php:593
+#: functions/customizer.php:618
 msgid "Tagline color"
 msgstr "Farbe der Tagline"
 
-#: functions/customizer.php:599
+#: functions/customizer.php:624
 msgid "Contact row background color"
 msgstr "Kontaktzeile Hintergrundfarbe"
 
-#: functions/customizer.php:605
+#: functions/customizer.php:630
 msgid "Contact row text"
 msgstr "Kontaktzeile Textfarbe"
 
-#: functions/customizer.php:613
+#: functions/customizer.php:638
 msgid "Navigation background color"
 msgstr "Menu Hintergrundfarbe"
 
-#: functions/customizer.php:619
+#: functions/customizer.php:644
 msgid "Nav item color"
 msgstr "Menu Linkfarbe"
 
-#: functions/customizer.php:625
+#: functions/customizer.php:650
 msgid "Nav item background color"
 msgstr "Menu Link-Hintergrundfarbe"
 
-#: functions/customizer.php:631
+#: functions/customizer.php:656
 msgid "Nav item hover color"
 msgstr "Menu Linkfarbe (hover)"
 
-#: functions/customizer.php:637
+#: functions/customizer.php:662
 msgid "Nav item hover background color"
 msgstr "Menu Link-Hintergrundfarbe (hover)"
 
-#: functions/customizer.php:643
+#: functions/customizer.php:668
 msgid "Nav item active color"
 msgstr "Menu Linkfarbe (aktiv)"
 
-#: functions/customizer.php:649
+#: functions/customizer.php:674
 msgid "Nav item active background color"
 msgstr "Menu Link-Hintergrundfarbe (aktiv)"
 
-#: functions/customizer.php:655
+#: functions/customizer.php:680
 msgid "Hamburger icon color"
 msgstr "Hamburger-Iconfarbe"
 
-#: functions/customizer.php:665
+#: functions/customizer.php:690
 msgid "Breadcrumb background color"
 msgstr "Breadcrumb Hintergrundfarbe"
 
-#: functions/customizer.php:671
+#: functions/customizer.php:696
 msgid "Breadcrumb text color"
 msgstr "Breadcrumb Textfarbe"
 
-#: functions/customizer.php:677
+#: functions/customizer.php:702
 msgid "Breadcrumb link color"
 msgstr "Breadcrumb Linkfarbe"
 
-#: functions/customizer.php:683
+#: functions/customizer.php:708
 msgid "Breadcrumb link color (hover)"
 msgstr "Breadcrumb Linkfarbe (hover)"
 
-#: functions/customizer.php:693
+#: functions/customizer.php:718
 msgid "Footer background color"
 msgstr "Footer Hintergrundfarbe"
 
-#: functions/customizer.php:699
+#: functions/customizer.php:724
 msgid "Footer text color"
 msgstr "Footer Textfarbe"
 
-#: functions/customizer.php:705
+#: functions/customizer.php:730
 msgid "Footer headings color"
 msgstr "Footer Überschriftenfarbe"
 
-#: functions/customizer.php:711
+#: functions/customizer.php:736
 msgid "Footer link color"
 msgstr "Footer Linkfarbe"
 
-#: functions/customizer.php:717
+#: functions/customizer.php:742
 msgid "Footer link hover color"
 msgstr "Footer Linkfarbe (hover)"
 
-#: functions/customizer.php:725
+#: functions/customizer.php:750
 msgid "Main content width (default: 1120px)"
 msgstr "Breite des Seiteninhalts (default: 1120px)"
 
-#: functions/customizer.php:731
+#: functions/customizer.php:756
 msgid "Base font size (default: 1.125em)"
 msgstr "Basis-Schriftgröße (default: 1.125em)"
 
-#: functions/customizer.php:739
+#: functions/customizer.php:764
 msgid "Main menu position"
 msgstr "Position der Hauptnavigation"
 
-#: functions/customizer.php:749
+#: functions/customizer.php:766
+msgid "Before header"
+msgstr "Vor Header"
+
+#: functions/customizer.php:767
+msgid "After header (default)"
+msgstr "Nach Header (default)"
+
+#: functions/customizer.php:768
+msgid "Inside header"
+msgstr "In Header"
+
+#: functions/customizer.php:775
 msgid "Menu animation style"
 msgstr "Menu-Animation"
 
-#: functions/customizer.php:759
+#: functions/customizer.php:785
 msgid "Hamburger icon class"
 msgstr "Hamburger-Icon"
 
-#: functions/customizer.php:775
+#: functions/customizer.php:801
 msgid "Excerpt length in words (default: 60)"
 msgstr "Länge des Auszugs (default: 60)"
 
-#: functions/customizer.php:784
+#: functions/customizer.php:810
 msgid "Boxed layout?"
 msgstr "Boxed Layout?"
 
-#: functions/customizer.php:790
+#: functions/customizer.php:816
 msgid "Sticky main navigation?"
 msgstr "Hauptnavigation feststellen?"
 
-#: functions/customizer.php:796
+#: functions/customizer.php:822
 msgid "Include search form in header (desktop)?"
 msgstr "Suchfeld in Hauptnavigation anzeigen (Desktop)?"
 
-#: functions/customizer.php:802
+#: functions/customizer.php:828
 msgid "Include search form in main navigation (mobile)?"
 msgstr "Suchfeld in Hauptnavigation einfügen (mobile)?"
 
-#: functions/customizer.php:808
+#: functions/customizer.php:834
 msgid "Center header content?"
 msgstr "Header-Inhalt zentrieren?"
 
-#: functions/customizer.php:814
+#: functions/customizer.php:840
 msgid "Center main menu items?"
 msgstr "Hauptnavigation zentrieren?"
 
-#: functions/customizer.php:820
+#: functions/customizer.php:846
 msgid "Show loading animation on page load?"
 msgstr "Lade-Animation anzeigen?"
 
-#: functions/customizer.php:826
+#: functions/customizer.php:852
 msgid "Show sidebar by default?"
 msgstr "Sidebar anzeigen voreingestellt?"
 
-#: functions/customizer.php:832
+#: functions/customizer.php:858
 msgid "Hide page title by default?"
 msgstr "Seitentitel verbergen voreingestellt?"
 
-#: functions/customizer.php:838
+#: functions/customizer.php:864
 msgid "Show read more link?"
 msgstr "„Mehr lesen“ Link anzeigen?"
 
-#: functions/customizer.php:848
+#: functions/customizer.php:874
 msgid "Show breadcrumbs navigation?"
 msgstr "Breadcrumb-Navigation anzeigen?"
 
-#: functions/customizer.php:854
+#: functions/customizer.php:880
 msgid "Show breadcrumbs navigation on home page?"
 msgstr "Breadcrumb-Navigation auf Startseite anzeigen?"
 
-#: functions/customizer.php:860
+#: functions/customizer.php:886
 msgid "Logo Icon"
 msgstr "Logo-Icon"
 
-#: functions/customizer.php:861
+#: functions/customizer.php:887
 #, php-format
 msgid ""
 "Select an icon that will be displayed together with your site logo (choose "
@@ -611,15 +623,15 @@ msgstr ""
 "Wähle ein Icon, das zusammen mit dem Seitenlogo angezeigt wird (ein "
 "beliebiges Icon von %1$s)."
 
-#: functions/customizer.php:869
+#: functions/customizer.php:895
 msgid "Show contact row?"
 msgstr "Kontaktzeile anzeigen?"
 
-#: functions/customizer.php:875
+#: functions/customizer.php:901
 msgid "Contact row"
 msgstr "Kontaktzeile"
 
-#: functions/customizer.php:876
+#: functions/customizer.php:902
 msgid ""
 "This section will show at the top of your website and may include some "
 "contact information or similar stuff."
@@ -627,33 +639,45 @@ msgstr ""
 "Dieser Bereich wird am Anfang Deiner Website angezeigt und kann z.B. "
 "Kontaktinformationen beinhalten."
 
-#: functions/customizer.php:880
+#: functions/customizer.php:906
 msgid "Spinner color"
 msgstr "Farbe der Ladeanimation"
 
-#: functions/customizer.php:887
+#: functions/customizer.php:913
 msgid "Header padding top"
 msgstr "Header Innenabstand (oben)"
 
-#: functions/customizer.php:900
+#: functions/customizer.php:926
 msgid "Header padding bottom"
 msgstr "Header Innenabstand (unten)"
 
-#: functions/customizer.php:913
+#: functions/customizer.php:939
 msgid "Nav item padding top/bottom (desktop)"
 msgstr "Navigationselemente Innenabstand oben/unten (Desktop)"
 
-#: functions/customizer.php:926
+#: functions/customizer.php:952
 msgid "Nav item padding left/right (desktop)"
 msgstr "Navigationselemente Innenabstand links/rechts (Desktop)"
 
-#: functions/customizer.php:939
+#: functions/customizer.php:965
 msgid "Flex columns spacing (horizontal)"
 msgstr "Flex columns Abstand (horizontal)"
 
-#: functions/customizer.php:952
+#: functions/customizer.php:978
 msgid "Folumns columns spacing (vertical)"
 msgstr "Flex columns Abstand (vertikal)"
+
+#: functions/customizer.php:993
+msgid "Hero content base font size (desktop)"
+msgstr "Hero-Inhalt Schriftgröße (Desktop)"
+
+#: functions/customizer.php:1006
+msgid "Hero content base font size (tablet)"
+msgstr "Hero-Inhalt Schriftgröße (Tablet)"
+
+#: functions/customizer.php:1019
+msgid "Hero content base font size (mobile)"
+msgstr "Hero-Inhalt Schriftgröße (Mobile)"
 
 #: home.php:17
 msgid "Latest Posts"

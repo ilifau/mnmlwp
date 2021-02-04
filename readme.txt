@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.6.7 =
+
+Added: Menu position „before header“
+Added: Customizer section „Hero“ + base font size desktop, tablet, mobile
+
 = 0.6.6 =
 
 Added: Version number for admin.css
