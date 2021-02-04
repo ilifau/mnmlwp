@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mnmlWP 0.1.1\n"
-"POT-Creation-Date: 2021-02-03 17:37+0100\n"
-"PO-Revision-Date: 2021-02-03 17:38+0100\n"
+"POT-Creation-Date: 2021-02-04 17:21+0100\n"
+"PO-Revision-Date: 2021-02-04 17:21+0100\n"
 "Last-Translator: Sebastian Honert <sebastian.honert@gmail.com>\n"
 "Language-Team: sebastian.honert@gmail.com\n"
 "Language: de_DE@formal\n"
@@ -186,74 +186,74 @@ msgstr "Vorheriger Beitrag"
 msgid "Next Post"
 msgstr "Nächster Beitrag"
 
-#: functions.php:1052
+#: functions.php:1066
 msgid "Color"
 msgstr "Farbe"
 
-#: functions.php:1054
+#: functions.php:1068
 msgid "Pick a Category Color"
 msgstr "Wählen Sie eine Farbe für diese Kategorie"
 
-#: functions.php:1070
+#: functions.php:1084
 msgid "Category Color"
 msgstr "Farbe dieser Kategorie"
 
-#: functions.php:1124
+#: functions.php:1138
 msgid "Hide Page Title?"
 msgstr "Seitentitel verbergen?"
 
-#: functions.php:1134
+#: functions.php:1148
 msgid "Show Sidebar?"
 msgstr "Sidebar anzeigen?"
 
-#: functions.php:1144
+#: functions.php:1158
 msgid "Hero Section"
 msgstr "Hero-Bereich"
 
-#: functions.php:1154
+#: functions.php:1168
 msgid "Hide Breadcrumbs?"
 msgstr "Breadcrumb-Navigation verbergen?"
 
-#: functions.php:1164
+#: functions.php:1178
 msgid "Hide Contact Row?"
 msgstr "Konzaktzeile verbergen?"
 
-#: functions.php:1179 functions.php:1202
+#: functions.php:1193 functions.php:1216
 msgid "This option is not available for the blank page template."
 msgstr "Diese Option ist für das „Blank Template“ nicht verfügbar."
 
-#: functions.php:1196
+#: functions.php:1210
 msgid "Yes, show the sidebar."
 msgstr "Ja, Sidebar anzeigen."
 
-#: functions.php:1219
+#: functions.php:1233
 msgid "Yes, hide the page title."
 msgstr "Ja, Seitentitel verbergen."
 
-#: functions.php:1229
+#: functions.php:1243
 msgid "Check to hide the breadcrumb navigation on this page."
 msgstr "Ankreuzen, um die Breadcrumb-Navigation zu verbergen."
 
-#: functions.php:1232 functions.php:1246 functions.php:1378
+#: functions.php:1246 functions.php:1260
 msgid "Attention"
 msgstr "Achtung"
 
-#: functions.php:1232
+#: functions.php:1246
 msgid ""
 "The breadcrumb navigation is globally disabled in the theme customization "
 "options."
 msgstr "Die Breadcrumb-Navigation ist im Theme-Customizer global abgeschaltet."
 
-#: functions.php:1243
+#: functions.php:1257
 msgid "Check to hide the contact row on this page."
 msgstr "Ankreuzen, um die Kontaktzeile auf dieser Seite auszublenden."
 
-#: functions.php:1246
+#: functions.php:1260
 msgid ""
 "The contact row is globally disabled in the theme customization options."
 msgstr "Die Kontaktzeile ist im Theme-Customizer global abgeschaltet."
 
-#: functions.php:1278
+#: functions.php:1299
 msgid ""
 "If you would like to display a hero section please select the hero template "
 "in the post/page attributes."
@@ -261,59 +261,81 @@ msgstr ""
 "Um einen Hero-Bereich anzeigen zu lassen, wählen Sie bitte das Hero-Template "
 "in den Beitrags-/Seitenattributen."
 
-#: functions.php:1283
+#: functions.php:1304
 msgid "Hero section height"
 msgstr "Höhe des Hero-Bereichs"
 
-#: functions.php:1328
-msgid "Content (HTML allowed)"
-msgstr "Inhalt (HTML erlaubt)"
+#: functions.php:1349
+msgid "Title"
+msgstr "Überschrift"
 
-#: functions.php:1332
+#: functions.php:1352
+msgid "Subtitle"
+msgstr "Untertitel"
+
+#: functions.php:1355
+msgid "Content"
+msgstr "Inhalt"
+
+#: functions.php:1358
+msgid "Title color"
+msgstr "Farbe der Überschrift"
+
+#: functions.php:1359
+msgid "Subtitle color"
+msgstr "Farbe des Untertitels"
+
+#: functions.php:1360
+msgid "Content color"
+msgstr "Farbe des Inhalts"
+
+#: functions.php:1362
+msgid "Content alignment"
+msgstr "Ausrichtung"
+
+#: functions.php:1377
+msgid "Custom HTML"
+msgstr "Beliebiges HTML"
+
+#: functions.php:1380
 msgid "Display colored overlay?"
 msgstr "Farb-Overlay anzeigen?"
 
-#: functions.php:1337
+#: functions.php:1383
+msgid "Gradient color 1"
+msgstr "Farbverlauf Farbe 1"
+
+#: functions.php:1385
+msgid "Gradient color 2"
+msgstr "Farbverlauf Farbe 2"
+
+#: functions.php:1387
 msgid "Gradient angle (0-360)"
 msgstr "Farbverlauf Winkel (0-360)"
 
-#: functions.php:1340
+#: functions.php:1390
 msgid "Radial gradient?"
 msgstr "Radialer Farbverlauf?"
 
-#: functions.php:1342
+#: functions.php:1392
 msgid "Overlay opacity in percent (0-100%)"
 msgstr "Overlay-Deckkraft in Prozent (0-100%)"
 
-#: functions.php:1345
-msgid "Skew Overlay?"
+#: functions.php:1395
+msgid "Skew overlay?"
 msgstr "Overlay mit Schräge?"
 
-#: functions.php:1347
+#: functions.php:1398
 msgid "Background position (vertical)"
 msgstr "Hintergrund-Position (vertikal)"
 
-#: functions.php:1362
+#: functions.php:1413
 msgid "Background position (horizontal)"
 msgstr "Hintergrund-Position (horizontal)"
 
-#: functions.php:1377
+#: functions.php:1428
 msgid "Fixed background position?"
 msgstr "Hintergrund-Position statisch?"
-
-#: functions.php:1378
-msgid ""
-"The fixed background setting overwrites the selected background position "
-"values. It is also not recommended to use the background overlay together "
-"with a fixed background, since the re-rendering of a transparent element "
-"might result in in jerky scrolling. The fixed background setting only takes "
-"effect with screen sizes >= 768px."
-msgstr ""
-"Die Einstellung für den statischen Hintergrund überschreibt die zuvor "
-"ausgewählten Positionsangaben. Es wird nicht empfohlen, einen statischen "
-"Hintergrund zusammen mit einem Overlay zu verwenden, da dies zu einem "
-"ruckelnden Scrollen führen kann. Die Einstellung für den statischen "
-"Hintergrund greift erst ab einer Bildschirmbreite von 768px."
 
 #: functions/breadcrumbs.php:23
 msgid "Browse:&nbsp;"
@@ -653,6 +675,22 @@ msgstr "mnmlWP Neueste Beiträge"
 msgid "No posts found"
 msgstr "Keine Beiträge gefunden"
 
+#~ msgid "Content (HTML allowed)"
+#~ msgstr "Inhalt (HTML erlaubt)"
+
+#~ msgid ""
+#~ "The fixed background setting overwrites the selected background position "
+#~ "values. It is also not recommended to use the background overlay together "
+#~ "with a fixed background, since the re-rendering of a transparent element "
+#~ "might result in in jerky scrolling. The fixed background setting only "
+#~ "takes effect with screen sizes >= 768px."
+#~ msgstr ""
+#~ "Die Einstellung für den statischen Hintergrund überschreibt die zuvor "
+#~ "ausgewählten Positionsangaben. Es wird nicht empfohlen, einen statischen "
+#~ "Hintergrund zusammen mit einem Overlay zu verwenden, da dies zu einem "
+#~ "ruckelnden Scrollen führen kann. Die Einstellung für den statischen "
+#~ "Hintergrund greift erst ab einer Bildschirmbreite von 768px."
+
 #~ msgid "Congratulations"
 #~ msgstr "Herzlichen Glückwunsch"
 
@@ -669,9 +707,6 @@ msgstr "Keine Beiträge gefunden"
 
 #~ msgid "Use local font (Source Sans Pro)?"
 #~ msgstr "Lokale Schriftart verwenden (Source Sans Pro)?"
-
-#~ msgid "Title:"
-#~ msgstr "Titel:"
 
 #~ msgid "Number of categories:"
 #~ msgstr "Anzahl der Kategorien:"
