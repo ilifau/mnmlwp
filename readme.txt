@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.6.9 =
+
+Added: Customizer option sidebar right/left
+Added: Customizer option header logo right/left
+
 = 0.6.8 =
 
 Fixed: Sticky menu position "before header"

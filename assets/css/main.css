@@ -868,6 +868,10 @@
         width: 55%;
       }
 
+      .mnmlwp-column.mnmlwp-column--header {
+        max-width: 1366px;
+      }
+
       .mnmlwp-row.mnmlwp-row--nav-mobile {
         display: none !important;
       }
@@ -898,7 +902,6 @@
       .mnmlwp-column--header #searchform {
          flex: 0 1 20%;
          order: 2;
-         padding-left: 1em;
          font-size: .875em;
       }
   

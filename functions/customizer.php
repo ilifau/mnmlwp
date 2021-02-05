@@ -294,6 +294,13 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'sanitize_text_field',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_logo_position', array(
+        'default' => 'left',
+        'capability' => 'edit_theme_options',
+        'type' => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_is_boxed', array(
         'default' => false,
         'capability' => 'edit_theme_options',
@@ -349,6 +356,13 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'sanitize_text_field',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_nav_align', array(
+        'default' => 'flex-start',
+        'capability' => 'edit_theme_options',
+        'type' => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_nav_animation', array(
         'default' => 'fade',
         'capability' => 'edit_theme_options',
@@ -375,12 +389,6 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_center_header', array(
-        'default' => false,
-        'capability' => 'edit_theme_options',
-        'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
-    ) );
-
-    $wp_customize->add_setting( 'mnmlwp_center_menu', array(
         'default' => false,
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
@@ -776,6 +784,27 @@ function mnmlwp_customize_register( $wp_customize )
         ),
     ) );
 
+    $wp_customize->add_control( 'mnmlwp_logo_position', array(
+        'type' => 'select',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Logo position', 'mnmlwp'),
+        'choices' => array(
+            'left' => __('Left (default)', 'mnmlwp'),
+            'right' => __('Right', 'mnmlwp'),
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_nav_align', array(
+        'type' => 'select',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Main menu alignment', 'mnmlwp'),
+        'choices' => array(
+            'flex-start' => __('Left (default)', 'mnmlwp'),
+            'center' => __('Center', 'mnmlwp'),
+            'flex-end' => __('Right', 'mnmlwp'),
+        ),
+    ) );
+
     $wp_customize->add_control( 'mnmlwp_nav_animation', array(
         'type' => 'select',
         'section' => 'mnmlwp_layout_section',
@@ -849,12 +878,6 @@ function mnmlwp_customize_register( $wp_customize )
         'type' => 'checkbox',
         'section' => 'mnmlwp_layout_section',
         'label' => esc_html__( 'Center header content?', 'mnmlwp'),
-    ) );
-
-    $wp_customize->add_control( 'mnmlwp_center_menu', array(
-        'type' => 'checkbox',
-        'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Center main menu items?', 'mnmlwp'),
     ) );
 
     $wp_customize->add_control( 'mnmlwp_has_loading_layer', array(
@@ -1450,8 +1473,8 @@ function mnmlwp_customizer_css()
                         
                         .mnmlwp-column.mnmlwp-column--header {
                             width: auto;
-                            padding-left: 1em;
-                            padding-right: 1em;
+                            padding-left: 1.5em;
+                            padding-right: 1.5em;
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -1481,8 +1504,21 @@ function mnmlwp_customizer_css()
                         nav#main li.mnmlwp-main-nav-searchform input#s {
                             width: 9em;
                             max-width: 9em;
+                        }';
+
+                        if( esc_html( get_theme_mod('mnmlwp_logo_position', 'left') ) === 'left' ) {
+                            echo 'div.mnmlwp-logo,
+                            .mnmlwp-row--nav-inside-header {
+                                margin-right: 1rem;
+                            }';
+                        } else {
+                            echo '.mnmlwp-column--header #searchform,
+                            .mnmlwp-row--nav-inside-header {
+                                margin-right: 1rem;
+                            }';
                         }
-                    }';
+
+                    echo '}';
                         
                     echo '@media screen and (max-width: 767px) {            
                             .mnmlwp-column.mnmlwp-column--nav {
@@ -1514,44 +1550,40 @@ function mnmlwp_customizer_css()
                     break;    
             }
 
-            // Center header
-            if( get_theme_mod('mnmlwp_center_header', false) === true ) {
-                echo' 
-                    div.mnmlwp-logo {
-                        margin: 0 0;
+            // Main navigation alignmemnt
+            $mnmlwp_main_nav_align = get_theme_mod('mnmlwp_nav_align', 'flex-start');
+
+            echo 'nav#main ul {
+                justify-content: ' . $mnmlwp_main_nav_align . ';
+            }
+            
+            @media screen and (max-width: 767px) {';
+                if( $mnmlwp_main_nav_align === 'flex-end' ) {
+                    echo 'nav#main ul li {
+                        text-align: right;
                     }
 
-                    .mnmlwp-column.mnmlwp-column--header {
-                        align-items: center;
-                        justify-content: center;
-                        flex-direction: column;
+                    nav#main ul li a {
+                        padding-right: 1em;
+                    }
+                    
+                    nav#main ul li ul li a {
+                        padding-left: 1em;
+                        padding-right: 2em;
+                    }';
+                } else if( $mnmlwp_main_nav_align === 'center' ) {
+                    echo 'nav#main ul li {
                         text-align: center;
                     }
-
-                    .mnmlwp-column.mnmlwp-column--header #searchform {
-                        margin-top: 1em;
-                    }
-
-                    .hamburger {
-                        margin-top: .75em;
-                        padding: 9px;
-                    }
-
-                    @media screen and (min-width: 768px) {
-                        .mnmlwp-row.mnmlwp-row--nav.mnmlwp-row--nav-inside-header {
-                            margin-top: .6125em;
-                        }
-                    } 
-                ';
-            }
-
-            // Center menu
-            if( get_theme_mod('mnmlwp_center_menu', false) === true ) {
-                echo 'nav#main ul {
-                    justify-content: center;
-                    text-align: center;
-                }';
-            }
+                    
+                    nav#main ul li a,
+                        nav#main ul li ul li a {
+                        text-align: center;
+                        padding-left: .875em;
+                        padding-right: .875em;
+                    }';
+                }
+            echo '}';
 
             // Hero section
             $mnmlwp_hero_base_font_size_desktop = esc_html( get_theme_mod('mnmlwp_hero_base_font_size_desktop', 1) );
@@ -1587,7 +1619,78 @@ function mnmlwp_customizer_css()
                         order: 1;
                     }
                 }';
-            } 
+            }
+
+            // Logo position
+            $mnmlwp_logo_position = esc_html( get_theme_mod('mnmlwp_logo_position', 'left') );
+            
+            if( $mnmlwp_logo_position === 'right' ) {
+                echo 'div.mnmlwp-logo {
+                    margin: 0 0 6px auto;
+                    order: 3;
+                    text-align: right;
+                }
+
+                .mnmlwp-column--header #searchform {
+                    order: 1;
+                }
+
+                @media screen and (max-width: 767px) {
+                    .hamburger {
+                        padding: 15px 15px 15px 0;
+                    }
+                }';
+            }
+
+            // Center header
+            if( get_theme_mod('mnmlwp_center_header', false) === true ) {
+                echo 'div.mnmlwp-logo {
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                .mnmlwp-column.mnmlwp-column--header {
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                @media screen and (min-width: 768px) {';
+                    if( esc_html( get_theme_mod('mnmlwp_logo_position', 'left') ) === 'left' ) {
+                        echo '.mnmlwp-column.mnmlwp-column--header #searchform,
+                            .mnmlwp-row--nav-inside-header {
+                                margin-top: 1rem;
+                            }';
+                        } else {
+                            echo '.mnmlwp-column.mnmlwp-column--header #searchform,
+                            .mnmlwp-row--nav-inside-header {
+                                margin-bottom: 1rem;
+                            }';
+                        }
+                echo '}
+
+                @media screen and (max-width: 767px) {';
+                    if( esc_html( get_theme_mod('mnmlwp_logo_position', 'left') ) === 'left' ) {
+                        echo '.hamburger {
+                            padding: 9px 9px 0 9px;
+                            margin-top: 1rem;
+                        }';
+                    } else {
+                        echo '.hamburger {
+                            padding: 0 9px 9px 9px;
+                            margin-bottom: 1rem;
+                        }';
+                    }
+                echo '}
+                
+                @media screen and (max-width: 767px) {
+                    .hamburger {
+                        padding-bottom: 0;
+                    }
+                }';
+
+            }
 
     echo '</style>';
 }
