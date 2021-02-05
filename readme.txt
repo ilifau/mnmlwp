@@ -79,12 +79,12 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 = 0.6.8 =
 
-Fixed: Sticky menu position „before header“
+Fixed: Sticky menu position "before header"
 
 = 0.6.7 =
 
-Added: Menu position „before header“
-Added: Customizer section „Hero“ + base font size desktop, tablet, mobile
+Added: Menu position "before header"
+Added: Customizer > Hero Section + base font sizes for desktop, tablet, and mobile
 
 = 0.6.6 =
 

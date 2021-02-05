@@ -926,7 +926,7 @@
       nav#main ul li ul li:hover ul li {
           display: block;
       }
-  
+
       nav#main ul li ul li {
           min-width: 12em;
       }
@@ -948,11 +948,6 @@
       /* Nav sarchform */
       nav#main #searchform {
         display: none !important;
-      }
-
-      /* Sidebar */
-      .mnmlwp-sidebar {
-        margin-bottom: 2em;
       }
   }
   
@@ -1760,6 +1755,7 @@
       font-size: .93875em;
       padding: .75em;
       border: 1px solid #f1f1f1;
+      word-wrap: break-word;
   }
   
   .mnmlwp-footer-widgets .full-width {
@@ -1770,6 +1766,10 @@
   .mnmlwp-footer-widget ol {
       display: block;
       margin: 0 auto;
+  }
+
+  .mnmlwp-footer-widget {
+      word-wrap: break-word;
   }
   
   .mnmlwp-footer-widget:not(:first-of-type),
@@ -2412,6 +2412,20 @@
           margin-bottom: 1.5em;
       }
   }
+
+  /* -----------------------------------------
+     min-width 768px
+     ----------------------------------------- */
+
+    @media screen and (min-width: 768px) {
+        .mnmlwp-flex-column--content {
+            order: 1;
+        }
+
+        .mnmlwp-flex-column--sidebar {
+            order: 2;
+        }
+    }
   
   /* -----------------------------------------
      max-width 767px

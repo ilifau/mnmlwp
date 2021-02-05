@@ -14,8 +14,8 @@
     $mnmlwp_hide_page_title = filter_var(get_post_meta( $post->ID, '_mnmlwp_hide_page_title', true ), FILTER_VALIDATE_BOOLEAN);
 
     if( is_active_sidebar( 'mnmlwp-sidebar' ) && $mnmlwp_show_sidebar == 1 ) {
-        echo '<div class="mnmlwp-flex-columns">';
-        echo '<div class="mnmlwp-flex-column mnmlwp-flex-column--two-third">';
+        echo '<div class="mnmlwp-flex-columns mnmlwp-flex-columns--main">';
+        echo '<div class="mnmlwp-flex-column mnmlwp-flex-column--two-third mnmlwp-flex-column--content">';
     }
 
     echo '<main>';
@@ -47,7 +47,7 @@
 
         echo '</div>';
 
-        echo '<div class="mnmlwp-flex-column mnmlwp-flex-column--third">';
+        echo '<div class="mnmlwp-flex-column mnmlwp-flex-column--third mnmlwp-flex-column--sidebar">';
 
             echo get_sidebar();
 
