@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.7.0 =
+
+Fixed: Header width (oops!)
+
 = 0.6.9 =
 
 Added: Customizer option sidebar right/left

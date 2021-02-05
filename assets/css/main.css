@@ -868,10 +868,6 @@
         width: 55%;
       }
 
-      .mnmlwp-column.mnmlwp-column--header {
-        max-width: 1366px;
-      }
-
       .mnmlwp-row.mnmlwp-row--nav-mobile {
         display: none !important;
       }
