@@ -25,7 +25,7 @@ add_filter( 'pt-ocdi/import_files', 'mnmlwp_import_files' );
 // Before Import
 function mnmlwp_before_widgets_import( $selected_import )
 {
-    // ...
+    update_option( 'sidebars_widgets', array() );
 }
 
 add_action( 'pt-ocdi/before_widgets_import', 'mnmlwp_before_widgets_import' );
@@ -42,7 +42,7 @@ function mnmlwp_after_import_setup()
     );
 
     // Assign front page and posts page (blog page).
-    $front_page_id = get_page_by_title( 'About' );
+    $front_page_id = get_page_by_title( 'Welcome' );
 
     update_option( 'show_on_front', 'page' );
     update_option( 'page_on_front', $front_page_id->ID );

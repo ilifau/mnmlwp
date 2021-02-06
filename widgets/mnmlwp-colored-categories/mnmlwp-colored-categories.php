@@ -72,7 +72,7 @@ class mnmlWP_Widget_Colored_Categories extends WP_Widget
             $term_id = $cat->term_id;
             $cat_meta = get_option( "category_$term_id" );
             $cat_count = $cat->count;
-            $color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#0073aa';
+            $color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#444bb1';
             $text_color = $colorize ? $cat_meta['color'] : 'inherit';
             $style = 'background:' .$color;
 
