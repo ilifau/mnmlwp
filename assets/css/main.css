@@ -2419,20 +2419,6 @@
         .mnmlwp-flex-column--sidebar {
             order: 2;
         }
-
-        /* Testing */
-        .mnmlwp-row.mnmlwp-row--nav-mobile {
-            background: red;
-        }
-
-        .mnmlwp-column--header #searchform {
-            background: blue;
-            padding: .5em;
-        }
-
-        .mnmlwp-logo {
-            background: green;
-        }
     }
   
   /* -----------------------------------------
