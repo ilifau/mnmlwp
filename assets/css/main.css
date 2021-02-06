@@ -466,7 +466,7 @@
   ul {
       list-style-type: none;
       list-style-position: outside;
-      padding: 0 0 0 1.375em;
+      padding: 0 0 0 1.25em;
       margin: 0 0 1em;
   }
   
@@ -738,6 +738,7 @@
     line-height: 1;
     list-style-type: none;
     margin: 0 0;
+    padding: 0 0;
   }
   
   nav#main ul li {
@@ -1782,7 +1783,7 @@
 
   .mnmlwp-sidebar-widget ul,
   .mnmlwp-footer-widget ol {
-    margin-left: .5em;
+    margin-left: .25em;
   }
   
   .mnmlwp-widget-title {

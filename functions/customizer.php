@@ -28,25 +28,25 @@ function mnmlwp_customize_register( $wp_customize )
     // General
 
     $wp_customize->add_setting( 'mnmlwp_body_text_color' , array(
-        'default'   => '#2b323a',
+        'default'   => '#333333',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_headings_text_color' , array(
-        'default'   => '#2b323a',
+        'default'   => '#333333',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_link_color' , array(
-        'default'   => '#2065b1',
+        'default'   => '#444bb1',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_link_hover_color' , array(
-        'default'   => '#154e8c',
+        'default'   => '#33398c',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -108,50 +108,50 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_header_bg_color' , array(
-        'default'   => '#34465b',
+        'default'   => '#222222',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_logo_text_color' , array(
-        'default'   => '#fff',
+        'default'   => '#ffffff',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_logo_icon_color' , array(
-        'default'   => '#72b6ff',
+        'default'   => '#444bb1',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_tagline_color' , array(
-        'default'   => '#c1dfff',
+        'default'   => '#b5b5b5',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_logo_icon' , array(
-        'default'   => 'diamond',
+        'default'   => 'superpowers',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_contact_row_bg_color' , array(
-        'default'   => '#21232b',
+        'default'   => '#005141',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
     
     $wp_customize->add_setting( 'mnmlwp_contact_row_text_color' , array(
-        'default'   => '#fff',
+        'default'   => '#ffffff',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_contact_row', array(
         'capability' => 'edit_theme_options',
-        'default' =>'Company Name | Street Address | Postcode City | +49 (0) 1234 56789 | contact@email.xyz',
+        'default' =>'Hey, this is the mnmlWP contact row! 😊',
         'sanitize_callback' => 'sanitize_text_field',
     ) );
     
@@ -160,25 +160,25 @@ function mnmlwp_customize_register( $wp_customize )
     if( function_exists('breadcrumb_trail') ): 
     
         $wp_customize->add_setting( 'mnmlwp_breadcrumb_bg_color' , array(
-            'default'   => '#f4f7ff',
+            'default'   => '#ffffff',
             'transport' => 'refresh',
             'sanitize_callback' => 'sanitize_hex_color',
         ) );
 
         $wp_customize->add_setting( 'mnmlwp_breadcrumb_text_color' , array(
-            'default'   => '#34465b',
+            'default'   => '#333333',
             'transport' => 'refresh',
             'sanitize_callback' => 'sanitize_hex_color',
         ) );
 
         $wp_customize->add_setting( 'mnmlwp_breadcrumb_link_color' , array(
-            'default'   => '#2065b1',
+            'default'   => '#444bb1',
             'transport' => 'refresh',
             'sanitize_callback' => 'sanitize_hex_color',
         ) );
 
         $wp_customize->add_setting( 'mnmlwp_breadcrumb_link_hover_color' , array(
-            'default'   => '#154e8c',
+            'default'   => '#33398c',
             'transport' => 'refresh',
             'sanitize_callback' => 'sanitize_hex_color',
         ) );
@@ -188,49 +188,49 @@ function mnmlwp_customize_register( $wp_customize )
     // Navigation
 
     $wp_customize->add_setting( 'mnmlwp_nav_row_color' , array(
-        'default'   => '#21232b',
+        'default'   => '#444bb1',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_link_color' , array(
-        'default'   => '#fff',
+        'default'   => '#ffffff',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_link_background_color' , array(
-        'default'   => '#21232b',
+        'default'   => '#444bb1',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_link_color_hover' , array(
-        'default'   => '#fff',
+        'default'   => '#ffffff',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_link_background_color_hover' , array(
-        'default'   => '#131419',
+        'default'   => '#39409b',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_active_link_color' , array(
-        'default'   => '#72b6ff',
+        'default'   => '#ffffff',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_active_link_background_color' , array(
-        'default'   => '#131419',
+        'default'   => '#272c72',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_hamburger_color' , array(
-        'default'   => '#ecf0f1',
+        'default'   => '#ffffff',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -238,31 +238,31 @@ function mnmlwp_customize_register( $wp_customize )
     // Footer
 
     $wp_customize->add_setting( 'mnmlwp_footer_bg_color' , array(
-        'default'   => '#34465b',
+        'default'   => '#f7f7f7',
         'transport' => 'refresh',
-           'sanitize_callback' => 'sanitize_hex_color',
+        'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_text_color' , array(
-        'default'   => '#f4f8f9',
+        'default'   => '#37383d',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_headings_color' , array(
-        'default'   => '#fff',
+        'default'   => '#37383d',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
     
     $wp_customize->add_setting( 'mnmlwp_footer_link_color' , array(
-        'default'   => '#72b6ff',
+        'default'   => '#444bb1',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_link_color_hover' , array(
-        'default'   => '#629cdb',
+        'default'   => '#33398c',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
