@@ -3,20 +3,14 @@
  */
 
 .mnmlwp-recent-posts-link {
-    display: inline-block;
-    width: 100%;
+    display: flex;
     position: relative;
-    overflow: hidden;
-    vertical-align: middle;
-    height: 100%;
-    padding-bottom: .375em;
-    margin-bottom: .25em;
+    align-items: center;
+    padding: .5em 0;
     border-bottom: 1px solid rgba(0,0,0,.06125);
 }
 
 .mnmlwp-recent-posts-link:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
     border: 0;
 }
 
@@ -24,10 +18,6 @@
     width: 1.875em;
     height: 1.875em;
     display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-    position: relative;
-    top: .25em;
     margin-left: .6125em;
 }
 
@@ -37,9 +27,6 @@
 
 .mnmlwp-recent-posts-link-title {
     width: calc(100% - 2.6125em);
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
 }
 
 .mnmlwp-recent-posts-link-title.mnmlwp-recent-posts-link-title-no-thumb {

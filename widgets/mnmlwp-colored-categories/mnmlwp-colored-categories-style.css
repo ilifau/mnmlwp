@@ -3,12 +3,11 @@
  */
 
 .mnmlwp-colored-category-link {
-    display: block;
+    display: flex;
     position: relative;
-    overflow: hidden;
-    margin-bottom: .375em;
-    padding-bottom: .375em;
-    border-bottom: 1px solid #eee;
+    align-items: center;
+    padding: .5em 0;
+    border-bottom: 1px solid rgba(0,0,0,.06125);
 }
 
 .mnmlwp-colored-category-link:last-of-type {
@@ -26,12 +25,11 @@
     line-height: 1;
     border-radius: 0;
     transition: all .2s ease;
-    padding: .375em .5em;
+    padding: 7px 9px;
     margin-right: 3px;
-    border-radius: .25em;
+    margin-left: auto;
     font-size: .875em;
     position: relative;
-    top: 1px;
 }
 
 .mnmlwp-colored-category-link-color:hover,
@@ -43,6 +41,5 @@
 }
 
 .mnmlwp-colored-category-link-title {
-    display: inline;
-    vertical-align: middle;
+    margin-right: .5em;
 }

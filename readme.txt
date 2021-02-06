@@ -77,6 +77,12 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.7.2 =
+
+Added: demo content at base.minimalwordpress.de
+Fixed: Hero post comments template
+Fixed: Recent posts and colored categories widget layout
+
 = 0.7.1 =
 
 Added: Separate option for mobile menu alignment

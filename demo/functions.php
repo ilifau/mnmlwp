@@ -8,13 +8,13 @@ function mnmlwp_import_files()
 {
     return array(
         array(
-            'import_file_name'             => 'Default',
-            'categories'                   => array('Default'),
-            'import_file_url'              => 'https://minimalwordpress.de/demo/data/default/content.xml',
-            'import_widget_file_url'       => 'https://minimalwordpress.de/demo/data/default/widgets.wie',
-            'import_customizer_file_url'   => 'https://minimalwordpress.de/demo/data/default/customizer.dat',
-            'import_preview_image_url'     => 'https://minimalwordpress.de//demo/data/default/screenshot.png',
-            'preview_url'                  => 'https://minimalwordpress.de',
+            'import_file_name'             => 'Base',
+            'categories'                   => array('Base'),
+            'import_file_url'              => 'https://base.minimalwordpress.de/demo/content.xml',
+            'import_widget_file_url'       => 'https://base.minimalwordpress.de/demo/widgets.wie',
+            'import_customizer_file_url'   => 'https://base.minimalwordpress.de/demo/customizer.dat',
+            'import_preview_image_url'     => 'https://base.minimalwordpress.de/demo/screenshot.png',
+            'preview_url'                  => 'https://base.minimalwordpress.de',
             'import_notice'              => __( 'Please configure your widgets and category colors after importing the demo content.', 'mnmlwp' ),
         ),
     );

@@ -1246,6 +1246,7 @@
   ol.commentlist ol {
       list-style-type: none;
       padding-left: 0;
+      margin-left: 0;
   }
   
   ol.commentlist cite {
@@ -1290,8 +1291,11 @@
      5.2 Comments
      ----------------------------------------- */
 
-  #comments,
-  #respond {
+  #comments > h4 {
+      padding-top: 0;
+  }
+
+  #comments + #respond {
     margin-top: 2em;
   }
   
@@ -1302,10 +1306,13 @@
   }
   
   .comment {
-      background: #f7f7f7;
       margin-bottom: 1em;
       padding: 1em;
-      font-size: .9375em;
+      font-size: 1em;
+  }
+
+  ul.children {
+      list-style-type: none;
   }
   
   .children .comment {

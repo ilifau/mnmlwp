@@ -93,8 +93,8 @@
 
         if ( comments_open() || get_comments_number() ) :
 
-            echo '<div class="row">';
-                echo '<div class="column">';
+            echo '<div class="mnmlwp-row mnmlwp-row--comments">';
+                echo '<div class="mnmlwp-column mnmlwp-column--comments">';
                     comments_template();
                 echo '</div>';
             echo '</div>';
