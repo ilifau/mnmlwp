@@ -1103,16 +1103,16 @@ function mnmlwp_customizer_css()
 {
     echo '<style>';
         echo 'body {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_body_text_color', '#2b323a') ) . ';
+                 color: ' . esc_html( get_theme_mod('mnmlwp_body_text_color', '#333333') ) . ';
                  font-size: ' . esc_html( get_theme_mod('mnmlwp_base_font_size', '1.125em') ) . ';
              }
 
              .sk-fading-circle .sk-circle:before {
-                 background-color: ' . esc_html( get_theme_mod('mnmlwp_spinner_color', '#000') )  . ';
+                 background-color: ' . esc_html( get_theme_mod('mnmlwp_spinner_color', '#666666') )  . ';
              }
 
              .mnmlwp-row.mnmlwp-row--contact {
-                 background: ' . esc_html( get_theme_mod('mnmlwp_contact_row_bg_color', '#21232b') ) . ';
+                 background: ' . esc_html( get_theme_mod('mnmlwp_contact_row_bg_color', '#005141') ) . ';
              }
 
              .mnmlwp-column {
@@ -1122,7 +1122,7 @@ function mnmlwp_customizer_css()
              .mnmlwp-column.mnmlwp-column--contact,
              .mnmlwp-column.mnmlwp-column--contact a,
              .mnmlwp-column.mnmlwp-column--contact a:hover {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_contact_row_text_color', '#fff') ) . ';
+                 color: ' . esc_html( get_theme_mod('mnmlwp_contact_row_text_color', '#ffffff') ) . ';
              }';
 
              // Flex columns spacing
@@ -1187,18 +1187,18 @@ function mnmlwp_customizer_css()
              
              if( function_exists('breadcrumb_trail') ) {
                  echo ' .mnmlwp-row.mnmlwp-row--breadcrumbs {
-                      background: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_bg_color', '#f4f7ff') ) . ';
-                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_text_color', '#34465b') ) . ';
+                      background: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_bg_color', '#ffffff') ) . ';
+                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_text_color', '#333333') ) . ';
                   }
 
                   .mnmlwp-row.mnmlwp-row--breadcrumbs a {
-                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_color', '#2065b1') ) . ';
+                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_color', '#444bb1') ) . ';
                   }
 
                   .mnmlwp-row.mnmlwp-row--breadcrumbs a:hover,
                   .mnmlwp-row.mnmlwp-row--breadcrumbs a:focus,
                   .mnmlwp-row.mnmlwp-row--breadcrumbs a:active {
-                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_hover_color', '#154e8c') ) . ';
+                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_hover_color', '#33398c') ) . ';
                   }
                   
                   .trail-items li::after {
@@ -1240,20 +1240,20 @@ function mnmlwp_customizer_css()
              }
 
              echo 'h1, .h1, h2, h3, h4, h5, h6 {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_headings_text_color', '#2b323a') ) . ';
+                 color: ' . esc_html( get_theme_mod('mnmlwp_headings_text_color', '#333333') ) . ';
              }
 
              a,
              p a {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#2065b1') ) . ';
+                 color: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
              }
 
              blockquote::before {
-                 color: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#2065b1') ), 0.2 ) . ';
+                 color: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ), 0.2 ) . ';
              }
 
              blockquote {
-                 border-color: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#2065b1') ), 0.1 ) . ';
+                 border-color: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ), 0.1 ) . ';
              }
 
              a:hover,
@@ -1264,17 +1264,17 @@ function mnmlwp_customizer_css()
              }
 
              nav#main ul li a {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_nav_link_color', '#fff') ) . ';
+                 color: ' . esc_html( get_theme_mod('mnmlwp_nav_link_color', '#ffffff') ) . ';
              }
 
              nav#main ul li a:hover,
              nav#main ul li a:focus {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_nav_link_color_hover', '#fff') ) . ';
+                 color: ' . esc_html( get_theme_mod('mnmlwp_nav_link_color_hover', '#ffffff') ) . ';
              }
 
              .mnmlwp-btn,
              input[type=submit] {
-                 background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#2065b1') ) . ';
+                 background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
              }
 
              .mnmlwp-btn:hover,
@@ -1282,28 +1282,28 @@ function mnmlwp_customizer_css()
              input[type=submit]:hover,
              input[type=submit]:focus {
                  opacity: 1;
-                 background: ' . mnmlwp_adjust_color( get_theme_mod('mnmlwp_link_color', '#2065b1'), -12 ) . ';
+                 background: ' . mnmlwp_adjust_color( get_theme_mod('mnmlwp_link_color', '#444bb1'), -12 ) . ';
              }
 
              div.mnmlwp-logo a {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_logo_text_color', '#fff') ) . '!important;
+                 color: ' . esc_html( get_theme_mod('mnmlwp_logo_text_color', '#ffffff') ) . '!important;
              }
 
              .mnmlwp-logo-icon {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_logo_icon_color', '#72b6ff') ) . '!important;
+                 color: ' . esc_html( get_theme_mod('mnmlwp_logo_icon_color', '#444bb1') ) . '!important;
              }
 
              .mnmlwp-tagline {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_tagline_color', '#c1dfff') ) . '!important;
+                 color: ' . esc_html( get_theme_mod('mnmlwp_tagline_color', '#b5b5b5') ) . '!important;
              }
 
             nav#main ul li,
             nav#main ul li a {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color', '#21232b') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color', '#444bb1') ) . ';
             }
 
             nav#main ul li a:hover {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color_hover', '#131419') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color_hover', '#39409b') ) . ';
             }
 
             nav#main ul li.current-menu-item > a,
@@ -1320,39 +1320,39 @@ function mnmlwp_customizer_css()
             nav#main ul li.current_page_item > a:active,
             nav#main ul li.current-page-parent > a:active {
                 opacity: 1;
-                color: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_color', '#72b6ff') ) . ';
+                color: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_color', '#ffffff') ) . ';
             }
 
             nav#main ul li.current-menu-item > a {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_background_color', '#131419') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_background_color', '#272c72') ) . ';
             }
 
             nav#main li.mnmlwp-main-nav-searchform button.submit {
-                background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#2065b1') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
             }
 
             nav#main li.mnmlwp-main-nav-searchform button.submit:hover,
             nav#main li.mnmlwp-main-nav-searchform button.submit:focus {
                 opacity: 1;
-                background: ' . mnmlwp_adjust_color( esc_html( get_theme_mod('mnmlwp_link_color', '#2065b1') ), -12 ) . ';
+                background: ' . mnmlwp_adjust_color( esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ), -12 ) . ';
             }
 
             .mnmlwp-pagination span.page-numbers {
-                background: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#2065b1') ), 0.5) . ';
-                color: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#2065b1') ) . ';
+                background: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ), 0.5) . ';
+                color: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
             }
 
             .mnmlwp-pagination span.page-numbers.current {
-                background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#2065b1') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
                 color: #fff;
             }
 
             .mnmlwp-row.mnmlwp-row--footer {
-                background: ' . esc_html( get_theme_mod('mnmlwp_footer_bg_color', '#34465b') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_footer_bg_color', '#f7f7f7') ) . ';
             }
 
             footer {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_text_color', '#f4f8f9') ) . '!important;
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_text_color', '#37383d') ) . '!important;
             }
 
             footer .mnmlwp-widget-title,
@@ -1360,16 +1360,16 @@ function mnmlwp_customizer_css()
             footer .mnmlwp-widget-title a:hover,
             footer .mnmlwp-widget-title a:focus,
             footer .h1, footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_headings_color', '#fff') ) . '!important;
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_headings_color', '#37383d') ) . '!important;
             }
             
             footer a {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_link_color', '#72b6ff') ) . ';
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_link_color', '#444bb1') ) . ';
             }
             
             footer a:hover,
             footer a:focus {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_link_color_hover', '#629cdb') ) . ';
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_link_color_hover', '#33398c') ) . ';
             }
 
             @media screen and (max-width: ' . esc_html( get_theme_mod('mnmlwp_column_width', '1120px') ) . ') {
@@ -1387,7 +1387,7 @@ function mnmlwp_customizer_css()
             .hamburger-inner,
             .hamburger-inner:after,
             .hamburger-inner:before {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_hamburger_color', '#ecf0f1') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_hamburger_color', '#ffffff') ) . ';
             }';
 
             if( has_header_image() ) {
@@ -1397,7 +1397,7 @@ function mnmlwp_customizer_css()
                 }';
             } else {
                 echo '.mnmlwp-row.mnmlwp-row--header {
-                    background: ' . esc_html( get_theme_mod('mnmlwp_header_bg_color', '#34465b') ) . ';
+                    background: ' . esc_html( get_theme_mod('mnmlwp_header_bg_color', '#222222') ) . ';
                 }';
             }
 
@@ -1467,7 +1467,7 @@ function mnmlwp_customizer_css()
 
             // Nav position / hamburger icon
             echo '.mnmlwp-row.mnmlwp-row--nav {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_row_color', '#21232b') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_row_color', '#444bb1') ) . ';
             }';
 
             // Nav item padding

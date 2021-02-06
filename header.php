@@ -19,10 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php if( get_theme_mod('mnmlwp_is_boxed') ): ?>
         <div class="mnmlwp-boxed-wrapper" style="width: <?php echo esc_attr( get_theme_mod('mnmlwp_column_width', '1120px') ); ?>">
         <?php endif; ?>  
-        <?php if( get_theme_mod( 'mnmlwp_show_contact_row', false ) && get_theme_mod( 'mnmlwp_contact_row', 'Company Name | Street Address | Postcode City | +49 (0) 1234 56789 | contact@email.xyz' ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_contact_row', true ) ): ?>
+        <?php if( get_theme_mod( 'mnmlwp_show_contact_row', false ) && get_theme_mod( 'mnmlwp_contact_row', 'Hey, this is the mnmlWP contact row! 😊' ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_contact_row', true ) ): ?>
                 <div class="mnmlwp-row mnmlwp-row--contact hide-767">
                     <div class="mnmlwp-column mnmlwp-column--contact">
-                        <p><?php echo esc_html( get_theme_mod( 'mnmlwp_contact_row', 'Company Name | Street Address | Postcode City | +49 (0) 1234 56789 | contact@email.xyz') ); ?></p>
+                        <p><?php echo esc_html( get_theme_mod( 'mnmlwp_contact_row', 'Hey, this is the mnmlWP contact row! 😊') ); ?></p>
                     </div>
                 </div>
         <?php endif; ?>
@@ -44,8 +44,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                             if ( has_custom_logo() ) {
                                 echo '<img class="mnmlwp-logo-image" src="'. esc_attr( $mnmlwp_logo[0] ) .'" alt="">';
                             } else {
-                                if( get_theme_mod( 'mnmlwp_logo_icon', 'diamond' ) ) {
-                                    echo '<div class="mnmlwp-logo-icon fa fa-' . esc_attr( get_theme_mod( 'mnmlwp_logo_icon', 'diamond' ) ) . '"></div>';
+                                if( get_theme_mod( 'mnmlwp_logo_icon', 'superpowers' ) ) {
+                                    echo '<div class="mnmlwp-logo-icon fa fa-' . esc_attr( get_theme_mod( 'mnmlwp_logo_icon', 'superpowers' ) ) . '"></div>';
                                 }
 
                                 echo '<span class="mnmlwp-logo-text">' . get_bloginfo( 'name' ) . '</span>';

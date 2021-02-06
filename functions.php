@@ -816,7 +816,7 @@ if( ! function_exists( 'mnmlwp_get_post_categories' ) )
             {
                 $term_id = $cat;
                 $cat_meta = get_option( "category_$term_id" );
-                $cat_color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#0073aa';
+                $cat_color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#444bb1';
                 $style = 'background:' . $cat_color . ';color:#fff!important';
 
                 $cat_name = get_cat_name( $cat );
@@ -1078,7 +1078,7 @@ function mnmlwp_add_category_meta_fields( $tag )
 {
     $term_id = $tag->term_id;
     $cat_meta = get_option( "category_$term_id" );
-    $color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#0073aa';
+    $color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#444bb1';
 
     echo '<tr class="form-field">
         <th scope="row" valign="top"><label for="meta-color">' . esc_attr__('Category Color', 'mnmlwp') . '</label></th>
