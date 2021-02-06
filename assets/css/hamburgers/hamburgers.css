@@ -711,5 +711,6 @@
         display: inline-block;
         position: relative;
         order: 1;
+        flex: 0 0 20%;
     }
 }

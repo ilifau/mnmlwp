@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.7.1 =
+
+Added: Separate option for mobile menu alignment
+Added: Optimized flex layout for site header
+
 = 0.7.0 =
 
 Fixed: Header width (oops!)
@@ -85,6 +90,7 @@ Fixed: Header width (oops!)
 
 Added: Customizer option sidebar right/left
 Added: Customizer option header logo right/left
+Added: Improved centered header
 
 = 0.6.8 =
 

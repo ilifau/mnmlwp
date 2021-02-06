@@ -82,6 +82,8 @@
   }
   
   .mnmlwp-row.mnmlwp-row--header {
+      display: flex;
+      flex-wrap: wrap;
       z-index: 3;
   }
   
@@ -100,10 +102,8 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
       padding-top: 1.5em;
       padding-bottom: 1.5em;
-      flex-wrap: nowrap;
   }
   
   .mnmlwp-row.mnmlwp-row--footer {
@@ -203,10 +203,8 @@
       line-height: 1;
       font-weight: 700;
       position: relative;
-      white-space: nowrap;
-      margin: 0 auto 6px 0;
-      flex: 0 1 25%;
       order: 1;
+      flex: 1 1 25%;
   }
   
   div.mnmlwp-logo a {
@@ -740,9 +738,6 @@
     line-height: 1;
     list-style-type: none;
     margin: 0 0;
-    flex-grow: 4;
-    flex-shrink: 3;
-    flex-basis: auto;
   }
   
   nav#main ul li {
@@ -864,8 +859,7 @@
       }
 
       .mnmlwp-row.mnmlwp-row--nav.mnmlwp-row--nav-inside-header {
-        flex: 0 1 55%;
-        width: 55%;
+        flex: 4 0 55%;
       }
 
       .mnmlwp-row.mnmlwp-row--nav-mobile {
@@ -896,9 +890,10 @@
       }
   
       .mnmlwp-column--header #searchform {
-         flex: 0 1 20%;
+         flex: 0 0 20%;
          order: 2;
          font-size: .875em;
+         margin-left: auto;
       }
   
       nav#main ul li ul {
@@ -2424,6 +2419,20 @@
         .mnmlwp-flex-column--sidebar {
             order: 2;
         }
+
+        /* Testing */
+        .mnmlwp-row.mnmlwp-row--nav-mobile {
+            background: red;
+        }
+
+        .mnmlwp-column--header #searchform {
+            background: blue;
+            padding: .5em;
+        }
+
+        .mnmlwp-logo {
+            background: green;
+        }
     }
   
   /* -----------------------------------------
@@ -2445,6 +2454,10 @@
 
       .mnmlwp-column.mnmlwp-column--header {
           flex-wrap: wrap;
+      }
+
+      div.mnmlwp-logo {
+        flex: 0 0 80%;
       }
 
       .mnmlwp-row.mnmlwp-row--nav {
@@ -2475,10 +2488,6 @@
           width: 100%;
           margin-right: 0;
           margin-bottom: 1em;
-      }
-
-      div.mnmlwp-logo {
-        flex: 0 1 75%;
       }
   
       nav#main {

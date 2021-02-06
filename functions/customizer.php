@@ -363,6 +363,13 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'sanitize_text_field',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_nav_align_mobile', array(
+        'default' => 'flex-start',
+        'capability' => 'edit_theme_options',
+        'type' => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_nav_animation', array(
         'default' => 'fade',
         'capability' => 'edit_theme_options',
@@ -797,7 +804,18 @@ function mnmlwp_customize_register( $wp_customize )
     $wp_customize->add_control( 'mnmlwp_nav_align', array(
         'type' => 'select',
         'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Main menu alignment', 'mnmlwp'),
+        'label' => esc_html__( 'Main menu alignment (desktop)', 'mnmlwp'),
+        'choices' => array(
+            'flex-start' => __('Left (default)', 'mnmlwp'),
+            'center' => __('Center', 'mnmlwp'),
+            'flex-end' => __('Right', 'mnmlwp'),
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_nav_align_mobile', array(
+        'type' => 'select',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Main menu alignment (mobile)', 'mnmlwp'),
         'choices' => array(
             'flex-start' => __('Left (default)', 'mnmlwp'),
             'center' => __('Center', 'mnmlwp'),
@@ -1465,20 +1483,17 @@ function mnmlwp_customizer_css()
                 
                     echo '
                 
-                    @media screen and (min-width:768px) {
+                    @media screen and (min-width: 768px) {
                         
                         .mnmlwp-row.mnmlwp-row--header {
                             overflow: visible;
                         }
                         
                         .mnmlwp-column.mnmlwp-column--header {
-                            width: auto;
                             padding-left: 1.5em;
                             padding-right: 1.5em;
                             display: flex;
                             align-items: center;
-                            justify-content: center;
-                            margin: 0 auto;
                             overflow: visible;
                         }
 
@@ -1486,10 +1501,7 @@ function mnmlwp_customizer_css()
                             padding-left: 0;
                             padding-right: 0;
                             text-align: right;
-                        }
-
-                        nav#main ul {
-                            justify-content: flex-end;
+                            width: auto;
                         }
                         
                         nav#main li ul li {
@@ -1505,18 +1517,6 @@ function mnmlwp_customizer_css()
                             width: 9em;
                             max-width: 9em;
                         }';
-
-                        if( esc_html( get_theme_mod('mnmlwp_logo_position', 'left') ) === 'left' ) {
-                            echo 'div.mnmlwp-logo,
-                            .mnmlwp-row--nav-inside-header {
-                                margin-right: 1rem;
-                            }';
-                        } else {
-                            echo '.mnmlwp-column--header #searchform,
-                            .mnmlwp-row--nav-inside-header {
-                                margin-right: 1rem;
-                            }';
-                        }
 
                     echo '}';
                         
@@ -1552,13 +1552,14 @@ function mnmlwp_customizer_css()
 
             // Main navigation alignmemnt
             $mnmlwp_main_nav_align = get_theme_mod('mnmlwp_nav_align', 'flex-start');
+            $mnmlwp_main_nav_align_mobile = get_theme_mod('mnmlwp_nav_align_mobile', 'flex-start');
 
             echo 'nav#main ul {
                 justify-content: ' . $mnmlwp_main_nav_align . ';
             }
             
             @media screen and (max-width: 767px) {';
-                if( $mnmlwp_main_nav_align === 'flex-end' ) {
+                if( $mnmlwp_main_nav_align_mobile === 'flex-end' ) {
                     echo 'nav#main ul li {
                         text-align: right;
                     }
@@ -1571,7 +1572,7 @@ function mnmlwp_customizer_css()
                         padding-left: 1em;
                         padding-right: 2em;
                     }';
-                } else if( $mnmlwp_main_nav_align === 'center' ) {
+                } else if( $mnmlwp_main_nav_align_mobile === 'center' ) {
                     echo 'nav#main ul li {
                         text-align: center;
                     }
@@ -1611,12 +1612,8 @@ function mnmlwp_customizer_css()
             
             if( $mnmlwp_sidebar_position === 'left' ) {
                 echo '@media screen and (min-width: 768px) {
-                    .mnmlwp-flex-column--content {
-                        order: 2;
-                    }
-            
-                    .mnmlwp-flex-column--sidebar {
-                        order: 1;
+                    .mnmlwp-flex-columns--main {
+                        flex-direction: row-reverse;
                     }
                 }';
             }
@@ -1625,72 +1622,105 @@ function mnmlwp_customizer_css()
             $mnmlwp_logo_position = esc_html( get_theme_mod('mnmlwp_logo_position', 'left') );
             
             if( $mnmlwp_logo_position === 'right' ) {
-                echo 'div.mnmlwp-logo {
-                    margin: 0 0 6px auto;
-                    order: 3;
-                    text-align: right;
-                }
-
-                .mnmlwp-column--header #searchform {
-                    order: 1;
-                }
-
-                @media screen and (max-width: 767px) {
-                    .hamburger {
-                        padding: 15px 15px 15px 0;
+                echo '.mnmlwp-column.mnmlwp-column--header {
+                        flex-direction: row-reverse;
                     }
+                    
+                    div.mnmlwp-logo {
+                        flex: 1 1 25%;
+                        text-align: right;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        .hamburger {
+                            padding: 15px 15px 15px 0;
+                        }
+                    }';
+            } else {
+                echo '.hamburger {
+                    text-align: right;
                 }';
             }
 
             // Center header
             if( get_theme_mod('mnmlwp_center_header', false) === true ) {
                 echo 'div.mnmlwp-logo {
-                    margin: 0 auto;
                     text-align: center;
                 }
 
                 .mnmlwp-column.mnmlwp-column--header {
+                    flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
                     text-align: center;
                 }
 
-                @media screen and (min-width: 768px) {';
-                    if( esc_html( get_theme_mod('mnmlwp_logo_position', 'left') ) === 'left' ) {
-                        echo '.mnmlwp-column.mnmlwp-column--header #searchform,
-                            .mnmlwp-row--nav-inside-header {
-                                margin-top: 1rem;
-                            }';
-                        } else {
-                            echo '.mnmlwp-column.mnmlwp-column--header #searchform,
-                            .mnmlwp-row--nav-inside-header {
-                                margin-bottom: 1rem;
-                            }';
-                        }
-                echo '}
+                .mnmlwp-column--header #searchform {
+                    margin-left: 0;
+                }
 
-                @media screen and (max-width: 767px) {';
-                    if( esc_html( get_theme_mod('mnmlwp_logo_position', 'left') ) === 'left' ) {
-                        echo '.hamburger {
-                            padding: 9px 9px 0 9px;
-                            margin-top: 1rem;
-                        }';
-                    } else {
-                        echo '.hamburger {
-                            padding: 0 9px 9px 9px;
-                            margin-bottom: 1rem;
+                @media screen and (min-width: 768px) {';
+                    if( esc_html( get_theme_mod('mnmlwp_logo_position', 'left') ) === 'right' ) {
+                        echo '.mnmlwp-column.mnmlwp-column--header {
+                            flex-direction: column-reverse;
                         }';
                     }
                 echo '}
-                
+
                 @media screen and (max-width: 767px) {
                     .hamburger {
-                        padding-bottom: 0;
+                        margin-top: .75em;
+                        padding: 9px 9px 0 9px;
                     }
                 }';
 
             }
+
+            // Header flex item margins (this is probably the best solution
+            // until flex gap is supported by all major browsers...)
+            // Margins are only required for desktop layout.
+            echo '@media screen and (min-width: 768px) {';
+
+            if( get_theme_mod('mnmlwp_center_header', false) === false ) {
+
+                if( $mnmlwp_logo_position !== 'right' ) {
+                    echo '
+                        div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
+                        .mnmlwp-row--nav-inside-header + #searchform {
+                            margin-left: .75rem;
+                        }
+                    ';
+                } else {
+                    echo '
+                        div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
+                        .mnmlwp-row--nav-inside-header + #searchform {
+                            margin-right: .75rem;
+                        }
+                    ';
+                }
+
+            }
+
+            else { // centered header
+
+                if( $mnmlwp_logo_position !== 'right' ) {
+                    echo 'div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
+                    div.mnmlwp-logo + #searchform,
+                    .mnmlwp-row--nav-inside-header + #searchform {
+                        margin-top: .75rem;
+                    }';
+                } else {
+                    echo 'div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
+                    div.mnmlwp-logo + #searchform,
+                    .mnmlwp-row--nav-inside-header + #searchform {
+                        margin-bottom: .75rem;
+                    }';
+                }
+
+            }
+
+            echo '}';
 
     echo '</style>';
 }
