@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.7.5 =
+
+Fixed: Customizer CSS (missed a curly bracket... D'oh!)
+
 = 0.7.4 =
 
 Fixed: i18n

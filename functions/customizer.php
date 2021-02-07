@@ -1660,8 +1660,7 @@ function mnmlwp_customizer_css()
             $mnmlwp_footer_full_width_text_align = esc_html( get_theme_mod('mnmlwp_footer_full_width_text_align', 'center') );
             
             echo '.mnmlwp-row.mnmlwp-row--footer-full-width {
-                    text-align: ' . $mnmlwp_footer_full_width_text_align . ';
-                }
+                text-align: ' . $mnmlwp_footer_full_width_text_align . ';
             }';
 
             // Logo position
