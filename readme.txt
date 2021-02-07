@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.7.4 =
+
+Fixed: i18n
+Fixed: Centered header elements margin top/bottom (mobile)
+
 = 0.7.3 =
 
 Added: Improved full width footer widget layout

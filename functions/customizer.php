@@ -1754,13 +1754,13 @@ function mnmlwp_customizer_css()
                     echo 'div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
                     div.mnmlwp-logo + #searchform,
                     .mnmlwp-row--nav-inside-header + #searchform {
-                        margin-top: .75rem;
+                        margin-top: 1rem;
                     }';
                 } else {
                     echo 'div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
                     div.mnmlwp-logo + #searchform,
                     .mnmlwp-row--nav-inside-header + #searchform {
-                        margin-bottom: .75rem;
+                        margin-bottom: 1rem;
                     }';
                 }
 
