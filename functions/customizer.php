@@ -243,6 +243,12 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_footer_full_width_bg_color' , array(
+        'default'   => '#f3f3f3',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_footer_text_color' , array(
         'default'   => '#37383d',
         'transport' => 'refresh',
@@ -289,6 +295,13 @@ function mnmlwp_customize_register( $wp_customize )
 
     $wp_customize->add_setting( 'mnmlwp_sidebar_position', array(
         'default' => 'right',
+        'capability' => 'edit_theme_options',
+        'type' => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_footer_full_width_text_align', array(
+        'default' => 'center',
         'capability' => 'edit_theme_options',
         'type' => 'theme_mod',
         'sanitize_callback' => 'sanitize_text_field',
@@ -457,7 +470,7 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_columns_spacing_vertical' , array(
-        'default'   => 0,
+        'default'   => 16,
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     ) );
@@ -742,6 +755,12 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_footer_bg_color',
     ) ) );
 
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_footer_full_width_bg_color', array(
+        'label'      => esc_html__( 'Footer full width background color', 'mnmlwp' ),
+        'section'    => 'colors',
+        'settings'   => 'mnmlwp_footer_full_width_bg_color',
+    ) ) );
+
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_footer_text_color', array(
         'label'      => esc_html__( 'Footer text color', 'mnmlwp' ),
         'section'    => 'colors',
@@ -865,6 +884,17 @@ function mnmlwp_customize_register( $wp_customize )
         'choices' => array(
             'right' => __('Right (default)', 'mnmlwp'),
             'left' => __('Left', 'mnmlwp'),
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_footer_full_width_text_align', array(
+        'type' => 'select',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Footer full width text align', 'mnmlwp'),
+        'choices' => array(
+            'center' => __('Center (default)', 'mnmlwp'),
+            'left' => __('Left', 'mnmlwp'),
+            'right' => __('Right', 'mnmlwp'),
         ),
     ) );
 
@@ -1127,12 +1157,16 @@ function mnmlwp_customizer_css()
 
              // Flex columns spacing
              $mnmlwp_columns_spacing_horizontal = esc_html( get_theme_mod('mnmlwp_columns_spacing_horizontal', 0) );
-             $mnmlwp_columns_spacing_vertical = esc_html( get_theme_mod('mnmlwp_columns_spacing_vertical', 0) );
+             $mnmlwp_columns_spacing_vertical = esc_html( get_theme_mod('mnmlwp_columns_spacing_vertical', 16) );
              
              if( $mnmlwp_columns_spacing_horizontal > 0 || $mnmlwp_columns_spacing_vertical > 0 )
              {
                 echo '.mnmlwp-flex-column {
-                        margin-bottom: calc((1em + ' .  $mnmlwp_columns_spacing_vertical . 'px));
+                        margin-bottom: ' .  $mnmlwp_columns_spacing_vertical . 'px;
+                    }
+
+                    .mnmlwp-footer-widgets .mnmlwp-flex-column {
+                        margin-bottom: 0;
                     }
                         
                     .mnmlwp-flex-column--half {
@@ -1349,6 +1383,10 @@ function mnmlwp_customizer_css()
 
             .mnmlwp-row.mnmlwp-row--footer {
                 background: ' . esc_html( get_theme_mod('mnmlwp_footer_bg_color', '#f7f7f7') ) . ';
+            }
+
+            .mnmlwp-row.mnmlwp-row--footer-full-width {
+                background: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_bg_color', '#f3f3f3') ) . ';
             }
 
             footer {
@@ -1617,6 +1655,14 @@ function mnmlwp_customizer_css()
                     }
                 }';
             }
+
+            // Footer full width text align
+            $mnmlwp_footer_full_width_text_align = esc_html( get_theme_mod('mnmlwp_footer_full_width_text_align', 'center') );
+            
+            echo '.mnmlwp-row.mnmlwp-row--footer-full-width {
+                    text-align: ' . $mnmlwp_footer_full_width_text_align . ';
+                }
+            }';
 
             // Logo position
             $mnmlwp_logo_position = esc_html( get_theme_mod('mnmlwp_logo_position', 'left') );

@@ -77,6 +77,14 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.7.3 =
+
+Added: Improved full width footer widget layout
+Added: Customizer option footer full width background color
+Added: Customizer option footer full width text align
+Fixed: Textarea font family
+Removed: Demo content import message
+
 = 0.7.2 =
 
 Added: demo content at base.minimalwordpress.de

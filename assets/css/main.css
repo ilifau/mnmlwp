@@ -110,6 +110,10 @@
       padding: 1em 0;
   }
 
+  .mnmlwp-row.mnmlwp-row--footer-full-width {
+    text-align: center;
+  }
+
   .mnmlwp-boxed-wrapper {
       margin: 0 auto;
       max-width: 100%;
@@ -1463,6 +1467,7 @@
       padding: .5em;
       border: 1px solid #ddd;
       background: #f9f9f9;
+      font-family: inherit;
       font-size: 1em;
       font-weight: 400;
       margin-bottom: .5em;

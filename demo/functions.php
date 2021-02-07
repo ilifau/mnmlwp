@@ -15,7 +15,6 @@ function mnmlwp_import_files()
             'import_customizer_file_url'   => 'https://base.minimalwordpress.de/demo/customizer.dat',
             'import_preview_image_url'     => 'https://base.minimalwordpress.de/demo/screenshot.png',
             'preview_url'                  => 'https://base.minimalwordpress.de',
-            'import_notice'              => __( 'Please configure your widgets and category colors after importing the demo content.', 'mnmlwp' ),
         ),
     );
 }
