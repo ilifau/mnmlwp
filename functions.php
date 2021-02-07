@@ -40,7 +40,7 @@ function mnmlwp_scripts_and_styles()
     wp_enqueue_style( 'font-awesome', mnmlwp_assets_url() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'hamburgers', mnmlwp_assets_url() . '/css/hamburgers/hamburgers.css' );
     wp_enqueue_style( 'mnmlwp', mnmlwp_theme_url() . '/style.css' );
-    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.7.5' );
+    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.7.6' );
 }
 
 add_action( 'wp_enqueue_scripts', 'mnmlwp_scripts_and_styles' );
@@ -61,8 +61,8 @@ function mnmlwp_admin_scripts_and_styles()
     }
     
     // Global
-    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.7.5' );
-    wp_enqueue_script( 'admin', mnmlwp_assets_url() . '/js/admin/mnmlwp-admin.js', array('jquery'), '0.7.5', true );
+    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.7.6' );
+    wp_enqueue_script( 'admin', mnmlwp_assets_url() . '/js/admin/mnmlwp-admin.js', array('jquery'), '0.7.6', true );
     wp_enqueue_script( 'admin-notifications', mnmlwp_assets_url() . '/js/admin/mnmlwp-notifications.js', array('jquery'), '0.0.1', true );
 }
 
@@ -687,7 +687,7 @@ if( ! function_exists( 'mnmlwp_get_posts') )
 
                     $html .= '<li>';
 
-                        $html .= '<h3 class="post-title">';
+                        $html .= '<h2 class="post-title">';
                         $html .= '<a class="post-title-link no-border" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . get_the_title() . '</a>';
                         
                         if( is_sticky( get_the_ID() ) ) {
@@ -712,7 +712,7 @@ if( ! function_exists( 'mnmlwp_get_posts') )
                                 break;
                         }
                         
-                        $html .= '</h3>';
+                        $html .= '</h2>';
 
                         if( get_post_type( get_the_ID() ) === 'post' )
                         {
@@ -1639,6 +1639,10 @@ function mnmlwp_get_breadcrumb_html() {
  */
 function mnmlwp_get_breadcrumb_row( $hero = false ) {
     global $post;
+
+    if( ! isset( $post->ID ) ) {
+        return;
+    }
 
     if( function_exists('breadcrumb_trail') ):
 

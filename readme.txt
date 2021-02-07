@@ -77,6 +77,12 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.7.6 =
+
+Fixed: Full width footer widget margin
+Fixed: Check post ID in breadcrumb row function
+Fixed: Post list titles h3 replaced by h2
+
 = 0.7.5 =
 
 Fixed: Customizer CSS (missed a curly bracket... D'oh!)

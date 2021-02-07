@@ -937,6 +937,11 @@
           clear: left;
           width: 100%;
       }
+
+      .mnmlwp-column--footer-full-width {
+          padding-top: 3em;
+          padding-bottom: 3em;
+      }
   
       /* Third Level */
       nav#main ul li:last-child ul li ul {
@@ -1086,9 +1091,12 @@
       border: 0;
   }
   
-  ul.post-list h3.post-title {
-      font-size: 1.25em;
+  ul.post-list h2.post-title {
       padding: 0 0;
+  }
+
+  ul.post-list h2.post-title + p.mnmlwp-excerpt {
+      padding-top: .5em;
   }
   
   ul.post-list p.post-meta {
@@ -2412,7 +2420,7 @@
           border: 0;
       }
   
-      .mnmlwp-footer-widget:not(.mnmlwp-footer-widget-right) {
+      .mnmlwp-footer-widget:not(.mnmlwp-footer-widget-right):not(.mnmlwp-footer-widget-full-width) {
           display: block;
           margin-bottom: 1.5em;
       }
@@ -2553,6 +2561,10 @@
   
       .hero-title {
           font-size: 2em;
+      }
+
+      .mnmlwp-column--footer-full-width {
+          padding: 3em 1em;
       }
   
       .hide-767 {
