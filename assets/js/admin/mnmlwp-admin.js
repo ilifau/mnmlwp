@@ -1,24 +1,36 @@
-// mnmlWP admin scripts
-(function($){
+const { select, subscribe } = wp.data;
 
-  $(window).load(function() {
+class PageTemplateSwitcher {
 
-    // Toggle hero section input
-    function toggleHeroSection(template) {
-      if (typeof template !== 'undefined' && ('template-page-hero.php' == template || 'template-post-hero.php' == template || 'template-blank-page-hero.php' == template)) {
-        $('#mnmlwp-hero-fieldset').show(0);
-        $('#mnmlwp-hero-fieldset-message').hide(0);
-      } else {
-        $('#mnmlwp-hero-fieldset').hide(0);
-        $('#mnmlwp-hero-fieldset-message').show(0);
+  constructor() {
+    this.template = null;
+  }
+
+  init() {
+
+    subscribe( () => {
+
+      const newTemplate = select( 'core/editor' ).getEditedPostAttribute( 'template' );
+
+      if ( newTemplate && newTemplate !== this.template ) {
+        this.template = newTemplate;
+        this.changeTemplate();
       }
+
+    });
+  }
+
+  changeTemplate() {
+    let $ = jQuery;
+  
+    if (typeof this.template !== 'undefined' && ('template-page-hero.php' === this.template || 'template-post-hero.php' === this.template || 'template-blank-page-hero.php' === this.template)) {
+      $('#mnmlwp-hero-fieldset').show(0);
+      $('#mnmlwp-hero-fieldset-message').hide(0);
+    } else {
+      $('#mnmlwp-hero-fieldset').hide(0);
+      $('#mnmlwp-hero-fieldset-message').show(0);
     }
+  }
+}
 
-    $('.editor-page-attributes__template select').on('change', function() {
-      let template = $(this).val();
-      toggleHeroSection(template);
-    })
-
-  });
-
-})(jQuery);
+new PageTemplateSwitcher().init();
