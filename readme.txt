@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.7.7 =
+
+Fixed: Admin JS select hero template
+
 = 0.7.6 =
 
 Fixed: Full width footer widget margin
