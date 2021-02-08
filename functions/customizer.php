@@ -138,7 +138,7 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_contact_row_bg_color' , array(
-        'default'   => '#005141',
+        'default'   => '#124239',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -314,6 +314,18 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'sanitize_text_field',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_nav_is_sticky', array(
+        'default' => true,
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_center_header', array(
+        'default' => false,
+        'capability' => 'edit_theme_options',
+        'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_is_boxed', array(
         'default' => false,
         'capability' => 'edit_theme_options',
@@ -389,12 +401,6 @@ function mnmlwp_customize_register( $wp_customize )
         'type' => 'theme_mod',
         'sanitize_callback' => 'sanitize_text_field',
     ) );
-    
-    $wp_customize->add_setting( 'mnmlwp_nav_is_sticky', array(
-        'default' => true,
-        'capability' => 'edit_theme_options',
-        'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
-    ) );
 
     $wp_customize->add_setting( 'mnmlwp_has_header_search', array(
         'default' => true,
@@ -404,12 +410,6 @@ function mnmlwp_customize_register( $wp_customize )
 
     $wp_customize->add_setting( 'mnmlwp_has_nav_search', array(
         'default' => true,
-        'capability' => 'edit_theme_options',
-        'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
-    ) );
-
-    $wp_customize->add_setting( 'mnmlwp_center_header', array(
-        'default' => false,
         'capability' => 'edit_theme_options',
         'sanitize_callback' => 'mnmlwp_sanitize_checkbox',
     ) );
@@ -799,6 +799,16 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_base_font_size',
     ) );
 
+    $wp_customize->add_control( 'mnmlwp_logo_position', array(
+        'type' => 'select',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Logo position', 'mnmlwp'),
+        'choices' => array(
+            'left' => __('Left (default)', 'mnmlwp'),
+            'right' => __('Right', 'mnmlwp'),
+        ),
+    ) );
+
     $wp_customize->add_control( 'mnmlwp_nav_position', array(
         'type' => 'select',
         'section' => 'mnmlwp_layout_section',
@@ -807,16 +817,6 @@ function mnmlwp_customize_register( $wp_customize )
             'before_header' => __('Before header', 'mnmlwp'),
             'after_header' => __('After header (default)', 'mnmlwp'),
             'inside_header' => __('Inside header', 'mnmlwp'),
-        ),
-    ) );
-
-    $wp_customize->add_control( 'mnmlwp_logo_position', array(
-        'type' => 'select',
-        'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Logo position', 'mnmlwp'),
-        'choices' => array(
-            'left' => __('Left (default)', 'mnmlwp'),
-            'right' => __('Right', 'mnmlwp'),
         ),
     ) );
 
@@ -898,16 +898,22 @@ function mnmlwp_customize_register( $wp_customize )
         ),
     ) );
 
-    $wp_customize->add_control( 'mnmlwp_is_boxed', array(
-        'type' => 'checkbox',
-        'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Boxed layout?', 'mnmlwp'),
-    ) );
-
     $wp_customize->add_control( 'mnmlwp_nav_is_sticky', array(
         'type' => 'checkbox',
         'section' => 'mnmlwp_layout_section',
         'label' => esc_html__( 'Sticky main navigation?', 'mnmlwp'),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_center_header', array(
+        'type' => 'checkbox',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Center header content?', 'mnmlwp'),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_is_boxed', array(
+        'type' => 'checkbox',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Boxed layout?', 'mnmlwp'),
     ) );
 
     $wp_customize->add_control( 'mnmlwp_has_header_search', array(
@@ -920,12 +926,6 @@ function mnmlwp_customize_register( $wp_customize )
         'type' => 'checkbox',
         'section' => 'mnmlwp_layout_section',
         'label' => esc_html__( 'Include search form in main navigation (mobile)?', 'mnmlwp'),
-    ) );
-
-    $wp_customize->add_control( 'mnmlwp_center_header', array(
-        'type' => 'checkbox',
-        'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Center header content?', 'mnmlwp'),
     ) );
 
     $wp_customize->add_control( 'mnmlwp_has_loading_layer', array(
@@ -1142,7 +1142,7 @@ function mnmlwp_customizer_css()
              }
 
              .mnmlwp-row.mnmlwp-row--contact {
-                 background: ' . esc_html( get_theme_mod('mnmlwp_contact_row_bg_color', '#005141') ) . ';
+                 background: ' . esc_html( get_theme_mod('mnmlwp_contact_row_bg_color', '#124239') ) . ';
              }
 
              .mnmlwp-column {

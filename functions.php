@@ -40,13 +40,13 @@ function mnmlwp_scripts_and_styles()
     wp_enqueue_style( 'font-awesome', mnmlwp_assets_url() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'hamburgers', mnmlwp_assets_url() . '/css/hamburgers/hamburgers.css' );
     wp_enqueue_style( 'mnmlwp', mnmlwp_theme_url() . '/style.css' );
-    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.7.7' );
+    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.7.8' );
 }
 
 add_action( 'wp_enqueue_scripts', 'mnmlwp_scripts_and_styles' );
 
 // Admin Scripts and Styles
-function mnmlwp_admin_scripts_and_styles()
+function mnmlwp_admin_scripts_and_styles( $hook_suffix )
 {
     // Color Picker
     $screen = get_current_screen();
@@ -59,10 +59,14 @@ function mnmlwp_admin_scripts_and_styles()
         wp_enqueue_script( 'mnmlwp-color-picker', mnmlwp_assets_url() . '/js/admin/mnmlwp-color-picker.js', array('jquery', 'wp-color-picker'), '0.0.1', true );
         wp_enqueue_style( 'wp-color-picker' );
     }
+
+    // Hero JS
+    if( in_array( $hook_suffix, array('post.php', 'post-new.php', 'page.php', 'page-new.php') ) ) {
+        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.7.8', true );
+    }
     
     // Global
-    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.7.7' );
-    wp_enqueue_script( 'admin', mnmlwp_assets_url() . '/js/admin/mnmlwp-admin.js', array('jquery'), '0.7.7', true );
+    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.7.8' );
     wp_enqueue_script( 'admin-notifications', mnmlwp_assets_url() . '/js/admin/mnmlwp-notifications.js', array('jquery'), '0.0.1', true );
 }
 
