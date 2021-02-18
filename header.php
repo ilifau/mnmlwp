@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php if( get_theme_mod( 'mnmlwp_show_contact_row', false ) && get_theme_mod( 'mnmlwp_contact_row', 'Hey, this is the mnmlWP contact row! 😊' ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_contact_row', true ) ): ?>
                 <div class="mnmlwp-row mnmlwp-row--contact hide-767">
                     <div class="mnmlwp-column mnmlwp-column--contact">
-                        <p><?php echo esc_html( get_theme_mod( 'mnmlwp_contact_row', 'Hey, this is the mnmlWP contact row! 😊') ); ?></p>
+                        <p><?php echo wp_kses_post( get_theme_mod( 'mnmlwp_contact_row', 'Hey, this is the mnmlWP contact row! 😊') ); ?></p>
                     </div>
                 </div>
         <?php endif; ?>

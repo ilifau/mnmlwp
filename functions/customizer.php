@@ -152,7 +152,7 @@ function mnmlwp_customize_register( $wp_customize )
     $wp_customize->add_setting( 'mnmlwp_contact_row', array(
         'capability' => 'edit_theme_options',
         'default' =>'Hey, this is the mnmlWP contact row! 😊',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'wp_kses_post',
     ) );
     
     // Breadcrumb navigation
@@ -599,7 +599,7 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_logo_height_desktop',
         'input_attrs' => array(
             'min' => 1,
-            'max' => 3,
+            'max' => 8,
             'step' => 0.1,
             'style' => 'width:98%;'
         ),
@@ -612,7 +612,7 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_logo_height_tablet',
         'input_attrs' => array(
             'min' => 1,
-            'max' => 3,
+            'max' => 8,
             'step' => 0.1,
             'style' => 'width:98%;'
         ),
@@ -625,7 +625,7 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_logo_height_mobile',
         'input_attrs' => array(
             'min' => 1,
-            'max' => 3,
+            'max' => 8,
             'step' => 0.1,
             'style' => 'width:98%;'
         ),

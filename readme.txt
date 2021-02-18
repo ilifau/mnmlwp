@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.7.9 =
+
+Fixed: Contact row: content now sanitized with wp_kses_post
+Fixed: Increased logo max height in Customizer
+
 = 0.7.8 =
 
 Fixed: Customizer options order
