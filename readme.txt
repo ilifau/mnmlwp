@@ -79,6 +79,7 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 = 0.8.0 =
 
+Added: Conference starter kit
 Added: Customizer options for full width footer widget
 Added: Current active menu item parent background color
 Added: Main navigation focus style
