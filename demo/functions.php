@@ -50,10 +50,14 @@ function mnmlwp_after_import_setup()
     );
 
     // Assign front page and posts page (blog page).
-    $front_page_id = get_page_by_title( 'Welcome' );
+    $front_page = get_page_by_title( 'Welcome' ); // Base
+
+    if( ! $front_page ) {
+        $front_page = get_page_by_title( 'About the Conference' ); // Conf
+    }
 
     update_option( 'show_on_front', 'page' );
-    update_option( 'page_on_front', $front_page_id->ID );
+    update_option( 'page_on_front', $front_page->ID );
 }
 
 add_action( 'pt-ocdi/after_import', 'mnmlwp_after_import_setup' );
