@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php if( get_theme_mod( 'mnmlwp_show_contact_row', false ) && get_theme_mod( 'mnmlwp_contact_row', 'Hey, this is the mnmlWP contact row! 😊' ) && ! get_post_meta( get_the_ID(), '_mnmlwp_hide_contact_row', true ) ): ?>
                 <div class="mnmlwp-row mnmlwp-row--contact hide-767">
                     <div class="mnmlwp-column mnmlwp-column--contact">
-                        <p><?php echo esc_html( get_theme_mod( 'mnmlwp_contact_row', 'Hey, this is the mnmlWP contact row! 😊') ); ?></p>
+                        <p><?php echo wp_kses_post( get_theme_mod( 'mnmlwp_contact_row', 'Hey, this is the mnmlWP contact row! 😊') ); ?></p>
                     </div>
                 </div>
         <?php endif; ?>
@@ -88,12 +88,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="mnmlwp-row mnmlwp-row--nav mnmlwp-row--nav-mobile overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
             <div class="mnmlwp-column mnmlwp-column--nav mnmlwp-column--nav-mobile overflow-visible">
                 <?php mnmlwp_nav(); ?>
-                <?php if( get_theme_mod( 'mnmlwp_has_nav_search', true ) ): ?>
-                    <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                        <input type="text" class="field" name="s" id="s" placeholder="<?php echo esc_attr__( 'Search', 'mnmlwp' ); ?>&hellip;" />
-                        <button class="submit mnmlwp-btn mnmlwp-btn-small" id="searchsubmit" value=""></button>
-                    </form>
-                <?php endif; ?>
             </div>
         </div>
         <div class="clear-columns"></div>
