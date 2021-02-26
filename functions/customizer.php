@@ -243,12 +243,6 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
-    $wp_customize->add_setting( 'mnmlwp_footer_full_width_bg_color' , array(
-        'default'   => '#f3f3f3',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_hex_color',
-    ) );
-
     $wp_customize->add_setting( 'mnmlwp_footer_text_color' , array(
         'default'   => '#37383d',
         'transport' => 'refresh',
@@ -268,6 +262,37 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_link_color_hover' , array(
+        'default'   => '#33398c',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+
+    // Footer Full Width
+    $wp_customize->add_setting( 'mnmlwp_footer_full_width_bg_color' , array(
+        'default'   => '#f3f3f3',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_footer_full_width_text_color' , array(
+        'default'   => '#37383d',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_footer_full_width_headings_color' , array(
+        'default'   => '#37383d',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+    
+    $wp_customize->add_setting( 'mnmlwp_footer_full_width_link_color' , array(
+        'default'   => '#444bb1',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_footer_full_width_link_color_hover' , array(
         'default'   => '#33398c',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
@@ -755,12 +780,6 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_footer_bg_color',
     ) ) );
 
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_footer_full_width_bg_color', array(
-        'label'      => esc_html__( 'Footer full width background color', 'mnmlwp' ),
-        'section'    => 'colors',
-        'settings'   => 'mnmlwp_footer_full_width_bg_color',
-    ) ) );
-
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_footer_text_color', array(
         'label'      => esc_html__( 'Footer text color', 'mnmlwp' ),
         'section'    => 'colors',
@@ -783,6 +802,38 @@ function mnmlwp_customize_register( $wp_customize )
         'label'      => esc_html__( 'Footer link hover color', 'mnmlwp' ),
         'section'    => 'colors',
         'settings'   => 'mnmlwp_footer_link_color_hover',
+    ) ) );
+
+    // Footer Full Width
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_footer_full_width_bg_color', array(
+        'label'      => esc_html__( 'Footer (full width) background color', 'mnmlwp' ),
+        'section'    => 'colors',
+        'settings'   => 'mnmlwp_footer_full_width_bg_color',
+    ) ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_footer_full_width_text_color', array(
+        'label'      => esc_html__( 'Footer (full width) text color', 'mnmlwp' ),
+        'section'    => 'colors',
+        'settings'   => 'mnmlwp_footer_full_width_text_color',
+    ) ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_footer_full_width_headings_color', array(
+        'label'      => esc_html__( 'Footer (full width) headings color', 'mnmlwp' ),
+        'section'    => 'colors',
+        'settings'   => 'mnmlwp_footer_full_width_headings_color',
+    ) ) );
+    
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_footer_full_width_link_color', array(
+        'label'      => esc_html__( 'Footer (full width) link color', 'mnmlwp' ),
+        'section'    => 'colors',
+        'settings'   => 'mnmlwp_footer_full_width_link_color',
+    ) ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mnmlwp_footer_full_width_link_color_hover', array(
+        'label'      => esc_html__( 'Footer (full width) link hover color', 'mnmlwp' ),
+        'section'    => 'colors',
+        'settings'   => 'mnmlwp_footer_full_width_link_color_hover',
     ) ) );
 
     // Customizer Controls Page Layout
@@ -890,7 +941,7 @@ function mnmlwp_customize_register( $wp_customize )
     $wp_customize->add_control( 'mnmlwp_footer_full_width_text_align', array(
         'type' => 'select',
         'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Footer full width text align', 'mnmlwp'),
+        'label' => esc_html__( 'Footer (full width) text align', 'mnmlwp'),
         'choices' => array(
             'center' => __('Center (default)', 'mnmlwp'),
             'left' => __('Left', 'mnmlwp'),
@@ -1151,7 +1202,8 @@ function mnmlwp_customizer_css()
 
              .mnmlwp-column.mnmlwp-column--contact,
              .mnmlwp-column.mnmlwp-column--contact a,
-             .mnmlwp-column.mnmlwp-column--contact a:hover {
+             .mnmlwp-column.mnmlwp-column--contact a:hover,
+             .mnmlwp-column.mnmlwp-column--contact a:focus {
                  color: ' . esc_html( get_theme_mod('mnmlwp_contact_row_text_color', '#ffffff') ) . ';
              }';
 
@@ -1336,7 +1388,8 @@ function mnmlwp_customizer_css()
                 background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color', '#444bb1') ) . ';
             }
 
-            nav#main ul li a:hover {
+            nav#main ul li a:hover,
+            nav#main ul li a:focus {
                 background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color_hover', '#39409b') ) . ';
             }
 
@@ -1355,9 +1408,6 @@ function mnmlwp_customizer_css()
             nav#main ul li.current-page-parent > a:active {
                 opacity: 1;
                 color: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_color', '#ffffff') ) . ';
-            }
-
-            nav#main ul li.current-menu-item > a {
                 background: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_background_color', '#272c72') ) . ';
             }
 
@@ -1385,10 +1435,6 @@ function mnmlwp_customizer_css()
                 background: ' . esc_html( get_theme_mod('mnmlwp_footer_bg_color', '#f7f7f7') ) . ';
             }
 
-            .mnmlwp-row.mnmlwp-row--footer-full-width {
-                background: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_bg_color', '#f3f3f3') ) . ';
-            }
-
             footer {
                 color: ' . esc_html( get_theme_mod('mnmlwp_footer_text_color', '#37383d') ) . '!important;
             }
@@ -1408,6 +1454,37 @@ function mnmlwp_customizer_css()
             footer a:hover,
             footer a:focus {
                 color: ' . esc_html( get_theme_mod('mnmlwp_footer_link_color_hover', '#33398c') ) . ';
+            }
+
+            .mnmlwp-row.mnmlwp-row--footer-full-width {
+                background: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_bg_color', '#f3f3f3') ) . ';
+            }
+
+            .mnmlwp-row.mnmlwp-row--footer-full-width {
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_text_color', '#37383d') ) . '!important;
+            }
+
+            .mnmlwp-row.mnmlwp-row--footer-full-width .mnmlwp-widget-title,
+            .mnmlwp-row.mnmlwp-row--footer-full-width .mnmlwp-widget-title a,
+            .mnmlwp-row.mnmlwp-row--footer-full-width .mnmlwp-widget-title a:hover,
+            .mnmlwp-row.mnmlwp-row--footer-full-width .mnmlwp-widget-title a:focus,
+            .mnmlwp-row.mnmlwp-row--footer-full-width .h1,
+            .mnmlwp-row.mnmlwp-row--footer-full-width h1,
+            .mnmlwp-row.mnmlwp-row--footer-full-width h2,
+            .mnmlwp-row.mnmlwp-row--footer-full-width h3,
+            .mnmlwp-row.mnmlwp-row--footer-full-width h4,
+            .mnmlwp-row.mnmlwp-row--footer-full-width h5,
+            .mnmlwp-row.mnmlwp-row--footer-full-width h6 {
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_headings_color', '#37383d') ) . '!important;
+            }
+            
+            .mnmlwp-row.mnmlwp-row--footer-full-width a {
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_link_color', '#444bb1') ) . ';
+            }
+            
+            .mnmlwp-row.mnmlwp-row--footer-full-width a:hover,
+            .mnmlwp-row.mnmlwp-row--footer-full-width a:focus {
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_link_color_hover', '#33398c') ) . ';
             }
 
             @media screen and (max-width: ' . esc_html( get_theme_mod('mnmlwp_column_width', '1120px') ) . ') {
@@ -1609,6 +1686,10 @@ function mnmlwp_customizer_css()
                     nav#main ul li ul li a {
                         padding-left: 1em;
                         padding-right: 2em;
+                    }
+                    
+                    nav#main #searchform {
+                        margin-right: 1em;
                     }';
                 } else if( $mnmlwp_main_nav_align_mobile === 'center' ) {
                     echo 'nav#main ul li {
@@ -1620,6 +1701,10 @@ function mnmlwp_customizer_css()
                         text-align: center;
                         padding-left: .875em;
                         padding-right: .875em;
+                    }
+                    
+                    nav#main #searchform {
+                        margin-left: 0;
                     }';
                 }
             echo '}';

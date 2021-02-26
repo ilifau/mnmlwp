@@ -88,12 +88,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="mnmlwp-row mnmlwp-row--nav mnmlwp-row--nav-mobile overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
             <div class="mnmlwp-column mnmlwp-column--nav mnmlwp-column--nav-mobile overflow-visible">
                 <?php mnmlwp_nav(); ?>
-                <?php if( get_theme_mod( 'mnmlwp_has_nav_search', true ) ): ?>
-                    <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                        <input type="text" class="field" name="s" id="s" placeholder="<?php echo esc_attr__( 'Search', 'mnmlwp' ); ?>&hellip;" />
-                        <button class="submit mnmlwp-btn mnmlwp-btn-small" id="searchsubmit" value=""></button>
-                    </form>
-                <?php endif; ?>
             </div>
         </div>
         <div class="clear-columns"></div>

@@ -77,6 +77,14 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.0 =
+
+Added: Customizer options for full width footer widget
+Added: Current active menu item parent background color
+Added: Main navigation focus style
+Fixed: Removed search form list item from header when not enabled
+Fixed: Search form margins in mobile navigation
+
 = 0.7.9 =
 
 Fixed: Contact row: content now sanitized with wp_kses_post

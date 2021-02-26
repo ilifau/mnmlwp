@@ -40,7 +40,7 @@ function mnmlwp_scripts_and_styles()
     wp_enqueue_style( 'font-awesome', mnmlwp_assets_url() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'hamburgers', mnmlwp_assets_url() . '/css/hamburgers/hamburgers.css' );
     wp_enqueue_style( 'mnmlwp', mnmlwp_theme_url() . '/style.css' );
-    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.7.9' );
+    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.8.0' );
 }
 
 add_action( 'wp_enqueue_scripts', 'mnmlwp_scripts_and_styles' );
@@ -62,11 +62,11 @@ function mnmlwp_admin_scripts_and_styles( $hook_suffix )
 
     // Hero JS
     if( in_array( $hook_suffix, array('post.php', 'post-new.php', 'page.php', 'page-new.php') ) ) {
-        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.7.9', true );
+        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.8.0', true );
     }
     
     // Global
-    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.7.9' );
+    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.8.0' );
     wp_enqueue_script( 'admin-notifications', mnmlwp_assets_url() . '/js/admin/mnmlwp-notifications.js', array('jquery'), '0.0.1', true );
 }
 
@@ -437,8 +437,6 @@ function mnmlwp_add_search_nav_item( $items, $args )
 
     if( ! get_theme_mod( 'mnmlwp_has_nav_search', true ) )
         return $items;
-
-    // $searchform = get_search_form( false );
 
     $searchform = '<form method="get" id="searchform" action="' . esc_url( home_url( '/' ) ) . '">
         <input type="text" class="field" name="s" id="s" placeholder="' . esc_attr__( 'Search', 'mnmlwp' ) . '&hellip;" />
