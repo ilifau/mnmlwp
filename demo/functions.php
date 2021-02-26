@@ -9,12 +9,21 @@ function mnmlwp_import_files()
     return array(
         array(
             'import_file_name'             => 'Base',
-            'categories'                   => array('Base'),
+            'categories'                   => array('Free'),
             'import_file_url'              => 'https://base.minimalwordpress.de/demo/content.xml',
             'import_widget_file_url'       => 'https://base.minimalwordpress.de/demo/widgets.wie',
             'import_customizer_file_url'   => 'https://base.minimalwordpress.de/demo/customizer.dat',
             'import_preview_image_url'     => 'https://base.minimalwordpress.de/demo/screenshot.png',
             'preview_url'                  => 'https://base.minimalwordpress.de',
+        ),
+        array(
+            'import_file_name'             => 'Conference',
+            'categories'                   => array('Free'),
+            'import_file_url'              => 'https://conf.minimalwordpress.de/demo/content.xml',
+            'import_widget_file_url'       => 'https://conf.minimalwordpress.de/demo/widgets.wie',
+            'import_customizer_file_url'   => 'https://conf.minimalwordpress.de/demo/customizer.dat',
+            'import_preview_image_url'     => 'https://conf.minimalwordpress.de/demo/screenshot.png',
+            'preview_url'                  => 'https://conf.minimalwordpress.de',
         ),
     );
 }
