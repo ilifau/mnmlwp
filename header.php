@@ -35,29 +35,36 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php endif; ?>
         <div class="mnmlwp-row mnmlwp-row--header">
             <div class="mnmlwp-column mnmlwp-column--header">
-                <div class="mnmlwp-logo">
-                    <a href="<?php echo esc_url( home_url() ); ?>">
-                        <?php
-                            $mnmlwp_custom_logo_id = esc_html( get_theme_mod( 'custom_logo' ) );
-                            $mnmlwp_logo = wp_get_attachment_image_src( $mnmlwp_custom_logo_id , 'full' );
-                            
-                            if ( has_custom_logo() ) {
-                                echo '<img class="mnmlwp-logo-image" src="'. esc_attr( $mnmlwp_logo[0] ) .'" alt="">';
-                            } else {
-                                if( get_theme_mod( 'mnmlwp_logo_icon', 'superpowers' ) ) {
-                                    echo '<div class="mnmlwp-logo-icon fa fa-' . esc_attr( get_theme_mod( 'mnmlwp_logo_icon', 'superpowers' ) ) . '"></div>';
-                                }
-
-                                echo '<span class="mnmlwp-logo-text">' . get_bloginfo( 'name' ) . '</span>';
-                            }
-                        ?>
-                    </a>
+                <a class="mnmlwp-logo-wrapper" href="<?php echo esc_url( home_url() ); ?>">
                     <?php
-                        if( display_header_text() && get_bloginfo( 'description' ) ) {
-                            echo '<div class="mnmlwp-tagline">' . get_bloginfo('description') . '</div>';
-                        }
+                    $mnmlwp_custom_logo_id = esc_html( get_theme_mod( 'custom_logo' ) );
+                    $mnmlwp_logo = wp_get_attachment_image_src( $mnmlwp_custom_logo_id , 'full' );
+
+                    if( has_custom_logo() ) {
+                        echo '<img class="mnmlwp-logo-image" src="'. esc_attr( $mnmlwp_logo[0] ) .'" alt="">';
+                    }
                     ?>
-                </div>
+
+                    <?php if( ! has_custom_logo() || ( has_custom_logo() && get_theme_mod( 'mnmlwp_has_logo_and_title', false ) ) ): ?>
+                        <div class="mnmlwp-logo">
+                            <?php
+                                echo '<div class="mnmlwp-site-title-wrapper">';
+
+                                    if( get_theme_mod( 'mnmlwp_logo_icon', 'superpowers' ) ) {
+                                        echo '<div class="mnmlwp-logo-icon fa fa-' . esc_attr( get_theme_mod( 'mnmlwp_logo_icon', 'superpowers' ) ) . '"></div>';
+                                    }
+
+                                    echo '<span class="mnmlwp-logo-text">' . get_bloginfo( 'name' ) . '</span>';
+                                echo '</div>';
+                            ?>
+                            <?php
+                                if( display_header_text() && get_bloginfo( 'description' ) ) {
+                                    echo '<div class="mnmlwp-tagline">' . get_bloginfo('description') . '</div>';
+                                }
+                            ?>
+                        </div>
+                    <?php endif; ?>
+                </a>
                 <?php if ( get_theme_mod( 'mnmlwp_nav_position', 'after_header' ) === 'inside_header' ): ?>
                     <div class="mnmlwp-row mnmlwp-row--nav mnmlwp-row--nav-inside-header overflow-visible <?php echo esc_attr( get_theme_mod('mnmlwp_nav_is_sticky', true ) ) ? 'sticky' : ''; ?>">
                         <div class="mnmlwp-column mnmlwp-column--nav overflow-visible">

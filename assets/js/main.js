@@ -5,10 +5,6 @@ jQuery(document).ready(function($) {
     // Animation speed
     let animSpeed = 180;
 
-    // Navigation timeout
-    var navTimer = 180;
-    var navTimeout;
-
     // Get Viewport Width
     function isMobile() {
         return $(window).width() <= 767;
@@ -22,92 +18,6 @@ jQuery(document).ready(function($) {
         if( window_width < 1024 ) return 'tablet';
         if( window_width > 1023 ) return 'desktop';
     }
-
-    // Main Navigation Desktop
-    function initiateNav() {
-        $('nav#main ul li.menu-item-has-children').off('mouseenter').off('mouseleave').off('touchend');
-
-        if( ! isMobile() && ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            $('nav#main ul li.menu-item-has-children').on('mouseenter mouseleave', function(e) {
-                var submenu = $(this).find('ul.sub-menu').eq(0);
-
-                if (e.type === 'mouseleave') {
-                    toggleSubMenu(submenu, e.type);
-                } else {
-                    navTimeout = setTimeout(function () {
-                        toggleSubMenu(submenu);
-                    }, navTimer);
-                }
-            });
-        }
-
-        // Main Navigation Mobile > 767
-        else if( ! isMobile() && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            $('nav#main ul li.menu-item-has-children').off('mouseenter').off('mouseleave').off('touchend');
-
-            $('nav#main ul li.menu-item-has-children').on({
-                 touchend: function(e) {
-                    var submenu = $(this).find('ul.sub-menu').eq(0);
-
-                    if( ! $(this).hasClass('mnmlwp-mobile-active') ) {
-                        e.preventDefault();
-
-                        if ( ! $(this).parents('ul').parents('ul').length ) {
-                            closeActiveNavItems();
-                        }
-
-                        $(this).addClass('mnmlwp-mobile-active');
-                        toggleSubMenu(submenu);
-                        return false;
-                    }
-                }
-            });
-        }
-    }
-
-    initiateNav();
-
-    // Toggle sub menu
-    function toggleSubMenu( item, event = null ) {
-        clearTimeout(navTimeout);
-        switch(mnmlwp_globals.nav_animation) {
-            case 'fade':
-                if (event === 'mouseleave') {
-                    item.stop(true, true).fadeOut(animSpeed);
-                } else {
-                    item.stop(true, true).fadeToggle(animSpeed);
-                }
-                break;
-            default:
-                if (event === 'mouseleave') {
-                    item.stop(true, true).slideUp(animSpeed);
-                } else {
-                    item.stop(true, true).slideToggle(animSpeed);
-                }
-                break;
-        }
-    }
-
-    // Close active menu items
-    function closeActiveNavItems() {
-        $('nav#main ul li.menu-item-has-children').removeClass('mnmlwp-mobile-active');
-
-        if( ! isMobile() ) {
-            toggleSubMenu( $('ul.sub-menu:visible') );
-        } else {
-            $('ul.sub-menu').show(0);
-        }
-    }
-
-    // Click anywhere closes open navigation
-    $('body').on('touchend', function(e) {
-        if( ! isMobile() ) {
-            if( ! $(e.target).closest('nav#main ul li').length) {
-                closeActiveNavItems();
-                checkNavigation();
-            }
-        }
-    });
 
     // Valuemeter
     $('.valuemeter').on('inview', function(event, isInView) {
@@ -172,7 +82,6 @@ jQuery(document).ready(function($) {
         window.resizedFinished = setTimeout(function() {
             if( $(window).width() !== window_width ) {
                 checkNavigation();
-                initiateNav();
                 window_width = $(window).width();
                 resizeHeroSection();
             }
