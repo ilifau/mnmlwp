@@ -77,6 +77,13 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.1 =
+
+Added: Content classes alignfull & alignwide
+Added: Place logo next to title
+Added: Pure CSS navigation
+Added: Customizer option „Sub menu item text align (desktop)“
+
 = 0.8.0 =
 
 Added: Conference starter kit

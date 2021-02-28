@@ -52,6 +52,30 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     // Header
+
+    $wp_customize->add_setting( 'mnmlwp_has_logo_and_title' , array(
+        'default'   => 0,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_logo_height_desktop' , array(
+        'default'   => 2,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_logo_height_tablet' , array(
+        'default'   => 2,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
+
+    $wp_customize->add_setting( 'mnmlwp_logo_height_mobile' , array(
+        'default'   => 2,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'mnmlwp_sanitize_float',
+    ) );
     
     $wp_customize->add_setting( 'mnmlwp_logo_base_font_size_desktop' , array(
         'default'   => 1.75,
@@ -79,30 +103,6 @@ function mnmlwp_customize_register( $wp_customize )
 
     $wp_customize->add_setting( 'mnmlwp_site_subtitle_font_size' , array(
         'default'   => 0.5875,
-        'transport' => 'refresh',
-        'sanitize_callback' => 'mnmlwp_sanitize_float',
-    ) );
-
-    $wp_customize->add_setting( 'mnmlwp_logo_height_desktop' , array(
-        'default'   => 2,
-        'transport' => 'refresh',
-        'sanitize_callback' => 'mnmlwp_sanitize_float',
-    ) );
-
-    $wp_customize->add_setting( 'mnmlwp_logo_height_tablet' , array(
-        'default'   => 2,
-        'transport' => 'refresh',
-        'sanitize_callback' => 'mnmlwp_sanitize_float',
-    ) );
-
-    $wp_customize->add_setting( 'mnmlwp_logo_height_tablet' , array(
-        'default'   => 2,
-        'transport' => 'refresh',
-        'sanitize_callback' => 'mnmlwp_sanitize_float',
-    ) );
-
-    $wp_customize->add_setting( 'mnmlwp_logo_height_mobile' , array(
-        'default'   => 2,
         'transport' => 'refresh',
         'sanitize_callback' => 'mnmlwp_sanitize_float',
     ) );
@@ -413,6 +413,13 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'sanitize_text_field',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_sub_menu_align_desktop', array(
+        'default' => 'flex-start',
+        'capability' => 'edit_theme_options',
+        'type' => 'theme_mod',
+        'sanitize_callback' => 'sanitize_text_field',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_nav_align_mobile', array(
         'default' => 'flex-start',
         'capability' => 'edit_theme_options',
@@ -552,6 +559,51 @@ function mnmlwp_customize_register( $wp_customize )
 
     // Header
 
+    $wp_customize->add_control( 'mnmlwp_has_logo_and_title', array(
+        'type' => 'checkbox',
+        'section' => 'title_tagline',
+        'label' => esc_html__( 'Display logo and title?', 'mnmlwp'),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_logo_height_desktop', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Logo image height (desktop)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_logo_height_desktop',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 8,
+            'step' => 0.1,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_logo_height_tablet', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Logo image height (tablet)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_logo_height_tablet',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 8,
+            'step' => 0.1,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
+    $wp_customize->add_control( 'mnmlwp_logo_height_mobile', array(
+        'type'       => 'range',
+        'label'      => esc_html__( 'Logo image height (mobile)', 'mnmlwp' ),
+        'section'    => 'title_tagline',
+        'settings'   => 'mnmlwp_logo_height_mobile',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 8,
+            'step' => 0.1,
+            'style' => 'width:98%;'
+        ),
+    ) );
+
     $wp_customize->add_control( 'mnmlwp_logo_base_font_size_desktop', array(
         'type'       => 'range',
         'label'      => esc_html__( 'Logo base font size (desktop)', 'mnmlwp' ),
@@ -613,45 +665,6 @@ function mnmlwp_customize_register( $wp_customize )
             'min' => 0.25,
             'max' => 1.5,
             'step' => 0.05,
-            'style' => 'width:98%;'
-        ),
-    ) );
-
-    $wp_customize->add_control( 'mnmlwp_logo_height_desktop', array(
-        'type'       => 'range',
-        'label'      => esc_html__( 'Logo image height (desktop)', 'mnmlwp' ),
-        'section'    => 'title_tagline',
-        'settings'   => 'mnmlwp_logo_height_desktop',
-        'input_attrs' => array(
-            'min' => 1,
-            'max' => 8,
-            'step' => 0.1,
-            'style' => 'width:98%;'
-        ),
-    ) );
-
-    $wp_customize->add_control( 'mnmlwp_logo_height_tablet', array(
-        'type'       => 'range',
-        'label'      => esc_html__( 'Logo image height (tablet)', 'mnmlwp' ),
-        'section'    => 'title_tagline',
-        'settings'   => 'mnmlwp_logo_height_tablet',
-        'input_attrs' => array(
-            'min' => 1,
-            'max' => 8,
-            'step' => 0.1,
-            'style' => 'width:98%;'
-        ),
-    ) );
-
-    $wp_customize->add_control( 'mnmlwp_logo_height_mobile', array(
-        'type'       => 'range',
-        'label'      => esc_html__( 'Logo image height (mobile)', 'mnmlwp' ),
-        'section'    => 'title_tagline',
-        'settings'   => 'mnmlwp_logo_height_mobile',
-        'input_attrs' => array(
-            'min' => 1,
-            'max' => 8,
-            'step' => 0.1,
             'style' => 'width:98%;'
         ),
     ) );
@@ -882,6 +895,17 @@ function mnmlwp_customize_register( $wp_customize )
         ),
     ) );
 
+    $wp_customize->add_control( 'mnmlwp_sub_menu_align_desktop', array(
+        'type' => 'select',
+        'section' => 'mnmlwp_layout_section',
+        'label' => esc_html__( 'Sub menu item text align (desktop)', 'mnmlwp'),
+        'choices' => array(
+            'flex-start' => __('Left (default)', 'mnmlwp'),
+            'center' => __('Center', 'mnmlwp'),
+            'flex-end' => __('Right', 'mnmlwp'),
+        ),
+    ) );
+
     $wp_customize->add_control( 'mnmlwp_nav_align_mobile', array(
         'type' => 'select',
         'section' => 'mnmlwp_layout_section',
@@ -896,7 +920,7 @@ function mnmlwp_customize_register( $wp_customize )
     $wp_customize->add_control( 'mnmlwp_nav_animation', array(
         'type' => 'select',
         'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Menu animation style', 'mnmlwp'),
+        'label' => esc_html__( 'Menu animation style (mobile)', 'mnmlwp'),
         'choices' => array(
             'fade' => 'Fade (default)',
             'slide' => 'Slide',
@@ -1371,7 +1395,7 @@ function mnmlwp_customizer_css()
                  background: ' . mnmlwp_adjust_color( get_theme_mod('mnmlwp_link_color', '#444bb1'), -12 ) . ';
              }
 
-             div.mnmlwp-logo a {
+             .mnmlwp-logo-text {
                  color: ' . esc_html( get_theme_mod('mnmlwp_logo_text_color', '#ffffff') ) . '!important;
              }
 
@@ -1386,11 +1410,6 @@ function mnmlwp_customizer_css()
             nav#main ul li,
             nav#main ul li a {
                 background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color', '#444bb1') ) . ';
-            }
-
-            nav#main ul li a:hover,
-            nav#main ul li a:focus {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color_hover', '#39409b') ) . ';
             }
 
             nav#main ul li.current-menu-item > a,
@@ -1409,6 +1428,11 @@ function mnmlwp_customizer_css()
                 opacity: 1;
                 color: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_color', '#ffffff') ) . ';
                 background: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_background_color', '#272c72') ) . ';
+            }
+
+            nav#main ul li a:hover,
+            nav#main ul li a:focus {
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color_hover', '#39409b') ) . ';
             }
 
             nav#main li.mnmlwp-main-nav-searchform button.submit {
@@ -1619,10 +1643,6 @@ function mnmlwp_customizer_css()
                             width: auto;
                         }
                         
-                        nav#main li ul li {
-                            text-align: left;
-                        }
-                        
                         nav#main li.mnmlwp-main-nav-searchform {
                             position: relative;
                             top: 0;
@@ -1667,10 +1687,26 @@ function mnmlwp_customizer_css()
 
             // Main navigation alignmemnt
             $mnmlwp_main_nav_align = get_theme_mod('mnmlwp_nav_align', 'flex-start');
-            $mnmlwp_main_nav_align_mobile = get_theme_mod('mnmlwp_nav_align_mobile', 'flex-start');
+            $mnmlwp_main_nav_align_mobile = get_theme_mod('mnmlwp_main_nav_align_mobile', 'flex-start');
+            $mnmlwp_sub_menu_align_desktop = get_theme_mod('mnmlwp_sub_menu_align_desktop', 'flex-start');
+
+            if( $mnmlwp_sub_menu_align_desktop === 'flex-start' ) {
+                $mnmlwp_sub_menu_text_align_desktop = 'left';
+            }  else if( $mnmlwp_sub_menu_align_desktop === 'flex-end' ) {
+                $mnmlwp_sub_menu_text_align_desktop = 'right';
+            } else {
+                $mnmlwp_sub_menu_text_align_desktop = 'center';
+            }
 
             echo 'nav#main ul {
                 justify-content: ' . $mnmlwp_main_nav_align . ';
+            }
+
+            @media screen and (min-width: 768px) {
+                nav#main ul.sub-menu li a {
+                    justify-content: ' . $mnmlwp_sub_menu_align_desktop . ';
+                    text-align: ' . $mnmlwp_sub_menu_text_align_desktop . ';
+                }
             }
             
             @media screen and (max-width: 767px) {';
@@ -1756,9 +1792,9 @@ function mnmlwp_customizer_css()
                         flex-direction: row-reverse;
                     }
                     
-                    div.mnmlwp-logo {
+                    .mnmlwp-logo-wrapper {
                         flex: 1 1 25%;
-                        text-align: right;
+                        justify-content: flex-end;
                     }
 
                     @media screen and (max-width: 767px) {
@@ -1774,7 +1810,7 @@ function mnmlwp_customizer_css()
 
             // Center header
             if( get_theme_mod('mnmlwp_center_header', false) === true ) {
-                echo 'div.mnmlwp-logo {
+                echo '.mnmlwp-logo-wrapper {
                     text-align: center;
                 }
 
@@ -1816,14 +1852,14 @@ function mnmlwp_customizer_css()
 
                 if( $mnmlwp_logo_position !== 'right' ) {
                     echo '
-                        div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
+                        .mnmlwp-logo-wrapper + .mnmlwp-row--nav-inside-header,
                         .mnmlwp-row--nav-inside-header + #searchform {
                             margin-left: .75rem;
                         }
                     ';
                 } else {
                     echo '
-                        div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
+                        .mnmlwp-logo-wrapper + .mnmlwp-row--nav-inside-header,
                         .mnmlwp-row--nav-inside-header + #searchform {
                             margin-right: .75rem;
                         }
@@ -1835,14 +1871,14 @@ function mnmlwp_customizer_css()
             else { // centered header
 
                 if( $mnmlwp_logo_position !== 'right' ) {
-                    echo 'div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
-                    div.mnmlwp-logo + #searchform,
+                    echo '.mnmlwp-logo-wrapper + .mnmlwp-row--nav-inside-header,
+                    .mnmlwp-logo-wrapper + #searchform,
                     .mnmlwp-row--nav-inside-header + #searchform {
                         margin-top: 1rem;
                     }';
                 } else {
-                    echo 'div.mnmlwp-logo + .mnmlwp-row--nav-inside-header,
-                    div.mnmlwp-logo + #searchform,
+                    echo '.mnmlwp-logo-wrapper + .mnmlwp-row--nav-inside-header,
+                    .mnmlwp-logo-wrapper + #searchform,
                     .mnmlwp-row--nav-inside-header + #searchform {
                         margin-bottom: 1rem;
                     }';
