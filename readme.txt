@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.2 =
+
+Fixed: Image max width (alignfull & alignwide)
+Fixed: alignfull & alignwide on posts/pages with sidebar
+
 = 0.8.1 =
 
 Added: Content classes alignfull & alignwide

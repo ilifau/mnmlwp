@@ -376,7 +376,7 @@
       color: #ddd;
   }
   
-  :not(.alignfull):not(.alignwide) img {
+  img {
       max-width: 100%;
   }
   
@@ -2718,21 +2718,26 @@
 
   /* Alignment */
 
-  .alignfull {
+  body:not(.mnmlwp-sidebar-is-active) .alignfull {
 	margin: 1em calc(50% - 50vw);
 	max-width: 100vw;
     width: 100vw;
     text-align: center;
   }
 
-  .alignwide {
+  body:not(.mnmlwp-sidebar-is-active) .alignwide {
     margin: 1em -10%;
     width: 120%;
     max-width: 120%;
     text-align: center;
   }
 
-  p + .alignwide,
-  p + .alignfull {
+  body:not(.mnmlwp-sidebar-is-active) .alignfull img,
+  body:not(.mnmlwp-sidebar-is-active) .alignwide img {
+    max-width: none;
+  }
+
+  body:not(.mnmlwp-sidebar-is-active) p + .alignwide,
+  body:not(.mnmlwp-sidebar-is-active) p + .alignfull {
       margin-top: 0;
   }
