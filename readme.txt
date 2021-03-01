@@ -77,6 +77,12 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.4 =
+
+Added: mnmlwp-row—main class added to blank templates
+Fixed: align wide overflow
+Fixed: Overflow hidden removed from html and body and moved to mnmlwp-row—main
+
 = 0.8.3 =
 
 Fixed: Sticky navigation with overflow hidden on html/body

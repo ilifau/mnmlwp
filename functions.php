@@ -40,7 +40,7 @@ function mnmlwp_scripts_and_styles()
     wp_enqueue_style( 'font-awesome', mnmlwp_assets_url() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'hamburgers', mnmlwp_assets_url() . '/css/hamburgers/hamburgers.css' );
     wp_enqueue_style( 'mnmlwp', mnmlwp_theme_url() . '/style.css' );
-    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.8.3' );
+    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.8.4' );
 }
 
 add_action( 'wp_enqueue_scripts', 'mnmlwp_scripts_and_styles' );
@@ -62,11 +62,11 @@ function mnmlwp_admin_scripts_and_styles( $hook_suffix )
 
     // Hero JS
     if( in_array( $hook_suffix, array('post.php', 'post-new.php', 'page.php', 'page-new.php') ) ) {
-        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.8.3', true );
+        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.8.4', true );
     }
     
     // Global
-    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.8.3' );
+    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.8.4' );
     wp_enqueue_script( 'admin-notifications', mnmlwp_assets_url() . '/js/admin/mnmlwp-notifications.js', array('jquery'), '0.0.1', true );
 }
 
@@ -390,12 +390,16 @@ if( ! function_exists( 'mnmlwp_page_content_wrapper' ) )
         );
 
         if( is_singular() && in_array( get_page_template_slug( $post_id ), $templates ) ) {
-            return;
+            if( $context === 'header' ) {
+                return '<div class="mnmlwp-row mnmlwp-row--main">';
+            } else {
+                return '</div>';
+            }
         } else {
             if( $context === 'header' ) {
-            return '<div class="mnmlwp-row mnmlwp-row--main"><div class="mnmlwp-row"><div class="mnmlwp-column">';
+                return '<div class="mnmlwp-row mnmlwp-row--main"><div class="mnmlwp-row"><div class="mnmlwp-column">';
             } else {
-            return '</div></div></div>';
+                return '</div></div></div>';
             }
         }
     }
