@@ -1888,6 +1888,13 @@ function mnmlwp_customizer_css()
 
             echo '}';
 
+            /* Gutenberg block width */
+            echo '.wp-block-column.mnmlwp-column  {
+                flex: 0 0 ' . get_theme_mod('mnmlwp_column_width', '1120px') . ';
+                margin: 0 auto;
+                padding: 0 0;
+            }';
+
     echo '</style>';
 }
 
