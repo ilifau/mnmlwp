@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.3 =
+
+Fixed: Sticky navigation with overflow hidden on html/body
+
 = 0.8.2 =
 
 Fixed: Image max width (alignfull & alignwide)
