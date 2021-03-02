@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.6 =
+
+Removed: Check navigation from assets/main.js
+
 = 0.8.5 =
 
 Added: Dynamic alignwide media query in customizer.php
