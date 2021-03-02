@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.5 =
+
+Added: Dynamic alignwide media query in customizer.php
+
 = 0.8.4 =
 
 Added: mnmlwp-row—main class added to blank templates
