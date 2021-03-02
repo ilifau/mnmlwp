@@ -1895,6 +1895,45 @@ function mnmlwp_customizer_css()
                 padding: 0 0;
             }';
 
+            /* Align wide */
+            $mnmlwp_column_width_px = false;
+            $mnmlwp_column_width = get_theme_mod('mnmlwp_column_width', '1120px');
+
+            if( strpos( $mnmlwp_column_width, 'em' ) !== false ) {
+               $mnmlwp_column_width_px = str_replace('em', '', $mnmlwp_column_width);
+               $mnmlwp_column_width_px = $mnmlwp_column_width_px * 16;
+            }
+
+            if( strpos( $mnmlwp_column_width, 'pt' ) !== false ) {
+                $mnmlwp_column_width_px = str_replace('pt', '', $mnmlwp_column_width);
+                $mnmlwp_column_width_px = $mnmlwp_column_width_px * 1.3333333333333333;
+             }
+
+            else if( strpos( $mnmlwp_column_width, 'px' ) !== false ) {
+                $mnmlwp_column_width_px = str_replace('px', '', $mnmlwp_column_width);
+            }
+            
+            if( $mnmlwp_column_width_px !== false ) {
+                $mnmlwp_column_width_px = $mnmlwp_column_width_px * 1.15;
+                echo '@media screen and (min-width: ' . $mnmlwp_column_width_px . 'px) {
+                    body:not(.mnmlwp-sidebar-is-active) .alignwide {
+                        width: calc(100% + 10vw);
+                        max-width: calc(100% + 10vw);
+                        position: relative;
+                        left: -5vw;
+                        text-align: center;
+                    }
+                }
+                
+                body:not(.mnmlwp-sidebar-is-active) .alignwide img {
+                    max-width: none;
+                }
+
+                body:not(.mnmlwp-sidebar-is-active) p + .alignwide {
+                    margin-top: 0;
+                }';
+            }
+
     echo '</style>';
 }
 
