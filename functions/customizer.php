@@ -1821,6 +1821,12 @@ function mnmlwp_customizer_css()
 
             // Center header
             if( get_theme_mod('mnmlwp_center_header', false) === true ) {
+                if( ! has_custom_logo() || ( 0 == get_theme_mod( 'mnmlwp_has_logo_and_title', 0 ) ) ) {
+                    echo '.mnmlwp-site-title-wrapper {
+                        justify-content: center;
+                    }';
+                }
+                
                 echo '.mnmlwp-logo-wrapper {
                     text-align: center;
                 }

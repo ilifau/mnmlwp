@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.8 =
+
+* Possible breaking change: Footer widget column classes
+* Fixed: Site title wrapper justify content when centered
+
 = 0.8.7 =
 
 * Added: Customizer option for number of footer columns

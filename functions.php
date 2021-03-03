@@ -40,7 +40,7 @@ function mnmlwp_scripts_and_styles()
     wp_enqueue_style( 'font-awesome', mnmlwp_assets_url() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'hamburgers', mnmlwp_assets_url() . '/css/hamburgers/hamburgers.css' );
     wp_enqueue_style( 'mnmlwp', mnmlwp_theme_url() . '/style.css' );
-    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.8.7' );
+    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.8.8' );
 }
 
 add_action( 'wp_enqueue_scripts', 'mnmlwp_scripts_and_styles' );
@@ -62,11 +62,11 @@ function mnmlwp_admin_scripts_and_styles( $hook_suffix )
 
     // Hero JS
     if( in_array( $hook_suffix, array('post.php', 'post-new.php', 'page.php', 'page-new.php') ) ) {
-        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.8.7', true );
+        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.8.8', true );
     }
     
     // Global
-    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.8.7' );
+    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.8.8' );
     wp_enqueue_script( 'admin-notifications', mnmlwp_assets_url() . '/js/admin/mnmlwp-notifications.js', array('jquery'), '0.0.1', true );
 }
 
@@ -420,7 +420,7 @@ function mnmlwp_widgets_init()
         'name'          => esc_html__('Footer (first column)', 'mnmlwp'),
         'id'            => 'mnmlwp-footer-left',
         'description'   => esc_html__('Footer (first column)', 'mnmlwp'),
-        'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-left">',
+        'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-first">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="mnmlwp-widget-title">',
         'after_title' => '</h2>',
@@ -430,7 +430,7 @@ function mnmlwp_widgets_init()
         'name'          => esc_html__('Footer (second column)', 'mnmlwp'),
         'id'            => 'mnmlwp-footer-middle',
         'description'   => esc_html__('Footer (second column)', 'mnmlwp'),
-        'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-middle">',
+        'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-second">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="mnmlwp-widget-title">',
         'after_title' => '</h2>',
@@ -440,7 +440,7 @@ function mnmlwp_widgets_init()
         'name'          => esc_html__('Footer (third column)', 'mnmlwp'),
         'id'            => 'mnmlwp-footer-right',
         'description'   => esc_html__('Footer (third column)', 'mnmlwp'),
-        'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-right">',
+        'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-third">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="mnmlwp-widget-title">',
         'after_title' => '</h2>',
