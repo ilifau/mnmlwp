@@ -40,7 +40,7 @@ function mnmlwp_scripts_and_styles()
     wp_enqueue_style( 'font-awesome', mnmlwp_assets_url() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'hamburgers', mnmlwp_assets_url() . '/css/hamburgers/hamburgers.css' );
     wp_enqueue_style( 'mnmlwp', mnmlwp_theme_url() . '/style.css' );
-    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.8.6' );
+    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.8.7' );
 }
 
 add_action( 'wp_enqueue_scripts', 'mnmlwp_scripts_and_styles' );
@@ -62,11 +62,11 @@ function mnmlwp_admin_scripts_and_styles( $hook_suffix )
 
     // Hero JS
     if( in_array( $hook_suffix, array('post.php', 'post-new.php', 'page.php', 'page-new.php') ) ) {
-        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.8.6', true );
+        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.8.7', true );
     }
     
     // Global
-    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.8.6' );
+    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.8.7' );
     wp_enqueue_script( 'admin-notifications', mnmlwp_assets_url() . '/js/admin/mnmlwp-notifications.js', array('jquery'), '0.0.1', true );
 }
 
@@ -204,28 +204,6 @@ function mnmlwp_register_required_plugins()
 {
     $plugins = array(
         array(
-            'name' => 'mnmlWP Contact Form',
-            'slug' => 'mnmlwp-simple-contact-form',
-            'source' => '', // The plugin source.
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-            'version' => '0.1.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url' => 'https://de.wordpress.org/plugins/mnmlwp-simple-contact-form/', // If set, overrides default API URL and points to an external URL.
-            'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-        ),
-        array(
-            'name' => 'Breadcrumb Trail',
-            'slug' => 'breadcrumb-trail',
-            'source' => '', // The plugin source.
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-            'version' => '1.1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url' => 'https://de.wordpress.org/plugins/breadcrumb-trail/', // If set, overrides default API URL and points to an external URL.
-            'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-        ),
-        array(
             'name' => 'One Click Demo Import',
             'slug' => 'one-click-demo-import',
             'source' => '', // The plugin source.
@@ -234,39 +212,6 @@ function mnmlwp_register_required_plugins()
             'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
             'external_url' => 'https://de.wordpress.org/plugins/one-click-demo-import/', // If set, overrides default API URL and points to an external URL.
-            'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-        ),
-        array(
-            'name' => 'Shariff',
-            'slug' => 'shariff',
-            'source' => '', // The plugin source.
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-            'version' => '4.4.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url' => 'https://de.wordpress.org/plugins/shariff/', // If set, overrides default API URL and points to an external URL.
-            'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-        ),
-        array(
-            'name' => 'Customizer Export/Import',
-            'slug' => 'customizer-export-import',
-            'source' => '', // The plugin source.
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-            'version' => '0.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url' => 'https://wordpress.org/plugins/customizer-export-import/', // If set, overrides default API URL and points to an external URL.
-            'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
-        ),
-        array(
-            'name' => 'Customizer Reset',
-            'slug' => 'customizer-reset-by-wpzoom',
-            'source' => '', // The plugin source.
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-            'version' => '1.0.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url' => 'https://de.wordpress.org/plugins/customizer-reset-by-wpzoom/', // If set, overrides default API URL and points to an external URL.
             'is_callable' => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
         ),
     );
@@ -443,7 +388,7 @@ function mnmlwp_add_search_nav_item( $items, $args )
     if( ! get_theme_mod( 'mnmlwp_has_nav_search', true ) )
         return $items;
 
-    $searchform = '<form method="get" id="searchform" action="' . esc_url( home_url( '/' ) ) . '">
+    $searchform = '<form class="mnmlwp-searchform" method="get" action="' . esc_url( home_url( '/' ) ) . '">
         <input type="text" class="field" name="s" id="s" placeholder="' . esc_attr__( 'Search', 'mnmlwp' ) . '&hellip;" />
         <button class="submit mnmlwp-btn mnmlwp-btn-small" id="searchsubmit" value=""></button>
     </form>';
@@ -458,10 +403,12 @@ add_filter( 'wp_nav_menu_items', 'mnmlwp_add_search_nav_item', 10, 2 );
 // Widgets & Sidebars
 function mnmlwp_widgets_init()
 {
+    $mnmlwp_footer_columns_amount = absint( get_theme_mod('mnmlwp_footer_columns_amount', 3) );
+
     register_sidebar( array(
-        'name' => esc_html__( 'mnmlWP Sidebar', 'mnmlwp' ),
+        'name' => esc_html__('Main Sidebar', 'mnmlwp'),
         'id' => 'mnmlwp-sidebar',
-        'description' => 'Default Sidebar',
+        'description' => esc_html__('Main Sidebar', 'mnmlwp'),
         'class' => '',
         'before_widget' => '<div class="mnmlwp-sidebar-widget">',
         'after_widget' => '</div>',
@@ -470,9 +417,9 @@ function mnmlwp_widgets_init()
     ) );
 
     register_sidebar( array(
-        'name'          => 'Footer Left',
+        'name'          => esc_html__('Footer (first column)', 'mnmlwp'),
         'id'            => 'mnmlwp-footer-left',
-        'description'   => 'Left Footer Column',
+        'description'   => esc_html__('Footer (first column)', 'mnmlwp'),
         'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-left">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="mnmlwp-widget-title">',
@@ -480,9 +427,9 @@ function mnmlwp_widgets_init()
     ) );
 
     register_sidebar( array(
-        'name'          => 'Footer Middle',
+        'name'          => esc_html__('Footer (second column)', 'mnmlwp'),
         'id'            => 'mnmlwp-footer-middle',
-        'description'   => 'Center Footer Column',
+        'description'   => esc_html__('Footer (second column)', 'mnmlwp'),
         'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-middle">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="mnmlwp-widget-title">',
@@ -490,19 +437,39 @@ function mnmlwp_widgets_init()
     ) );
 
     register_sidebar( array(
-        'name'          => 'Footer Right',
+        'name'          => esc_html__('Footer (third column)', 'mnmlwp'),
         'id'            => 'mnmlwp-footer-right',
-        'description'   => 'Right Footer Column',
+        'description'   => esc_html__('Footer (third column)', 'mnmlwp'),
         'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-right">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="mnmlwp-widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => esc_html__('Footer (fourth column)', 'mnmlwp'),
+        'id'            => 'mnmlwp-footer-fourth',
+        'description'   => esc_html__('Footer (fourth column)', 'mnmlwp'),
+        'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-fourth">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="mnmlwp-widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => esc_html__('Footer (fifth column)', 'mnmlwp'),
+        'id'            => 'mnmlwp-footer-fifth',
+        'description'   => esc_html__('Footer (fifth column)', 'mnmlwp'),
+        'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-fifth">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="mnmlwp-widget-title">',
         'after_title' => '</h2>',
     ) );
     
     register_sidebar( array(
-        'name'          => 'Footer Full Width',
+        'name'          => esc_html__('Footer (full width)', 'mnmlwp'),
         'id'            => 'mnmlwp-footer-full-width',
-        'description'   => 'Full Width Footer',
+        'description'   => esc_html__('Footer (full width)', 'mnmlwp'),
         'before_widget' => '<div class="mnmlwp-footer-widget mnmlwp-footer-widget-full-width">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="mnmlwp-widget-title">',
@@ -511,6 +478,7 @@ function mnmlwp_widgets_init()
 }
 
 add_action( 'widgets_init', 'mnmlwp_widgets_init' );
+add_action( 'customize_save', 'mnmlwp_widgets_init' );
 
 // mnmlWP Recent Posts Widget
 include dirname(__FILE__) . '/widgets/mnmlwp-recent-posts/mnmlwp-recent-posts.php';

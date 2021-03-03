@@ -73,7 +73,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div>
                 <?php endif; ?>
                 <?php if( get_theme_mod( 'mnmlwp_has_header_search', true ) ): ?>
-                    <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <form class="mnmlwp-searchform" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                         <input type="text" class="field" name="s" id="s" placeholder="<?php echo esc_attr__( 'Search', 'mnmlwp' ); ?>&hellip;" />
                         <button class="submit mnmlwp-btn mnmlwp-btn-small" id="searchsubmit" value=""></button>
                     </form>

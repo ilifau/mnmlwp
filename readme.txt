@@ -77,296 +77,303 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.7 =
+
+* Added: Customizer option for number of footer columns
+* Added: tabindex 0  on main menu links without href
+* Fixed: Replaced duplicate searchform IDs by class „mnmlwp-searchform“
+* Removed: Rcommended plugins (all but One Click Demo Import)
+
 = 0.8.6 =
 
-Removed: Check navigation from assets/main.js
+* Removed: Check navigation from assets/main.js
 
 = 0.8.5 =
 
-Added: Dynamic alignwide media query in customizer.php
+* Added: Dynamic alignwide media query in customizer.php
 
 = 0.8.4 =
 
-Added: mnmlwp-row—main class added to blank templates
-Fixed: align wide overflow
-Fixed: Overflow hidden removed from html and body and moved to mnmlwp-row—main
+* Added: mnmlwp-row—main class added to blank templates
+* Fixed: align wide overflow
+* Fixed: Overflow hidden removed from html and body and moved to mnmlwp-row—main
 
 = 0.8.3 =
 
-Fixed: Sticky navigation with overflow hidden on html/body
+* Fixed: Sticky navigation with overflow hidden on html/body
 
 = 0.8.2 =
 
-Fixed: Image max width (alignfull & alignwide)
-Fixed: alignfull & alignwide on posts/pages with sidebar
+* Fixed: Image max width (alignfull & alignwide)
+* Fixed: alignfull & alignwide on posts/pages with sidebar
 
 = 0.8.1 =
 
-Added: Content classes alignfull & alignwide
-Added: Place logo next to title
-Added: Pure CSS navigation
-Added: Customizer option „Sub menu item text align (desktop)“
+* Added: Content classes alignfull & alignwide
+* Added: Place logo next to title
+* Added: Pure CSS navigation
+* Added: Customizer option „Sub menu item text align (desktop)“
 
 = 0.8.0 =
 
-Added: Conference starter kit
-Added: Customizer options for full width footer widget
-Added: Current active menu item parent background color
-Added: Main navigation focus style
-Fixed: Removed search form list item from header when not enabled
-Fixed: Search form margins in mobile navigation
+* Added: Conference starter kit
+* Added: Customizer options for full width footer widget
+* Added: Current active menu item parent background color
+* Added: Main navigation focus style
+* Fixed: Removed search form list item from header when not enabled
+* Fixed: Search form margins in mobile navigation
 
 = 0.7.9 =
 
-Fixed: Contact row: content now sanitized with wp_kses_post
-Fixed: Increased logo max height in Customizer
+* Fixed: Contact row: content now sanitized with wp_kses_post
+* Fixed: Increased logo max height in Customizer
 
 = 0.7.8 =
 
-Fixed: Customizer options order
-Fixed: Admin JS select hero template
+* Fixed: Customizer options order
+* Fixed: Admin JS select hero template
 
 = 0.7.7 =
 
-Fixed: Admin JS select hero template
+* Fixed: Admin JS select hero template
 
 = 0.7.6 =
 
-Fixed: Full width footer widget margin
-Fixed: Check post ID in breadcrumb row function
-Fixed: Post list titles h3 replaced by h2
+* Fixed: Full width footer widget margin
+* Fixed: Check post ID in breadcrumb row function
+* Fixed: Post list titles h3 replaced by h2
 
 = 0.7.5 =
 
-Fixed: Customizer CSS (missed a curly bracket... D'oh!)
+* Fixed: Customizer CSS (missed a curly bracket... D'oh!)
 
 = 0.7.4 =
 
-Fixed: i18n
-Fixed: Centered header elements margin top/bottom (mobile)
+* Fixed: i18n
+* Fixed: Centered header elements margin top/bottom (mobile)
 
 = 0.7.3 =
 
-Added: Improved full width footer widget layout
-Added: Customizer option footer full width background color
-Added: Customizer option footer full width text align
-Fixed: Textarea font family
-Removed: Demo content import message
+* Added: Improved full width footer widget layout
+* Added: Customizer option footer full width background color
+* Added: Customizer option footer full width text align
+* Fixed: Textarea font family
+* Removed: Demo content import message
 
 = 0.7.2 =
 
-Added: demo content at base.minimalwordpress.de
-Fixed: Hero post comments template
-Fixed: Recent posts and colored categories widget layout
+* Added: demo content at base.minimalwordpress.de
+* Fixed: Hero post comments template
+* Fixed: Recent posts and colored categories widget layout
 
 = 0.7.1 =
 
-Added: Separate option for mobile menu alignment
-Added: Optimized flex layout for site header
+* Added: Separate option for mobile menu alignment
+* Added: Optimized flex layout for site header
 
 = 0.7.0 =
 
-Fixed: Header width (oops!)
+* Fixed: Header width (oops!)
 
 = 0.6.9 =
 
-Added: Customizer option sidebar right/left
-Added: Customizer option header logo right/left
-Added: Improved centered header
+* Added: Customizer option sidebar right/left
+* Added: Customizer option header logo right/left
+* Added: Improved centered header
 
 = 0.6.8 =
 
-Fixed: Sticky menu position "before header"
+* Fixed: Sticky menu position "before header"
 
 = 0.6.7 =
 
-Added: Menu position "before header"
-Added: Customizer > Hero Section + base font sizes for desktop, tablet, and mobile
+* Added: Menu position "before header"
+* Added: Customizer > Hero Section + base font sizes for desktop, tablet, and mobile
 
 = 0.6.6 =
 
-Added: Version number for admin.css
+* Added: Version number for admin.css
 
 = 0.6.5 =
 
-Added: Version number for admin.js
+* Added: Version number for admin.js
 
 = 0.6.4 =
 
-Added: Hero section fields for title, subtitle, content, alignment, and colors
-Fixed: Toggle hero settings on template select
-Fixed: Hero section editor layout
+* Added: Hero section fields for title, subtitle, content, alignment, and colors
+* Fixed: Toggle hero settings on template select
+* Fixed: Hero section editor layout
 
 = 0.6.3 =
 
-Fixed: z-index header / contact row
-Fixed: Current theme version info for main.css
-Fixed: Centered header => Text align center
-Added: Customizer options for logo base font size, logo title font size, logo subtitle font size
+* Fixed: z-index header / contact row
+* Fixed: Current theme version info for main.css
+* Fixed: Centered header => Text align center
+* Added: Customizer options for logo base font size, logo title font size, logo subtitle font size
 
 = 0.6.2 =
 
-Fixed: Breadcrumb navigation
+* Fixed: Breadcrumb navigation
 
 = 0.6.1 =
 
-Fixed: Searchform visibility in widgets
+* Fixed: Searchform visibility in widgets
 
 = 0.6.0 =
 
-Breaking changes: .row and .column classed changed to .mnmlwp-row and .mnmlwp-column
-Added: Flex header layout for logo, navigation, and hamburger
-Added: Shared mobile navigation
-Added: Logo height option
-Added: Separate options for nav in header  (desktop) and main nav (mobile)
-Added: Option for centering header content
-Added: Option for centering menu items
-Added: Options header top and bottom padding
-Added: Sticky posts in recent posts widget
-Removed: Source Sans Pro font; base font is now system font
-Removed: Theme activation welcome message
+* Breaking changes: .row and .column classed changed to .mnmlwp-row and .mnmlwp-column
+* Added: Flex header layout for logo, navigation, and hamburger
+* Added: Shared mobile navigation
+* Added: Logo height option
+* Added: Separate options for nav in header  (desktop) and main nav (mobile)
+* Added: Option for centering header content
+* Added: Option for centering menu items
+* Added: Options header top and bottom padding
+* Added: Sticky posts in recent posts widget
+* Removed: Source Sans Pro font; base font is now system font
+* Removed: Theme activation welcome message
 
 = 0.5.7 =
 
-Added: Sticky posts in recent posts widget
-Added: Sticky posts in categories
+* Added: Sticky posts in recent posts widget
+* Added: Sticky posts in categories
 
 = 0.5.6 =
 
-Added: Toggle hero section in post/page editor
-Fixed: Content wrapper
+* Added: Toggle hero section in post/page editor
+* Fixed: Content wrapper
 
 = 0.5.5 =
 
-Fixed: requires PHP 7.2 (not 7.4)
+* Fixed: requires PHP 7.2 (not 7.4)
 
 = 0.5.4 =
 
-Added: WP required theme info
-Fixed: Post/page template options
-Fixed: WP image block (image sizes)
+* Added: WP required theme info
+* Fixed: Post/page template options
+* Fixed: WP image block (image sizes)
 
 = 0.5.3 =
 
-Added: Responsive Tables
+* Added: Responsive Tables
 
 = 0.5.2 =
 
-Updated: Demo content
-Fixed: Navigation z-index, footer HTML
+* Updated: Demo content
+* Fixed: Navigation z-index, footer HTML
 
 = 0.5.1 =
 
-Please note: this update might include some breaking changes. Backup your website before updating!
+* Please note: this update might include some breaking changes. Backup your website before updating!
 
-Fixed: Better navigation HTML structure
-Fixed: Flex colum layout in templates
-Added: Navigation sub-menu timeout
-Added: Main menu item background color (Customizer)
-Added: Main menu item background color (Customizer)
-Changed: Main menu color scheme
-Removed: Menu position "before header"
+* Fixed: Better navigation HTML structure
+* Fixed: Flex colum layout in templates
+* Added: Navigation sub-menu timeout
+* Added: Main menu item background color (Customizer)
+* Added: Main menu item background color (Customizer)
+* Changed: Main menu color scheme
+* Removed: Menu position "before header"
 
 = 0.5.0 =
 
-Fixed: Full width layouts
+* Fixed: Full width layouts
 
 = 0.4.9 =
 
-Added: Flex columns shortcode
-Added: Page content wrapper
-Fixed: Minor CSS changes
+* Added: Flex columns shortcode
+* Added: Page content wrapper
+* Fixed: Minor CSS changes
 
 = 0.4.8 =
 
-Fixed: Hero styles moved to wp_head
+* Fixed: Hero styles moved to wp_head
 
 = 0.4.7 =
 
-Changed: Pluggable image sizes
+* Changed: Pluggable image sizes
 
 = 0.4.6 =
 
-Fixed: Admin editor styles
-Fixed: Main navigation list items align
+* Fixed: Admin editor styles
+* Fixed: Main navigation list items align
 
 = 0.4.5 =
 
-Added: Dynamic hero background sizes
-Added: Clearfixes
+* Added: Dynamic hero background sizes
+* Added: Clearfixes
 
 = 0.4.4 =
 
-Added: Cover images for embedded YouTube/Vimeo videos
-Changed: Project website is now https://minimalwordpress.de
+* Added: Cover images for embedded YouTube/Vimeo videos
+* Changed: Project website is now https://minimalwordpress.de
 
 = 0.4.3 =
 
-Added: Blank post/page + hero template
-Added: Shortcode allowed in hero section
-Added: Prevent direct file access
+* Added: Blank post/page + hero template
+* Added: Shortcode allowed in hero section
+* Added: Prevent direct file access
 
 = 0.4.2 =
 
-Added: Gradient colors for hero section
-Added: New custom layout / demo data
+* Added: Gradient colors for hero section
+* Added: New custom layout / demo data
 
 = 0.4.0 =
 
-Fixed: CSS and Layout issues
+* Fixed: CSS and Layout issues
 
 = 0.3.8 =
 
-Fixed: Sticky navigation (customizer)
+* Fixed: Sticky navigation (customizer)
 
 = 0.3.7 =
 
-Added: Menu animation styles: slide/fade (Customizer)
+* Added: Menu animation styles: slide/fade (Customizer)
 
 = 0.3.6 =
 
-Added: Excerpt length (Customizer)
-Added: Show/hide "read more" link (Customizer)
+* Added: Excerpt length (Customizer)
+* Added: Show/hide "read more" link (Customizer)
 
 = 0.3.5 =
 
-Added: new placeholder image
+* Added: new placeholder image
 
 = 0.3.4 =
 
-Fixed: Pullquote Block (Gutenberg)
-Fixed: Meta Boxes for blank page template
+* Fixed: Pullquote Block (Gutenberg)
+* Fixed: Meta Boxes for blank page template
 
 = 0.3.3 =
 
-WordPress 5: Fixes for Gutenberg editor (more coming)
+* WordPress 5: Fixes for Gutenberg editor (more coming)
 
 = 0.3.2 =
 
-Fixed: Adjusted maximum width of rows in boxed layout
+* Fixed: Adjusted maximum width of rows in boxed layout
 
 = 0.3 =
 
-Added: Activate post/page sidebar by default (Customizer)
-Added: Hide page title by default (Customizer)
-Fixed: CSS, improved readability
+* Added: Activate post/page sidebar by default (Customizer)
+* Added: Hide page title by default (Customizer)
+* Fixed: CSS, improved readability
 
 = 0.2.15 =
 
-Fixed: Updated to latest version of TGM Plugin Activation
+* Fixed: Updated to latest version of TGM Plugin Activation
 
 = 0.2.12 =
 
-Added: Hero section height in px or % (viewport based)
-Fixed: CSS main navigation position (sticky) in Safari
-Fixed: Translations
+* Added: Hero section height in px or % (viewport based)
+* Fixed: CSS main navigation position (sticky) in Safari
+* Fixed: Translations
 
 = 0.2.2 =
 
-Fixed: Color picker in category editor
-Fixed: Minor CSS changes
-Optimized: Theme screenshots
+* Fixed: Color picker in category editor
+* Fixed: Minor CSS changes
+* Optimized: Theme screenshots
 
 = 0.2.1 =
 
-Initial release
+* Initial release

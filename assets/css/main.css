@@ -817,19 +817,19 @@
   
   /* Search form */
   
-  #searchform {
+  .mnmlwp-searchform {
       position: relative;
       z-index: 4;
       display: inline-block;
       vertical-align: middle;
   }
 
-  #searchform,
-  #searchform #s {
+  .mnmlwp-searchform,
+  .mnmlwp-searchform #s {
       position: relative;
   }
   
-  #searchform input#s {
+  .mnmlwp-searchform input#s {
       margin-bottom: 0;
       width: 100%;
       background: #fff;
@@ -840,7 +840,7 @@
       padding: .75em;
   }
   
-  #searchform button.submit {
+  .mnmlwp-searchform button.submit {
       text-shadow: none !important;
       border: none;
       margin: 0;
@@ -854,7 +854,7 @@
       text-align: center;
   }
   
-  #searchform button.submit::before {
+  .mnmlwp-searchform button.submit::before {
       font-family: 'FontAwesome';
       content: '\f002';
       color: #fff;
@@ -895,7 +895,7 @@
         align-items: center;
       }
   
-      .mnmlwp-column--header #searchform {
+      .mnmlwp-column--header .mnmlwp-searchform {
          flex: 0 0 20%;
          order: 2;
          font-size: .875em;
@@ -936,7 +936,7 @@
       }
 
       /* Nav sarchform */
-      nav#main #searchform {
+      nav#main .mnmlwp-searchform {
         display: none !important;
       }
   }
@@ -1791,20 +1791,20 @@
       padding-bottom: .75em;
   }
   
-  .mnmlwp-widgets #searchform {
+  .mnmlwp-widgets .mnmlwp-searchform {
       width: 75%;
   }
 
-  .mnmlwp-widgets #searchform #searchsubmit {
+  .mnmlwp-widgets .mnmlwp-searchform #searchsubmit {
       margin-bottom: 0;
   }
   
-  .mnmlwp-widgets #searchform .screen-reader-text,
-  .mnmlwp-widgets #searchform label {
+  .mnmlwp-widgets .mnmlwp-searchform .screen-reader-text,
+  .mnmlwp-widgets .mnmlwp-searchform label {
       display: none;
   }
 
-  .mnmlwp-widgets #searchform input#s {
+  .mnmlwp-widgets .mnmlwp-searchform input#s {
       border: 1px solid #f1f1f1;
       margin-bottom: .5em;
   }
@@ -2405,10 +2405,9 @@
           padding: 0;
           border: 0;
       }
-  
-      .mnmlwp-footer-widget:not(.mnmlwp-footer-widget-right):not(.mnmlwp-footer-widget-full-width) {
-          display: block;
-          margin-bottom: 1.5em;
+
+      .mnmlwp-footer-widget:not(.mnmlwp-footer-widget-left):not(.mnmlwp-footer-widget-full-width) {
+          margin-top: 2em;
       }
   }
 
@@ -2526,21 +2525,21 @@
         content: '\f107';
       }
 
-      #searchform {
+      .mnmlwp-searchform {
           display: none;
       }
   
-      nav#main #searchform {
+      nav#main .mnmlwp-searchform {
           margin: 1em 0 1.125em 1em;
           display: inline-block;
           font-size: .875em;
       }
 
-      .mnmlwp-widgets #searchform {
+      .mnmlwp-widgets .mnmlwp-searchform {
           display: block;
       }
   
-      #searchform input#s {
+      .mnmlwp-searchform input#s {
           width: 16em;
           max-width: 100%;
       }
