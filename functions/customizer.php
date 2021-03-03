@@ -325,6 +325,13 @@ function mnmlwp_customize_register( $wp_customize )
         'sanitize_callback' => 'sanitize_text_field',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_footer_columns_amount', array(
+        'default' => 3,
+        'capability' => 'edit_theme_options',
+        'type' => 'theme_mod',
+        'sanitize_callback' => 'absint',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_footer_full_width_text_align', array(
         'default' => 'center',
         'capability' => 'edit_theme_options',
@@ -952,13 +959,17 @@ function mnmlwp_customize_register( $wp_customize )
         'type'       => 'number',
     ) );
 
-    $wp_customize->add_control( 'mnmlwp_sidebar_position', array(
+    $wp_customize->add_control( 'mnmlwp_footer_columns_amount', array(
         'type' => 'select',
         'section' => 'mnmlwp_layout_section',
-        'label' => esc_html__( 'Sidebar position', 'mnmlwp'),
+        'label' => esc_html__( 'Number of footer widget columns', 'mnmlwp'),
         'choices' => array(
-            'right' => __('Right (default)', 'mnmlwp'),
-            'left' => __('Left', 'mnmlwp'),
+            0 => '0',
+            1 => '1',
+            2 => '2',
+            3 => __('3 (default)', 'mnmlwp'),
+            4 => '4',
+            5 => '5',
         ),
     ) );
 
@@ -1724,7 +1735,7 @@ function mnmlwp_customizer_css()
                         padding-right: 2em;
                     }
                     
-                    nav#main #searchform {
+                    nav#main .mnmlwp-searchform {
                         margin-right: 1em;
                     }';
                 } else if( $mnmlwp_main_nav_align_mobile === 'center' ) {
@@ -1739,7 +1750,7 @@ function mnmlwp_customizer_css()
                         padding-right: .875em;
                     }
                     
-                    nav#main #searchform {
+                    nav#main .mnmlwp-searchform {
                         margin-left: 0;
                     }';
                 }
@@ -1822,7 +1833,7 @@ function mnmlwp_customizer_css()
                     text-align: center;
                 }
 
-                .mnmlwp-column--header #searchform {
+                .mnmlwp-column--header .mnmlwp-searchform {
                     margin-left: 0;
                 }
 
@@ -1853,14 +1864,14 @@ function mnmlwp_customizer_css()
                 if( $mnmlwp_logo_position !== 'right' ) {
                     echo '
                         .mnmlwp-logo-wrapper + .mnmlwp-row--nav-inside-header,
-                        .mnmlwp-row--nav-inside-header + #searchform {
+                        .mnmlwp-row--nav-inside-header + .mnmlwp-searchform {
                             margin-left: .75rem;
                         }
                     ';
                 } else {
                     echo '
                         .mnmlwp-logo-wrapper + .mnmlwp-row--nav-inside-header,
-                        .mnmlwp-row--nav-inside-header + #searchform {
+                        .mnmlwp-row--nav-inside-header + .mnmlwp-searchform {
                             margin-right: .75rem;
                         }
                     ';
@@ -1872,14 +1883,14 @@ function mnmlwp_customizer_css()
 
                 if( $mnmlwp_logo_position !== 'right' ) {
                     echo '.mnmlwp-logo-wrapper + .mnmlwp-row--nav-inside-header,
-                    .mnmlwp-logo-wrapper + #searchform,
-                    .mnmlwp-row--nav-inside-header + #searchform {
+                    .mnmlwp-logo-wrapper + .mnmlwp-searchform,
+                    .mnmlwp-row--nav-inside-header + .mnmlwp-searchform {
                         margin-top: 1rem;
                     }';
                 } else {
                     echo '.mnmlwp-logo-wrapper + .mnmlwp-row--nav-inside-header,
-                    .mnmlwp-logo-wrapper + #searchform,
-                    .mnmlwp-row--nav-inside-header + #searchform {
+                    .mnmlwp-logo-wrapper + .mnmlwp-searchform,
+                    .mnmlwp-row--nav-inside-header + .mnmlwp-searchform {
                         margin-bottom: 1rem;
                     }';
                 }

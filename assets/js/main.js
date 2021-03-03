@@ -32,6 +32,9 @@ jQuery(document).ready(function($) {
         }
     });
 
+    // Add tabindex="0" to main menu links without href
+    $('nav#main ul li a:not([href])').attr('tabIndex', 0);
+
     // Hamburger Navigation
     var $hamburger = $('.hamburger');
 
@@ -96,7 +99,7 @@ jQuery(document).ready(function($) {
     });
 
     // Searchform
-    $('form#searchform').on('submit', function() {
+    $('form.mnmlwp-searchform').on('submit', function() {
         if( $(this).find( $('input#s') ).val() === '' ) {
             $(this).find( $('input#s') ).focus();
             return false;
