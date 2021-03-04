@@ -1067,8 +1067,8 @@
   
   ul.post-list li {
       display: block;
-      padding-bottom: 1.5em;
-      margin-bottom: 1.5em!important;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem!important;
       border-bottom: 1px solid #eee;
       margin: 0;
   }
@@ -1079,7 +1079,7 @@
   
   ul.post-list h2.post-title {
       padding: 0 0;
-      margin: 0 0;
+      margin: 0 0 .5rem;
   }
 
   ul.post-list h2.post-title + p.mnmlwp-excerpt {
@@ -1185,13 +1185,13 @@
       background: #f7f7f7!important;
   }
   
-  p.mnmlwp-excerpt {
-      padding: .25em 0 0;
-  }
-  
   .mnmlwp-post-list-thumbnail-wrapper {
       display: block;
       margin: 0 0;
+  }
+
+  h2.post-title + .mnmlwp-post-list-thumbnail-wrapper {
+    margin-top: 1em;
   }
   
   /* Prev/Next Post */
@@ -1276,7 +1276,7 @@
   .mnmlwp-meta-wrapper.mnmlwp-meta-wrapper--single,
   .mnmlwp-meta-wrapper.mnmlwp-meta-wrapper--post-list {
       display: block;
-      margin-bottom: .5em;
+      margin-bottom: 1em;
   }
   
   .mnmlwp-meta-wrapper--author-date {
@@ -2752,7 +2752,7 @@
 
   /* Elements after headings */
   h1 + *, .h1 + *,
-  h2 + *,
+  h2 + *:not(.mnmlwp-post-list-thumbnail-wrapper),
   h3 + *,
   h4 + *,
   h5 + *,
