@@ -1190,6 +1190,14 @@
       margin: 0 0;
   }
 
+  .mnmlwp-post-list-thumbnail-wrapper + .mnmlwp-excerpt {
+      margin-top: .75rem;
+  }
+  .mnmlwp-post-list-thumbnail-wrapper {
+      display: block;
+      margin: 0 0;
+  }
+
   h2.post-title + .mnmlwp-post-list-thumbnail-wrapper {
     margin-top: 1em;
   }
