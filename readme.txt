@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.8.9 =
+
+* Improved typography, content / element margins
+
 = 0.8.8 =
 
 * Possible breaking change: Footer widget column classes

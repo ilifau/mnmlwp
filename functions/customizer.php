@@ -1944,10 +1944,6 @@ function mnmlwp_customizer_css()
                 
                 body:not(.mnmlwp-sidebar-is-active) .alignwide img {
                     max-width: none;
-                }
-
-                body:not(.mnmlwp-sidebar-is-active) p + .alignwide {
-                    margin-top: 0;
                 }';
             }
 
