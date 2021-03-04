@@ -2406,16 +2406,6 @@
           margin-right: 0;
           margin-bottom: 1em;
       }
-      
-      .mnmlwp-sidebar {
-          margin-top: 2em;
-          border-top: 1px solid #f7f7f7;
-      }
-  
-      .mnmlwp-sidebar-widget {
-          padding: 0;
-          border: 0;
-      }
 
       .mnmlwp-footer-widget:not(.mnmlwp-footer-widget-first):not(.mnmlwp-footer-widget-full-width) {
           margin-top: 2em;
@@ -2561,6 +2551,15 @@
 
       .mnmlwp-column--footer-full-width {
           padding: 3em 1em;
+      }
+
+      .mnmlwp-sidebar {
+        margin-top: 2em;
+      }
+
+      .mnmlwp-sidebar-widget {
+          padding: 0;
+          border: 0;
       }
   
       .hide-767 {
