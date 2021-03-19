@@ -71,6 +71,8 @@
   
   .mnmlwp-row {
       position: relative;
+      max-width: 1920px;
+      margin: 0 auto;
   }
   
   .mnmlwp-column {
@@ -294,7 +296,7 @@
   
   .mnmlwp-logo-image {
       height: auto;
-      max-height: 8em;
+      max-height: 12em;
       width: auto;
       max-width: 100%;
       position: relative;

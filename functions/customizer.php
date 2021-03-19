@@ -579,7 +579,7 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_logo_height_desktop',
         'input_attrs' => array(
             'min' => 1,
-            'max' => 8,
+            'max' => 12,
             'step' => 0.1,
             'style' => 'width:98%;'
         ),
@@ -592,7 +592,7 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_logo_height_tablet',
         'input_attrs' => array(
             'min' => 1,
-            'max' => 8,
+            'max' => 12,
             'step' => 0.1,
             'style' => 'width:98%;'
         ),
@@ -605,7 +605,7 @@ function mnmlwp_customize_register( $wp_customize )
         'settings'   => 'mnmlwp_logo_height_mobile',
         'input_attrs' => array(
             'min' => 1,
-            'max' => 8,
+            'max' => 12,
             'step' => 0.1,
             'style' => 'width:98%;'
         ),

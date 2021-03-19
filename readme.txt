@@ -77,6 +77,11 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.9.1 =
+
+* Improved: Post meta
+* Improved: Max. logo height
+
 = 0.9.0 =
 
 * Improved: Typography; overflow wrap
