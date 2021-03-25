@@ -28,25 +28,25 @@ function mnmlwp_customize_register( $wp_customize )
     // General
 
     $wp_customize->add_setting( 'mnmlwp_body_text_color' , array(
-        'default'   => '#333333',
+        'default'   => '#252525',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_headings_text_color' , array(
-        'default'   => '#333333',
+        'default'   => '#252525',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_link_color' , array(
-        'default'   => '#444bb1',
+        'default'   => '#1559b2',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_link_hover_color' , array(
-        'default'   => '#33398c',
+        'default'   => '#0f4996',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -108,25 +108,25 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_header_bg_color' , array(
-        'default'   => '#222222',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_hex_color',
-    ) );
-
-    $wp_customize->add_setting( 'mnmlwp_logo_text_color' , array(
         'default'   => '#ffffff',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
+    $wp_customize->add_setting( 'mnmlwp_logo_text_color' , array(
+        'default'   => '#252525',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ) );
+
     $wp_customize->add_setting( 'mnmlwp_logo_icon_color' , array(
-        'default'   => '#444bb1',
+        'default'   => '#252525',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_tagline_color' , array(
-        'default'   => '#b5b5b5',
+        'default'   => '#969696',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -138,7 +138,7 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_contact_row_bg_color' , array(
-        'default'   => '#124239',
+        'default'   => '#005141',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -166,19 +166,19 @@ function mnmlwp_customize_register( $wp_customize )
         ) );
 
         $wp_customize->add_setting( 'mnmlwp_breadcrumb_text_color' , array(
-            'default'   => '#333333',
+            'default'   => '#252525',
             'transport' => 'refresh',
             'sanitize_callback' => 'sanitize_hex_color',
         ) );
 
         $wp_customize->add_setting( 'mnmlwp_breadcrumb_link_color' , array(
-            'default'   => '#444bb1',
+            'default'   => '#1559b2',
             'transport' => 'refresh',
             'sanitize_callback' => 'sanitize_hex_color',
         ) );
 
         $wp_customize->add_setting( 'mnmlwp_breadcrumb_link_hover_color' , array(
-            'default'   => '#33398c',
+            'default'   => '#0f4996',
             'transport' => 'refresh',
             'sanitize_callback' => 'sanitize_hex_color',
         ) );
@@ -188,7 +188,7 @@ function mnmlwp_customize_register( $wp_customize )
     // Navigation
 
     $wp_customize->add_setting( 'mnmlwp_nav_row_color' , array(
-        'default'   => '#444bb1',
+        'default'   => '#1559b2',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -200,7 +200,7 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_link_background_color' , array(
-        'default'   => '#444bb1',
+        'default'   => '#1559b2',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -212,7 +212,7 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_link_background_color_hover' , array(
-        'default'   => '#39409b',
+        'default'   => '#0f4996',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -224,13 +224,13 @@ function mnmlwp_customize_register( $wp_customize )
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_active_link_background_color' , array(
-        'default'   => '#272c72',
+        'default'   => '#0f4996',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_nav_hamburger_color' , array(
-        'default'   => '#ffffff',
+        'default'   => '#1559b2',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -238,62 +238,62 @@ function mnmlwp_customize_register( $wp_customize )
     // Footer
 
     $wp_customize->add_setting( 'mnmlwp_footer_bg_color' , array(
-        'default'   => '#f7f7f7',
+        'default'   => '#f9f9f9',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_text_color' , array(
-        'default'   => '#37383d',
+        'default'   => '#252525',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_headings_color' , array(
-        'default'   => '#37383d',
+        'default'   => '#252525',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
     
     $wp_customize->add_setting( 'mnmlwp_footer_link_color' , array(
-        'default'   => '#444bb1',
+        'default'   => '#1559b2',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_link_color_hover' , array(
-        'default'   => '#33398c',
+        'default'   => '#0f4996',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     // Footer Full Width
     $wp_customize->add_setting( 'mnmlwp_footer_full_width_bg_color' , array(
-        'default'   => '#f3f3f3',
+        'default'   => '#f7f7f7',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_full_width_text_color' , array(
-        'default'   => '#37383d',
+        'default'   => '#252525',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_full_width_headings_color' , array(
-        'default'   => '#37383d',
+        'default'   => '#252525',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
     
     $wp_customize->add_setting( 'mnmlwp_footer_full_width_link_color' , array(
-        'default'   => '#444bb1',
+        'default'   => '#1559b2',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
 
     $wp_customize->add_setting( 'mnmlwp_footer_full_width_link_color_hover' , array(
-        'default'   => '#33398c',
+        'default'   => '#0f4996',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_hex_color',
     ) );
@@ -1219,7 +1219,7 @@ function mnmlwp_customizer_css()
 {
     echo '<style>';
         echo 'body {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_body_text_color', '#333333') ) . ';
+                 color: ' . esc_html( get_theme_mod('mnmlwp_body_text_color', '#252525') ) . ';
                  font-size: ' . esc_html( get_theme_mod('mnmlwp_base_font_size', '1.125em') ) . ';
              }
 
@@ -1228,7 +1228,7 @@ function mnmlwp_customizer_css()
              }
 
              .mnmlwp-row.mnmlwp-row--contact {
-                 background: ' . esc_html( get_theme_mod('mnmlwp_contact_row_bg_color', '#124239') ) . ';
+                 background: ' . esc_html( get_theme_mod('mnmlwp_contact_row_bg_color', '#005141') ) . ';
              }
 
              .mnmlwp-column {
@@ -1309,17 +1309,17 @@ function mnmlwp_customizer_css()
              if( function_exists('breadcrumb_trail') ) {
                  echo ' .mnmlwp-row.mnmlwp-row--breadcrumbs {
                       background: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_bg_color', '#ffffff') ) . ';
-                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_text_color', '#333333') ) . ';
+                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_text_color', '#252525') ) . ';
                   }
 
                   .mnmlwp-row.mnmlwp-row--breadcrumbs a {
-                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_color', '#444bb1') ) . ';
+                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_color', '#1559b2') ) . ';
                   }
 
                   .mnmlwp-row.mnmlwp-row--breadcrumbs a:hover,
                   .mnmlwp-row.mnmlwp-row--breadcrumbs a:focus,
                   .mnmlwp-row.mnmlwp-row--breadcrumbs a:active {
-                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_hover_color', '#33398c') ) . ';
+                      color: ' . esc_html( get_theme_mod('mnmlwp_breadcrumb_link_hover_color', '#0f4996') ) . ';
                   }
                   
                   .trail-items li::after {
@@ -1361,20 +1361,20 @@ function mnmlwp_customizer_css()
              }
 
              echo 'h1, .h1, h2, h3, h4, h5, h6 {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_headings_text_color', '#333333') ) . ';
+                 color: ' . esc_html( get_theme_mod('mnmlwp_headings_text_color', '#252525') ) . ';
              }
 
              a,
              p a {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
+                 color: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#1559b2') ) . ';
              }
 
              blockquote::before {
-                 color: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ), 0.2 ) . ';
+                 color: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#1559b2') ), 0.2 ) . ';
              }
 
              blockquote {
-                 border-color: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ), 0.1 ) . ';
+                 border-color: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#1559b2') ), 0.1 ) . ';
              }
 
              a:hover,
@@ -1395,7 +1395,7 @@ function mnmlwp_customizer_css()
 
              .mnmlwp-btn,
              input[type=submit] {
-                 background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
+                 background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#1559b2') ) . ';
              }
 
              .mnmlwp-btn:hover,
@@ -1403,24 +1403,24 @@ function mnmlwp_customizer_css()
              input[type=submit]:hover,
              input[type=submit]:focus {
                  opacity: 1;
-                 background: ' . mnmlwp_adjust_color( get_theme_mod('mnmlwp_link_color', '#444bb1'), -12 ) . ';
+                 background: ' . mnmlwp_adjust_color( get_theme_mod('mnmlwp_link_color', '#1559b2'), -12 ) . ';
              }
 
              .mnmlwp-logo-text {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_logo_text_color', '#ffffff') ) . '!important;
+                 color: ' . esc_html( get_theme_mod('mnmlwp_logo_text_color', '#252525') ) . '!important;
              }
 
              .mnmlwp-logo-icon {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_logo_icon_color', '#444bb1') ) . '!important;
+                 color: ' . esc_html( get_theme_mod('mnmlwp_logo_icon_color', '#252525') ) . '!important;
              }
 
              .mnmlwp-tagline {
-                 color: ' . esc_html( get_theme_mod('mnmlwp_tagline_color', '#b5b5b5') ) . '!important;
+                 color: ' . esc_html( get_theme_mod('mnmlwp_tagline_color', '#969696') ) . '!important;
              }
 
             nav#main ul li,
             nav#main ul li a {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color', '#444bb1') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color', '#1559b2') ) . ';
             }
 
             nav#main ul li.current-menu-item > a,
@@ -1438,40 +1438,40 @@ function mnmlwp_customizer_css()
             nav#main ul li.current-page-parent > a:active {
                 opacity: 1;
                 color: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_color', '#ffffff') ) . ';
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_background_color', '#272c72') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_active_link_background_color', '#0f4996') ) . ';
             }
 
             nav#main ul li a:hover,
             nav#main ul li a:focus {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color_hover', '#39409b') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_link_background_color_hover', '#0f4996') ) . ';
             }
 
             nav#main li.mnmlwp-main-nav-searchform button.submit {
-                background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#1559b2') ) . ';
             }
 
             nav#main li.mnmlwp-main-nav-searchform button.submit:hover,
             nav#main li.mnmlwp-main-nav-searchform button.submit:focus {
                 opacity: 1;
-                background: ' . mnmlwp_adjust_color( esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ), -12 ) . ';
+                background: ' . mnmlwp_adjust_color( esc_html( get_theme_mod('mnmlwp_link_color', '#1559b2') ), -12 ) . ';
             }
 
             .mnmlwp-pagination span.page-numbers {
-                background: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ), 0.5) . ';
-                color: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
+                background: ' . mnmlwp_hex2rgba( esc_html( get_theme_mod('mnmlwp_link_color', '#1559b2') ), 0.5) . ';
+                color: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#1559b2') ) . ';
             }
 
             .mnmlwp-pagination span.page-numbers.current {
-                background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#444bb1') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_link_color', '#1559b2') ) . ';
                 color: #fff;
             }
 
             .mnmlwp-row.mnmlwp-row--footer {
-                background: ' . esc_html( get_theme_mod('mnmlwp_footer_bg_color', '#f7f7f7') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_footer_bg_color', '#f9f9f9') ) . ';
             }
 
             footer {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_text_color', '#37383d') ) . '!important;
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_text_color', '#252525') ) . '!important;
             }
 
             footer .mnmlwp-widget-title,
@@ -1479,24 +1479,24 @@ function mnmlwp_customizer_css()
             footer .mnmlwp-widget-title a:hover,
             footer .mnmlwp-widget-title a:focus,
             footer .h1, footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_headings_color', '#37383d') ) . '!important;
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_headings_color', '#252525') ) . '!important;
             }
             
             footer a {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_link_color', '#444bb1') ) . ';
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_link_color', '#1559b2') ) . ';
             }
             
             footer a:hover,
             footer a:focus {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_link_color_hover', '#33398c') ) . ';
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_link_color_hover', '#0f4996') ) . ';
             }
 
             .mnmlwp-row.mnmlwp-row--footer-full-width {
-                background: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_bg_color', '#f3f3f3') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_bg_color', '#f7f7f7') ) . ';
             }
 
             .mnmlwp-row.mnmlwp-row--footer-full-width {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_text_color', '#37383d') ) . '!important;
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_text_color', '#252525') ) . '!important;
             }
 
             .mnmlwp-row.mnmlwp-row--footer-full-width .mnmlwp-widget-title,
@@ -1510,16 +1510,16 @@ function mnmlwp_customizer_css()
             .mnmlwp-row.mnmlwp-row--footer-full-width h4,
             .mnmlwp-row.mnmlwp-row--footer-full-width h5,
             .mnmlwp-row.mnmlwp-row--footer-full-width h6 {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_headings_color', '#37383d') ) . '!important;
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_headings_color', '#252525') ) . '!important;
             }
             
             .mnmlwp-row.mnmlwp-row--footer-full-width a {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_link_color', '#444bb1') ) . ';
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_link_color', '#1559b2') ) . ';
             }
             
             .mnmlwp-row.mnmlwp-row--footer-full-width a:hover,
             .mnmlwp-row.mnmlwp-row--footer-full-width a:focus {
-                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_link_color_hover', '#33398c') ) . ';
+                color: ' . esc_html( get_theme_mod('mnmlwp_footer_full_width_link_color_hover', '#0f4996') ) . ';
             }
 
             @media screen and (max-width: ' . esc_html( get_theme_mod('mnmlwp_column_width', '1120px') ) . ') {
@@ -1537,7 +1537,7 @@ function mnmlwp_customizer_css()
             .hamburger-inner,
             .hamburger-inner:after,
             .hamburger-inner:before {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_hamburger_color', '#ffffff') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_hamburger_color', '#1559b2') ) . ';
             }';
 
             if( has_header_image() ) {
@@ -1547,7 +1547,7 @@ function mnmlwp_customizer_css()
                 }';
             } else {
                 echo '.mnmlwp-row.mnmlwp-row--header {
-                    background: ' . esc_html( get_theme_mod('mnmlwp_header_bg_color', '#222222') ) . ';
+                    background: ' . esc_html( get_theme_mod('mnmlwp_header_bg_color', '#ffffff') ) . ';
                 }';
             }
 
@@ -1617,7 +1617,7 @@ function mnmlwp_customizer_css()
 
             // Nav position / hamburger icon
             echo '.mnmlwp-row.mnmlwp-row--nav {
-                background: ' . esc_html( get_theme_mod('mnmlwp_nav_row_color', '#444bb1') ) . ';
+                background: ' . esc_html( get_theme_mod('mnmlwp_nav_row_color', '#1559b2') ) . ';
             }';
 
             // Nav item padding
@@ -1923,7 +1923,7 @@ function mnmlwp_customizer_css()
 
             if( strpos( $mnmlwp_column_width, 'pt' ) !== false ) {
                 $mnmlwp_column_width_px = str_replace('pt', '', $mnmlwp_column_width);
-                $mnmlwp_column_width_px = $mnmlwp_column_width_px * 1.3333333333333333;
+                $mnmlwp_column_width_px = $mnmlwp_column_width_px * 1.2525252525253333;
              }
 
             else if( strpos( $mnmlwp_column_width, 'px' ) !== false ) {

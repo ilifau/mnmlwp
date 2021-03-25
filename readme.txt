@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.9.2 =
+
+* Improved: Color scheme
+
 = 0.9.1 =
 
 * Improved: Post meta
