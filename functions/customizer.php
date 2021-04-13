@@ -1698,7 +1698,7 @@ function mnmlwp_customizer_css()
 
             // Main navigation alignmemnt
             $mnmlwp_main_nav_align = get_theme_mod('mnmlwp_nav_align', 'flex-start');
-            $mnmlwp_main_nav_align_mobile = get_theme_mod('mnmlwp_main_nav_align_mobile', 'flex-start');
+            $mnmlwp_main_nav_align_mobile = get_theme_mod('mnmlwp_nav_align_mobile', 'flex-start');
             $mnmlwp_sub_menu_align_desktop = get_theme_mod('mnmlwp_sub_menu_align_desktop', 'flex-start');
 
             if( $mnmlwp_sub_menu_align_desktop === 'flex-start' ) {
@@ -1744,7 +1744,7 @@ function mnmlwp_customizer_css()
                     }
                     
                     nav#main ul li a,
-                        nav#main ul li ul li a {
+                    nav#main ul li ul li a {
                         text-align: center;
                         padding-left: .875em;
                         padding-right: .875em;

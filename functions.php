@@ -40,7 +40,7 @@ function mnmlwp_scripts_and_styles()
     wp_enqueue_style( 'font-awesome', mnmlwp_assets_url() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'hamburgers', mnmlwp_assets_url() . '/css/hamburgers/hamburgers.css' );
     wp_enqueue_style( 'mnmlwp', mnmlwp_theme_url() . '/style.css' );
-    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.9.2' );
+    wp_enqueue_style( 'mnmlwp-main', mnmlwp_assets_url() . '/css/main.css', array(), '0.9.4' );
 }
 
 add_action( 'wp_enqueue_scripts', 'mnmlwp_scripts_and_styles' );
@@ -62,11 +62,11 @@ function mnmlwp_admin_scripts_and_styles( $hook_suffix )
 
     // Hero JS
     if( in_array( $hook_suffix, array('post.php', 'post-new.php', 'page.php', 'page-new.php') ) ) {
-        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.9.2', true );
+        wp_enqueue_script( 'mnmlwp-hero', mnmlwp_assets_url() . '/js/admin/mnmlwp-hero.js', array('jquery'), '0.9.4', true );
     }
     
     // Global
-    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.9.2' );
+    wp_enqueue_style( 'mnmlwp-admin', mnmlwp_assets_url() . '/css/admin.css', array(), '0.9.4' );
     wp_enqueue_script( 'admin-notifications', mnmlwp_assets_url() . '/js/admin/mnmlwp-notifications.js', array('jquery'), '0.0.1', true );
 }
 
@@ -795,7 +795,7 @@ if( ! function_exists( 'mnmlwp_get_post_categories' ) )
             {
                 $term_id = $cat;
                 $cat_meta = get_option( "category_$term_id" );
-                $cat_color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#444bb1';
+                $cat_color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#1559b2';
                 $style = 'background:' . $cat_color . ';color:#fff!important';
 
                 $cat_name = get_cat_name( $cat );
@@ -1057,7 +1057,7 @@ function mnmlwp_add_category_meta_fields( $tag )
 {
     $term_id = $tag->term_id;
     $cat_meta = get_option( "category_$term_id" );
-    $color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#444bb1';
+    $color = isset( $cat_meta['color'] ) ? $cat_meta['color'] : '#1559b2';
 
     echo '<tr class="form-field">
         <th scope="row" valign="top"><label for="meta-color">' . esc_attr__('Category Color', 'mnmlwp') . '</label></th>

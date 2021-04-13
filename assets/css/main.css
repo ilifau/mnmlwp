@@ -1635,12 +1635,12 @@
   }
   
   .mnmlwp-msg.mnmlwp-msg-info {
-      color: #444bb1;
-      background-color: #f5f6ff;
+      color: #1559b2;
+      background-color: #f1f7ff;
   }
   
   .mnmlwp-msg.mnmlwp-msg-info a {
-      color: #444bb1!important;
+      color: #1559b2!important;
   }
   
   .mnmlwp-msg.mnmlwp-msg-success {
@@ -2419,10 +2419,6 @@
           margin-right: 0;
           margin-bottom: 1em;
       }
-
-      .mnmlwp-footer-widget:not(.mnmlwp-footer-widget-first):not(.mnmlwp-footer-widget-full-width) {
-          margin-top: 2em;
-      }
   }
 
   /* -----------------------------------------
@@ -2573,6 +2569,10 @@
       .mnmlwp-sidebar-widget {
           padding: 0;
           border: 0;
+      }
+
+      .mnmlwp-footer-widget:not(.mnmlwp-footer-widget-first):not(.mnmlwp-footer-widget-full-width) {
+        margin-top: 2em;
       }
   
       .hide-767 {

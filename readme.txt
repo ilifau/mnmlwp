@@ -77,6 +77,15 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.9.4 =
+
+* Fixed: Footer widgets top margin (mobile)
+* Fixed: Customizer option text align main navigation (mobile)
+
+= 0.9.3 =
+
+* Fixed: Color scheme
+
 = 0.9.2 =
 
 * Improved: Color scheme
