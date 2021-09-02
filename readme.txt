@@ -77,6 +77,10 @@ Code License: MIT License - http://opensource.org/licenses/mit-license.html
 
 == Changelog ==
 
+= 0.9.5 =
+
+* Fixed: Load mnmlwp-hero.js in post/page editor
+
 = 0.9.4 =
 
 * Fixed: Footer widgets top margin (mobile)

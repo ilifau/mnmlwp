@@ -9,7 +9,7 @@ Author URI: https://sebastianhonert.com
 Text Domain: mnmlwp
 License: GNU General Public License v2 or later
 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
-Version: 0.9.4
+Version: 0.9.5
 Tested up to: 5.5
 Requires PHP: 7.2
 */
@@ -95,11 +95,11 @@ u,
 ul,
 var,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 article,
@@ -113,32 +113,32 @@ hgroup,
 menu,
 nav,
 section {
-    display: block
+  display: block;
 }
 
 body {
-    line-height: 1
+  line-height: 1;
 }
 
 ol,
 ul {
-    list-style: none
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none
+  quotes: none;
 }
 
 blockquote:after,
 blockquote:before,
 q:after,
 q:before {
-    content: '';
-    content: none
+  content: '';
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0
+  border-collapse: collapse;
+  border-spacing: 0;
 }
